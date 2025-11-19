@@ -27,7 +27,11 @@ dependencies = [
     "nltk>=3.9.2",
     "openai>=2.8.1",
     "yeval @ git+https://github.com/lintangsutawika/yaeval-harness.git",
+    "evalplus",
 ]
 
 [tool.setuptools.packages.find]
 include = ["proxy_bench/*"]
+
+[tool.uv.sources]
+evalplus = { path = "vendor/evalplus" }
