@@ -2,14 +2,11 @@
 #SBATCH --job-name=eval
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.out
-#SBATCH --partition=preempt
-#SBATCH --gres=gpu:L40S:1
+#SBATCH --partition=cpu
 #SBATCH --nodes=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
 #SBATCH --time=2-00:00:00
-#SBATCH --mem=128G
-#SBATCH --cpus-per-task=32
-#SBATCH --ntasks-per-node=1
-#SBATCH --overcommit
 
 . .env
 
@@ -41,7 +38,6 @@ for TASK in ${TASK_LIST[@]}
 do
     uv run yeval \
         --model ${MODEL_PATH}${MODEL}${MODEL_SUFFIX} \
-        --sample_args "n=2" \
         --task "${TASK}" \
         --include_path proxy_bench/tasks/ \
         --api_base ${LLM_API_URL} \

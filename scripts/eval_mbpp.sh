@@ -2,14 +2,11 @@
 #SBATCH --job-name=eval
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.out
-#SBATCH --partition=preempt
-#SBATCH --gres=gpu:L40S:1
+#SBATCH --partition=cpu
 #SBATCH --nodes=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
 #SBATCH --time=2-00:00:00
-#SBATCH --mem=128G
-#SBATCH --cpus-per-task=32
-#SBATCH --ntasks-per-node=1
-#SBATCH --overcommit
 
 . .env
 
@@ -29,7 +26,7 @@ done
 
 MAX_TOKEN=8192
 export OPENAI_API_KEY=${LLM_API_KEY}
-uv run evalplus.evaluate \
+uv run --isolated evalplus.evaluate \
     --model ${MODEL_PATH}${MODEL}${MODEL_SUFFIX} \
     --dataset mbpp \
     --backend openai \
