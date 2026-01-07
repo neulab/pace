@@ -22,7 +22,12 @@ def eval_with_postprocessing(x, y):
     gold_letter, gold_answer = y.split("::")
 
     ans_score = 0.0
-    ans = get_boxed_answer(x)
+    try:
+        ans = get_boxed_answer(x)
+    except:
+        ans = ""
+    if "\\text{" in ans:
+        ans = ans.replace("\\text{", "").replace("}", "").strip()
     if ans.lower() == gold_letter.lower():
         ans_score = 1.0
     elif ans.lower() == gold_answer.lower():
@@ -51,9 +56,9 @@ class MMLU_AnatomyTask(MMLUTask):
 class MMLU_AstronomyTask(MMLUTask):
     data_name = "astronomy"
 
-@register_task("mmlu_auxiliary_train")
-class MMLU_AuxiliaryTrainTask(MMLUTask):
-    data_name = "auxiliary_train"
+# @register_task("mmlu_auxiliary_train")
+# class MMLU_AuxiliaryTrainTask(MMLUTask):
+#     data_name = "auxiliary_train"
 
 @register_task("mmlu_business_ethics")
 class MMLU_BusinessEthicsTask(MMLUTask):
