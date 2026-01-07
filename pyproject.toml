@@ -26,7 +26,7 @@ dependencies = [
     "langdetect>=1.0.9",
     "nltk>=3.9.2",
     "openai>=2.8.1",
-    "yeval @ git+https://github.com/lintangsutawika/yaeval-harness.git",
+    "yeval @ git+https://github.com/lintangsutawika/yaeval-harness.git#main",
     "evalplus",
 ]
 
