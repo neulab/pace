@@ -1,2 +1,0 @@
-{"task_id": "Mbpp/2", "solution": "def similar_elements(t1, t2):\n    \"\"\"\n    Returns a tuple of elements common to both input tuples.\n    The order of the elements in the output is not guaranteed.\n    \"\"\"\n    return tuple(set(t1) & set(t2))"}
-{"task_id": "Mbpp/3", "solution": "import math\ndef is_not_prime(n):\n    if n < 2:\n        return True\n    if n == 2:\n        return False\n    if n % 2 ==0:\n        return True\n    sqrt_n = int(math.sqrt(n))\n    for i in range(3, sqrt_n + 1, 2):\n        if n % i == 0:\n            return True\n    return False"}
