@@ -418,7 +418,7 @@ def get_task_corr_subset(task, plot_dir=PLOT_DIR, annotate=True):
 
     model_outputs = []
     for m in model_names:
-        model_output, _ = load_model_results_0(m, task)
+        model_output, _ = load_model_results_0(m, task, OUTPUT_DIR_LCB)
         model_outputs.append(model_output)
 
     A_lcb, lcb_ids = dicts_to_matrix(model_outputs, fill_value=0.0)
