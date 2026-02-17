@@ -3,52 +3,42 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
-
-from utils import load_model_results_0  # LiveCodeBench per-task results
-
-import pandas as pd
-
+from typing import List, Dict, Tuple, Optional
 
 # -----------------------------
-# Config
+# Config (generic defaults)
 # -----------------------------
-OUTPUT_DIR_LCB = "/home/yueqis/LiveCodeBench/output/"  # contains per-model dirs
-SWE_CSV_DIR = "/home/yueqis/LiveCodeBench/analysis/swebench"  # folder of SWE CSVs
 PLOT_DIR = "plots"
 
-# SWE CSV schema
-SWE_ID_COL = "metadata.instance_id"
-SWE_SCORE_COL = "metadata.scores.resolved"  # 0/1 or "unknown"
-
-# Split SWE instances: 400 for optimization, 100 for evaluation
+# Train/eval split on TARGET benchmark
 SWE_TRAIN_SIZE = 400
 SWE_EVAL_SIZE = 100
 SWE_SPLIT_SEED = 0
 
-# Two-sided bootstrap (for "bootstrap max" plot)
-BOOT_LCB_K = 200
-BOOT_SWE_K = 400
+# Two-sided bootstrap
+BOOT_LCB_K = 200     # number of source (A) instances sampled per boot
+BOOT_SWE_K = 400     # number of target (B) instances sampled per boot
 N_BOOT = 50
 BOOT_SEED = 0
 
 # Optimization (voting)
 K_LCB = 200
-N_OUTER_OPT = 50          # how many times to optimize with different SWE bootstraps
+N_OUTER_OPT = 10          # how many times to optimize with different TARGET bootstraps
 N_RESTARTS_INNER = 10     # greedy+swap restarts per outer iteration
 SWAP_PASSES = 10
 SWAP_SAMPLE_IN = 300
-CANDIDATE_CAP = None      # e.g. 3000 if LCB has huge number of instances
+CANDIDATE_CAP = None      # e.g. 3000 if source has huge number of instances
 
 
 # -----------------------------
-# Common helpers: corr + plotting
+# Common helpers: corr + plotting (generic labels)
 # -----------------------------
-def compute_mean_over_indices(A, idx):
+def compute_mean_over_indices(A: np.ndarray, idx: List[int]) -> np.ndarray:
     """A: (M,N), idx: list/np array of column indices (can contain repeats)"""
     return A[:, idx].mean(axis=1)
 
 
-def pearson_corr(x, y):
+def pearson_corr(x, y) -> float:
     x = np.asarray(x, dtype=float)
     y = np.asarray(y, dtype=float)
     xc = x - x.mean()
@@ -60,16 +50,95 @@ def pearson_corr(x, y):
     return float((xc @ yc) / (len(y) * xs * ys))
 
 
-def plot_scatter_with_corr(x, y, model_names, title, out_path, annotate=True):
+def plot_scatter_with_corr(
+    x,
+    y,
+    model_names,
+    title,
+    out_path,
+    xlabel="Source mean",
+    ylabel="Target mean",
+    annotate=True,
+    n_boot=500,
+    seed=0,
+):
     x = np.asarray(x, dtype=float)
     y = np.asarray(y, dtype=float)
+
+    # -----------------------------
+    # Base correlation
+    # -----------------------------
     r = pearson_corr(x, y)
 
+    # -----------------------------
+    # Linear fit (closed form)
+    # y = a x + b
+    # -----------------------------
+    a_hat, b_hat = np.polyfit(x, y, deg=1)
+
+    # -----------------------------
+    # Bootstrap correlation + fit
+    # -----------------------------
+    rng = np.random.default_rng(seed)
+    n = len(x)
+
+    r_boot = np.zeros(n_boot, dtype=float)
+    a_boot = np.zeros(n_boot, dtype=float)
+    b_boot = np.zeros(n_boot, dtype=float)
+
+    for i in range(n_boot):
+        idx = rng.integers(0, n, size=n)  # resample pairs
+        xb = x[idx]
+        yb = y[idx]
+
+        r_boot[i] = pearson_corr(xb, yb)
+
+        # Guard against degenerate resamples
+        if np.std(xb) > 0:
+            a_b, b_b = np.polyfit(xb, yb, deg=1)
+        else:
+            a_b, b_b = 0.0, yb.mean()
+
+        a_boot[i] = a_b
+        b_boot[i] = b_b
+
+    r_mean = float(np.mean(r_boot))
+    r_std = float(np.std(r_boot, ddof=1))
+
+    # -----------------------------
+    # Fit line + uncertainty band
+    # -----------------------------
+    xs = np.linspace(x.min(), x.max(), 200)
+
+    y_hat_mean = a_hat * xs + b_hat
+    y_hat_boot = np.outer(a_boot, xs) + b_boot[:, None]
+
+    y_hat_std = y_hat_boot.std(axis=0, ddof=1)
+
+    # -----------------------------
+    # Plot
+    # -----------------------------
     plt.figure(figsize=(6, 6))
     plt.scatter(x, y)
-    plt.xlabel("LiveCodeBench performance (mean over selected instances)")
-    plt.ylabel("SWE-Bench performance (mean over selected instances)")
-    plt.title(f"{title}\nPearson r = {r:.4f}")
+
+    # Mean fit line
+    plt.plot(xs, y_hat_mean, linewidth=2, label="Linear fit")
+
+    # ±1 std band from bootstrap
+    plt.fill_between(
+        xs,
+        y_hat_mean - y_hat_std,
+        y_hat_mean + y_hat_std,
+        alpha=0.25,
+        label="±1σ fit (bootstrap)",
+    )
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(
+        f"{title}\n"
+        f"Pearson r = {r_mean:.4f} ± {r_std:.4f} (bootstrap)"
+    )
 
     if annotate:
         for xi, yi, name in zip(x, y, model_names):
@@ -82,12 +151,15 @@ def plot_scatter_with_corr(x, y, model_names, title, out_path, annotate=True):
                 alpha=0.9,
             )
 
+    plt.legend(fontsize=8)
     plt.tight_layout()
+
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(out_path, dpi=200)
     plt.close()
-    return r
+
+    return r_mean, r_std
 
 
 def plot_curve(values, title, out_path, xlabel="Iteration", ylabel="Value"):
@@ -105,13 +177,13 @@ def plot_curve(values, title, out_path, xlabel="Iteration", ylabel="Value"):
 
 
 # -----------------------------
-# LiveCodeBench: dicts -> matrix (missing => 0)
+# dicts -> matrix (missing => 0)
 # -----------------------------
-def dicts_to_matrix(model_outputs_dicts, fill_value=0.0, id_list=None):
+def dicts_to_matrix(model_outputs_dicts: List[Dict], fill_value: float = 0.0, id_list: Optional[List[str]] = None) -> Tuple[np.ndarray, List[str]]:
     """
     model_outputs_dicts: list[dict], length=M
-      each dict: {question_id: 0/1 or {"pass@1": 0/1} or float}
-    Missing qid in a model dict => fill_value (default 0).
+      each dict: {instance_id: float in [0,1]}
+    Missing id in a model dict => fill_value (default 0).
     """
     M = len(model_outputs_dicts)
     if id_list is None:
@@ -130,93 +202,8 @@ def dicts_to_matrix(model_outputs_dicts, fill_value=0.0, id_list=None):
             j = id2j.get(qid, None)
             if j is None:
                 continue
-            if isinstance(val, dict):
-                A[i, j] = float(val.get("pass@1", fill_value))
-            else:
-                A[i, j] = float(val)
-    return A, ids
-
-
-# -----------------------------
-# SWE: load per-model CSV -> matrix (missing => 0)
-# -----------------------------
-def load_swe_csv_as_dict(csv_path, id_col=SWE_ID_COL, score_col=SWE_SCORE_COL):
-    """
-    Returns dict: {instance_id: 0/1}
-    Treats non-numeric (e.g., 'unknown') as 0.
-    """
-    if pd is None:
-        raise ImportError("pandas is required to read SWE CSVs. Please `pip install pandas`.")
-
-    df = pd.read_csv(csv_path)
-    if id_col not in df.columns or score_col not in df.columns:
-        raise ValueError(
-            f"CSV {csv_path} missing required columns. "
-            f"Need {id_col} and {score_col}. Got columns: {list(df.columns)[:30]}..."
-        )
-
-    inst = df[id_col].astype(str)
-
-    sc_num = pd.to_numeric(df[score_col], errors="coerce")
-    n_bad = int(sc_num.isna().sum())
-    if n_bad > 0:
-        print(f"[WARN] {os.path.basename(csv_path)}: {n_bad} non-numeric SWE scores treated as 0")
-
-    sc = sc_num.fillna(0.0).clip(lower=0.0, upper=1.0)
-    return dict(zip(inst.tolist(), sc.astype(float).tolist()))
-
-
-def swe_dicts_to_matrix(model_swe_dicts, fill_value=0.0, id_list=None):
-    """
-    model_swe_dicts: list[dict], length=M, each dict {swe_instance_id: 0/1}
-    Missing => fill_value.
-    """
-    M = len(model_swe_dicts)
-    if id_list is None:
-        all_ids = set()
-        for d in model_swe_dicts:
-            all_ids.update(d.keys())
-        ids = sorted(all_ids)
-    else:
-        ids = list(id_list)
-
-    id2j = {qid: j for j, qid in enumerate(ids)}
-    A = np.full((M, len(ids)), fill_value, dtype=float)
-
-    for i, d in enumerate(model_swe_dicts):
-        for qid, val in d.items():
-            j = id2j.get(qid, None)
-            if j is None:
-                continue
             A[i, j] = float(val)
     return A, ids
-
-
-def load_swe_matrix_for_models(model_names, swe_csv_dir=SWE_CSV_DIR):
-    """
-    Assumes SWE CSV filenames are: <model_name>.csv
-    Returns:
-      kept_models: list[str]
-      A_swe: (M, N_swe)
-      swe_ids: list[str]
-    """
-    swe_dicts = []
-    kept_models = []
-    missing = []
-
-    for m in model_names:
-        csv_path = os.path.join(swe_csv_dir, f"{m}.csv")
-        if not os.path.exists(csv_path):
-            missing.append(m)
-            continue
-        swe_dicts.append(load_swe_csv_as_dict(csv_path))
-        kept_models.append(m)
-
-    if missing:
-        print(f"[WARN] Missing SWE CSV for {len(missing)} models (skipping them): {missing[:10]}{'...' if len(missing)>10 else ''}")
-
-    A_swe, swe_ids = swe_dicts_to_matrix(swe_dicts, fill_value=0.0)
-    return kept_models, A_swe, swe_ids
 
 
 # -----------------------------
@@ -327,24 +314,24 @@ def multi_restart_select_subset(A, y, k, n_restarts=10, greedy_seed0=0,
 
 
 # -----------------------------
-# Two-sided bootstrap (bootstrap BOTH LCB and SWE) -> pick max corr sample
+# Two-sided bootstrap (bootstrap BOTH source(A) and target(B)) -> pick max corr sample
 # -----------------------------
-def two_sided_bootstrap_max_sample(A_lcb, A_swe, swe_pool_cols, k_lcb, k_swe, n_boot, seed=0):
+def two_sided_bootstrap_max_sample(A_src, A_tgt, tgt_pool_cols, k_src, k_tgt, n_boot, seed=0):
     rng = np.random.default_rng(seed)
-    M, N_lcb = A_lcb.shape
-    pool = np.asarray(swe_pool_cols, dtype=int)
+    M, N_src = A_src.shape
+    pool = np.asarray(tgt_pool_cols, dtype=int)
     if len(pool) == 0:
-        raise ValueError("swe_pool_cols is empty")
+        raise ValueError("tgt_pool_cols is empty")
 
     best_r = -1e18
     best_x = None
     best_y = None
 
     for _ in range(n_boot):
-        idx_l = rng.integers(0, N_lcb, size=k_lcb)  # with replacement
-        idx_s = rng.choice(pool, size=k_swe, replace=True)  # with replacement from train pool
-        x = compute_mean_over_indices(A_lcb, idx_l)
-        y = compute_mean_over_indices(A_swe, idx_s)
+        idx_l = rng.integers(0, N_src, size=k_src)  # with replacement
+        idx_s = rng.choice(pool, size=k_tgt, replace=True)  # with replacement from train pool
+        x = compute_mean_over_indices(A_src, idx_l)
+        y = compute_mean_over_indices(A_tgt, idx_s)
         r = pearson_corr(x, y)
         if r > best_r:
             best_r = r
@@ -355,33 +342,32 @@ def two_sided_bootstrap_max_sample(A_lcb, A_swe, swe_pool_cols, k_lcb, k_swe, n_
 
 
 # -----------------------------
-# SWE bootstrap + optimize LCB repeatedly + voting
-# AND: evaluate corr on SWE eval at every outer iteration (no tqdm)
+# Target bootstrap + optimize Source repeatedly + voting (generic)
 # -----------------------------
-def vote_lcb_instances_over_swe_bootstraps(
-    A_lcb, A_swe, swe_train_cols, y_swe_eval,
-    k_lcb=200, swe_boot_k=400,
+def vote_source_instances_over_target_bootstraps(
+    A_src, A_tgt, tgt_train_cols, y_tgt_eval,
+    k_src=200, tgt_boot_k=400,
     n_outer=50, n_restarts_inner=10,
     seed=0
 ):
     rng = np.random.default_rng(seed)
-    M, N_lcb = A_lcb.shape
-    pool = np.asarray(swe_train_cols, dtype=int)
+    M, N_src = A_src.shape
+    pool = np.asarray(tgt_train_cols, dtype=int)
 
-    counts = np.zeros(N_lcb, dtype=int)
+    counts = np.zeros(N_src, dtype=int)
     eval_corrs = np.zeros(n_outer, dtype=float)
     boot_corrs = np.zeros(n_outer, dtype=float)
 
     print_every = max(1, n_outer // 10)
 
     for t in range(n_outer):
-        # SWE bootstrap -> y_boot
-        idx_s = rng.choice(pool, size=swe_boot_k, replace=True)
-        y_boot = compute_mean_over_indices(A_swe, idx_s)
+        # TARGET bootstrap -> y_boot
+        idx_s = rng.choice(pool, size=tgt_boot_k, replace=True)
+        y_boot = compute_mean_over_indices(A_tgt, idx_s)
 
-        # optimize LCB subset against y_boot
+        # optimize SOURCE subset against y_boot
         S, best_corr = multi_restart_select_subset(
-            A_lcb, y_boot, k=k_lcb,
+            A_src, y_boot, k=k_src,
             n_restarts=n_restarts_inner,
             greedy_seed0=seed + 1000 + t * 13,
             swap_passes=SWAP_PASSES,
@@ -391,9 +377,9 @@ def vote_lcb_instances_over_swe_bootstraps(
 
         counts[S] += 1
 
-        # eval corr on fixed SWE eval set
-        x_S = compute_mean_over_indices(A_lcb, S)
-        eval_corr = pearson_corr(x_S, y_swe_eval)
+        # eval corr on fixed TARGET eval set
+        x_S = compute_mean_over_indices(A_src, S)
+        eval_corr = pearson_corr(x_S, y_tgt_eval)
 
         eval_corrs[t] = eval_corr
         boot_corrs[t] = best_corr
@@ -401,94 +387,99 @@ def vote_lcb_instances_over_swe_bootstraps(
         if (t + 1) % print_every == 0 or (t + 1) == n_outer:
             print(f"  [vote] iter {t+1}/{n_outer}: best_corr_on_y_boot={best_corr:.4f} | eval_corr={eval_corr:.4f}")
 
-    final_S_vote = np.argsort(-counts)[:k_lcb].tolist()
+    final_S_vote = np.argsort(-counts)[:k_src].tolist()
     return final_S_vote, counts, eval_corrs, boot_corrs
 
 
 # -----------------------------
-# Main per-task pipeline
+# Generic pipeline runner (data provided by utils)
 # -----------------------------
-def get_task_corr_subset(task, plot_dir=PLOT_DIR, annotate=True):
-    print(f"\n=== TASK: {task} ===")
-
-    all_models = sorted(os.listdir(OUTPUT_DIR_LCB))
-
-    kept_models, A_swe, swe_ids = load_swe_matrix_for_models(all_models, swe_csv_dir=SWE_CSV_DIR)
-    model_names = kept_models
-
-    model_outputs = []
-    for m in model_names:
-        model_output, _ = load_model_results_0(m, task, OUTPUT_DIR_LCB)
-        model_outputs.append(model_output)
-
-    A_lcb, lcb_ids = dicts_to_matrix(model_outputs, fill_value=0.0)
-
-    assert A_lcb.shape[0] == len(model_names)
-    assert A_swe.shape[0] == len(model_names)
+def run_bootstrap_pipeline(
+    model_names: List[str],
+    A_source: np.ndarray,
+    A_target: np.ndarray,
+    source_ids: List[str],
+    target_ids: List[str],
+    plot_dir: str = PLOT_DIR,
+    title_prefix: str = "",
+    annotate: bool = True,
+    k_source: int = K_LCB,
+    target_train_size: int = SWE_TRAIN_SIZE,
+    target_eval_size: int = SWE_EVAL_SIZE,
+    n_outer: int = N_OUTER_OPT,
+    n_restarts_inner: int = N_RESTARTS_INNER,
+    boot_source_k: int = BOOT_LCB_K,
+    boot_target_k: int = BOOT_SWE_K,
+    boot_seed: int = BOOT_SEED,
+    split_seed: int = SWE_SPLIT_SEED,
+):
+    assert A_source.shape[0] == len(model_names)
+    assert A_target.shape[0] == len(model_names)
 
     print(f"Models used: {len(model_names)}")
-    print(f"LCB matrix: {A_lcb.shape}  |  SWE matrix: {A_swe.shape}")
+    print(f"Source matrix: {A_source.shape}  |  Target matrix: {A_target.shape}")
 
-    # SWE train/eval split
-    N_swe = A_swe.shape[1]
-    if SWE_TRAIN_SIZE + SWE_EVAL_SIZE > N_swe:
-        raise ValueError(f"SWE split sizes exceed available instances: {SWE_TRAIN_SIZE}+{SWE_EVAL_SIZE} > {N_swe}")
+    # Target train/eval split
+    N_tgt = A_target.shape[1]
+    if target_train_size + target_eval_size > N_tgt:
+        raise ValueError(f"Target split sizes exceed available instances: {target_train_size}+{target_eval_size} > {N_tgt}")
 
-    rng_split = np.random.default_rng(SWE_SPLIT_SEED)
-    perm = rng_split.permutation(N_swe)
-    swe_train_cols = perm[:SWE_TRAIN_SIZE].tolist()
-    swe_eval_cols = perm[SWE_TRAIN_SIZE:SWE_TRAIN_SIZE + SWE_EVAL_SIZE].tolist()
+    rng_split = np.random.default_rng(split_seed)
+    perm = rng_split.permutation(N_tgt)
+    tgt_train_cols = perm[:target_train_size].tolist()
+    tgt_eval_cols = perm[target_train_size:target_train_size + target_eval_size].tolist()
 
-    y_swe_eval = compute_mean_over_indices(A_swe, swe_eval_cols)
-    y_swe_train = compute_mean_over_indices(A_swe, swe_train_cols)
+    y_tgt_eval = compute_mean_over_indices(A_target, tgt_eval_cols)
+    y_tgt_train = compute_mean_over_indices(A_target, tgt_train_cols)
 
-    print(f"SWE split: train={len(swe_train_cols)} eval={len(swe_eval_cols)} (total {N_swe})")
+    print(f"Target split: train={len(tgt_train_cols)} eval={len(tgt_eval_cols)} (total {N_tgt})")
 
     # Two-sided bootstrap max
     x_boot_max, y_boot_max, boot_max_corr = two_sided_bootstrap_max_sample(
-        A_lcb, A_swe, swe_train_cols,
-        k_lcb=BOOT_LCB_K, k_swe=BOOT_SWE_K,
+        A_source, A_target, tgt_train_cols,
+        k_src=boot_source_k, k_tgt=boot_target_k,
         n_boot=N_BOOT,
-        seed=BOOT_SEED,
+        seed=boot_seed,
     )
-    print(f"[BOOT MAX] (LCB k={BOOT_LCB_K}, SWE k={BOOT_SWE_K}, n_boot={N_BOOT}) corr={boot_max_corr:.4f}")
+    print(f"[BOOT MAX] (SRC k={boot_source_k}, TGT k={boot_target_k}, n_boot={N_BOOT}) corr={boot_max_corr:.4f}")
 
     # Voting-based subset selection with per-iter eval corr tracking
-    S_vote, vote_counts, eval_corrs, boot_corrs = vote_lcb_instances_over_swe_bootstraps(
-        A_lcb, A_swe, swe_train_cols, y_swe_eval,
-        k_lcb=K_LCB,
-        swe_boot_k=SWE_TRAIN_SIZE,
-        n_outer=N_OUTER_OPT,
-        n_restarts_inner=N_RESTARTS_INNER,
+    S_vote, vote_counts, eval_corrs, boot_corrs = vote_source_instances_over_target_bootstraps(
+        A_source, A_target, tgt_train_cols, y_tgt_eval,
+        k_src=k_source,
+        tgt_boot_k=target_train_size,
+        n_outer=n_outer,
+        n_restarts_inner=n_restarts_inner,
         seed=0,
     )
 
     # Final voted subset evaluation
-    x_vote = compute_mean_over_indices(A_lcb, S_vote)
-    corr_eval = pearson_corr(x_vote, y_swe_eval)
-    corr_train = pearson_corr(x_vote, y_swe_train)
-    print(f"[VOTED SUBSET] size={len(S_vote)} corr(trainSWE_mean)={corr_train:.4f} corr(evalSWE_mean)={corr_eval:.4f}")
+    x_vote = compute_mean_over_indices(A_source, S_vote)
+    corr_eval = pearson_corr(x_vote, y_tgt_eval)
+    corr_train = pearson_corr(x_vote, y_tgt_train)
+    print(f"[VOTED SUBSET] size={len(S_vote)} corr(trainTGT_mean)={corr_train:.4f} corr(evalTGT_mean)={corr_eval:.4f}")
 
     # Save voted subset ids + traces
-    top_ids = [lcb_ids[j] for j in S_vote]
-    out_json = Path(plot_dir) / f"{task}_voted_subset_top{K_LCB}.json"
+    top_ids = [source_ids[j] for j in S_vote]
+    tag = title_prefix or "bootstrap"
+    out_json = Path(plot_dir) / f"{tag}_voted_subset_top{k_source}.json"
     out_json.parent.mkdir(parents=True, exist_ok=True)
     with open(out_json, "w") as f:
         json.dump(
             {
-                "task": task,
+                "title_prefix": title_prefix,
                 "models_used": model_names,
-                "k_lcb": K_LCB,
-                "swe_train_size": SWE_TRAIN_SIZE,
-                "swe_eval_size": SWE_EVAL_SIZE,
-                "n_outer_opt": N_OUTER_OPT,
-                "n_restarts_inner": N_RESTARTS_INNER,
+                "k_source": k_source,
+                "target_train_size": target_train_size,
+                "target_eval_size": target_eval_size,
+                "n_outer_opt": n_outer,
+                "n_restarts_inner": n_restarts_inner,
                 "corr_train": corr_train,
                 "corr_eval": corr_eval,
                 "boot_max_corr": boot_max_corr,
                 "eval_corrs_per_outer_iter": eval_corrs.tolist(),
                 "boot_corrs_per_outer_iter": boot_corrs.tolist(),
-                "selected_lcb_instance_ids": top_ids,
+                "selected_source_instance_ids": top_ids,
             },
             f,
             indent=2,
@@ -496,42 +487,49 @@ def get_task_corr_subset(task, plot_dir=PLOT_DIR, annotate=True):
     print(f"Saved voted subset ids + traces to: {out_json}")
 
     # Plots
+    title_boot = f"{title_prefix} | Two-sided Bootstrap MAX\n(SRC k={boot_source_k}, TGT k={boot_target_k}, n_boot={N_BOOT})"
     plot_scatter_with_corr(
         x_boot_max, y_boot_max, model_names,
-        title=f"{task} | Two-sided Bootstrap MAX\n(LCB k={BOOT_LCB_K}, SWE k={BOOT_SWE_K}, n_boot={N_BOOT})",
-        out_path=f"{plot_dir}/{task}_bootstrap2sided_max_scatter.png",
+        title=title_boot,
+        out_path=f"{plot_dir}/{tag}_bootstrap2sided_max_scatter.png",
+        xlabel="Source mean (selected)", ylabel="Target mean (selected)",
         annotate=annotate
     )
 
-    plt_title = f"{task} | Voted LCB subset (k={K_LCB}) on SWE eval\nr_train={corr_train:.4f}, r_eval={corr_eval:.4f}"
+    plt_title = f"{title_prefix} | Voted SRC subset (k={k_source}) on TGT eval\nr_train={corr_train:.4f}, r_eval={corr_eval:.4f}"
     plot_scatter_with_corr(
-        x_vote, y_swe_eval, model_names,
+        x_vote, y_tgt_eval, model_names,
         title=plt_title,
-        out_path=f"{plot_dir}/{task}_voted_subset_eval_scatter.png",
+        out_path=f"{plot_dir}/{tag}_voted_subset_eval_scatter.png",
+        xlabel="Source mean (voted subset)", ylabel="Target mean (eval)",
         annotate=annotate
     )
 
     plot_curve(
         eval_corrs,
-        title=f"{task} | eval corr per outer iter (SWE eval)",
-        out_path=f"{plot_dir}/{task}_eval_corr_per_iter.png",
+        title=f"{title_prefix} | eval corr per outer iter (TGT eval)",
+        out_path=f"{plot_dir}/{tag}_eval_corr_per_iter.png",
         xlabel="Outer iteration",
         ylabel="Eval correlation",
     )
 
     plot_curve(
         boot_corrs,
-        title=f"{task} | best corr on y_boot per outer iter",
-        out_path=f"{plot_dir}/{task}_best_boot_corr_per_iter.png",
+        title=f"{title_prefix} | best corr on y_boot per outer iter",
+        out_path=f"{plot_dir}/{tag}_best_boot_corr_per_iter.png",
         xlabel="Outer iteration",
         ylabel="Best corr on y_boot",
     )
 
     print(f"Saved plots under: {plot_dir}/")
 
-
-if __name__ == "__main__":
-    get_task_corr_subset("codegeneration", annotate=True)
-    get_task_corr_subset("codeexecution", annotate=True)
-    get_task_corr_subset("selfrepair", annotate=True)
-    get_task_corr_subset("testoutputprediction", annotate=True)
+    return {
+        "k_source": k_source,
+        "corr_train": corr_train,
+        "corr_eval": corr_eval,
+        "selected_source_indices": S_vote,
+        "selected_source_ids": top_ids,
+        "eval_corrs": eval_corrs,
+        "boot_corrs": boot_corrs,
+        "boot_max_corr": boot_max_corr,
+    }
