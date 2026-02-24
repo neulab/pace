@@ -1,0 +1,126 @@
+{
+  "results": {
+    "aime25": {
+      "alias": "aime25",
+      "exact_match,none": 0.4666666666666667,
+      "exact_match_stderr,none": 0.09264111117062017
+    }
+  },
+  "group_subtasks": {
+    "aime25": []
+  },
+  "configs": {
+    "aime25": {
+      "task": "aime25",
+      "tag": [
+        "math_word_problems"
+      ],
+      "dataset_path": "math-ai/aime25",
+      "training_split": "test",
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "Question: {{problem}}\nPlease reason step by step, and put your final answer within \\boxed{}.\nAnswer:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_results(doc: dict, results: List[str]) -> Dict[str, int]:\n    retval = 0\n    response = results[0]\n    answer = None\n\n    # Priority 1: Extract from \\\\boxed{} if present (most reliable)\n    boxed_answer = last_boxed_only_string(response)\n    if boxed_answer is not None:\n        try:\n            boxed_content = remove_boxed(boxed_answer)\n            if boxed_content is not None:\n                answer = boxed_content\n        except (AssertionError, IndexError):\n            pass\n\n    # Priority 2: If no boxed answer, try to find the last integer in the response\n    # AIME answers are always integers between 0-999\n    if answer is None:\n        # First, try to find the last standalone integer in the final portion of the response\n        # This handles cases like \"Sum = $21 + 49 = 70$.\" where we want \"70\"\n        last_portion = response[-1000:] if len(response) > 1000 else response\n\n        # Look for the last \"= {number}\" pattern (handles \"= 70$.\" or \"= 70.\" or \"= 70\\n\")\n        equals_matches = re.findall(r'=\\s*(\\d+)(?:\\s*[.$!?\\n]|\\s*$)', last_portion)\n        if equals_matches:\n            answer = equals_matches[-1]\n\n        # If no \"= number\" pattern, look for keyword patterns\n        if answer is None:\n            # Look for \"answer is 70\", \"remainder is 16\", \"sum is 70\" etc.\n            keyword_matches = re.findall(\n                r'(?:answer|result|remainder|sum|total|value|difference|number)\\s+(?:is|=|:)?\\s*(\\d+)',\n                last_portion, re.IGNORECASE\n            )\n            if keyword_matches:\n                answer = keyword_matches[-1]\n\n        # Final fallback: find the last standalone integer in the last 500 chars\n        if answer is None:\n            final_portion = response[-500:] if len(response) > 500 else response\n            numbers = re.findall(r'\\b(\\d+)\\b', final_portion)\n            if numbers:\n                answer = numbers[-1]\n\n    # Priority 3: Original fallback - extract from $...$ format\n    if answer is None:\n        indices = [pos for pos, char in enumerate(response) if char == \"$\"]\n        if len(indices) <= 1:\n            answer = response\n        else:\n            answer = response[indices[0] + 1 : indices[-1]]\n\n    # Check if answer matches target\n    answer_key = next(k for k in doc.keys() if k.lower() == \"answer\")\n    target = str(doc[answer_key])\n    if is_equiv(answer, target):\n        retval = 1\n\n    return {\"exact_match\": retval}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{problem}}\nPlease reason step by step, and put your final answer within \\boxed{}.\nAnswer:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "Question:",
+          "</s>",
+          "<|im_end|>",
+          "<|eot_id|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 32768
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 0.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    }
+  },
+  "versions": {
+    "aime25": 0.0
+  },
+  "n-shot": {
+    "aime25": 0
+  },
+  "higher_is_better": {
+    "aime25": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "aime25": {
+      "original": 30,
+      "effective": 30
+    }
+  },
+  "config": {
+    "model": "openai-chat-completions",
+    "model_args": {
+      "model": "neulab/qwen3-coder-480b-a35b-instruct",
+      "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+      "disable_seed": true
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1770149869.160589,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "aime25": "5439460f52db3ca0d8e89d9f703b71640051d4cfc5130789cc5ec04a866474dc"
+  },
+  "model_source": "openai-chat-completions",
+  "model_name": "neulab/qwen3-coder-480b-a35b-instruct",
+  "model_name_sanitized": "neulab__qwen3-coder-480b-a35b-instruct",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "408.9307588529773"
+}

@@ -1,0 +1,154 @@
+{
+  "results": {
+    "logiqa_cot_zeroshot": {
+      "alias": "logiqa_cot_zeroshot",
+      "exact_match,strict-match": 0.8417818740399385,
+      "exact_match_stderr,strict-match": 0.014314336577643944,
+      "exact_match,flexible-extract": 0.8417818740399385,
+      "exact_match_stderr,flexible-extract": 0.014314336577643944
+    }
+  },
+  "group_subtasks": {
+    "logiqa_cot_zeroshot": []
+  },
+  "configs": {
+    "logiqa_cot_zeroshot": {
+      "task": "logiqa_cot_zeroshot",
+      "tag": "logiqa",
+      "dataset_path": "EleutherAI/logiqa",
+      "dataset_name": "logiqa",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "def doc_to_text(doc) -> str:\n    \"\"\"\n    Format the document into a CoT prompt for chat completions.\n    \"\"\"\n    choices = [\"A\", \"B\", \"C\", \"D\"]\n    prompt = \"Read the following passage and answer the question.\\n\\n\"\n    prompt += f\"Passage: {doc['context']}\\n\\n\"\n    prompt += f\"Question: {doc['question']}\\n\\n\"\n    prompt += \"Choices:\\n\"\n    for choice, option in zip(choices, doc[\"options\"]):\n        prompt += f\"({choice}) {option}\\n\"\n    prompt += \"\\nThink step by step, then provide your final answer in the format: \\\"The answer is (X)\\\" where X is A, B, C, or D.\"\n    return prompt\n",
+      "doc_to_target": "def doc_to_target(doc) -> str:\n    \"\"\"\n    Convert the label to (A), (B), (C), (D) format.\n    \"\"\"\n    label_map = {\"a\": \"(A)\", \"b\": \"(B)\", \"c\": \"(C)\", \"d\": \"(D)\"}\n    return label_map[doc[\"label\"].strip().lower()]\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text at 0x7f022bd944a0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x7f022bd947c0>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 16384
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?i)(?:the answer is|answer is|the correct answer is)\\s*(\\([A-D]\\))"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        },
+        {
+          "name": "flexible-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(\\([A-D]\\))",
+              "group_select": -1
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "gemini/gemini-3-pro-preview",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    }
+  },
+  "versions": {
+    "logiqa_cot_zeroshot": 1.0
+  },
+  "n-shot": {
+    "logiqa_cot_zeroshot": 0
+  },
+  "higher_is_better": {
+    "logiqa_cot_zeroshot": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "logiqa_cot_zeroshot": {
+      "original": 651,
+      "effective": 651
+    }
+  },
+  "config": {
+    "model": "openai-chat-completions",
+    "model_args": {
+      "model": "gemini/gemini-3-pro-preview",
+      "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+      "disable_seed": true
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {
+      "max_gen_toks": 16384
+    },
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1770157686.1366348,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "logiqa_cot_zeroshot": "e0fa9b1f3196331a7ae5374e5ee4c9dd5a6370e37cb54c090f6862a5e6251d61"
+  },
+  "model_source": "openai-chat-completions",
+  "model_name": "gemini/gemini-3-pro-preview",
+  "model_name_sanitized": "gemini__gemini-3-pro-preview",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "24377.18150847801"
+}

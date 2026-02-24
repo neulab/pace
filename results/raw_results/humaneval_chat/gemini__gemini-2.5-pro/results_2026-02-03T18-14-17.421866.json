@@ -1,0 +1,130 @@
+{
+  "results": {
+    "humaneval_chat": {
+      "alias": "humaneval_chat",
+      "pass@1,create_test": 0.975609756097561,
+      "pass@1_stderr,create_test": 0.01208237572239194
+    }
+  },
+  "group_subtasks": {
+    "humaneval_chat": []
+  },
+  "configs": {
+    "humaneval_chat": {
+      "task": "humaneval_chat",
+      "dataset_path": "openai/openai_humaneval",
+      "test_split": "test",
+      "doc_to_text": "Complete the following Python function. Return ONLY the complete function inside a ```python code block, nothing else.\n\n```python\n{{ prompt }}\n```\n",
+      "doc_to_target": "{{test}}\ncheck({{entry_point}})",
+      "unsafe_code": true,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Complete the following Python function. Return ONLY the complete function inside a ```python code block, nothing else.\n\n```python\n{{ prompt }}\n```\n",
+        "doc_to_choice": null,
+        "doc_to_target": "{{test}}\ncheck({{entry_point}})",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "def pass_at_k(references: list[str], predictions: list[list[str]], k: list[int] = None):\n    global compute_\n    assert k is not None\n    if isinstance(k, int):\n        k = [k]\n    res = compute_.compute(\n        references=references,\n        predictions=predictions,\n        k=k,\n    )\n    return res[0]\n",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "k": [
+            1
+          ]
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [],
+        "max_gen_toks": 32768,
+        "do_sample": false
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "create_test",
+          "filter": [
+            {
+              "function": "custom",
+              "filter_fn": "<function build_predictions_instruct at 0x7fe1b9fc7420>"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "gemini/gemini-2.5-pro",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    }
+  },
+  "versions": {
+    "humaneval_chat": 1.0
+  },
+  "n-shot": {
+    "humaneval_chat": 0
+  },
+  "higher_is_better": {
+    "humaneval_chat": {
+      "pass_at_k": true
+    }
+  },
+  "n-samples": {
+    "humaneval_chat": {
+      "original": 164,
+      "effective": 164
+    }
+  },
+  "config": {
+    "model": "openai-chat-completions",
+    "model_args": {
+      "model": "gemini/gemini-2.5-pro",
+      "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+      "disable_seed": true
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {
+      "max_gen_toks": 32768
+    },
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1770155861.1030738,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "humaneval_chat": "311db66838799d743a8c10b0cbb4d1eb916716d2b338f8688f9497190f2683a7"
+  },
+  "model_source": "openai-chat-completions",
+  "model_name": "gemini/gemini-2.5-pro",
+  "model_name_sanitized": "gemini__gemini-2.5-pro",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "4606.411871657008"
+}

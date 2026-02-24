@@ -1,0 +1,50 @@
+{
+    "model_name_or_path": "litellm_proxy/moonshot/kimi-k2.5",
+    "total_instances": 16,
+    "submitted_instances": 16,
+    "completed_instances": 16,
+    "resolved_instances": 3,
+    "unresolved_instances": 13,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 3288,
+    "total_passed_tests": 2683,
+    "completed_ids": [
+        "cachetools",
+        "deprecated",
+        "wcwidth",
+        "imapclient",
+        "portalocker",
+        "voluptuous",
+        "simpy",
+        "tinydb",
+        "marshmallow",
+        "chardet",
+        "parsel",
+        "jinja",
+        "cookiecutter",
+        "babel",
+        "pyjwt",
+        "minitorch"
+    ],
+    "resolved_ids": [
+        "deprecated",
+        "portalocker",
+        "voluptuous"
+    ],
+    "unresolved_ids": [
+        "cachetools",
+        "wcwidth",
+        "imapclient",
+        "simpy",
+        "tinydb",
+        "marshmallow",
+        "chardet",
+        "parsel",
+        "jinja",
+        "cookiecutter",
+        "babel",
+        "pyjwt",
+        "minitorch"
+    ]
+}

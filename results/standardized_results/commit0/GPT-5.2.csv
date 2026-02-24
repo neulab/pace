@@ -1,0 +1,17 @@
+id,score,metric_name
+cachetools,1.0,resolved
+portalocker,1.0,resolved
+pyjwt,1.0,resolved
+babel,0.0,resolved
+chardet,0.0,resolved
+cookiecutter,0.0,resolved
+deprecated,0.0,resolved
+imapclient,0.0,resolved
+jinja,0.0,resolved
+marshmallow,0.0,resolved
+minitorch,0.0,resolved
+parsel,0.0,resolved
+simpy,0.0,resolved
+tinydb,0.0,resolved
+voluptuous,0.0,resolved
+wcwidth,0.0,resolved

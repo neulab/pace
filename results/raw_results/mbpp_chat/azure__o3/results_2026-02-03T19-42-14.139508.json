@@ -1,0 +1,126 @@
+{
+  "results": {
+    "mbpp_chat": {
+      "alias": "mbpp_chat",
+      "pass_at_1,extract_code": 0.976,
+      "pass_at_1_stderr,extract_code": 0.006851414727451212
+    }
+  },
+  "group_subtasks": {
+    "mbpp_chat": []
+  },
+  "configs": {
+    "mbpp_chat": {
+      "task": "mbpp_chat",
+      "dataset_path": "google-research-datasets/mbpp",
+      "dataset_name": "full",
+      "test_split": "test",
+      "doc_to_text": "You are an expert Python programmer. Write a Python function to solve the following task. Return ONLY the complete function inside a ```python code block, nothing else.\n\nTask: {{text}}\n\nYour code should pass these tests:\n{{test_list[0]}}\n{{test_list[1]}}\n{{test_list[2]}}\n",
+      "doc_to_target": "{{test_list[0]}}\n{{test_list[1]}}\n{{test_list[2]}}",
+      "unsafe_code": true,
+      "description": "",
+      "target_delimiter": "",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "You are an expert Python programmer. Write a Python function to solve the following task. Return ONLY the complete function inside a ```python code block, nothing else.\n\nTask: {{text}}\n\nYour code should pass these tests:\n{{test_list[0]}}\n{{test_list[1]}}\n{{test_list[2]}}\n",
+        "doc_to_choice": null,
+        "doc_to_target": "{{test_list[0]}}\n{{test_list[1]}}\n{{test_list[2]}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": ""
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "def pass_at_1(\n    references: Union[str, list[str]], predictions: Union[str, list[list[str]]]\n) -> float:\n    if isinstance(references, str):\n        references = [references]\n    if isinstance(predictions[0], str):\n        predictions = [[p] for p in predictions]\n    return pass_at_k.compute(\n        references=references,\n        predictions=predictions,\n        k=[1],\n    )[0][\"pass@1\"]\n",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 16384,
+        "until": [],
+        "do_sample": false
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "extract_code",
+          "filter": [
+            {
+              "function": "custom",
+              "filter_fn": "<function build_predictions at 0x7f1125aa14e0>"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "azure/o3",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions"
+      }
+    }
+  },
+  "versions": {
+    "mbpp_chat": 1.0
+  },
+  "n-shot": {
+    "mbpp_chat": 0
+  },
+  "higher_is_better": {
+    "mbpp_chat": {
+      "pass_at_1": true
+    }
+  },
+  "n-samples": {
+    "mbpp_chat": {
+      "original": 500,
+      "effective": 500
+    }
+  },
+  "config": {
+    "model": "openai-chat-completions",
+    "model_args": {
+      "model": "azure/o3",
+      "base_url": "https://cmu.litellm.ai/v1/chat/completions"
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {
+      "max_gen_toks": 16384
+    },
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1770155438.0493755,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "mbpp_chat": "7efb36a1cd6ffab259adf3e78b0948610cf266ef6f2a70434196ff1b439b1124"
+  },
+  "model_source": "openai-chat-completions",
+  "model_name": "azure/o3",
+  "model_name_sanitized": "azure__o3",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "10305.48346347292"
+}

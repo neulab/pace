@@ -1,0 +1,48 @@
+{
+    "model_name_or_path": "litellm_proxy/deepseek/deepseek-reasoner",
+    "total_instances": 16,
+    "submitted_instances": 15,
+    "completed_instances": 15,
+    "resolved_instances": 5,
+    "unresolved_instances": 10,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 3753,
+    "total_passed_tests": 3652,
+    "completed_ids": [
+        "deprecated",
+        "cachetools",
+        "marshmallow",
+        "voluptuous",
+        "cookiecutter",
+        "pyjwt",
+        "imapclient",
+        "chardet",
+        "simpy",
+        "portalocker",
+        "jinja",
+        "wcwidth",
+        "babel",
+        "parsel",
+        "minitorch"
+    ],
+    "resolved_ids": [
+        "deprecated",
+        "marshmallow",
+        "imapclient",
+        "portalocker",
+        "jinja"
+    ],
+    "unresolved_ids": [
+        "cachetools",
+        "voluptuous",
+        "cookiecutter",
+        "pyjwt",
+        "chardet",
+        "simpy",
+        "wcwidth",
+        "babel",
+        "parsel",
+        "minitorch"
+    ]
+}

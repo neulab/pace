@@ -1,0 +1,50 @@
+{
+    "model_name_or_path": "litellm_proxy/gpt-5.2-codex",
+    "total_instances": 16,
+    "submitted_instances": 16,
+    "completed_instances": 16,
+    "resolved_instances": 10,
+    "unresolved_instances": 6,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 4279,
+    "total_passed_tests": 4270,
+    "completed_ids": [
+        "wcwidth",
+        "imapclient",
+        "marshmallow",
+        "jinja",
+        "cachetools",
+        "voluptuous",
+        "simpy",
+        "deprecated",
+        "parsel",
+        "portalocker",
+        "pyjwt",
+        "chardet",
+        "tinydb",
+        "babel",
+        "cookiecutter",
+        "minitorch"
+    ],
+    "resolved_ids": [
+        "wcwidth",
+        "imapclient",
+        "marshmallow",
+        "jinja",
+        "voluptuous",
+        "simpy",
+        "deprecated",
+        "portalocker",
+        "tinydb",
+        "cookiecutter"
+    ],
+    "unresolved_ids": [
+        "cachetools",
+        "parsel",
+        "pyjwt",
+        "chardet",
+        "babel",
+        "minitorch"
+    ]
+}

@@ -1,0 +1,856 @@
+{
+  "results": {
+    "acp_app_gen": {
+      "alias": "acp_app_gen",
+      "score,acp_grammar_parse": 0.14615384615384616,
+      "score_stderr,acp_grammar_parse": 0.03110284258903805
+    },
+    "acp_areach_gen": {
+      "alias": "acp_areach_gen",
+      "score,acp_grammar_parse": 0.007692307692307693,
+      "score_stderr,acp_grammar_parse": 0.007692307692307693
+    },
+    "acp_just_gen": {
+      "alias": "acp_just_gen",
+      "score,acp_grammar_parse": 0.6307692307692307,
+      "score_stderr,acp_grammar_parse": 0.04249025499621756
+    },
+    "acp_land_gen": {
+      "alias": "acp_land_gen",
+      "score,acp_grammar_parse": 0.27692307692307694,
+      "score_stderr,acp_grammar_parse": 0.03939825345266468
+    },
+    "acp_nexta_gen": {
+      "alias": "acp_nexta_gen",
+      "score,acp_grammar_parse": 0.4153846153846154,
+      "score_stderr,acp_grammar_parse": 0.043387584110356495
+    },
+    "acp_prog_gen": {
+      "alias": "acp_prog_gen",
+      "score,acp_grammar_parse": 0.7307692307692307,
+      "score_stderr,acp_grammar_parse": 0.03905328918744188
+    },
+    "acp_reach_gen": {
+      "alias": "acp_reach_gen",
+      "score,acp_grammar_parse": 0.34615384615384615,
+      "score_stderr,acp_grammar_parse": 0.04188683174943867
+    },
+    "acp_val_gen": {
+      "alias": "acp_val_gen",
+      "score,acp_grammar_parse": 0.47692307692307695,
+      "score_stderr,acp_grammar_parse": 0.04397563240166502
+    }
+  },
+  "group_subtasks": {
+    "acp_val_gen": [],
+    "acp_reach_gen": [],
+    "acp_prog_gen": [],
+    "acp_nexta_gen": [],
+    "acp_land_gen": [],
+    "acp_just_gen": [],
+    "acp_app_gen": [],
+    "acp_areach_gen": []
+  },
+  "configs": {
+    "acp_app_gen": {
+      "task": "acp_app_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_app_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Each action starts with an opening parenthesis and ends with closing parenthesis. Provide only the actions. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f3-2f and its arm is empty. All the positions are open except the following: f2-0f has shape0 shaped lock, f4-2f has shape0 shaped lock. Key key0-0 is at position f2-2f. Key key0-1 is at position f1-3f. The available actions are: (unlock ?curpos ?lockpos ?key ?shape) - unlock the place ?lockpos with key ?key of shape ?shape from the current position place ?curpos, (move ?curpos ?nextpos) - travel from the current position ?curpos to the next position ?nextpos, (pickup ?curpos ?key) - pick up key ?key from place ?curpos, (pickup-and-loose ?curpos ?newkey ?oldkey) - pick up the key ?newkey at the current position place ?curpos and loose the key ?oldkey being held, and (putdown ?curpos ?key) - put down key ?key at current position place ?curpos.",
+            "question": "Generate the list of all ground actions that are applicable in this state.",
+            "answer": "[(move f3-2f f3-1f), (move f3-2f f2-2f), (move f3-2f f3-3f)]"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l0-0 and l0-1 are in c0; l1-0 and l1-1 are in c1. Currently, t1, p2, and p3 are at l1-0, a0 is at l0-0, t0 is at l0-1, p1 and p0 are in t1. The available actions are: (load-truck ?obj ?truck ?loc) - load object ?obj into truck ?truck at location ?loc, (load-airplane ?obj ?airplane ?loc) - load object ?obj into airplane ?airplane at location ?loc, (unload-truck ?obj ?truck ?loc) - unload object ?obj from truck ?truck at location ?loc, (unload-airplane ?obj ?airplane ?loc) - remove the object ?obj from the airplane ?airplane and place it on the location ?loc, (drive-truck ?truck ?loc-from ?loc-to ?city) - navigate the truck ?truck from its current location ?loc-from in city ?city to the new location ?loc-to within the same city, and (fly-airplane ?airplane ?loc-from ?loc-to) - fly airplane ?airplane from airport ?loc-from to airport ?loc-to.",
+            "question": "Generate the list of all ground actions that are applicable in this state.",
+            "answer": "[(drive-truck t1 l1-0 l1-0 c1), (drive-truck t0 l0-1 l0-0 c0), (load-truck p2 t1 l1-0), (unload-truck p0 t1 l1-0), (drive-truck t0 l0-1 l0-1 c0), (fly-airplane a0 l0-0 l1-0), (fly-airplane a0 l0-0 l0-0), (unload-truck p1 t1 l1-0), (drive-truck t1 l1-0 l1-1 c1), (load-truck p3 t1 l1-0)]"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Each action starts with an opening parenthesis and ends with closing parenthesis. Provide only the actions. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "action_list"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_areach_gen": {
+      "task": "acp_areach_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_areach_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Each action starts with an opening parenthesis and ends with closing parenthesis. Provide one action or None. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 0 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f2-2f and its arm is empty. All the positions are open except the following: f2-0f has shape0 shaped lock, f4-2f has shape0 shaped lock. Key key0-0 is at position f1-2f. Key key0-1 is at position f1-3f. The available actions are: (unlock ?curpos ?lockpos ?key ?shape) - unlock the place ?lockpos with key ?key of shape ?shape from the current position place ?curpos, (move ?curpos ?nextpos) - move from place ?curpos to place ?nextpos, (pickup ?curpos ?key) - retrieve the key ?key from its current position ?curpos, (pickup-and-loose ?curpos ?newkey ?oldkey) - pick up the key ?newkey from the current position ?curpos and loose the key ?oldkey which is being held, and (putdown ?curpos ?key) - put the key ?key at the current position place ?curpos.",
+            "question": "What action can never become applicable, in any state reachable from the current state?",
+            "answer": "(unlock f0-3f f0-4f key0-0 shape0)"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l1-1 and l1-0 are in c1; l0-0 and l0-1 are in c0. Currently, t1 is at l1-1, a0 is at l1-0, p0 is at l0-0, t0 is at l0-1, p2 is in a0, p1 is in t1, p3 is in t0. The available actions are: (load-truck ?obj ?truck ?loc) - load the object ?obj from location ?loc into the truck ?truck, (load-airplane ?obj ?airplane ?loc) - load object ?obj into airplane ?airplane at location ?loc, (unload-truck ?obj ?truck ?loc) - offload the object ?obj from the truck ?truck at location ?loc, (unload-airplane ?obj ?airplane ?loc) - offload the object ?obj from the airplane ?airplane at location ?loc, (drive-truck ?truck ?loc-from ?loc-to ?city) - navigate the truck ?truck from location ?loc-from in city ?city to location ?loc-to in the same city, and (fly-airplane ?airplane ?loc-from ?loc-to) - operate the airplane ?airplane from airport ?loc-from to airport ?loc-to.",
+            "question": "What action can never become applicable, in any state reachable from the current state?",
+            "answer": "(drive-truck t0 l1-1 l0-0 c0)"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Each action starts with an opening parenthesis and ends with closing parenthesis. Provide one action or None. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "act"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_just_gen": {
+      "task": "acp_just_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_just_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f3-3f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock, f2-0f has shape0 shaped lock. Key key0-0 is at position f2-2f. Key key0-1 is at position f1-3f. The available actions are: (unlock ?curpos ?lockpos ?key ?shape) - unlock place ?lockpos with key ?key of shape ?shape from current position place ?curpos, (move ?curpos ?nextpos) - move from ?curpos to ?nextpos, (pickup ?curpos ?key) - retrieve the key ?key from its current position ?curpos, (pickup-and-loose ?curpos ?newkey ?oldkey) - pick up key ?newkey at current position place ?curpos and loose key ?oldkey being held, and (putdown ?curpos ?key) - put down the key ?key at the current position ?curpos. The goal is to reach a state where the following facts hold: Key key0-0 is at f2-0f location and Key key0-1 is at f1-3f location.",
+            "question": "Simplify the plan [(move f3-3f f3-2f), (move f3-2f f2-2f), (pickup f2-2f key0-0), (move f2-2f f2-1f), (putdown f2-1f key0-0), (pickup f2-1f key0-0), (unlock f2-1f f2-0f key0-0 shape0), (move f2-1f f2-0f), (putdown f2-0f key0-0)] by removing either a single action or a pair of consecutive actions, while still maintaining a valid plan. Provide the resulting simplified plan.",
+            "answer": "[(move f3-3f f3-2f), (move f3-2f f2-2f), (pickup f2-2f key0-0), (move f2-2f f2-1f), (unlock f2-1f f2-0f key0-0 shape0), (move f2-1f f2-0f), (putdown f2-0f key0-0)]"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l1-1 and l1-0 are in c1; l0-0 and l0-1 are in c0. Currently, p2, p1, and p3 are at l1-0, p0 and t1 are at l1-1, t0 is at l0-1, a0 is at l0-0. The available actions are: (load-truck ?obj ?truck ?loc) - load the object ?obj from location ?loc into the truck ?truck, (load-airplane ?obj ?airplane ?loc) - load the object ?obj from location ?loc onto the airplane ?airplane, (unload-truck ?obj ?truck ?loc) - unload the object ?obj from the truck ?truck at location ?loc, (unload-airplane ?obj ?airplane ?loc) - remove the object ?obj from the airplane ?airplane and place it on the location ?loc, (drive-truck ?truck ?loc-from ?loc-to ?city) - drive truck ?truck from location ?loc-from in city ?city to location ?loc-to in the same city, and (fly-airplane ?airplane ?loc-from ?loc-to) - fly the airplane ?airplane from location ?loc-from to location ?loc-to. The goal is to reach a state where the following facts hold: p3 is at l0-1, p2 is at l1-0, p0 is at l0-0, and p1 is at l1-0.",
+            "question": "Simplify the plan [(fly-airplane a0 l0-0 l1-0), (fly-airplane a0 l1-0 l0-0), (load-truck p0 t1 l1-1), (drive-truck t1 l1-1 l1-0 c1), (unload-truck p0 t1 l1-0), (fly-airplane a0 l0-0 l1-0), (load-airplane p0 a0 l1-0), (load-airplane p3 a0 l1-0), (fly-airplane a0 l1-0 l0-0), (unload-airplane p0 a0 l0-0), (unload-airplane p3 a0 l0-0), (drive-truck t0 l0-1 l0-0 c0), (load-truck p3 t0 l0-0), (drive-truck t0 l0-0 l0-1 c0), (unload-truck p3 t0 l0-1)] by removing either a single action or a pair of consecutive actions, while still maintaining a valid plan. Provide the resulting simplified plan.",
+            "answer": "[(load-truck p0 t1 l1-1), (drive-truck t1 l1-1 l1-0 c1), (unload-truck p0 t1 l1-0), (fly-airplane a0 l0-0 l1-0), (load-airplane p0 a0 l1-0), (load-airplane p3 a0 l1-0), (fly-airplane a0 l1-0 l0-0), (unload-airplane p0 a0 l0-0), (unload-airplane p3 a0 l0-0), (drive-truck t0 l0-1 l0-0 c0), (load-truck p3 t0 l0-0), (drive-truck t0 l0-0 l0-1 c0), (unload-truck p3 t0 l0-1)]"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "action_list",
+              "clean": "simplified plan"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_land_gen": {
+      "task": "acp_land_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_land_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Provide only the ground proposition or None. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f3-0f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock. Key key0-0 is at position f3-0f. Key key0-1 is at position f1-3f. The goal is to reach a state where the following facts hold: Key key0-0 is at f2-0f location and Key key0-1 is at f1-3f location. The available propositions are: (at ?r ?x) - Key ?r is at ?x location, (at-robot ?x) - Robot is at ?x location, (locked ?x) - Location ?x is locked, (holding ?k) - Robot is holding ?k, (open ?x) - Location ?x is open, and (arm-empty) - Robot's arm is empty.",
+            "question": "Generate a non-trivial fact landmark, one that does not hold in the initial state or goal.",
+            "answer": "(holding key0-0)"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l1-0 and l1-1 are in c1; l0-1 and l0-0 are in c0. Currently, a0 and p2 are at l1-0, t0 is at l0-0, t1 is at l1-1, p3 and p1 are in a0, p0 is in t1. The goal is to reach a state where the following facts hold: p0 is at l0-0, p2 is at l1-0, p1 is at l1-0, and p3 is at l0-1. The available propositions are: (at ?obj ?loc) - ?obj is at ?loc and (in ?obj1 ?obj2) - ?obj1 is in ?obj2.",
+            "question": "Generate a non-trivial fact landmark, one that does not hold in the initial state or goal.",
+            "answer": "(in p3 t0)"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Provide only the ground proposition or None. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "act"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_nexta_gen": {
+      "task": "acp_nexta_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_nexta_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Each action starts with an opening parenthesis and ends with closing parenthesis. Provide only the action. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty. There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0. Currently, the robot is at position f4-0f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock. Key key0-0 is at position f3-0f. Key key0-1 is at position f1-3f. The goal is to reach a state where the following facts hold: Key key0-0 is at f2-0f location and Key key0-1 is at f1-3f location. The available actions are: (unlock ?curpos ?lockpos ?key ?shape) - unlock place ?lockpos with key ?key of shape ?shape from current position place ?curpos, (move ?curpos ?nextpos) - travel from the current position ?curpos to the next position ?nextpos, (pickup ?curpos ?key) - pick up key ?key from place ?curpos, (pickup-and-loose ?curpos ?newkey ?oldkey) - pick up the key ?newkey at the current position place ?curpos and loose the key ?oldkey being held, and (putdown ?curpos ?key) - put down the key ?key at the current position ?curpos.",
+            "question": "What is the next action that takes us towards the goal?",
+            "answer": "(move f4-0f f3-0f)"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l0-1 and l0-0 are in c0; l1-1 and l1-0 are in c1. Currently, t0 is at l0-1, a0 is at l0-0, t1 and p1 are at l1-0, p2, p0, and p3 are in t1. The goal is to reach a state where the following facts hold: p3 is at l0-1, p2 is at l1-0, p1 is at l1-0, and p0 is at l0-0. The available actions are: (load-truck ?obj ?truck ?loc) - load object ?obj into truck ?truck at location ?loc, (load-airplane ?obj ?airplane ?loc) - load the object ?obj from location ?loc onto the airplane ?airplane, (unload-truck ?obj ?truck ?loc) - unload the object ?obj from the truck ?truck at location ?loc, (unload-airplane ?obj ?airplane ?loc) - unload object ?obj from airplane ?airplane at location ?loc, (drive-truck ?truck ?loc-from ?loc-to ?city) - drive the truck ?truck in city ?city from location ?loc-from to location ?loc-to, and (fly-airplane ?airplane ?loc-from ?loc-to) - operate the airplane ?airplane from airport ?loc-from to airport ?loc-to.",
+            "question": "What is the next action that takes us towards the goal?",
+            "answer": "(drive-truck t0 l0-1 l0-0 c0)"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Each action starts with an opening parenthesis and ends with closing parenthesis. Provide only the action. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "action_name"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_prog_gen": {
+      "task": "acp_prog_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_prog_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Provide only the two lists with the ground propositions. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. \nThe grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  \nThere are 2 keys in 0 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  \nCurrently, the robot is at position f0-1f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock. Key key0-1 is at position f1-3f. Key key0-0 is at position f0-1f. The available propositions are: (at ?r ?x) - Key ?r is at ?x location, (at-robot ?x) - Robot is at ?x location, (locked ?x) - Location ?x is locked, (holding ?k) - Robot is holding ?k, (open ?x) - Location ?x is open, and (arm-empty) - Robot's arm is empty.",
+            "question": "Break down the outcomes of performing the action \"retrieve the key key0-0 from its current position f0-1f\" into two lists, positive effects and negative effects. Positive effects are the propositions that are false in the current state but will become true after performing the action. Negative effects are the propositions that are true in the current state and will become false after performing the action.",
+            "answer": "[(holding key0-0)] [(arm-empty), (at key0-0 f0-1f)]"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l1-1 and l1-0 are in c1; l0-1 and l0-0 are in c0. Currently, p2, t1, p1, p3, a0, and p0 are at l1-0, t0 is at l0-1. The available propositions are: (at ?obj ?loc) - ?obj is at ?loc and (in ?obj1 ?obj2) - ?obj1 is in ?obj2.",
+            "question": "Break down the outcomes of performing the action \"load object p3 into truck t1 at location l1-0\" into two lists, positive effects and negative effects. Positive effects are the propositions that are false in the current state but will become true after performing the action. Negative effects are the propositions that are true in the current state and will become false after performing the action.",
+            "answer": "[(in p3 t1)] [(at p3 l1-0)]"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Provide only the two lists with the ground propositions. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "progression_list",
+              "clean": "pos_neg"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_reach_gen": {
+      "task": "acp_reach_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_reach_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Provide one proposition or None. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 0 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f1-2f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock. Key key0-0 is at position f1-0f. Key key0-1 is at position f1-3f. The available propositions are: (at ?r ?x) - Key ?r is at ?x location, (at-robot ?x) - Robot is at ?x location, (locked ?x) - Location ?x is locked, (holding ?k) - Robot is holding ?k, (open ?x) - Location ?x is open, and (arm-empty) - Robot's arm is empty.",
+            "question": "What proposition can never hold in any potentially reachable state?",
+            "answer": "(locked f3-1f)"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l0-0 and l0-1 are in c0; l1-0 and l1-1 are in c1. Currently, a0, p2, and t1 are at l1-0, p3 and p0 are at l0-0, t0 is at l0-1, p1 is in t1. The available propositions are: (at ?obj ?loc) - ?obj is at ?loc and (in ?obj1 ?obj2) - ?obj1 is in ?obj2.",
+            "question": "What proposition can never hold in any potentially reachable state?",
+            "answer": "(at t0 l1-1)"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Provide one proposition or None. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "act"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    },
+    "acp_val_gen": {
+      "task": "acp_val_gen",
+      "tag": [
+        "acp_gen_2shot",
+        "acp_bench_hard"
+      ],
+      "dataset_path": "ibm-research/acp_bench",
+      "dataset_name": "acp_val_gen",
+      "test_split": "test",
+      "doc_to_text": "**Question**: {{context}} {{question}} Provide only the index of the action. **Final Answer**:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_acp_results(doc, results):\n    return {\"score\": get_evaluator(doc[\"group\"]).get_score(results, doc)}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": [
+          {
+            "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f3-3f and its arm is empty. All the positions are open except the following: f2-0f has shape0 shaped lock, f4-2f has shape0 shaped lock. Key key0-1 is at position f1-3f. Key key0-0 is at position f2-2f. The goal is to reach a state where the following facts hold: Key key0-0 is at f2-0f location and Key key0-1 is at f1-3f location. The available actions are: (unlock ?curpos ?lockpos ?key ?shape) - unlock the place ?lockpos with the key ?key of the shape ?shape from the current position place ?curpos, (move ?curpos ?nextpos) - travel from the current position ?curpos to the next position ?nextpos, (pickup ?curpos ?key) - pick up key ?key from place ?curpos, (pickup-and-loose ?curpos ?newkey ?oldkey) - pick up the key ?newkey from the current position ?curpos and loose the key ?oldkey which is being held, and (putdown ?curpos ?key) - put down key ?key at current position place ?curpos.",
+            "question": "What is the first inapplicable action in the next sequence of actions: [(move f3-3f f3-2f), (move f3-2f f2-2f), (pickup f2-2f key0-0), (pickup-and-loose f4-0f key0-0 key0-1), (unlock f2-1f f2-0f key0-0 shape0), (move f2-1f f2-0f), (putdown f2-0f key0-0), (move f2-0f f2-1f)]?",
+            "answer": "3"
+          },
+          {
+            "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l0-1 and l0-0 are in c0; l1-1 and l1-0 are in c1. Currently, t1 and p0 are at l1-1, t0 is at l0-1, p3, p2, and p1 are at l1-0, a0 is at l0-0. The goal is to reach a state where the following facts hold: p2 is at l1-0, p3 is at l0-1, p0 is at l0-0, and p1 is at l1-0. The available actions are: (load-truck ?obj ?truck ?loc) - load object ?obj into truck ?truck at location ?loc, (load-airplane ?obj ?airplane ?loc) - load the object ?obj from location ?loc onto the airplane ?airplane, (unload-truck ?obj ?truck ?loc) - unload the object ?obj from the truck ?truck at location ?loc, (unload-airplane ?obj ?airplane ?loc) - unload object ?obj from airplane ?airplane at location ?loc, (drive-truck ?truck ?loc-from ?loc-to ?city) - navigate the truck ?truck from its current location ?loc-from in city ?city to the new location ?loc-to within the same city, and (fly-airplane ?airplane ?loc-from ?loc-to) - fly the airplane ?airplane from location ?loc-from to location ?loc-to.",
+            "question": "What is the first inapplicable action in the next sequence of actions: [(load-truck p0 t1 l1-1), (drive-truck t1 l1-1 l1-0 c1), (unload-truck p0 t1 l1-0), (fly-airplane a0 l0-0 l1-0), (unload-truck p3 t0 l0-1), (load-airplane p3 a0 l1-0), (fly-airplane a0 l1-0 l0-0), (unload-airplane p0 a0 l0-0), (unload-airplane p3 a0 l0-0), (drive-truck t0 l0-1 l0-0 c0), (load-truck p3 t0 l0-0), (drive-truck t0 l0-0 l0-1 c0), (unload-truck p3 t0 l0-1)]?",
+            "answer": "4"
+          }
+        ],
+        "doc_to_text": "**Question**: {{context}} {{question}} Provide only the index of the action. **Final Answer**:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 2,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n\n\n\n",
+          "\n\n",
+          "**Question**:",
+          "**Question:**",
+          "Q:"
+        ],
+        "do_sample": false,
+        "max_gen_toks": 16384,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "acp_grammar_parse",
+          "filter": [
+            {
+              "function": "ACP_grammar_filter",
+              "grammar_task": "index"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "model": "neulab/qwen3-coder-480b-a35b-instruct",
+        "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+        "disable_seed": true
+      }
+    }
+  },
+  "versions": {
+    "acp_app_gen": 1.0,
+    "acp_areach_gen": 1.0,
+    "acp_just_gen": 1.0,
+    "acp_land_gen": 1.0,
+    "acp_nexta_gen": 1.0,
+    "acp_prog_gen": 1.0,
+    "acp_reach_gen": 1.0,
+    "acp_val_gen": 1.0
+  },
+  "n-shot": {
+    "acp_app_gen": 2,
+    "acp_areach_gen": 2,
+    "acp_just_gen": 2,
+    "acp_land_gen": 2,
+    "acp_nexta_gen": 2,
+    "acp_prog_gen": 2,
+    "acp_reach_gen": 2,
+    "acp_val_gen": 2
+  },
+  "higher_is_better": {
+    "acp_app_gen": {
+      "score": true
+    },
+    "acp_areach_gen": {
+      "score": true
+    },
+    "acp_just_gen": {
+      "score": true
+    },
+    "acp_land_gen": {
+      "score": true
+    },
+    "acp_nexta_gen": {
+      "score": true
+    },
+    "acp_prog_gen": {
+      "score": true
+    },
+    "acp_reach_gen": {
+      "score": true
+    },
+    "acp_val_gen": {
+      "score": true
+    }
+  },
+  "n-samples": {
+    "acp_areach_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_app_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_just_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_land_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_nexta_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_prog_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_reach_gen": {
+      "original": 130,
+      "effective": 130
+    },
+    "acp_val_gen": {
+      "original": 130,
+      "effective": 130
+    }
+  },
+  "config": {
+    "model": "openai-chat-completions",
+    "model_args": {
+      "model": "neulab/qwen3-coder-480b-a35b-instruct",
+      "base_url": "https://cmu.litellm.ai/v1/chat/completions",
+      "disable_seed": true
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {
+      "max_gen_toks": 16384
+    },
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1770147453.3693435,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "acp_areach_gen": "15ba7c57d1851686fce394f7e79f1c37ef129b6390779f1d1890e87993f2813a",
+    "acp_app_gen": "6db3d2a933d0a6176de55b2ca08a355f939c8b73a92174954d0acd950c5eef57",
+    "acp_just_gen": "b2c9ac483e3c88b9390d358c41745470956a4060fcaf99c6d2f750a740b37d87",
+    "acp_land_gen": "c924c6af28ec6e47faf05cc44ee11139787471d3bdcab38bb1da6dacecbf51f2",
+    "acp_nexta_gen": "aa676966e3dfa2364f3073807bb60590c1cd1315d8b749772809fbe5b8b85e23",
+    "acp_prog_gen": "4536dbbbb5517963943af92b76efcca147a1f0ecbdae3817fd66cc39a9c34657",
+    "acp_reach_gen": "5d348a442db24dfc2f895edd2a2e1813838cebb7725a5f8b58e0875be50b7402",
+    "acp_val_gen": "89f1302ac70775551b8ad9d83b26ec8b5ff95f194b59055566560ac48fd004c0"
+  },
+  "model_source": "openai-chat-completions",
+  "model_name": "neulab/qwen3-coder-480b-a35b-instruct",
+  "model_name_sanitized": "neulab__qwen3-coder-480b-a35b-instruct",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "1010.8700855458155"
+}

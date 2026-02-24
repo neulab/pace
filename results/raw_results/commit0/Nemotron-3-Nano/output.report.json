@@ -1,0 +1,50 @@
+{
+    "model_name_or_path": "litellm_proxy/openai/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8",
+    "total_instances": 16,
+    "submitted_instances": 16,
+    "completed_instances": 16,
+    "resolved_instances": 1,
+    "unresolved_instances": 15,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 285,
+    "total_passed_tests": 17,
+    "completed_ids": [
+        "voluptuous",
+        "marshmallow",
+        "tinydb",
+        "wcwidth",
+        "jinja",
+        "cachetools",
+        "parsel",
+        "portalocker",
+        "pyjwt",
+        "babel",
+        "imapclient",
+        "chardet",
+        "simpy",
+        "minitorch",
+        "cookiecutter",
+        "deprecated"
+    ],
+    "resolved_ids": [
+        "pyjwt"
+    ],
+    "unresolved_ids": [
+        "voluptuous",
+        "marshmallow",
+        "tinydb",
+        "wcwidth",
+        "jinja",
+        "cachetools",
+        "parsel",
+        "portalocker",
+        "babel",
+        "imapclient",
+        "chardet",
+        "simpy",
+        "minitorch",
+        "cookiecutter",
+        "deprecated"
+    ]
+}

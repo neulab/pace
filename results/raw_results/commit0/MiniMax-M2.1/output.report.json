@@ -1,0 +1,50 @@
+{
+    "model_name_or_path": "litellm_proxy/minimax/MiniMax-M2.1",
+    "total_instances": 16,
+    "submitted_instances": 16,
+    "completed_instances": 16,
+    "resolved_instances": 4,
+    "unresolved_instances": 12,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 2959,
+    "total_passed_tests": 2297,
+    "completed_ids": [
+        "voluptuous",
+        "pyjwt",
+        "chardet",
+        "deprecated",
+        "jinja",
+        "babel",
+        "portalocker",
+        "marshmallow",
+        "minitorch",
+        "cookiecutter",
+        "imapclient",
+        "parsel",
+        "cachetools",
+        "wcwidth",
+        "tinydb",
+        "simpy"
+    ],
+    "resolved_ids": [
+        "voluptuous",
+        "deprecated",
+        "jinja",
+        "portalocker"
+    ],
+    "unresolved_ids": [
+        "pyjwt",
+        "chardet",
+        "babel",
+        "marshmallow",
+        "minitorch",
+        "cookiecutter",
+        "imapclient",
+        "parsel",
+        "cachetools",
+        "wcwidth",
+        "tinydb",
+        "simpy"
+    ]
+}

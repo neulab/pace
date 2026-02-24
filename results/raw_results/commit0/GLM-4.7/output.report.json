@@ -1,0 +1,36 @@
+{
+    "model_name_or_path": "litellm_proxy/openrouter/z-ai/glm-4.7",
+    "total_instances": 16,
+    "submitted_instances": 9,
+    "completed_instances": 9,
+    "resolved_instances": 2,
+    "unresolved_instances": 7,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 1890,
+    "total_passed_tests": 1345,
+    "completed_ids": [
+        "deprecated",
+        "cachetools",
+        "imapclient",
+        "portalocker",
+        "pyjwt",
+        "voluptuous",
+        "parsel",
+        "chardet",
+        "babel"
+    ],
+    "resolved_ids": [
+        "deprecated",
+        "voluptuous"
+    ],
+    "unresolved_ids": [
+        "cachetools",
+        "imapclient",
+        "portalocker",
+        "pyjwt",
+        "parsel",
+        "chardet",
+        "babel"
+    ]
+}

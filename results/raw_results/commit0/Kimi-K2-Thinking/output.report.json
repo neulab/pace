@@ -1,0 +1,50 @@
+{
+    "model_name_or_path": "litellm_proxy/moonshot/kimi-k2-thinking",
+    "total_instances": 16,
+    "submitted_instances": 16,
+    "completed_instances": 16,
+    "resolved_instances": 3,
+    "unresolved_instances": 13,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 4010,
+    "total_passed_tests": 3365,
+    "completed_ids": [
+        "cachetools",
+        "deprecated",
+        "imapclient",
+        "portalocker",
+        "wcwidth",
+        "jinja",
+        "marshmallow",
+        "tinydb",
+        "cookiecutter",
+        "chardet",
+        "minitorch",
+        "pyjwt",
+        "parsel",
+        "babel",
+        "voluptuous",
+        "simpy"
+    ],
+    "resolved_ids": [
+        "deprecated",
+        "jinja",
+        "marshmallow"
+    ],
+    "unresolved_ids": [
+        "cachetools",
+        "imapclient",
+        "portalocker",
+        "wcwidth",
+        "tinydb",
+        "cookiecutter",
+        "chardet",
+        "minitorch",
+        "pyjwt",
+        "parsel",
+        "babel",
+        "voluptuous",
+        "simpy"
+    ]
+}

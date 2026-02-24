@@ -1,0 +1,47 @@
+{
+    "total_instances": 16,
+    "submitted_instances": 15,
+    "completed_instances": 15,
+    "resolved_instances": 7,
+    "unresolved_instances": 8,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "total_tests": 2543,
+    "total_passed_tests": 2533,
+    "completed_ids": [
+        "jinja",
+        "deprecated",
+        "wcwidth",
+        "cachetools",
+        "cookiecutter",
+        "pyjwt",
+        "portalocker",
+        "parsel",
+        "tinydb",
+        "chardet",
+        "simpy",
+        "voluptuous",
+        "imapclient",
+        "babel",
+        "minitorch"
+    ],
+    "resolved_ids": [
+        "jinja",
+        "deprecated",
+        "wcwidth",
+        "portalocker",
+        "tinydb",
+        "voluptuous",
+        "imapclient"
+    ],
+    "unresolved_ids": [
+        "cachetools",
+        "cookiecutter",
+        "pyjwt",
+        "parsel",
+        "chardet",
+        "simpy",
+        "babel",
+        "minitorch"
+    ]
+}

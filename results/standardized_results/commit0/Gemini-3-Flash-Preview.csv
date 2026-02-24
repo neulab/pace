@@ -1,0 +1,12 @@
+id,score,metric_name
+deprecated,1.0,resolved
+tinydb,1.0,resolved
+wcwidth,1.0,resolved
+cachetools,0.0,resolved
+chardet,0.0,resolved
+jinja,0.0,resolved
+marshmallow,0.0,resolved
+parsel,0.0,resolved
+portalocker,0.0,resolved
+pyjwt,0.0,resolved
+voluptuous,0.0,resolved
