@@ -1,5 +1,4 @@
 {
-    "model_name_or_path": "litellm_proxy/anthropic/claude-opus-4-5-20251101",
     "total_instances": 16,
     "submitted_instances": 13,
     "completed_instances": 13,
@@ -8,37 +7,37 @@
     "empty_patch_instances": 0,
     "error_instances": 0,
     "total_tests": 2358,
-    "total_passed_tests": 2336,
+    "total_passed_tests": 2232,
     "completed_ids": [
-        "cachetools",
         "deprecated",
-        "tinydb",
+        "cachetools",
         "jinja",
+        "tinydb",
         "wcwidth",
+        "parsel",
         "simpy",
         "portalocker",
-        "parsel",
+        "pyjwt",
         "chardet",
-        "babel",
-        "voluptuous",
         "imapclient",
-        "pyjwt"
+        "voluptuous",
+        "babel"
     ],
     "resolved_ids": [
         "deprecated",
-        "tinydb",
         "jinja",
+        "tinydb",
         "wcwidth",
         "portalocker",
-        "imapclient"
+        "voluptuous"
     ],
     "unresolved_ids": [
         "cachetools",
-        "simpy",
         "parsel",
+        "simpy",
+        "pyjwt",
         "chardet",
-        "babel",
-        "voluptuous",
-        "pyjwt"
+        "imapclient",
+        "babel"
     ]
 }

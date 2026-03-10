@@ -1,40 +1,49 @@
 {
-    "model_name_or_path": "litellm_proxy/gemini/gemini-3-pro-preview",
     "total_instances": 16,
-    "submitted_instances": 11,
-    "completed_instances": 11,
-    "resolved_instances": 2,
-    "unresolved_instances": 9,
+    "submitted_instances": 16,
+    "completed_instances": 16,
+    "resolved_instances": 4,
+    "unresolved_instances": 12,
     "empty_patch_instances": 0,
     "error_instances": 0,
-    "total_tests": 859,
-    "total_passed_tests": 743,
+    "total_tests": 4020,
+    "total_passed_tests": 2142,
     "completed_ids": [
         "cachetools",
         "deprecated",
         "wcwidth",
-        "simpy",
-        "portalocker",
-        "voluptuous",
+        "chardet",
         "parsel",
         "tinydb",
         "pyjwt",
+        "portalocker",
+        "voluptuous",
+        "babel",
+        "simpy",
         "marshmallow",
-        "chardet"
+        "jinja",
+        "imapclient",
+        "minitorch",
+        "cookiecutter"
     ],
     "resolved_ids": [
         "deprecated",
-        "tinydb"
+        "wcwidth",
+        "tinydb",
+        "portalocker"
     ],
     "unresolved_ids": [
         "cachetools",
-        "wcwidth",
-        "simpy",
-        "portalocker",
-        "voluptuous",
+        "chardet",
         "parsel",
         "pyjwt",
+        "voluptuous",
+        "babel",
+        "simpy",
         "marshmallow",
-        "chardet"
+        "jinja",
+        "imapclient",
+        "minitorch",
+        "cookiecutter"
     ]
 }
