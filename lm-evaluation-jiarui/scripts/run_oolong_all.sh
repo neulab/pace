@@ -67,14 +67,51 @@ for dataset in "${datasets[@]}"; do
   running=0
   for model in "${models[@]}"; do
     (
-      # Set max_tokens based on model
-      if [[ "$model" == "azure/gpt-4o" ]]; then
-        MAX_TOKENS=16384
-      else
-        MAX_TOKENS=32768
-      fi
+      # Set max_tokens and max_context_len based on model
+      case "$model" in
+        azure/gpt-4o)
+          MAX_TOKENS=16384
+          MAX_CONTEXT_LEN=131072    # 128K context
+          ;;
+        azure/gpt-5)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=1048576   # 1M context
+          ;;
+        azure/o3)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=131072    # 200K context, conservative
+          ;;
+        azure/o4-mini)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=131072    # 200K context, conservative
+          ;;
+        azure/gpt-oss-120b)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=131072    # 128K context
+          ;;
+        gemini/*)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=1048576   # 1M context
+          ;;
+        neulab/claude-*)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=200000    # 200K context
+          ;;
+        neulab/kimi-k2*)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=131072    # 128K context
+          ;;
+        azure/Llama-4-Maverick*)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=1048576   # 1M context
+          ;;
+        *)
+          MAX_TOKENS=32768
+          MAX_CONTEXT_LEN=131072    # Default: 128K
+          ;;
+      esac
 
-      echo "Starting: ${model} on ${dataset} (max_tokens=${MAX_TOKENS})"
+      echo "Starting: ${model} on ${dataset} (max_tokens=${MAX_TOKENS}, max_context_len=${MAX_CONTEXT_LEN})"
       python run_oolong.py \
         --model "$model" \
         --dataset "$dataset" \
@@ -82,6 +119,7 @@ for dataset in "${datasets[@]}"; do
         --apply_chat_template \
         --log_samples \
         --max_tokens $MAX_TOKENS \
+        --max_context_len $MAX_CONTEXT_LEN \
         $LIMIT
       echo "Completed: ${model} on ${dataset}"
     ) &

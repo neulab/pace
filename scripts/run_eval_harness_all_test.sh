@@ -1,24 +1,34 @@
 #!/bin/bash
 
+# Activate conda environment
+eval "$(conda shell.bash hook 2>/dev/null)"
+conda activate proxy
+
+# Use local lm-evaluation-harness
+export PYTHONPATH=/home/jiaruil5/proxy_bench/proxy-bench/lm-evaluation-harness:$PYTHONPATH
 export HF_ALLOW_CODE_EVAL="1"
 
+# RunPod API key for nemotron (set in ~/.bashrc)
+# export RUNPOD_API_KEY="..."
+
+# --- New models via CMU LiteLLM proxy ---
 models=(
-  "azure/gpt-4o"
-  "azure/gpt-5"
-  "azure/o3"
-  "azure/o4-mini"
-  "azure/gpt-oss-120b"
-  "gemini/gemini-2.0-flash"
-  "gemini/gemini-2.5-flash"
-  "gemini/gemini-2.5-pro"
-  "gemini/gemini-3-pro-preview"
-  "gemini/gemini-3-flash-preview"
-  "neulab/claude-opus-4-5-20251101"
-  "neulab/claude-sonnet-4-5-20250929"
-  "neulab/claude-sonnet-4-20250514"
-  "neulab/kimi-k2-0711-preview"
-  "azure/Llama-4-Maverick-17B-128E-Instruct-FP8"
-  "neulab/qwen3-coder-480b-a35b-instruct"
+  # Azure AI Foundry (free credits)
+  "azure_ai/Kimi-K2.5"
+  "azure_ai/Kimi-K2-Thinking"
+  "azure_ai/DeepSeek-V3.2"
+  # Azure
+  "azure/gpt-5.2"
+  # Fireworks AI
+  "fireworks_ai/accounts/fireworks/models/minimax-m2p5"
+  "fireworks_ai/accounts/fireworks/models/glm-4p7"
+  "fireworks_ai/accounts/fireworks/models/minimax-m2p1"
+  "fireworks_ai/accounts/fireworks/models/glm-5"
+  # Budget-dependent
+  "anthropic/claude-opus-4-6"
+  "azure/gpt-5.2-codex"
+  # "fireworks_ai/accounts/fireworks/models/qwen3-next-80b-a3b-thinking"
+  # "fireworks_ai/accounts/fireworks/models/qwen3-coder-30b-a3b-instruct"
 )
 
 benchmarks=(
@@ -31,56 +41,71 @@ benchmarks=(
   "logiqa_cot_zeroshot"
 )
 
+# CMU proxy models
 for model in "${models[@]}"; do
   (
     for benchmark in "${benchmarks[@]}"; do
-      # Set model_args based on whether model supports seed parameter
-      # Azure/OpenAI models support seed, others (gemini, neulab) don't
       if [[ "$model" == azure/* ]]; then
         model_args="model=$model,base_url=https://cmu.litellm.ai/v1/chat/completions"
       else
         model_args="model=$model,base_url=https://cmu.litellm.ai/v1/chat/completions,disable_seed=true"
       fi
 
-      # Set gen_kwargs for specific model + benchmark combinations
-      # gpt-4o + aime25 needs higher max_gen_toks for long reasoning
-      if [[ "$model" == "gemini/gemini-2.5-pro" ]]; then
+      if [[ "$model" == *"Thinking"* || "$model" == *"DeepSeek"* || "$model" == *"thinking"* || "$model" == *"deepseek"* ]]; then
         gen_kwargs="max_gen_toks=32768"
-      elif [[ "$model" == "azure/gpt-4o" && "$benchmark" == "aime25" ]]; then
-        gen_kwargs="max_gen_toks=16384"
-      elif [[ "$benchmark" == "ifeval" || "$benchmark" == "acp_gen_2shot" || "$benchmark" == "gpqa_diamond_cot_zeroshot,gpqa_main_cot_zeroshot,gpqa_extended_cot_zeroshot" || "$benchmark" == "mbpp_chat" || "$benchmark" == "humaneval_chat" || "$benchmark" == "logiqa_cot_zeroshot" ]]; then
-        gen_kwargs="max_gen_toks=16384"
       else
-        gen_kwargs=""
+        gen_kwargs="max_gen_toks=16384"
       fi
 
-      # test by running the first 2 samples
-      if [[ -n "$gen_kwargs" ]]; then
-        lm-eval run \
-          --model openai-chat-completions \
-          --model_args $model_args \
-          --tasks $benchmark \
-          --output_path /home/jiaruil5/proxy_bench/proxy_bench_data/test/$benchmark \
-          --apply_chat_template \
-          --limit 2 \
-          --confirm_run_unsafe_code \
-          --log_samples \
-          --gen_kwargs $gen_kwargs
+      echo "=== Testing $model on $benchmark ==="
+
+      python -m lm_eval run \
+        --model openai-chat-completions \
+        --model_args $model_args \
+        --tasks $benchmark \
+        --output_path /home/jiaruil5/proxy_bench/proxy_bench_data/test/$benchmark \
+        --apply_chat_template \
+        --limit 2 \
+        --confirm_run_unsafe_code \
+        --log_samples \
+        --gen_kwargs $gen_kwargs 2>&1
+
+      if [ $? -eq 0 ]; then
+        echo "=== SUCCESS: $model on $benchmark ==="
       else
-        lm-eval run \
-          --model openai-chat-completions \
-          --model_args $model_args \
-          --tasks $benchmark \
-          --output_path /home/jiaruil5/proxy_bench/proxy_bench_data/test/$benchmark \
-          --apply_chat_template \
-          --limit 2 \
-          --confirm_run_unsafe_code \
-          --log_samples
+        echo "=== FAILED: $model on $benchmark ==="
       fi
     done
   ) &
 done
 
-# Wait for all parallel jobs to complete
+# RunPod nemotron (different base_url and api_key)
+(
+  model="nvidia/nvidia-nemotron-3-nano-30b-a3b-bf16"
+  for benchmark in "${benchmarks[@]}"; do
+    model_args="model=$model,base_url=https://api.runpod.ai/v2/c35bkyozx7erir/openai/v1/chat/completions,disable_seed=true"
+    gen_kwargs="max_gen_toks=16384"
+
+    echo "=== Testing $model on $benchmark (RunPod) ==="
+
+    OPENAI_API_KEY="$RUNPOD_API_KEY" python -m lm_eval run \
+      --model openai-chat-completions \
+      --model_args $model_args \
+      --tasks $benchmark \
+      --output_path /home/jiaruil5/proxy_bench/proxy_bench_data/test/$benchmark \
+      --apply_chat_template \
+      --limit 2 \
+      --confirm_run_unsafe_code \
+      --log_samples \
+      --gen_kwargs $gen_kwargs 2>&1
+
+    if [ $? -eq 0 ]; then
+      echo "=== SUCCESS: $model on $benchmark (RunPod) ==="
+    else
+      echo "=== FAILED: $model on $benchmark (RunPod) ==="
+    fi
+  done
+) &
+
 wait
-echo "All model evaluations completed."
+echo "All model test evaluations completed."

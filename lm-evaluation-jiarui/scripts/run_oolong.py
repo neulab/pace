@@ -21,6 +21,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional
 
 from model_api import (
+    BadRequestError,
     ProxyModelAPI,
     ModelConfig,
     GenerationResult,
@@ -211,6 +212,8 @@ def run_oolong(
     batch_size: int = 1,
     use_cache: bool = True,
     cache_dir: str = None,
+    max_context_len: int = 131072,
+    min_context_len: int = 1024,
 ):
     """Run Oolong benchmark evaluation."""
     from datasets import load_dataset
@@ -233,6 +236,15 @@ def run_oolong(
         process_response = dnd_process_response
 
     logger.info(f"Loaded {len(data)} examples from {dataset} dataset")
+
+    # Filter by context length (faithful to original oolong eval_script_batched.py)
+    pre_filter_count = len(data)
+    data = data.filter(lambda x: x["context_len"] <= max_context_len)
+    data = data.filter(lambda x: x["context_len"] > min_context_len)
+    logger.info(
+        f"Context length filter ({min_context_len} < context_len <= {max_context_len}): "
+        f"{pre_filter_count} -> {len(data)} examples"
+    )
 
     # Apply limit
     if limit is not None and limit > 0:
@@ -298,16 +310,60 @@ def run_oolong(
             if (idx + 1) % 10 == 0:
                 logger.info(f"Progress: {idx + 1}/{len(data)}, Score: {correct/total:.4f}")
 
-        except Exception as e:
-            logger.error(f"Error on example {idx}: {e}")
-            # Don't count errors towards total - they weren't actually evaluated
-            # This allows re-running to fill in cached results
-            all_outputs.append({
+        except BadRequestError as e:
+            # Faithful to original oolong: 400 errors get score=0 and count toward total
+            logger.warning(f"BadRequest on example {idx} (score=0): {e}")
+            error_output = {
                 "id": datapoint.get("id", idx),
-                "error": str(e),
+                "context_window_id": datapoint.get("context_window_id", ""),
+                "dataset": datapoint.get("dataset", dataset),
+                "model": model,
+                "attempted_parse": "ERROR",
+                "parse_confidence": "ERROR",
+                "full_answer": "ERROR",
                 "score": 0,
-                "skipped": True,
-            })
+                "context_len": datapoint.get("context_len", 0),
+                "task_group": datapoint.get("task_group", ""),
+                "task": datapoint.get("task", ""),
+                "answer_type": datapoint.get("answer_type", ""),
+                "answer": datapoint.get("answer", ""),
+                "error": str(e),
+            }
+            total += 1
+            all_outputs.append(error_output)
+
+        except Exception as e:
+            err_str = str(e)
+            # Safety net: catch 400 errors that weren't raised as BadRequestError
+            if "400" in err_str and ("Bad Request" in err_str or "Client Error" in err_str):
+                logger.warning(f"BadRequest (fallback) on example {idx} (score=0): {e}")
+                error_output = {
+                    "id": datapoint.get("id", idx),
+                    "context_window_id": datapoint.get("context_window_id", ""),
+                    "dataset": datapoint.get("dataset", dataset),
+                    "model": model,
+                    "attempted_parse": "ERROR",
+                    "parse_confidence": "ERROR",
+                    "full_answer": "ERROR",
+                    "score": 0,
+                    "context_len": datapoint.get("context_len", 0),
+                    "task_group": datapoint.get("task_group", ""),
+                    "task": datapoint.get("task", ""),
+                    "answer_type": datapoint.get("answer_type", ""),
+                    "answer": datapoint.get("answer", ""),
+                    "error": err_str,
+                }
+                total += 1
+                all_outputs.append(error_output)
+            else:
+                logger.error(f"Unexpected error on example {idx}: {e}")
+                # Don't count unexpected errors towards total - they weren't actually evaluated
+                all_outputs.append({
+                    "id": datapoint.get("id", idx),
+                    "error": err_str,
+                    "score": 0,
+                    "skipped": True,
+                })
 
     # Calculate final metrics
     errors = sum(1 for o in all_outputs if o.get("skipped", False))
@@ -432,6 +488,18 @@ def main():
         default=None,
         help="Cache directory (default: ~/.cache/llm_responses)",
     )
+    parser.add_argument(
+        "--max_context_len",
+        type=int,
+        default=131072,
+        help="Maximum context length to include (default: 131072). Examples longer than this are filtered out.",
+    )
+    parser.add_argument(
+        "--min_context_len",
+        type=int,
+        default=1024,
+        help="Minimum context length to include (default: 1024). Examples shorter than or equal to this are filtered out.",
+    )
 
     args = parser.parse_args()
 
@@ -451,6 +519,8 @@ def main():
         batch_size=args.batch_size,
         use_cache=use_cache,
         cache_dir=args.cache_dir,
+        max_context_len=args.max_context_len,
+        min_context_len=args.min_context_len,
     )
 
     return 0 if metrics else 1

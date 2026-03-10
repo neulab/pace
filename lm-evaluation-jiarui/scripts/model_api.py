@@ -25,6 +25,12 @@ from tqdm.asyncio import tqdm_asyncio
 logger = logging.getLogger(__name__)
 
 
+class BadRequestError(Exception):
+    """Raised when the API returns a 400 Bad Request (e.g., prompt too long).
+    Not retried — the caller should treat this as score=0."""
+    pass
+
+
 class ResponseCache:
     """
     Simple file-based cache for LLM responses.
@@ -308,6 +314,16 @@ class ProxyModelAPI:
                 last_exception = e
                 status_code = e.response.status_code if e.response else None
 
+                # 400 Bad Request — do not retry (e.g., prompt too long)
+                if status_code == 400:
+                    body = e.response.text if e.response else "(no body)"
+                    logger.warning(
+                        f"Bad Request (400) — not retrying. Response body: {body}"
+                    )
+                    raise BadRequestError(
+                        f"400 Bad Request: {body}"
+                    ) from e
+
                 # Special handling for rate limits (429) and server errors (5xx)
                 if status_code == 429:
                     # Longer backoff for rate limits: 5, 15, 45, 135, 405 seconds
@@ -337,6 +353,13 @@ class ProxyModelAPI:
                         raise
             except Exception as e:
                 last_exception = e
+                # Check if this is a 400 error wrapped in a non-HTTPError exception
+                err_str = str(e)
+                if "400" in err_str and ("Bad Request" in err_str or "Client Error" in err_str):
+                    logger.warning(
+                        f"Bad Request (400) detected in generic exception — not retrying: {e}"
+                    )
+                    raise BadRequestError(f"400 Bad Request: {err_str}") from e
                 logger.warning(f"API request failed (attempt {attempt + 1}/{self.config.max_retries}): {e}")
                 if attempt < self.config.max_retries - 1:
                     time.sleep(2 ** attempt)  # Exponential backoff
