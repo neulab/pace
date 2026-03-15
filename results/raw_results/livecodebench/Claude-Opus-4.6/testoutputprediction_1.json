@@ -1,0 +1,53 @@
+[
+    {
+        "question_title": "number-of-senior-citizens",
+        "question_content": "You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:\n\nThe first ten characters consist of the phone number of passengers.\nThe next character denotes the gender of the person.\nThe following two characters are used to indicate the age of the person.\nThe last two characters determine the seat allotted to that person.\n\nReturn the number of passengers who are strictly more than 60 years old.\n \n",
+        "question_id": "2727",
+        "contest_id": "biweekly-contest-104",
+        "contest_date": "2023-05-13T00:00:00",
+        "difficulty": "easy",
+        "output_list": [
+            "Looking at each string in the input:\n\n- `\"7868190130M7522\"`: Phone=`7868190130`, Gender=`M`, Age=`75`, Seat=`22` \u2192 75 > 60 \u2713\n- `\"5303914400F9211\"`: Phone=`5303914400`, Gender=`F`, Age=`92`, Seat=`11` \u2192 92 > 60 \u2713\n- `\"9273338290F4010\"`: Phone=`9273338290`, Gender=`F`, Age=`40`, Seat=`10` \u2192 40 > 60 \u2717\n\nTwo passengers are strictly more than 60 years old.\n\n```python\nassert countSeniors([\"7868190130M7522\", \"5303914400F9211\", \"9273338290F4010\"]) == 2\n```"
+        ],
+        "pred_list": [
+            "assert countSeniors([\"7868190130M7522\", \"5303914400F9211\", \"9273338290F4010\"]) == 2"
+        ],
+        "test_id": 0,
+        "function_name": "countSeniors",
+        "starter_code": "def countSeniors(self, details: List[str]) -> int:\n    pass"
+    },
+    {
+        "question_title": "number-of-senior-citizens",
+        "question_content": "You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:\n\nThe first ten characters consist of the phone number of passengers.\nThe next character denotes the gender of the person.\nThe following two characters are used to indicate the age of the person.\nThe last two characters determine the seat allotted to that person.\n\nReturn the number of passengers who are strictly more than 60 years old.\n \n",
+        "question_id": "2727",
+        "contest_id": "biweekly-contest-104",
+        "contest_date": "2023-05-13T00:00:00",
+        "difficulty": "easy",
+        "output_list": [
+            "Looking at each string in the input:\n\n1. `\"1313579440F2036\"`: Phone=`1313579440`, Gender=`F`, Age=`20`, Seat=`36` \u2192 Age 20 \u2264 60\n2. `\"2921522980M5644\"`: Phone=`2921522980`, Gender=`M`, Age=`56`, Seat=`44` \u2192 Age 56 \u2264 60\n\nNeither passenger is strictly more than 60 years old.\n\n```python\nassert countSeniors([\"1313579440F2036\", \"2921522980M5644\"]) == 0\n```"
+        ],
+        "pred_list": [
+            "assert countSeniors([\"1313579440F2036\", \"2921522980M5644\"]) == 0"
+        ],
+        "test_id": 1,
+        "function_name": "countSeniors",
+        "starter_code": "def countSeniors(self, details: List[str]) -> int:\n    pass"
+    },
+    {
+        "question_title": "sum-in-a-matrix",
+        "question_content": "You are given a 0-indexed 2D integer array nums. Initially, your score is 0. Perform the following operations until the matrix becomes empty:\n\nFrom each row in the matrix, select the largest number and remove it. In the case of a tie, it does not matter which number is chosen.\nIdentify the highest number amongst all those removed in step 1. Add that number to your score.\n\nReturn the final score.\n \n",
+        "question_id": "2728",
+        "contest_id": "biweekly-contest-104",
+        "contest_date": "2023-05-13T00:00:00",
+        "difficulty": "medium",
+        "output_list": [
+            "Looking at this problem, I need to simulate the process:\n\n**Round 1:** Remove largest from each row:\n- Row 0: **7**, Row 1: **6**, Row 2: **6**, Row 3: **3**\n- Max = 7 \u2192 Score = 7\n\n**Round 2:** Remove largest from remaining:\n- Row 0: **2**, Row 1: **4**, Row 2: **5**, Row 3: **2**\n- Max = 5 \u2192 Score = 12\n\n**Round 3:** Remove largest from remaining:\n- Row 0: **1**, Row 1: **2**, Row 2: **3**, Row 3: **1**\n- Max = 3 \u2192 Score = 15\n\nFinal score = 7 + 5 + 3 = **15**\n\n```python\nassert matrixSum([[7, 2, 1], [6, 4, 2], [6, 5, 3], [3, 2, 1]]) == 15\n```"
+        ],
+        "pred_list": [
+            "assert matrixSum([[7, 2, 1], [6, 4, 2], [6, 5, 3], [3, 2, 1]]) == 15"
+        ],
+        "test_id": 0,
+        "function_name": "matrixSum",
+        "starter_code": "def matrixSum(self, nums: List[List[int]]) -> int:\n    pass"
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "question_id": 2777,
+        "contest_id": "weekly-contest-344",
+        "contest_date": "2023-05-07T00:00:00",
+        "difficulty": "easy",
+        "function_name": "distinctDifferenceArray",
+        "code": "def distinctDifferenceArray(a: List[int]) -> List[int]:\n    return [len(set(a[:i+1]))-len(set(a[i+1:]))for i in range(len(a))]",
+        "input": "distinctDifferenceArray(a = [1, 2, 3, 4, 5])",
+        "output": "[-3, -1, 1, 3, 5]",
+        "id": "sample_0",
+        "problem_id": [
+            0,
+            2,
+            0
+        ],
+        "numsteps": 678,
+        "output_list": [
+            "Looking at the function for `a = [1, 2, 3, 4, 5]`:\n\n- `i=0`: `len(set([1])) - len(set([2,3,4,5]))` = 1 - 4 = **-3**\n- `i=1`: `len(set([1,2])) - len(set([3,4,5]))` = 2 - 3 = **-1**\n- `i=2`: `len(set([1,2,3])) - len(set([4,5]))` = 3 - 2 = **1**\n- `i=3`: `len(set([1,2,3,4])) - len(set([5]))` = 4 - 1 = **3**\n- `i=4`: `len(set([1,2,3,4,5])) - len(set([]))` = 5 - 0 = **5**\n\nResult: `[-3, -1, 1, 3, 5]`\n\n[ANSWER]\nassert distinctDifferenceArray(a = [1, 2, 3, 4, 5]) == [-3, -1, 1, 3, 5]\n[/ANSWER]"
+        ],
+        "pred_list": [
+            "[-3, -1, 1, 3, 5]"
+        ]
+    },
+    {
+        "question_id": 2777,
+        "contest_id": "weekly-contest-344",
+        "contest_date": "2023-05-07T00:00:00",
+        "difficulty": "easy",
+        "function_name": "distinctDifferenceArray",
+        "code": "def distinctDifferenceArray(nums: List[int]) -> List[int]:\n    r = Counter(nums)\n    l = set()\n    ans = []\n    for x in nums:\n        r[x] -= 1\n        if not r[x]:\n            del r[x]\n        l.add(x)\n        ans.append(len(l) - len(r))\n    return ans",
+        "input": "distinctDifferenceArray(nums = [1, 2, 3, 4, 5])",
+        "output": "[-3, -1, 1, 3, 5]",
+        "id": "sample_1",
+        "problem_id": [
+            0,
+            11,
+            0
+        ],
+        "numsteps": 869,
+        "output_list": [
+            "Looking at this step by step:\n\n**Initial state:**\n- `nums = [1, 2, 3, 4, 5]`\n- `r = Counter({1:1, 2:1, 3:1, 4:1, 5:1})`\n- `l = set()`, `ans = []`\n\n**x = 1:** r[1]\u21920, delete r[1] \u2192 r has 4 keys. l={1}. ans.append(1-4) \u2192 ans=[-3]\n\n**x = 2:** r[2]\u21920, delete r[2] \u2192 r has 3 keys. l={1,2}. ans.append(2-3) \u2192 ans=[-3,-1]\n\n**x = 3:** r[3]\u21920, delete r[3] \u2192 r has 2 keys. l={1,2,3}. ans.append(3-2) \u2192 ans=[-3,-1,1]\n\n**x = 4:** r[4]\u21920, delete r[4] \u2192 r has 1 key. l={1,2,3,4}. ans.append(4-1) \u2192 ans=[-3,-1,1,3]\n\n**x = 5:** r[5]\u21920, delete r[5] \u2192 r has 0 keys. l={1,2,3,4,5}. ans.append(5-0) \u2192 ans=[-3,-1,1,3,5]\n\n[ANSWER]\nassert distinctDifferenceArray(nums = [1, 2, 3, 4, 5]) == [-3, -1, 1, 3, 5]\n[/ANSWER]"
+        ],
+        "pred_list": [
+            "[-3, -1, 1, 3, 5]"
+        ]
+    },
+    {
+        "question_id": 2777,
+        "contest_id": "weekly-contest-344",
+        "contest_date": "2023-05-07T00:00:00",
+        "difficulty": "easy",
+        "function_name": "distinctDifferenceArray",
+        "code": "def distinctDifferenceArray(nums: List[int]) -> List[int]:\n    return [len(set(nums[:i + 1])) - len(set(nums[i + 1:])) for i in range(len(nums))]",
+        "input": "distinctDifferenceArray(nums = [1, 2, 3, 4, 5])",
+        "output": "[-3, -1, 1, 3, 5]",
+        "id": "sample_2",
+        "problem_id": [
+            0,
+            17,
+            0
+        ],
+        "numsteps": 678,
+        "output_list": [
+            "Looking at the list comprehension for `nums = [1, 2, 3, 4, 5]`:\n\n- `i=0`: `len(set([1])) - len(set([2,3,4,5]))` = 1 - 4 = **-3**\n- `i=1`: `len(set([1,2])) - len(set([3,4,5]))` = 2 - 3 = **-1**\n- `i=2`: `len(set([1,2,3])) - len(set([4,5]))` = 3 - 2 = **1**\n- `i=3`: `len(set([1,2,3,4])) - len(set([5]))` = 4 - 1 = **3**\n- `i=4`: `len(set([1,2,3,4,5])) - len(set([]))` = 5 - 0 = **5**\n\nResult: `[-3, -1, 1, 3, 5]`\n\n[ANSWER]\nassert distinctDifferenceArray(nums = [1, 2, 3, 4, 5]) == [-3, -1, 1, 3, 5]\n[/ANSWER]"
+        ],
+        "pred_list": [
+            "[-3, -1, 1, 3, 5]"
+        ]
+    }
+]
