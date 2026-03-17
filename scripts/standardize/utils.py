@@ -134,7 +134,21 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "fireworks_ai__accounts__fireworks__models__glm-4p7": "GLM-4.7",
     "GLM-5": "GLM-5",
     "fireworks_ai__accounts__fireworks__models__glm-5": "GLM-5",
-    "DeepSeek-V3.2-Reasoner": "DeepSeek-V3.2-Reasoner",    
+    "DeepSeek-V3.2-Reasoner": "DeepSeek-V3.2-Reasoner",
+
+    "azure__gpt-5.2": "GPT-5.2",
+    "azure_ai__grok-4-fast-non-reasoning": "Grok-4-Fast",
+    "azure_ai__grok-4-fast-reasoning": "Grok-4-Fast-Reasoning",
+    "Grok-4-Fast": "Grok-4-Fast",
+    "Grok-4-Fast-Reasoning": "Grok-4-Fast-Reasoning",
+    "gemini__gemini-2.5-flash": "Gemini-2.5-Flash",
+    "gemini__gemini-2.5-pro": "Gemini-2.5-Pro",
+    "gemini__gemini-3-flash-preview": "Gemini-3-Flash-Preview",
+    "gemini__gemini-3-pro-preview": "Gemini-3-Pro-Preview",
+    "neulab__deepseek-v3p1": "DeepSeek-V3.1",
+    "DeepSeek-V3.1": "DeepSeek-V3.1",
+    "openai__gpt-5.2": "GPT-5.2",
+    "openai__gpt-5.2-codex": "GPT-5.2-Codex",
 }
 
 def parse_model_name_from_filename(filename: str) -> Tuple[str, Optional[str]]:
