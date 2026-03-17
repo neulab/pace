@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "anthropic/claude-sonnet-4-20250514",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.51393,
+    "NDCG@5": 0.4376,
+    "NDCG@10": 0.3958,
+    "NDCG@20": 0.35006
+  },
+  "map": {
+    "MAP@1": 0.06993,
+    "MAP@5": 0.13462,
+    "MAP@10": 0.15515,
+    "MAP@20": 0.16566
+  },
+  "recall": {
+    "Recall@1": 0.06993,
+    "Recall@5": 0.15227,
+    "Recall@10": 0.18625,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.52941,
+    "P@5": 0.37647,
+    "P@10": 0.28947,
+    "P@20": 0.18963
+  }
+}

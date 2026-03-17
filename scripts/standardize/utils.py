@@ -52,26 +52,45 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "neulab--gpt-4.1-mini-2025-04-14": "GPT-4.1-mini",
     "neulab--gpt-4o-2024-08-06": "GPT-4o",
     "neulab--llama4-maverick-instruct": "Llama-4-Maverick-Instruct",
+    "Llama-4-Maverick-Instruct": "Llama-4-Maverick-Instruct",
     "neulab--llama4-scout-instruct": "Llama-4-Scout-Instruct",
     "neulab--qwen3-235b-a22b": "Qwen3-235B-A22B",
     "neulab--gpt-oss-120b": "GPT-OSS-120B",
 
     # Standalone raw names (appear in some datasets)
     "gpt-oss-120b": "GPT-OSS-120B",
+    "GPT-OSS-120B": "GPT-OSS-120B",
+    "Gemini-3.1-Pro": "Gemini-3.1-Pro",
     "gemini-3-pro-preview": "Gemini-3-Pro-Preview",
+    "Gemini-3-Pro-Preview": "Gemini-3-Pro-Preview",
     "Gemini-3-Pro": "Gemini-3-Pro-Preview",
     "Gemini-3-Flash": "Gemini-3-Flash-Preview",
+    "Gemini-3-Flash-Preview": "Gemini-3-Flash-Preview",
     "Nemotron-3-Nano": "Nemotron-3-Nano",
+    "Nemotron-Nano-3-30B-A3B": "Nemotron-3-Nano",
+    "Nvidia-Nemotron-3-Nano-30B-A3B": "Nemotron-3-Nano",
+    "nvidia__nvidia-nemotron-3-nano-30b-a3b-bf16": "Nemotron-3-Nano",
     "gemini2.5flash": "Gemini-2.5-Flash",
     "gemini2.5pro": "Gemini-2.5-Pro",
     "gemini-2.0-flash": "Gemini-2.0-Flash",
+    "Gemini-2.0-Flash": "Gemini-2.0-Flash",
     "gemini-2.5-flash": "Gemini-2.5-Flash",
+    "Gemini-2.5-Flash": "Gemini-2.5-Flash",
     "gemini-2.5-pro": "Gemini-2.5-Pro",
+    "Gemini-2.5-Pro": "Gemini-2.5-Pro",
     "gpt4o": "GPT-4o",
     "gpt-4o": "GPT-4o",
+    "GPT-4o": "GPT-4o",
+    "GPT-4.1-mini": "GPT-4.1-mini",
     "gpt-5": "GPT-5",
+    "GPT-5": "GPT-5",
+    "GPT-5-mini": "GPT-5-mini",
+    "GPT-5-nano": "GPT-5-nano",
     "gpt-5.2": "GPT-5.2",
+    "GPT-5.2": "GPT-5.2",
+    "azure__gpt-5.2": "GPT-5.2",
     "GPT-5.2-Codex": "GPT-5.2-Codex",
+    "azure__gpt-5.2-codex": "GPT-5.2-Codex",
     "o3": "o3",
     "o4-mini": "o4-mini",
     "Llama-4-Maverick-17B-128E-Instruct-FP8": "Llama-4-Maverick-Instruct",
@@ -80,22 +99,41 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "claude-sonnet-4-20250514": "Claude-4-Sonnet",
     "Claude-Sonnet-4.5": "Claude-4.5-Sonnet",
     "claude-sonnet-4-5-20250929": "Claude-4.5-Sonnet",
+    "Claude-4.5-Sonnet": "Claude-4.5-Sonnet",
+    "Claude-4.5-Opus": "Claude-4.5-Opus",
     "claude-sonnet-4-5": "Claude-4.5-Sonnet",
+    "claude-sonnet-4-6": "Claude-4.6-Sonnet",
     "sonnet092925": "Claude-4.5-Sonnet",
     "kimik": "Kimi-K2",
     "kimi-k2-0711-preview": "Kimi-K2",
     "Kimi-K2-Thinking": "Kimi-K2",
+    "Kimi-K2-Instruct": "Kimi-K2",
+    "Kimi-K2": "Kimi-K2",
     "Kimi-K2.5": "Kimi-K2.5",
+    "azure_ai__Kimi-K2.5": "Kimi-K2.5",
+    "DeepSeek-V3.2": "DeepSeek-V3.2",
+    "azure_ai__DeepSeek-V3.2": "DeepSeek-V3.2",
     "qwen3-coder-480b-a35b-instruct": "Qwen3-Coder-480B-A35B-Instruct",
+    "Qwen3-Coder-480B-A35B-Instruct": "Qwen3-Coder-480B-A35B-Instruct",
     "Qwen3-Coder-480B": "Qwen3-Coder-480B-A35B-Instruct",
+    "Qwen3-Coder-Next": "Qwen3-Coder-Next",
+    "Qwen3.5-Flash": "Qwen3.5-Flash",
     "Claude-Opus-4.5": "Claude-4.5-Opus",
     "claude-opus-4-5": "Claude-4.5-Opus",
     "claude-opus-4-5-20251101": "Claude-4.5-Opus",
     "claude-opus-4-6": "Claude-4.6-Opus",
+    "Claude-4.6-Opus": "Claude-4.6-Opus",
+    "Claude-Opus-4.6": "Claude-4.6-Opus",
+    "anthropic__claude-opus-4-6": "Claude-4.6-Opus",
     "Qwen2.5-Coder-32B-Instruct": "Qwen2.5-Coder-32B-Instruct",
     "MiniMax-M2.5": "MiniMax-M2.5",
+    "fireworks_ai__accounts__fireworks__models__minimax-m2p5": "MiniMax-M2.5",
     "MiniMax-M2.1": "MiniMax-M2.1",
+    "fireworks_ai__accounts__fireworks__models__minimax-m2p1": "MiniMax-M2.1",
     "GLM-4.7": "GLM-4.7",
+    "fireworks_ai__accounts__fireworks__models__glm-4p7": "GLM-4.7",
+    "GLM-5": "GLM-5",
+    "fireworks_ai__accounts__fireworks__models__glm-5": "GLM-5",
     "DeepSeek-V3.2-Reasoner": "DeepSeek-V3.2-Reasoner",    
 }
 
@@ -158,8 +196,12 @@ def normalize_model_name(raw_name: str, reasoning_level: Optional[str] = None) -
         base_name = MODEL_NAME_LOOKUP[raw_name]
     elif raw_name.replace("__", "--") in MODEL_NAME_LOOKUP:
         base_name = MODEL_NAME_LOOKUP[raw_name.replace("__", "--")]
+    elif raw_name.replace("--", "-") in MODEL_NAME_LOOKUP:
+        base_name = MODEL_NAME_LOOKUP[raw_name.replace("--", "-")]
+    elif raw_name.replace("__high", "") in MODEL_NAME_LOOKUP:
+        base_name = MODEL_NAME_LOOKUP[raw_name.replace("__high", "")]
     else:
-        base_name = raw_name.replace("--", "-")
+        raise ValueError(f"model not in MODEL_NAME_LOOKUP: {raw_name}")
 
     # if reasoning_level:
     #     return f"{base_name}__{reasoning_level.replace(':', '_')}"

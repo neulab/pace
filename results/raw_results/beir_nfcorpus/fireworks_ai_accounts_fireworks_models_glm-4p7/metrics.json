@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "fireworks_ai/accounts/fireworks/models/glm-4p7",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.44582,
+    "NDCG@5": 0.38725,
+    "NDCG@10": 0.34818,
+    "NDCG@20": 0.32248
+  },
+  "map": {
+    "MAP@1": 0.05181,
+    "MAP@5": 0.1085,
+    "MAP@10": 0.12635,
+    "MAP@20": 0.14019
+  },
+  "recall": {
+    "Recall@1": 0.05181,
+    "Recall@5": 0.13294,
+    "Recall@10": 0.16597,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.46749,
+    "P@5": 0.34427,
+    "P@10": 0.2613,
+    "P@20": 0.18963
+  }
+}

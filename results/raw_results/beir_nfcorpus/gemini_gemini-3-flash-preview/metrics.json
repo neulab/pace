@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "gemini/gemini-3-flash-preview",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.53096,
+    "NDCG@5": 0.44328,
+    "NDCG@10": 0.39469,
+    "NDCG@20": 0.35108
+  },
+  "map": {
+    "MAP@1": 0.07139,
+    "MAP@5": 0.13535,
+    "MAP@10": 0.15397,
+    "MAP@20": 0.16542
+  },
+  "recall": {
+    "Recall@1": 0.07139,
+    "Recall@5": 0.15379,
+    "Recall@10": 0.18317,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.54799,
+    "P@5": 0.38204,
+    "P@10": 0.28452,
+    "P@20": 0.18963
+  }
+}

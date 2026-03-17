@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "neulab/gpt-oss-120b",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.52012,
+    "NDCG@5": 0.43721,
+    "NDCG@10": 0.39228,
+    "NDCG@20": 0.34773
+  },
+  "map": {
+    "MAP@1": 0.07049,
+    "MAP@5": 0.13293,
+    "MAP@10": 0.15271,
+    "MAP@20": 0.16342
+  },
+  "recall": {
+    "Recall@1": 0.07049,
+    "Recall@5": 0.15159,
+    "Recall@10": 0.18331,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.5418,
+    "P@5": 0.37647,
+    "P@10": 0.28576,
+    "P@20": 0.18963
+  }
+}
