@@ -1,0 +1,14 @@
+id,score,metric_name
+parallel_3,0.0,accuracy
+parallel_9,0.0,accuracy
+parallel_19,0.0,accuracy
+parallel_26,0.0,accuracy
+parallel_38,0.0,accuracy
+parallel_71,0.0,accuracy
+parallel_100,0.0,accuracy
+parallel_103,0.0,accuracy
+parallel_108,0.0,accuracy
+parallel_125,0.0,accuracy
+parallel_153,0.0,accuracy
+parallel_183,0.0,accuracy
+parallel_185,0.0,accuracy

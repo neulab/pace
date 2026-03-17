@@ -1,0 +1,10 @@
+id,score,metric_name
+live_parallel_multiple_0-0-0,0.0,accuracy
+live_parallel_multiple_2-2-0,0.0,accuracy
+live_parallel_multiple_3-2-1,0.0,accuracy
+live_parallel_multiple_4-3-0,0.0,accuracy
+live_parallel_multiple_8-7-0,0.0,accuracy
+live_parallel_multiple_9-8-0,0.0,accuracy
+live_parallel_multiple_10-9-0,0.0,accuracy
+live_parallel_multiple_14-12-0,0.0,accuracy
+live_parallel_multiple_23-20-0,0.0,accuracy
