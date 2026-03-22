@@ -3,8 +3,9 @@
 Standardize LIFBench scores from results/raw_results/lifbench into CSVs grouped by task.
 
 - Input layout:
-  results/raw_results/lifbench/<task>.csv
-  where <task> is like: list-blur_offset_query_element, list-offset_query_id, ...
+  results/raw_results/lifbench/<model>/<task>.json
+  where <model> is like: gpt-5.2, claude-opus-4-6, etc.
+  and <task> is like: onedoc-qa, list-blur_offset_query_element, etc.
 
 - Output layout (one CSV per model per task):
   results/standardized_results/lifbench/<task>/{normalized_model_name}.csv
@@ -18,9 +19,9 @@ uniqueness. The metric recorded is total_score.
 """
 from __future__ import annotations
 
-import csv
+import json
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Any, Dict, List, Tuple
 from collections import defaultdict
 
 from utils import (
@@ -31,83 +32,149 @@ from utils import (
 )
 
 
-def _standardize_task_csv(task_csv: Path, out_root: Path, verbose: bool) -> Dict[str, int]:
-    """Process one lifbench task CSV into per-model standardized CSVs.
+def _get_model_name_for_dir(dirname: str) -> str:
+    """Try to normalize a model directory name.
 
-    Returns {model_name: num_entries_written} for summary stats.
+    Falls back to the dirname itself if not found in MODEL_NAME_LOOKUP.
     """
-    task_name = task_csv.stem  # e.g., 'list-blur_offset_query_element'
-    out_dir = out_root / "lifbench" / task_name
-    out_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        return normalize_model_name(dirname)
+    except ValueError:
+        # If not found in lookup, return the dirname as-is (title-cased)
+        return dirname
 
-    # Group rows by model
-    by_model: Dict[str, List[Tuple[float, str, str]]] = defaultdict(list)
 
-    # Track IDs per model to ensure uniqueness
-    seen_ids: Dict[str, set] = defaultdict(set)
+def _extract_entries_from_json(
+    json_file: Path, verbose: bool
+) -> List[Tuple[str, float, str]]:
+    """Extract (id, score, metric_name) triples from a LIFBench JSON file.
 
-    with open(task_csv, "r", newline="") as f:
-        reader = csv.DictReader(f)
-        required_cols = {"model", "ins_id", "param_id", "length", "total_score"}
-        missing = required_cols - set(reader.fieldnames or [])
-        if missing:
-            raise ValueError(f"{task_csv.name}: missing required columns: {sorted(missing)}")
+    Each entry in the JSON array should have:
+    - ins_id: instance id
+    - param_id: parameter id
+    - length: length parameter
+    - score_dict: dict with 'total_score' key
+    """
+    entries: List[Tuple[str, float, str]] = []
+    seen_ids: set = set()
 
-        for row in reader:
-            raw_model = row["model"].strip()
-            model_name = normalize_model_name(raw_model)
-            ins_id = str(row["ins_id"]).strip()
-            param_id = str(row["param_id"]).strip()
-            length = str(row["length"]).strip()
-            rid_base = f"{ins_id}_{param_id}_{length}"
-
-            # Ensure unique id per model
-            rid = rid_base
-            if rid in seen_ids[model_name]:
-                suffix = 2
-                while f"{rid_base}#{suffix}" in seen_ids[model_name]:
-                    suffix += 1
-                rid = f"{rid_base}#{suffix}"
-            seen_ids[model_name].add(rid)
-
-            try:
-                score = float(row["total_score"])  # total_score is numeric
-            except Exception:
-                # If parsing fails, skip this entry
-                if verbose:
-                    print(f"  Warning: bad total_score in {task_csv.name}: {row.get('total_score')} (skipped)")
-                continue
-
-            by_model[model_name].append((rid, score, "total_score"))
-
-    # Write outputs
-    stats: Dict[str, int] = {}
-    for model_name, triples in sorted(by_model.items()):
-        if not triples:
-            continue
-        output_csv = out_dir / f"{model_name}.csv"
-        write_csv(output_csv, triples)
-        stats[model_name] = len(triples)
+    try:
+        with open(json_file, "r") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, IOError) as e:
         if verbose:
-            print(f"  Wrote lifbench/{task_name}/{output_csv.name} ({len(triples)} entries)")
+            print(f"  Warning: Failed to read {json_file.name}: {e}")
+        return entries
 
-    return stats
+    if not isinstance(data, list):
+        if verbose:
+            print(f"  Warning: {json_file.name} is not a JSON array, skipping")
+        return entries
+
+    for idx, item in enumerate(data):
+        if not isinstance(item, dict):
+            continue
+
+        ins_id = str(item.get("ins_id", idx))
+        param_id = str(item.get("param_id", 0))
+        length = str(item.get("length", 0))
+        rid_base = f"{ins_id}_{param_id}_{length}"
+
+        # Ensure unique id
+        rid = rid_base
+        if rid in seen_ids:
+            suffix = 2
+            while f"{rid_base}#{suffix}" in seen_ids:
+                suffix += 1
+            rid = f"{rid_base}#{suffix}"
+        seen_ids.add(rid)
+
+        # Extract total_score from score_dict
+        score_dict = item.get("score_dict", {})
+        if not isinstance(score_dict, dict):
+            if verbose:
+                print(f"  Warning: Invalid score_dict at index {idx} in {json_file.name}")
+            continue
+
+        total_score = score_dict.get("total_score")
+        if total_score is None:
+            if verbose:
+                print(f"  Warning: Missing total_score at index {idx} in {json_file.name}")
+            continue
+
+        try:
+            score = float(total_score)
+        except (ValueError, TypeError):
+            if verbose:
+                print(f"  Warning: Invalid total_score '{total_score}' at index {idx} in {json_file.name}")
+            continue
+
+        entries.append((rid, score, "total_score"))
+
+    return entries
 
 
-def standardize_lifbench(input_root: Path, output_root: Path, verbose: bool = True) -> Dict[str, Dict[str, int]]:
+def standardize_lifbench(
+    input_root: Path, output_root: Path, verbose: bool = True
+) -> Dict[str, Dict[str, int]]:
+    """
+    Process all LIFBench results from input_root and write standardized CSVs.
+
+    Input structure: input_root/<model>/<task>.json
+    Output structure: output_root/lifbench/<task>/<model>.csv
+    """
     stats: Dict[str, Dict[str, int]] = defaultdict(dict)
 
-    task_csvs = sorted([p for p in input_root.glob("*.csv") if p.is_file()])
+    # Collect all tasks and their model data
+    # Structure: {task_name: {model_name: [(id, score, metric_name), ...]}}
+    task_data: Dict[str, Dict[str, List[Tuple[str, float, str]]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
+
+    # Find all model directories
+    model_dirs = sorted(
+        [d for d in input_root.iterdir() if d.is_dir() and not d.name.startswith(".")]
+    )
+
     if verbose:
-        print(f"Found {len(task_csvs)} lifbench task CSV files")
+        print(f"Found {len(model_dirs)} model directories")
 
-    for task_csv in task_csvs:
+    for model_dir in model_dirs:
+        raw_model = model_dir.name
+        model_name = _get_model_name_for_dir(raw_model)
+
         if verbose:
-            print(f"\nProcessing task: {task_csv.name}")
-        per_model_counts = _standardize_task_csv(task_csv, output_root, verbose)
-        stats[f"lifbench/{task_csv.stem}"] = per_model_counts
+            print(f"\nProcessing model: {raw_model} -> {model_name}")
 
-    return stats
+        # Find all task JSON files in this model directory
+        json_files = sorted([f for f in model_dir.glob("*.json") if f.is_file()])
+
+        for json_file in json_files:
+            task_name = json_file.stem  # e.g., 'onedoc-qa', 'list-blur_offset_query_element'
+            entries = _extract_entries_from_json(json_file, verbose)
+
+            if entries:
+                task_data[task_name][model_name].extend(entries)
+                if verbose:
+                    print(f"  {task_name}: {len(entries)} entries")
+
+    # Write output CSVs organized by task
+    for task_name in sorted(task_data.keys()):
+        out_dir = output_root / "lifbench" / task_name
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        for model_name, entries in sorted(task_data[task_name].items()):
+            if not entries:
+                continue
+
+            output_csv = out_dir / f"{model_name}.csv"
+            write_csv(output_csv, entries)
+            stats[f"lifbench/{task_name}"][model_name] = len(entries)
+
+            if verbose:
+                print(f"  Wrote lifbench/{task_name}/{output_csv.name} ({len(entries)} entries)")
+
+    return dict(stats)
 
 
 def main() -> int:
@@ -118,7 +185,7 @@ def main() -> int:
         "--input-dir",
         type=Path,
         default=Path("results/raw_results/lifbench"),
-        help="Directory containing LIFBench <task>.csv files",
+        help="Directory containing LIFBench model subdirectories with task JSON files",
     )
     parser.add_argument(
         "--output-dir",
@@ -127,7 +194,8 @@ def main() -> int:
         help="Output directory root for standardized CSV files",
     )
     parser.add_argument(
-        "--verbose", "-v",
+        "--verbose",
+        "-v",
         action="store_true",
         default=True,
         help="Print verbose progress information",

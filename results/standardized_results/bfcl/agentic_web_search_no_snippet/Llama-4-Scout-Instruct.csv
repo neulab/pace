@@ -4,7 +4,9 @@ web_search_no_snippet_1,0.0,accuracy
 web_search_no_snippet_2,0.0,accuracy
 web_search_no_snippet_3,0.0,accuracy
 web_search_no_snippet_4,0.0,accuracy
+web_search_no_snippet_5,1.0,accuracy
 web_search_no_snippet_6,0.0,accuracy
+web_search_no_snippet_7,1.0,accuracy
 web_search_no_snippet_8,0.0,accuracy
 web_search_no_snippet_9,0.0,accuracy
 web_search_no_snippet_10,0.0,accuracy
@@ -12,6 +14,7 @@ web_search_no_snippet_11,0.0,accuracy
 web_search_no_snippet_12,0.0,accuracy
 web_search_no_snippet_13,0.0,accuracy
 web_search_no_snippet_14,0.0,accuracy
+web_search_no_snippet_15,1.0,accuracy
 web_search_no_snippet_16,0.0,accuracy
 web_search_no_snippet_17,0.0,accuracy
 web_search_no_snippet_18,0.0,accuracy
@@ -22,13 +25,16 @@ web_search_no_snippet_22,0.0,accuracy
 web_search_no_snippet_23,0.0,accuracy
 web_search_no_snippet_24,0.0,accuracy
 web_search_no_snippet_25,0.0,accuracy
+web_search_no_snippet_26,1.0,accuracy
 web_search_no_snippet_27,0.0,accuracy
 web_search_no_snippet_28,0.0,accuracy
+web_search_no_snippet_29,1.0,accuracy
 web_search_no_snippet_30,0.0,accuracy
 web_search_no_snippet_31,0.0,accuracy
 web_search_no_snippet_32,0.0,accuracy
 web_search_no_snippet_33,0.0,accuracy
 web_search_no_snippet_34,0.0,accuracy
+web_search_no_snippet_35,1.0,accuracy
 web_search_no_snippet_36,0.0,accuracy
 web_search_no_snippet_37,0.0,accuracy
 web_search_no_snippet_38,0.0,accuracy
@@ -38,6 +44,7 @@ web_search_no_snippet_41,0.0,accuracy
 web_search_no_snippet_42,0.0,accuracy
 web_search_no_snippet_43,0.0,accuracy
 web_search_no_snippet_44,0.0,accuracy
+web_search_no_snippet_45,1.0,accuracy
 web_search_no_snippet_46,0.0,accuracy
 web_search_no_snippet_47,0.0,accuracy
 web_search_no_snippet_48,0.0,accuracy
@@ -54,6 +61,8 @@ web_search_no_snippet_58,0.0,accuracy
 web_search_no_snippet_59,0.0,accuracy
 web_search_no_snippet_60,0.0,accuracy
 web_search_no_snippet_61,0.0,accuracy
+web_search_no_snippet_62,1.0,accuracy
+web_search_no_snippet_63,1.0,accuracy
 web_search_no_snippet_64,0.0,accuracy
 web_search_no_snippet_65,0.0,accuracy
 web_search_no_snippet_66,0.0,accuracy
@@ -67,6 +76,7 @@ web_search_no_snippet_73,0.0,accuracy
 web_search_no_snippet_74,0.0,accuracy
 web_search_no_snippet_75,0.0,accuracy
 web_search_no_snippet_76,0.0,accuracy
+web_search_no_snippet_77,1.0,accuracy
 web_search_no_snippet_78,0.0,accuracy
 web_search_no_snippet_79,0.0,accuracy
 web_search_no_snippet_80,0.0,accuracy
@@ -84,6 +94,7 @@ web_search_no_snippet_91,0.0,accuracy
 web_search_no_snippet_92,0.0,accuracy
 web_search_no_snippet_93,0.0,accuracy
 web_search_no_snippet_94,0.0,accuracy
+web_search_no_snippet_95,1.0,accuracy
 web_search_no_snippet_96,0.0,accuracy
 web_search_no_snippet_97,0.0,accuracy
 web_search_no_snippet_98,0.0,accuracy

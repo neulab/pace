@@ -62,16 +62,21 @@ Standardize BFCL scores from results/raw_results/bfcl into CSVs grouped by task.
 CSV columns:
   id,score,metric_name
 
-Each JSON file has a header line with overall accuracy, followed by per-instance results.
-We extract per-instance results where each line has "id", "valid" (true/false for correctness).
-The primary metric is "accuracy" (1.0 if valid, 0.0 otherwise).
+IMPORTANT: BFCL raw results only contain instances that the model got WRONG.
+The first line contains aggregate stats with total_count and correct_count.
+We generate all instance IDs and mark:
+- Instances in the file as WRONG (score = 0.0)
+- Instances NOT in the file as CORRECT (score = 1.0)
+
+For tasks with simple ID patterns (e.g., non_live tasks), IDs are {test_category}_{i} for i in 0..total_count-1.
+For tasks with complex ID patterns (e.g., live, memory tasks), we can only output the wrong instances.
 """
 from __future__ import annotations
 
 import json
 import re
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple, Optional
 from collections import defaultdict
 
 from utils import (
@@ -92,7 +97,6 @@ BFCL_MODEL_NAME_LOOKUP: Dict[str, str] = {
     "meta-llama_Llama-4-Maverick-17B-128E-Instruct-FP8-FC": "Llama-4-Maverick-Instruct",
     "meta-llama_Llama-4-Scout-17B-16E-Instruct-FC": "Llama-4-Scout-Instruct",
     "minimax-m2p1-FC": "MiniMax-M2.1",
-    "minimax-m2p1-fireworks-FC": "MiniMax-M2.1",
     "minimax-m2p5-FC": "MiniMax-M2.5",
     "nvidia_nemotron-3-nano-30b-a3b-FC": "Nemotron-3-Nano",
     "o3-2025-04-16-FC": "o3",
@@ -157,37 +161,142 @@ def _extract_task_name_from_file(filepath: Path, category: str) -> str:
     return f"{category}_{base_task}"
 
 
+def _has_simple_id_pattern(test_category: str) -> bool:
+    """
+    Check if the test category uses simple ID patterns ({test_category}_{i}).
+    
+    Non-live tasks generally use simple patterns.
+    Live, memory, and multi-turn tasks often use complex patterns with multiple indices.
+    """
+    # Tasks known to use simple ID patterns: {test_category}_{i}
+    simple_pattern_tasks = {
+        "irrelevance",  # non_live
+        "multiple",
+        "parallel",
+        "parallel_multiple",
+        "simple_python",
+        "simple_java",
+        "simple_javascript",
+    }
+    return test_category in simple_pattern_tasks
+
+
+def _extract_test_category_from_filename(filename: str) -> Optional[str]:
+    """
+    Extract test_category from a BFCL score filename.
+    
+    E.g., "BFCL_v4_irrelevance_score.json" -> "irrelevance"
+          "BFCL_v4_simple_python_score.json" -> "simple_python"
+          "BFCL_v4_live_simple_score.json" -> "live_simple"
+          "BFCL_v4_memory_kv_score.json" -> "memory_kv"
+    """
+    # Remove prefix and suffix
+    name = filename
+    if name.startswith("BFCL_v4_"):
+        name = name[len("BFCL_v4_"):]
+    if name.endswith("_score.json"):
+        name = name[:-len("_score.json")]
+    
+    return name if name else None
+
+
 def _process_score_file(filepath: Path) -> List[Tuple[str, float, str]]:
     """
     Process a BFCL score JSON file and extract per-instance results.
     
-    Returns list of (id, score, metric_name) tuples.
-    The first line contains aggregate stats, subsequent lines have per-instance results.
-    """
-    results: List[Tuple[str, float, str]] = []
+    IMPORTANT: The raw BFCL results only contain instances that models got WRONG.
+    The first line has aggregate stats (accuracy, correct_count, total_count).
+    Subsequent lines are the wrong instances.
     
+    For tasks with simple ID patterns, we generate all IDs and mark correct/wrong.
+    For tasks with complex ID patterns, we use index-based approach.
+    
+    Returns list of (id, score, metric_name) tuples.
+    """
+    lines = []
     with open(filepath, "r") as f:
-        for idx, line in enumerate(f):
+        for line in f:
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
+                lines.append(data)
             except json.JSONDecodeError:
                 continue
-            
-            # Skip the first line which is the aggregate stats
-            if idx == 0 and "accuracy" in data and "id" not in data:
-                continue
-            
-            # Extract id and validity
-            if "id" not in data:
-                continue
-            
-            instance_id = str(data["id"])
-            # 'valid' field indicates if the response was correct
-            valid = data.get("valid", False)
-            score = 1.0 if valid else 0.0
+    
+    if not lines:
+        return []
+    
+    # First line should have aggregate stats
+    first_line = lines[0]
+    if "accuracy" not in first_line or "total_count" not in first_line:
+        # Unexpected format, skip
+        return []
+    
+    total_count = first_line.get("total_count", 0)
+    correct_count = first_line.get("correct_count", 0)
+    wrong_count = total_count - correct_count
+    
+    # Rest of lines are wrong instances
+    wrong_instances = lines[1:]
+    
+    # Collect wrong instance IDs and test_category
+    wrong_ids: Set[str] = set()
+    test_category: Optional[str] = None
+    
+    for inst in wrong_instances:
+        if "id" in inst:
+            wrong_ids.add(str(inst["id"]))
+        if test_category is None and "test_category" in inst:
+            test_category = inst["test_category"]
+    
+    # If no wrong instances (100% accuracy), try to get test_category from filename
+    if test_category is None:
+        test_category = _extract_test_category_from_filename(filepath.name)
+    
+    if test_category is None:
+        # Cannot determine test category
+        return []
+    
+    results: List[Tuple[str, float, str]] = []
+    
+    # Check if this task uses simple ID patterns
+    if _has_simple_id_pattern(test_category):
+        # Generate all IDs: {test_category}_{i} for i in 0..total_count-1
+        # Mark wrong ones (in file) as 0.0, correct ones (not in file) as 1.0
+        for i in range(total_count):
+            instance_id = f"{test_category}_{i}"
+            if instance_id in wrong_ids:
+                score = 0.0
+            else:
+                score = 1.0
+            results.append((instance_id, score, "accuracy"))
+    else:
+        # Complex ID pattern - use index-based approach
+        # Generate IDs as {test_category}_{i} and mark based on extracted indices
+        
+        # Extract numeric indices from wrong IDs
+        wrong_indices: Set[int] = set()
+        for wid in wrong_ids:
+            # Try to extract the first numeric part after test_category_
+            prefix = f"{test_category}_"
+            if wid.startswith(prefix):
+                rest = wid[len(prefix):]
+                # Extract first number (before any hyphen or other separator)
+                match = re.match(r"^(\d+)", rest)
+                if match:
+                    wrong_indices.add(int(match.group(1)))
+        
+        # Generate all IDs using simple format {test_category}_{i}
+        # If we could extract indices from wrong IDs, use them to mark wrong
+        # Otherwise (no wrong instances = 100% accuracy), all are correct
+        for i in range(total_count):
+            instance_id = f"{test_category}_{i}"
+            if i in wrong_indices:
+                score = 0.0
+            else:
+                score = 1.0
             results.append((instance_id, score, "accuracy"))
     
     return results
