@@ -162,6 +162,12 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "minimax-m2p1": "MiniMax-M2.1",
     "minimax-m2p5": "MiniMax-M2.5",
     "nvidia-nemotron-3-nano-30b-a3b-bf16": "Nemotron-3-Nano",
+    "anthropic__claude-opus-4-5": "Claude-4.5-Opus",
+    "anthropic__claude-sonnet-4-5": "Claude-4.5-Sonnet",
+    "azure_ai__gpt-5.2": "GPT-5.2",
+    "azure_ai__gpt-5.2-codex": "GPT-5.2-Codex",
+    "models__kimi-k2p5": "Kimi-K2.5",
+    "neulab__claude-3-7-sonnet-20250219": "Claude-3.7-Sonnet",
 }
 
 def parse_model_name_from_filename(filename: str) -> Tuple[str, Optional[str]]:
