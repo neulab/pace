@@ -53,7 +53,7 @@ def _process_infobench_file(filepath: Path) -> Tuple[str, List[Tuple[float, str,
         print(f"  Error reading {filepath}: {e}")
         return _parse_model_from_filename(filepath.name), []
 
-    raw_model = str(data.get("model") or _parse_model_from_filename(filepath.name))
+    raw_model = str(_parse_model_from_filename(filepath.name) or data.get("model"))
 
     instances = data.get("instances", [])
     results: List[Tuple[float, str, str]] = []

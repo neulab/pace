@@ -1,18 +1,18 @@
 {
-  "model": "claude_opus",
+  "model": "deepseek-v3p2",
   "num_instances": 500,
-  "average_accuracy": 88.19,
-  "total_prompt_tokens": 41363,
-  "total_completion_tokens": 339027,
+  "average_accuracy": 90.26,
+  "total_prompt_tokens": 38874,
+  "total_completion_tokens": 605406,
   "instances": [
     {
       "id": "user_oriented_task_167",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 93,
-      "completion_tokens": 207,
-      "total_tokens": 300
+      "prompt_tokens": 89,
+      "completion_tokens": 150,
+      "total_tokens": 239
     },
     {
       "id": "user_oriented_task_205",
@@ -20,35 +20,35 @@
       "correct": 4,
       "total_questions": 4,
       "prompt_tokens": 42,
-      "completion_tokens": 181,
-      "total_tokens": 223
+      "completion_tokens": 630,
+      "total_tokens": 672
     },
     {
       "id": "user_oriented_task_187",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 71,
-      "completion_tokens": 63,
-      "total_tokens": 134
+      "prompt_tokens": 69,
+      "completion_tokens": 292,
+      "total_tokens": 361
     },
     {
       "id": "user_oriented_task_103",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 52,
-      "completion_tokens": 909,
-      "total_tokens": 961
+      "prompt_tokens": 48,
+      "completion_tokens": 916,
+      "total_tokens": 964
     },
     {
       "id": "user_oriented_task_94",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 28,
-      "completion_tokens": 363,
-      "total_tokens": 391
+      "prompt_tokens": 29,
+      "completion_tokens": 880,
+      "total_tokens": 909
     },
     {
       "id": "user_oriented_task_124",
@@ -56,125 +56,125 @@
       "correct": 1,
       "total_questions": 1,
       "prompt_tokens": 29,
-      "completion_tokens": 86,
-      "total_tokens": 115
+      "completion_tokens": 194,
+      "total_tokens": 223
     },
     {
       "id": "user_oriented_task_242",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 28,
-      "completion_tokens": 279,
-      "total_tokens": 307
+      "completion_tokens": 152,
+      "total_tokens": 180
     },
     {
       "id": "user_oriented_task_111",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 43,
-      "completion_tokens": 370,
-      "total_tokens": 413
+      "prompt_tokens": 42,
+      "completion_tokens": 1210,
+      "total_tokens": 1252
     },
     {
       "id": "user_oriented_task_54",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 58,
-      "completion_tokens": 58,
-      "total_tokens": 116
+      "prompt_tokens": 55,
+      "completion_tokens": 218,
+      "total_tokens": 273
     },
     {
       "id": "user_oriented_task_3",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 136,
-      "completion_tokens": 53,
-      "total_tokens": 189
+      "prompt_tokens": 114,
+      "completion_tokens": 949,
+      "total_tokens": 1063
     },
     {
       "id": "user_oriented_task_64",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 37,
-      "completion_tokens": 38,
-      "total_tokens": 75
+      "prompt_tokens": 35,
+      "completion_tokens": 247,
+      "total_tokens": 282
     },
     {
       "id": "user_oriented_task_172",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 31,
-      "completion_tokens": 297,
-      "total_tokens": 328
+      "prompt_tokens": 29,
+      "completion_tokens": 806,
+      "total_tokens": 835
     },
     {
       "id": "user_oriented_task_176",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 107,
-      "completion_tokens": 218,
-      "total_tokens": 325
+      "prompt_tokens": 96,
+      "completion_tokens": 365,
+      "total_tokens": 461
     },
     {
       "id": "user_oriented_task_223",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 43,
-      "completion_tokens": 336,
-      "total_tokens": 379
+      "prompt_tokens": 42,
+      "completion_tokens": 536,
+      "total_tokens": 578
     },
     {
       "id": "user_oriented_task_147",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 49,
-      "completion_tokens": 29,
-      "total_tokens": 78
+      "prompt_tokens": 50,
+      "completion_tokens": 444,
+      "total_tokens": 494
     },
     {
       "id": "user_oriented_task_199",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 39,
-      "completion_tokens": 52,
-      "total_tokens": 91
+      "prompt_tokens": 37,
+      "completion_tokens": 174,
+      "total_tokens": 211
     },
     {
       "id": "user_oriented_task_6",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 104,
-      "completion_tokens": 154,
-      "total_tokens": 258
+      "prompt_tokens": 98,
+      "completion_tokens": 285,
+      "total_tokens": 383
     },
     {
       "id": "user_oriented_task_22",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 32,
-      "completion_tokens": 212,
-      "total_tokens": 244
+      "prompt_tokens": 29,
+      "completion_tokens": 285,
+      "total_tokens": 314
     },
     {
       "id": "user_oriented_task_121",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 30,
-      "completion_tokens": 355,
-      "total_tokens": 385
+      "prompt_tokens": 29,
+      "completion_tokens": 421,
+      "total_tokens": 450
     },
     {
       "id": "user_oriented_task_92",
@@ -182,233 +182,233 @@
       "correct": 6,
       "total_questions": 6,
       "prompt_tokens": 40,
-      "completion_tokens": 1223,
-      "total_tokens": 1263
+      "completion_tokens": 6857,
+      "total_tokens": 6897
     },
     {
       "id": "user_oriented_task_59",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 64,
-      "completion_tokens": 350,
-      "total_tokens": 414
+      "prompt_tokens": 62,
+      "completion_tokens": 818,
+      "total_tokens": 880
     },
     {
       "id": "user_oriented_task_73",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 42,
-      "completion_tokens": 212,
-      "total_tokens": 254
+      "prompt_tokens": 41,
+      "completion_tokens": 350,
+      "total_tokens": 391
     },
     {
       "id": "user_oriented_task_219",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 29,
-      "completion_tokens": 564,
-      "total_tokens": 593
+      "prompt_tokens": 26,
+      "completion_tokens": 439,
+      "total_tokens": 465
     },
     {
       "id": "user_oriented_task_243",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 48,
-      "completion_tokens": 229,
-      "total_tokens": 277
+      "prompt_tokens": 43,
+      "completion_tokens": 1222,
+      "total_tokens": 1265
     },
     {
       "id": "user_oriented_task_214",
-      "accuracy_percent": 100.0,
-      "correct": 4,
+      "accuracy_percent": 75.0,
+      "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 31,
-      "completion_tokens": 353,
-      "total_tokens": 384
+      "prompt_tokens": 32,
+      "completion_tokens": 678,
+      "total_tokens": 710
     },
     {
       "id": "user_oriented_task_201",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 270,
-      "completion_tokens": 143,
-      "total_tokens": 413
+      "prompt_tokens": 206,
+      "completion_tokens": 253,
+      "total_tokens": 459
     },
     {
       "id": "user_oriented_task_69",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 76,
-      "completion_tokens": 191,
-      "total_tokens": 267
+      "prompt_tokens": 71,
+      "completion_tokens": 235,
+      "total_tokens": 306
     },
     {
       "id": "user_oriented_task_66",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 57,
-      "completion_tokens": 406,
-      "total_tokens": 463
+      "prompt_tokens": 54,
+      "completion_tokens": 1531,
+      "total_tokens": 1585
     },
     {
       "id": "user_oriented_task_2",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 60,
-      "completion_tokens": 101,
-      "total_tokens": 161
+      "prompt_tokens": 57,
+      "completion_tokens": 347,
+      "total_tokens": 404
     },
     {
       "id": "user_oriented_task_138",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 40,
-      "completion_tokens": 342,
-      "total_tokens": 382
+      "prompt_tokens": 39,
+      "completion_tokens": 843,
+      "total_tokens": 882
     },
     {
       "id": "user_oriented_task_140",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 40,
-      "completion_tokens": 266,
-      "total_tokens": 306
+      "prompt_tokens": 36,
+      "completion_tokens": 751,
+      "total_tokens": 787
     },
     {
       "id": "user_oriented_task_20",
-      "accuracy_percent": 0.0,
-      "correct": 0,
+      "accuracy_percent": 60.0,
+      "correct": 3,
       "total_questions": 5,
       "prompt_tokens": 49,
-      "completion_tokens": 208,
-      "total_tokens": 257
+      "completion_tokens": 337,
+      "total_tokens": 386
     },
     {
       "id": "user_oriented_task_162",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 134,
-      "completion_tokens": 87,
-      "total_tokens": 221
+      "prompt_tokens": 133,
+      "completion_tokens": 265,
+      "total_tokens": 398
     },
     {
       "id": "user_oriented_task_190",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 31,
-      "completion_tokens": 15,
-      "total_tokens": 46
+      "prompt_tokens": 30,
+      "completion_tokens": 289,
+      "total_tokens": 319
     },
     {
       "id": "user_oriented_task_244",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 33,
-      "completion_tokens": 55,
-      "total_tokens": 88
+      "prompt_tokens": 31,
+      "completion_tokens": 190,
+      "total_tokens": 221
     },
     {
       "id": "user_oriented_task_60",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 81,
-      "completion_tokens": 299,
-      "total_tokens": 380
+      "prompt_tokens": 76,
+      "completion_tokens": 555,
+      "total_tokens": 631
     },
     {
       "id": "user_oriented_task_208",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 33,
-      "completion_tokens": 265,
-      "total_tokens": 298
+      "prompt_tokens": 32,
+      "completion_tokens": 525,
+      "total_tokens": 557
     },
     {
       "id": "user_oriented_task_24",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 21,
-      "completion_tokens": 535,
-      "total_tokens": 556
+      "prompt_tokens": 22,
+      "completion_tokens": 1039,
+      "total_tokens": 1061
     },
     {
       "id": "user_oriented_task_107",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 45,
-      "completion_tokens": 1893,
-      "total_tokens": 1938
+      "prompt_tokens": 42,
+      "completion_tokens": 969,
+      "total_tokens": 1011
     },
     {
       "id": "user_oriented_task_55",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 70,
-      "completion_tokens": 88,
-      "total_tokens": 158
+      "prompt_tokens": 66,
+      "completion_tokens": 180,
+      "total_tokens": 246
     },
     {
       "id": "user_oriented_task_229",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 51,
-      "completion_tokens": 181,
-      "total_tokens": 232
+      "completion_tokens": 116,
+      "total_tokens": 167
     },
     {
       "id": "user_oriented_task_37",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 30,
-      "completion_tokens": 203,
-      "total_tokens": 233
+      "prompt_tokens": 29,
+      "completion_tokens": 250,
+      "total_tokens": 279
     },
     {
       "id": "user_oriented_task_104",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 33,
-      "completion_tokens": 309,
-      "total_tokens": 342
+      "prompt_tokens": 32,
+      "completion_tokens": 475,
+      "total_tokens": 507
     },
     {
       "id": "user_oriented_task_41",
-      "accuracy_percent": 100.0,
-      "correct": 3,
+      "accuracy_percent": 66.67,
+      "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 37,
-      "completion_tokens": 377,
-      "total_tokens": 414
+      "prompt_tokens": 36,
+      "completion_tokens": 634,
+      "total_tokens": 670
     },
     {
       "id": "user_oriented_task_11",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 40,
-      "completion_tokens": 482,
-      "total_tokens": 522
+      "prompt_tokens": 38,
+      "completion_tokens": 506,
+      "total_tokens": 544
     },
     {
       "id": "user_oriented_task_217",
@@ -416,8 +416,8 @@
       "correct": 3,
       "total_questions": 4,
       "prompt_tokens": 88,
-      "completion_tokens": 435,
-      "total_tokens": 523
+      "completion_tokens": 516,
+      "total_tokens": 604
     },
     {
       "id": "user_oriented_task_125",
@@ -425,17 +425,17 @@
       "correct": 1,
       "total_questions": 2,
       "prompt_tokens": 21,
-      "completion_tokens": 163,
-      "total_tokens": 184
+      "completion_tokens": 249,
+      "total_tokens": 270
     },
     {
       "id": "user_oriented_task_213",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 295,
-      "completion_tokens": 397,
-      "total_tokens": 692
+      "prompt_tokens": 271,
+      "completion_tokens": 684,
+      "total_tokens": 955
     },
     {
       "id": "user_oriented_task_38",
@@ -443,26 +443,26 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 39,
-      "completion_tokens": 554,
-      "total_tokens": 593
+      "completion_tokens": 633,
+      "total_tokens": 672
     },
     {
       "id": "user_oriented_task_239",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 25,
-      "completion_tokens": 361,
-      "total_tokens": 386
+      "prompt_tokens": 23,
+      "completion_tokens": 1004,
+      "total_tokens": 1027
     },
     {
       "id": "user_oriented_task_234",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 130,
-      "completion_tokens": 150,
-      "total_tokens": 280
+      "prompt_tokens": 118,
+      "completion_tokens": 916,
+      "total_tokens": 1034
     },
     {
       "id": "user_oriented_task_133",
@@ -470,62 +470,62 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 19,
-      "completion_tokens": 517,
-      "total_tokens": 536
+      "completion_tokens": 1782,
+      "total_tokens": 1801
     },
     {
       "id": "user_oriented_task_181",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 340,
-      "completion_tokens": 192,
-      "total_tokens": 532
+      "prompt_tokens": 315,
+      "completion_tokens": 242,
+      "total_tokens": 557
     },
     {
       "id": "user_oriented_task_157",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 160,
-      "completion_tokens": 69,
-      "total_tokens": 229
+      "prompt_tokens": 148,
+      "completion_tokens": 289,
+      "total_tokens": 437
     },
     {
       "id": "user_oriented_task_1",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 186,
-      "completion_tokens": 364,
-      "total_tokens": 550
+      "prompt_tokens": 162,
+      "completion_tokens": 1362,
+      "total_tokens": 1524
     },
     {
       "id": "user_oriented_task_12",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 38,
-      "completion_tokens": 428,
-      "total_tokens": 466
+      "completion_tokens": 547,
+      "total_tokens": 585
     },
     {
       "id": "user_oriented_task_36",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 26,
-      "completion_tokens": 148,
-      "total_tokens": 174
+      "prompt_tokens": 25,
+      "completion_tokens": 357,
+      "total_tokens": 382
     },
     {
       "id": "user_oriented_task_216",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 47,
-      "completion_tokens": 993,
-      "total_tokens": 1040
+      "completion_tokens": 1055,
+      "total_tokens": 1102
     },
     {
       "id": "user_oriented_task_207",
@@ -533,35 +533,35 @@
       "correct": 4,
       "total_questions": 5,
       "prompt_tokens": 52,
-      "completion_tokens": 91,
-      "total_tokens": 143
+      "completion_tokens": 308,
+      "total_tokens": 360
     },
     {
       "id": "user_oriented_task_77",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 25,
-      "completion_tokens": 2077,
-      "total_tokens": 2102
+      "prompt_tokens": 23,
+      "completion_tokens": 1015,
+      "total_tokens": 1038
     },
     {
       "id": "user_oriented_task_88",
       "accuracy_percent": 75.0,
       "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 32,
-      "completion_tokens": 393,
-      "total_tokens": 425
+      "prompt_tokens": 33,
+      "completion_tokens": 594,
+      "total_tokens": 627
     },
     {
       "id": "user_oriented_task_150",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 27,
-      "completion_tokens": 193,
-      "total_tokens": 220
+      "prompt_tokens": 25,
+      "completion_tokens": 2635,
+      "total_tokens": 2660
     },
     {
       "id": "user_oriented_task_128",
@@ -569,53 +569,53 @@
       "correct": 4,
       "total_questions": 4,
       "prompt_tokens": 23,
-      "completion_tokens": 385,
-      "total_tokens": 408
+      "completion_tokens": 831,
+      "total_tokens": 854
     },
     {
       "id": "user_oriented_task_61",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 96,
-      "completion_tokens": 381,
-      "total_tokens": 477
+      "prompt_tokens": 91,
+      "completion_tokens": 367,
+      "total_tokens": 458
     },
     {
       "id": "user_oriented_task_250",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 39,
-      "completion_tokens": 49,
-      "total_tokens": 88
+      "prompt_tokens": 37,
+      "completion_tokens": 250,
+      "total_tokens": 287
     },
     {
       "id": "user_oriented_task_153",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 83,
-      "completion_tokens": 38,
-      "total_tokens": 121
+      "prompt_tokens": 77,
+      "completion_tokens": 151,
+      "total_tokens": 228
     },
     {
       "id": "user_oriented_task_130",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 29,
-      "completion_tokens": 362,
-      "total_tokens": 391
+      "prompt_tokens": 28,
+      "completion_tokens": 619,
+      "total_tokens": 647
     },
     {
       "id": "user_oriented_task_31",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 108,
-      "completion_tokens": 460,
-      "total_tokens": 568
+      "prompt_tokens": 90,
+      "completion_tokens": 706,
+      "total_tokens": 796
     },
     {
       "id": "user_oriented_task_5",
@@ -623,161 +623,161 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 35,
-      "completion_tokens": 224,
-      "total_tokens": 259
+      "completion_tokens": 260,
+      "total_tokens": 295
     },
     {
       "id": "user_oriented_task_131",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 52,
-      "completion_tokens": 536,
-      "total_tokens": 588
+      "prompt_tokens": 47,
+      "completion_tokens": 647,
+      "total_tokens": 694
     },
     {
       "id": "user_oriented_task_210",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 61,
-      "completion_tokens": 421,
-      "total_tokens": 482
+      "prompt_tokens": 60,
+      "completion_tokens": 3635,
+      "total_tokens": 3695
     },
     {
       "id": "user_oriented_task_188",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 48,
-      "completion_tokens": 25,
-      "total_tokens": 73
+      "prompt_tokens": 46,
+      "completion_tokens": 3607,
+      "total_tokens": 3653
     },
     {
       "id": "user_oriented_task_72",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 113,
-      "completion_tokens": 201,
-      "total_tokens": 314
+      "prompt_tokens": 109,
+      "completion_tokens": 481,
+      "total_tokens": 590
     },
     {
       "id": "user_oriented_task_139",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 33,
-      "completion_tokens": 112,
-      "total_tokens": 145
+      "completion_tokens": 183,
+      "total_tokens": 216
     },
     {
       "id": "user_oriented_task_184",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 49,
-      "completion_tokens": 60,
-      "total_tokens": 109
+      "prompt_tokens": 47,
+      "completion_tokens": 341,
+      "total_tokens": 388
     },
     {
       "id": "user_oriented_task_209",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 75,
-      "completion_tokens": 468,
-      "total_tokens": 543
+      "prompt_tokens": 74,
+      "completion_tokens": 1130,
+      "total_tokens": 1204
     },
     {
       "id": "user_oriented_task_96",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 271,
-      "completion_tokens": 505,
-      "total_tokens": 776
+      "prompt_tokens": 253,
+      "completion_tokens": 1149,
+      "total_tokens": 1402
     },
     {
       "id": "user_oriented_task_113",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 39,
-      "completion_tokens": 1786,
-      "total_tokens": 1825
+      "prompt_tokens": 38,
+      "completion_tokens": 1800,
+      "total_tokens": 1838
     },
     {
       "id": "user_oriented_task_105",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 32,
-      "completion_tokens": 281,
-      "total_tokens": 313
+      "prompt_tokens": 33,
+      "completion_tokens": 388,
+      "total_tokens": 421
     },
     {
       "id": "user_oriented_task_185",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 63,
-      "completion_tokens": 207,
-      "total_tokens": 270
+      "prompt_tokens": 58,
+      "completion_tokens": 4385,
+      "total_tokens": 4443
     },
     {
       "id": "user_oriented_task_237",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 46,
-      "completion_tokens": 370,
-      "total_tokens": 416
+      "prompt_tokens": 40,
+      "completion_tokens": 605,
+      "total_tokens": 645
     },
     {
       "id": "user_oriented_task_197",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 105,
-      "completion_tokens": 48,
-      "total_tokens": 153
+      "prompt_tokens": 104,
+      "completion_tokens": 98,
+      "total_tokens": 202
     },
     {
       "id": "user_oriented_task_155",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 62,
-      "completion_tokens": 106,
-      "total_tokens": 168
+      "prompt_tokens": 59,
+      "completion_tokens": 1433,
+      "total_tokens": 1492
     },
     {
       "id": "user_oriented_task_28",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 111,
-      "completion_tokens": 114,
-      "total_tokens": 225
+      "prompt_tokens": 102,
+      "completion_tokens": 271,
+      "total_tokens": 373
     },
     {
       "id": "user_oriented_task_215",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 31,
-      "completion_tokens": 428,
-      "total_tokens": 459
+      "prompt_tokens": 29,
+      "completion_tokens": 720,
+      "total_tokens": 749
     },
     {
       "id": "user_oriented_task_236",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 54,
-      "completion_tokens": 158,
-      "total_tokens": 212
+      "prompt_tokens": 52,
+      "completion_tokens": 287,
+      "total_tokens": 339
     },
     {
       "id": "user_oriented_task_120",
@@ -785,44 +785,44 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 38,
-      "completion_tokens": 343,
-      "total_tokens": 381
+      "completion_tokens": 401,
+      "total_tokens": 439
     },
     {
       "id": "user_oriented_task_251",
-      "accuracy_percent": 100.0,
-      "correct": 3,
+      "accuracy_percent": 66.67,
+      "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 50,
-      "completion_tokens": 233,
-      "total_tokens": 283
+      "prompt_tokens": 49,
+      "completion_tokens": 530,
+      "total_tokens": 579
     },
     {
       "id": "user_oriented_task_98",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 443,
-      "completion_tokens": 199,
-      "total_tokens": 642
+      "prompt_tokens": 388,
+      "completion_tokens": 309,
+      "total_tokens": 697
     },
     {
       "id": "user_oriented_task_70",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 47,
-      "completion_tokens": 472,
-      "total_tokens": 519
+      "prompt_tokens": 44,
+      "completion_tokens": 514,
+      "total_tokens": 558
     },
     {
       "id": "user_oriented_task_247",
       "accuracy_percent": 0.0,
       "correct": 0,
       "total_questions": 2,
-      "prompt_tokens": 130,
-      "completion_tokens": 119,
-      "total_tokens": 249
+      "prompt_tokens": 117,
+      "completion_tokens": 171,
+      "total_tokens": 288
     },
     {
       "id": "user_oriented_task_170",
@@ -830,8 +830,8 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 37,
-      "completion_tokens": 315,
-      "total_tokens": 352
+      "completion_tokens": 921,
+      "total_tokens": 958
     },
     {
       "id": "user_oriented_task_136",
@@ -839,35 +839,35 @@
       "correct": 2,
       "total_questions": 3,
       "prompt_tokens": 25,
-      "completion_tokens": 387,
-      "total_tokens": 412
+      "completion_tokens": 611,
+      "total_tokens": 636
     },
     {
       "id": "user_oriented_task_58",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 69,
-      "completion_tokens": 171,
-      "total_tokens": 240
+      "prompt_tokens": 65,
+      "completion_tokens": 359,
+      "total_tokens": 424
     },
     {
       "id": "user_oriented_task_173",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 86,
-      "completion_tokens": 235,
-      "total_tokens": 321
+      "prompt_tokens": 79,
+      "completion_tokens": 2290,
+      "total_tokens": 2369
     },
     {
       "id": "user_oriented_task_194",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 56,
-      "completion_tokens": 77,
-      "total_tokens": 133
+      "prompt_tokens": 49,
+      "completion_tokens": 231,
+      "total_tokens": 280
     },
     {
       "id": "user_oriented_task_222",
@@ -875,17 +875,17 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 33,
-      "completion_tokens": 4096,
-      "total_tokens": 4129
+      "completion_tokens": 1570,
+      "total_tokens": 1603
     },
     {
       "id": "user_oriented_task_78",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 74,
-      "completion_tokens": 2050,
-      "total_tokens": 2124
+      "prompt_tokens": 72,
+      "completion_tokens": 1627,
+      "total_tokens": 1699
     },
     {
       "id": "user_oriented_task_230",
@@ -893,17 +893,17 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 45,
-      "completion_tokens": 278,
-      "total_tokens": 323
+      "completion_tokens": 375,
+      "total_tokens": 420
     },
     {
       "id": "user_oriented_task_171",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 24,
-      "completion_tokens": 361,
-      "total_tokens": 385
+      "prompt_tokens": 23,
+      "completion_tokens": 522,
+      "total_tokens": 545
     },
     {
       "id": "user_oriented_task_203",
@@ -911,8 +911,8 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 26,
-      "completion_tokens": 163,
-      "total_tokens": 189
+      "completion_tokens": 455,
+      "total_tokens": 481
     },
     {
       "id": "user_oriented_task_123",
@@ -920,26 +920,26 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 32,
-      "completion_tokens": 332,
-      "total_tokens": 364
+      "completion_tokens": 703,
+      "total_tokens": 735
     },
     {
       "id": "user_oriented_task_160",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 139,
-      "completion_tokens": 94,
-      "total_tokens": 233
+      "prompt_tokens": 136,
+      "completion_tokens": 250,
+      "total_tokens": 386
     },
     {
       "id": "user_oriented_task_226",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 40,
-      "completion_tokens": 331,
-      "total_tokens": 371
+      "completion_tokens": 2705,
+      "total_tokens": 2745
     },
     {
       "id": "user_oriented_task_81",
@@ -947,17 +947,17 @@
       "correct": 1,
       "total_questions": 2,
       "prompt_tokens": 37,
-      "completion_tokens": 195,
-      "total_tokens": 232
+      "completion_tokens": 240,
+      "total_tokens": 277
     },
     {
       "id": "user_oriented_task_112",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 34,
-      "completion_tokens": 309,
-      "total_tokens": 343
+      "prompt_tokens": 32,
+      "completion_tokens": 755,
+      "total_tokens": 787
     },
     {
       "id": "user_oriented_task_144",
@@ -965,62 +965,62 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 42,
-      "completion_tokens": 349,
-      "total_tokens": 391
+      "completion_tokens": 307,
+      "total_tokens": 349
     },
     {
       "id": "user_oriented_task_71",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 31,
-      "completion_tokens": 382,
-      "total_tokens": 413
+      "prompt_tokens": 29,
+      "completion_tokens": 726,
+      "total_tokens": 755
     },
     {
       "id": "user_oriented_task_118",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 38,
-      "completion_tokens": 322,
-      "total_tokens": 360
+      "prompt_tokens": 36,
+      "completion_tokens": 663,
+      "total_tokens": 699
     },
     {
       "id": "user_oriented_task_180",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 59,
-      "completion_tokens": 406,
-      "total_tokens": 465
+      "prompt_tokens": 54,
+      "completion_tokens": 607,
+      "total_tokens": 661
     },
     {
       "id": "user_oriented_task_90",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 189,
-      "completion_tokens": 363,
-      "total_tokens": 552
+      "prompt_tokens": 182,
+      "completion_tokens": 526,
+      "total_tokens": 708
     },
     {
       "id": "user_oriented_task_232",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 44,
-      "completion_tokens": 76,
-      "total_tokens": 120
+      "prompt_tokens": 43,
+      "completion_tokens": 321,
+      "total_tokens": 364
     },
     {
       "id": "user_oriented_task_23",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 22,
-      "completion_tokens": 4003,
-      "total_tokens": 4025
+      "prompt_tokens": 24,
+      "completion_tokens": 3196,
+      "total_tokens": 3220
     },
     {
       "id": "user_oriented_task_122",
@@ -1028,8 +1028,8 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 22,
-      "completion_tokens": 989,
-      "total_tokens": 1011
+      "completion_tokens": 684,
+      "total_tokens": 706
     },
     {
       "id": "user_oriented_task_228",
@@ -1037,35 +1037,35 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 28,
-      "completion_tokens": 322,
-      "total_tokens": 350
+      "completion_tokens": 1119,
+      "total_tokens": 1147
     },
     {
       "id": "user_oriented_task_135",
-      "accuracy_percent": 50.0,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
       "prompt_tokens": 32,
-      "completion_tokens": 90,
-      "total_tokens": 122
+      "completion_tokens": 210,
+      "total_tokens": 242
     },
     {
       "id": "user_oriented_task_62",
       "accuracy_percent": 75.0,
       "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 56,
-      "completion_tokens": 397,
-      "total_tokens": 453
+      "prompt_tokens": 54,
+      "completion_tokens": 650,
+      "total_tokens": 704
     },
     {
       "id": "user_oriented_task_127",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 122,
-      "completion_tokens": 100,
-      "total_tokens": 222
+      "prompt_tokens": 108,
+      "completion_tokens": 262,
+      "total_tokens": 370
     },
     {
       "id": "user_oriented_task_108",
@@ -1073,44 +1073,44 @@
       "correct": 4,
       "total_questions": 4,
       "prompt_tokens": 26,
-      "completion_tokens": 363,
-      "total_tokens": 389
+      "completion_tokens": 586,
+      "total_tokens": 612
     },
     {
       "id": "user_oriented_task_13",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 55,
-      "completion_tokens": 512,
-      "total_tokens": 567
+      "prompt_tokens": 53,
+      "completion_tokens": 419,
+      "total_tokens": 472
     },
     {
       "id": "user_oriented_task_240",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 38,
-      "completion_tokens": 14,
-      "total_tokens": 52
+      "prompt_tokens": 36,
+      "completion_tokens": 193,
+      "total_tokens": 229
     },
     {
       "id": "user_oriented_task_146",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 55,
-      "completion_tokens": 452,
-      "total_tokens": 507
+      "prompt_tokens": 51,
+      "completion_tokens": 600,
+      "total_tokens": 651
     },
     {
       "id": "user_oriented_task_52",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 32,
-      "completion_tokens": 349,
-      "total_tokens": 381
+      "prompt_tokens": 31,
+      "completion_tokens": 706,
+      "total_tokens": 737
     },
     {
       "id": "user_oriented_task_192",
@@ -1118,62 +1118,62 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 29,
-      "completion_tokens": 331,
-      "total_tokens": 360
+      "completion_tokens": 1076,
+      "total_tokens": 1105
     },
     {
       "id": "user_oriented_task_101",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 162,
-      "completion_tokens": 321,
-      "total_tokens": 483
+      "prompt_tokens": 155,
+      "completion_tokens": 617,
+      "total_tokens": 772
     },
     {
       "id": "user_oriented_task_132",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 21,
-      "completion_tokens": 317,
-      "total_tokens": 338
+      "prompt_tokens": 19,
+      "completion_tokens": 394,
+      "total_tokens": 413
     },
     {
       "id": "user_oriented_task_152",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 39,
-      "completion_tokens": 332,
-      "total_tokens": 371
+      "prompt_tokens": 40,
+      "completion_tokens": 375,
+      "total_tokens": 415
     },
     {
       "id": "user_oriented_task_189",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 35,
-      "completion_tokens": 115,
-      "total_tokens": 150
+      "prompt_tokens": 33,
+      "completion_tokens": 3354,
+      "total_tokens": 3387
     },
     {
       "id": "user_oriented_task_33",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 32,
-      "completion_tokens": 272,
-      "total_tokens": 304
+      "prompt_tokens": 31,
+      "completion_tokens": 384,
+      "total_tokens": 415
     },
     {
       "id": "user_oriented_task_57",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 40,
-      "completion_tokens": 313,
-      "total_tokens": 353
+      "prompt_tokens": 36,
+      "completion_tokens": 778,
+      "total_tokens": 814
     },
     {
       "id": "user_oriented_task_168",
@@ -1181,8 +1181,8 @@
       "correct": 1,
       "total_questions": 1,
       "prompt_tokens": 31,
-      "completion_tokens": 245,
-      "total_tokens": 276
+      "completion_tokens": 441,
+      "total_tokens": 472
     },
     {
       "id": "user_oriented_task_14",
@@ -1190,17 +1190,17 @@
       "correct": 2,
       "total_questions": 3,
       "prompt_tokens": 93,
-      "completion_tokens": 399,
-      "total_tokens": 492
+      "completion_tokens": 650,
+      "total_tokens": 743
     },
     {
       "id": "user_oriented_task_74",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 21,
-      "completion_tokens": 350,
-      "total_tokens": 371
+      "prompt_tokens": 22,
+      "completion_tokens": 594,
+      "total_tokens": 616
     },
     {
       "id": "user_oriented_task_249",
@@ -1208,17 +1208,17 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 21,
-      "completion_tokens": 275,
-      "total_tokens": 296
+      "completion_tokens": 424,
+      "total_tokens": 445
     },
     {
       "id": "user_oriented_task_126",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 22,
-      "completion_tokens": 187,
-      "total_tokens": 209
+      "prompt_tokens": 23,
+      "completion_tokens": 334,
+      "total_tokens": 357
     },
     {
       "id": "user_oriented_task_182",
@@ -1226,71 +1226,71 @@
       "correct": 1,
       "total_questions": 2,
       "prompt_tokens": 29,
-      "completion_tokens": 327,
-      "total_tokens": 356
+      "completion_tokens": 593,
+      "total_tokens": 622
     },
     {
       "id": "user_oriented_task_42",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 26,
-      "completion_tokens": 533,
-      "total_tokens": 559
+      "prompt_tokens": 24,
+      "completion_tokens": 1637,
+      "total_tokens": 1661
     },
     {
       "id": "user_oriented_task_56",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 297,
-      "completion_tokens": 546,
-      "total_tokens": 843
+      "prompt_tokens": 273,
+      "completion_tokens": 920,
+      "total_tokens": 1193
     },
     {
       "id": "user_oriented_task_51",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
       "prompt_tokens": 43,
-      "completion_tokens": 380,
-      "total_tokens": 423
+      "completion_tokens": 726,
+      "total_tokens": 769
     },
     {
       "id": "user_oriented_task_186",
-      "accuracy_percent": 50.0,
-      "correct": 2,
+      "accuracy_percent": 75.0,
+      "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 34,
-      "completion_tokens": 328,
-      "total_tokens": 362
+      "prompt_tokens": 35,
+      "completion_tokens": 461,
+      "total_tokens": 496
     },
     {
       "id": "user_oriented_task_178",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
       "prompt_tokens": 37,
-      "completion_tokens": 20,
-      "total_tokens": 57
+      "completion_tokens": 218,
+      "total_tokens": 255
     },
     {
       "id": "user_oriented_task_143",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 44,
-      "completion_tokens": 425,
-      "total_tokens": 469
+      "prompt_tokens": 42,
+      "completion_tokens": 414,
+      "total_tokens": 456
     },
     {
       "id": "user_oriented_task_166",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 0.0,
+      "correct": 0,
       "total_questions": 2,
-      "prompt_tokens": 59,
-      "completion_tokens": 46,
-      "total_tokens": 105
+      "prompt_tokens": 56,
+      "completion_tokens": 204,
+      "total_tokens": 260
     },
     {
       "id": "user_oriented_task_26",
@@ -1298,179 +1298,179 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 25,
-      "completion_tokens": 345,
-      "total_tokens": 370
+      "completion_tokens": 953,
+      "total_tokens": 978
     },
     {
       "id": "user_oriented_task_202",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 70,
-      "completion_tokens": 119,
-      "total_tokens": 189
+      "prompt_tokens": 66,
+      "completion_tokens": 409,
+      "total_tokens": 475
     },
     {
       "id": "user_oriented_task_21",
-      "accuracy_percent": 50.0,
-      "correct": 2,
+      "accuracy_percent": 75.0,
+      "correct": 3,
       "total_questions": 4,
       "prompt_tokens": 60,
-      "completion_tokens": 154,
-      "total_tokens": 214
+      "completion_tokens": 1103,
+      "total_tokens": 1163
     },
     {
       "id": "user_oriented_task_231",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 53,
-      "completion_tokens": 31,
-      "total_tokens": 84
+      "prompt_tokens": 48,
+      "completion_tokens": 1013,
+      "total_tokens": 1061
     },
     {
       "id": "user_oriented_task_193",
-      "accuracy_percent": 33.33,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 39,
-      "completion_tokens": 76,
-      "total_tokens": 115
+      "prompt_tokens": 36,
+      "completion_tokens": 802,
+      "total_tokens": 838
     },
     {
       "id": "user_oriented_task_142",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 69,
-      "completion_tokens": 258,
-      "total_tokens": 327
+      "prompt_tokens": 61,
+      "completion_tokens": 469,
+      "total_tokens": 530
     },
     {
       "id": "user_oriented_task_25",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 25,
-      "completion_tokens": 268,
-      "total_tokens": 293
+      "prompt_tokens": 26,
+      "completion_tokens": 793,
+      "total_tokens": 819
     },
     {
       "id": "user_oriented_task_7",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 34,
-      "completion_tokens": 328,
-      "total_tokens": 362
+      "prompt_tokens": 31,
+      "completion_tokens": 367,
+      "total_tokens": 398
     },
     {
       "id": "user_oriented_task_151",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 27,
-      "completion_tokens": 114,
-      "total_tokens": 141
+      "prompt_tokens": 25,
+      "completion_tokens": 283,
+      "total_tokens": 308
     },
     {
       "id": "user_oriented_task_44",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 42,
-      "completion_tokens": 422,
-      "total_tokens": 464
+      "prompt_tokens": 38,
+      "completion_tokens": 470,
+      "total_tokens": 508
     },
     {
       "id": "user_oriented_task_89",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 89,
-      "completion_tokens": 571,
-      "total_tokens": 660
+      "prompt_tokens": 87,
+      "completion_tokens": 665,
+      "total_tokens": 752
     },
     {
       "id": "user_oriented_task_224",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 54,
-      "completion_tokens": 90,
-      "total_tokens": 144
+      "prompt_tokens": 50,
+      "completion_tokens": 180,
+      "total_tokens": 230
     },
     {
       "id": "user_oriented_task_29",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 70,
-      "completion_tokens": 415,
-      "total_tokens": 485
+      "prompt_tokens": 62,
+      "completion_tokens": 621,
+      "total_tokens": 683
     },
     {
       "id": "user_oriented_task_9",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 52,
-      "completion_tokens": 303,
-      "total_tokens": 355
+      "prompt_tokens": 50,
+      "completion_tokens": 539,
+      "total_tokens": 589
     },
     {
       "id": "user_oriented_task_0",
       "accuracy_percent": 60.0,
       "correct": 3,
       "total_questions": 5,
-      "prompt_tokens": 90,
-      "completion_tokens": 26,
-      "total_tokens": 116
+      "prompt_tokens": 86,
+      "completion_tokens": 475,
+      "total_tokens": 561
     },
     {
       "id": "user_oriented_task_134",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 209,
-      "completion_tokens": 1381,
-      "total_tokens": 1590
+      "prompt_tokens": 197,
+      "completion_tokens": 19654,
+      "total_tokens": 19851
     },
     {
       "id": "user_oriented_task_148",
       "accuracy_percent": 75.0,
       "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 36,
-      "completion_tokens": 389,
-      "total_tokens": 425
+      "prompt_tokens": 35,
+      "completion_tokens": 666,
+      "total_tokens": 701
     },
     {
       "id": "user_oriented_task_110",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 180,
-      "completion_tokens": 628,
-      "total_tokens": 808
+      "prompt_tokens": 170,
+      "completion_tokens": 1457,
+      "total_tokens": 1627
     },
     {
       "id": "user_oriented_task_34",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 36,
-      "completion_tokens": 351,
-      "total_tokens": 387
+      "prompt_tokens": 34,
+      "completion_tokens": 617,
+      "total_tokens": 651
     },
     {
       "id": "user_oriented_task_65",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 82,
-      "completion_tokens": 349,
-      "total_tokens": 431
+      "prompt_tokens": 80,
+      "completion_tokens": 446,
+      "total_tokens": 526
     },
     {
       "id": "user_oriented_task_248",
@@ -1478,107 +1478,107 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 24,
-      "completion_tokens": 356,
-      "total_tokens": 380
+      "completion_tokens": 623,
+      "total_tokens": 647
     },
     {
       "id": "user_oriented_task_137",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 28,
-      "completion_tokens": 240,
-      "total_tokens": 268
+      "prompt_tokens": 27,
+      "completion_tokens": 300,
+      "total_tokens": 327
     },
     {
       "id": "user_oriented_task_49",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 102,
-      "completion_tokens": 1364,
-      "total_tokens": 1466
+      "prompt_tokens": 99,
+      "completion_tokens": 911,
+      "total_tokens": 1010
     },
     {
       "id": "user_oriented_task_87",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 34,
-      "completion_tokens": 342,
-      "total_tokens": 376
+      "prompt_tokens": 33,
+      "completion_tokens": 789,
+      "total_tokens": 822
     },
     {
       "id": "user_oriented_task_117",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 24,
-      "completion_tokens": 306,
-      "total_tokens": 330
+      "prompt_tokens": 25,
+      "completion_tokens": 510,
+      "total_tokens": 535
     },
     {
       "id": "user_oriented_task_233",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 23,
-      "completion_tokens": 310,
-      "total_tokens": 333
+      "prompt_tokens": 24,
+      "completion_tokens": 698,
+      "total_tokens": 722
     },
     {
       "id": "user_oriented_task_76",
-      "accuracy_percent": 0.0,
-      "correct": 0,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 54,
-      "completion_tokens": 366,
-      "total_tokens": 420
+      "prompt_tokens": 49,
+      "completion_tokens": 654,
+      "total_tokens": 703
     },
     {
       "id": "user_oriented_task_169",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 34,
-      "completion_tokens": 349,
-      "total_tokens": 383
+      "prompt_tokens": 32,
+      "completion_tokens": 672,
+      "total_tokens": 704
     },
     {
       "id": "user_oriented_task_206",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 31,
-      "completion_tokens": 91,
-      "total_tokens": 122
+      "prompt_tokens": 28,
+      "completion_tokens": 168,
+      "total_tokens": 196
     },
     {
       "id": "user_oriented_task_141",
-      "accuracy_percent": 100.0,
-      "correct": 3,
+      "accuracy_percent": 66.67,
+      "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 49,
-      "completion_tokens": 461,
-      "total_tokens": 510
+      "prompt_tokens": 47,
+      "completion_tokens": 4052,
+      "total_tokens": 4099
     },
     {
       "id": "user_oriented_task_99",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 101,
-      "completion_tokens": 844,
-      "total_tokens": 945
+      "prompt_tokens": 97,
+      "completion_tokens": 521,
+      "total_tokens": 618
     },
     {
       "id": "user_oriented_task_227",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 47,
-      "completion_tokens": 264,
-      "total_tokens": 311
+      "prompt_tokens": 43,
+      "completion_tokens": 457,
+      "total_tokens": 500
     },
     {
       "id": "user_oriented_task_198",
@@ -1586,17 +1586,17 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 27,
-      "completion_tokens": 315,
-      "total_tokens": 342
+      "completion_tokens": 621,
+      "total_tokens": 648
     },
     {
       "id": "user_oriented_task_165",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 65,
-      "completion_tokens": 8,
-      "total_tokens": 73
+      "prompt_tokens": 62,
+      "completion_tokens": 414,
+      "total_tokens": 476
     },
     {
       "id": "user_oriented_task_145",
@@ -1604,35 +1604,35 @@
       "correct": 2,
       "total_questions": 5,
       "prompt_tokens": 54,
-      "completion_tokens": 340,
-      "total_tokens": 394
+      "completion_tokens": 546,
+      "total_tokens": 600
     },
     {
       "id": "user_oriented_task_15",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 116,
-      "completion_tokens": 139,
-      "total_tokens": 255
+      "prompt_tokens": 110,
+      "completion_tokens": 399,
+      "total_tokens": 509
     },
     {
       "id": "user_oriented_task_212",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 165,
-      "completion_tokens": 263,
-      "total_tokens": 428
+      "prompt_tokens": 150,
+      "completion_tokens": 356,
+      "total_tokens": 506
     },
     {
       "id": "user_oriented_task_119",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 27,
-      "completion_tokens": 321,
-      "total_tokens": 348
+      "prompt_tokens": 28,
+      "completion_tokens": 670,
+      "total_tokens": 698
     },
     {
       "id": "user_oriented_task_47",
@@ -1640,80 +1640,80 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 20,
-      "completion_tokens": 360,
-      "total_tokens": 380
+      "completion_tokens": 750,
+      "total_tokens": 770
     },
     {
       "id": "user_oriented_task_100",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 145,
-      "completion_tokens": 177,
-      "total_tokens": 322
+      "prompt_tokens": 131,
+      "completion_tokens": 352,
+      "total_tokens": 483
     },
     {
       "id": "user_oriented_task_161",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 60,
-      "completion_tokens": 178,
-      "total_tokens": 238
+      "prompt_tokens": 57,
+      "completion_tokens": 728,
+      "total_tokens": 785
     },
     {
       "id": "user_oriented_task_149",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 32,
-      "completion_tokens": 124,
-      "total_tokens": 156
+      "completion_tokens": 379,
+      "total_tokens": 411
     },
     {
       "id": "user_oriented_task_82",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 43,
-      "completion_tokens": 324,
-      "total_tokens": 367
+      "prompt_tokens": 41,
+      "completion_tokens": 433,
+      "total_tokens": 474
     },
     {
       "id": "user_oriented_task_67",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 91,
-      "completion_tokens": 280,
-      "total_tokens": 371
+      "prompt_tokens": 90,
+      "completion_tokens": 597,
+      "total_tokens": 687
     },
     {
       "id": "user_oriented_task_211",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 124,
-      "completion_tokens": 359,
-      "total_tokens": 483
+      "prompt_tokens": 109,
+      "completion_tokens": 675,
+      "total_tokens": 784
     },
     {
       "id": "user_oriented_task_174",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 84,
-      "completion_tokens": 308,
-      "total_tokens": 392
+      "prompt_tokens": 71,
+      "completion_tokens": 579,
+      "total_tokens": 650
     },
     {
       "id": "user_oriented_task_84",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 37,
-      "completion_tokens": 360,
-      "total_tokens": 397
+      "prompt_tokens": 36,
+      "completion_tokens": 657,
+      "total_tokens": 693
     },
     {
       "id": "user_oriented_task_75",
@@ -1721,26 +1721,26 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 26,
-      "completion_tokens": 330,
-      "total_tokens": 356
+      "completion_tokens": 398,
+      "total_tokens": 424
     },
     {
       "id": "user_oriented_task_114",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 69,
-      "completion_tokens": 365,
-      "total_tokens": 434
+      "prompt_tokens": 62,
+      "completion_tokens": 647,
+      "total_tokens": 709
     },
     {
       "id": "user_oriented_task_164",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 137,
-      "completion_tokens": 93,
-      "total_tokens": 230
+      "prompt_tokens": 133,
+      "completion_tokens": 196,
+      "total_tokens": 329
     },
     {
       "id": "user_oriented_task_109",
@@ -1748,62 +1748,62 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 26,
-      "completion_tokens": 369,
-      "total_tokens": 395
+      "completion_tokens": 443,
+      "total_tokens": 469
     },
     {
       "id": "user_oriented_task_204",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 48,
-      "completion_tokens": 125,
-      "total_tokens": 173
+      "prompt_tokens": 46,
+      "completion_tokens": 247,
+      "total_tokens": 293
     },
     {
       "id": "user_oriented_task_220",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 36,
-      "completion_tokens": 106,
-      "total_tokens": 142
+      "prompt_tokens": 35,
+      "completion_tokens": 221,
+      "total_tokens": 256
     },
     {
       "id": "user_oriented_task_183",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 0.0,
+      "correct": 0,
       "total_questions": 2,
-      "prompt_tokens": 65,
-      "completion_tokens": 60,
-      "total_tokens": 125
+      "prompt_tokens": 61,
+      "completion_tokens": 144,
+      "total_tokens": 205
     },
     {
       "id": "user_oriented_task_68",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 89,
-      "completion_tokens": 367,
-      "total_tokens": 456
+      "prompt_tokens": 86,
+      "completion_tokens": 1011,
+      "total_tokens": 1097
     },
     {
       "id": "user_oriented_task_102",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 171,
-      "completion_tokens": 87,
-      "total_tokens": 258
+      "prompt_tokens": 166,
+      "completion_tokens": 399,
+      "total_tokens": 565
     },
     {
       "id": "user_oriented_task_159",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 99,
-      "completion_tokens": 79,
-      "total_tokens": 178
+      "prompt_tokens": 95,
+      "completion_tokens": 182,
+      "total_tokens": 277
     },
     {
       "id": "user_oriented_task_86",
@@ -1811,188 +1811,188 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 22,
-      "completion_tokens": 1297,
-      "total_tokens": 1319
+      "completion_tokens": 781,
+      "total_tokens": 803
     },
     {
       "id": "user_oriented_task_246",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 31,
-      "completion_tokens": 242,
-      "total_tokens": 273
+      "prompt_tokens": 30,
+      "completion_tokens": 458,
+      "total_tokens": 488
     },
     {
       "id": "user_oriented_task_30",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 77,
-      "completion_tokens": 348,
-      "total_tokens": 425
+      "prompt_tokens": 63,
+      "completion_tokens": 541,
+      "total_tokens": 604
     },
     {
       "id": "user_oriented_task_238",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 46,
-      "completion_tokens": 63,
-      "total_tokens": 109
+      "prompt_tokens": 41,
+      "completion_tokens": 185,
+      "total_tokens": 226
     },
     {
       "id": "user_oriented_task_4",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 51,
-      "completion_tokens": 137,
-      "total_tokens": 188
+      "prompt_tokens": 47,
+      "completion_tokens": 553,
+      "total_tokens": 600
     },
     {
       "id": "user_oriented_task_129",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 30,
-      "completion_tokens": 312,
-      "total_tokens": 342
+      "prompt_tokens": 27,
+      "completion_tokens": 408,
+      "total_tokens": 435
     },
     {
       "id": "user_oriented_task_225",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 171,
-      "completion_tokens": 138,
-      "total_tokens": 309
+      "prompt_tokens": 156,
+      "completion_tokens": 217,
+      "total_tokens": 373
     },
     {
       "id": "user_oriented_task_18",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 60,
-      "completion_tokens": 373,
-      "total_tokens": 433
+      "prompt_tokens": 58,
+      "completion_tokens": 410,
+      "total_tokens": 468
     },
     {
       "id": "user_oriented_task_191",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 180,
-      "completion_tokens": 180,
-      "total_tokens": 360
+      "prompt_tokens": 171,
+      "completion_tokens": 394,
+      "total_tokens": 565
     },
     {
       "id": "user_oriented_task_95",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 177,
-      "completion_tokens": 348,
-      "total_tokens": 525
+      "prompt_tokens": 164,
+      "completion_tokens": 662,
+      "total_tokens": 826
     },
     {
       "id": "user_oriented_task_45",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 63,
-      "completion_tokens": 309,
-      "total_tokens": 372
+      "prompt_tokens": 60,
+      "completion_tokens": 538,
+      "total_tokens": 598
     },
     {
       "id": "user_oriented_task_156",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 53,
-      "completion_tokens": 208,
-      "total_tokens": 261
+      "prompt_tokens": 50,
+      "completion_tokens": 370,
+      "total_tokens": 420
     },
     {
       "id": "user_oriented_task_106",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 38,
-      "completion_tokens": 1008,
-      "total_tokens": 1046
+      "prompt_tokens": 37,
+      "completion_tokens": 678,
+      "total_tokens": 715
     },
     {
       "id": "user_oriented_task_200",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 30,
-      "completion_tokens": 35,
-      "total_tokens": 65
+      "prompt_tokens": 29,
+      "completion_tokens": 428,
+      "total_tokens": 457
     },
     {
       "id": "user_oriented_task_179",
-      "accuracy_percent": 100.0,
-      "correct": 2,
-      "total_questions": 2,
-      "prompt_tokens": 268,
-      "completion_tokens": 148,
-      "total_tokens": 416
-    },
-    {
-      "id": "user_oriented_task_163",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 44,
-      "completion_tokens": 181,
-      "total_tokens": 225
+      "prompt_tokens": 251,
+      "completion_tokens": 309,
+      "total_tokens": 560
+    },
+    {
+      "id": "user_oriented_task_163",
+      "accuracy_percent": 100.0,
+      "correct": 2,
+      "total_questions": 2,
+      "prompt_tokens": 42,
+      "completion_tokens": 142,
+      "total_tokens": 184
     },
     {
       "id": "user_oriented_task_17",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 32,
-      "completion_tokens": 393,
-      "total_tokens": 425
+      "prompt_tokens": 31,
+      "completion_tokens": 750,
+      "total_tokens": 781
     },
     {
       "id": "user_oriented_task_80",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 416,
-      "completion_tokens": 436,
-      "total_tokens": 852
+      "prompt_tokens": 398,
+      "completion_tokens": 1031,
+      "total_tokens": 1429
     },
     {
       "id": "user_oriented_task_177",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 29,
-      "completion_tokens": 378,
-      "total_tokens": 407
+      "prompt_tokens": 28,
+      "completion_tokens": 563,
+      "total_tokens": 591
     },
     {
       "id": "user_oriented_task_43",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 41,
-      "completion_tokens": 514,
-      "total_tokens": 555
+      "prompt_tokens": 36,
+      "completion_tokens": 570,
+      "total_tokens": 606
     },
     {
       "id": "user_oriented_task_158",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
       "prompt_tokens": 32,
-      "completion_tokens": 89,
-      "total_tokens": 121
+      "completion_tokens": 244,
+      "total_tokens": 276
     },
     {
       "id": "user_oriented_task_63",
@@ -2000,35 +2000,35 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 48,
-      "completion_tokens": 315,
-      "total_tokens": 363
+      "completion_tokens": 763,
+      "total_tokens": 811
     },
     {
       "id": "user_oriented_task_196",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 50,
-      "completion_tokens": 199,
-      "total_tokens": 249
+      "prompt_tokens": 42,
+      "completion_tokens": 842,
+      "total_tokens": 884
     },
     {
       "id": "user_oriented_task_235",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 144,
-      "completion_tokens": 51,
-      "total_tokens": 195
+      "prompt_tokens": 130,
+      "completion_tokens": 126,
+      "total_tokens": 256
     },
     {
       "id": "user_oriented_task_241",
       "accuracy_percent": 100.0,
       "correct": 1,
       "total_questions": 1,
-      "prompt_tokens": 25,
-      "completion_tokens": 125,
-      "total_tokens": 150
+      "prompt_tokens": 23,
+      "completion_tokens": 215,
+      "total_tokens": 238
     },
     {
       "id": "user_oriented_task_116",
@@ -2036,71 +2036,71 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 28,
-      "completion_tokens": 536,
-      "total_tokens": 564
+      "completion_tokens": 846,
+      "total_tokens": 874
     },
     {
       "id": "user_oriented_task_53",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 167,
-      "completion_tokens": 271,
-      "total_tokens": 438
+      "prompt_tokens": 154,
+      "completion_tokens": 373,
+      "total_tokens": 527
     },
     {
       "id": "user_oriented_task_175",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 285,
-      "completion_tokens": 257,
-      "total_tokens": 542
+      "prompt_tokens": 253,
+      "completion_tokens": 267,
+      "total_tokens": 520
     },
     {
       "id": "user_oriented_task_35",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 29,
-      "completion_tokens": 363,
-      "total_tokens": 392
+      "completion_tokens": 927,
+      "total_tokens": 956
     },
     {
       "id": "user_oriented_task_46",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 32,
-      "completion_tokens": 405,
-      "total_tokens": 437
+      "prompt_tokens": 31,
+      "completion_tokens": 620,
+      "total_tokens": 651
     },
     {
       "id": "user_oriented_task_40",
-      "accuracy_percent": 0.0,
-      "correct": 0,
+      "accuracy_percent": 100.0,
+      "correct": 1,
       "total_questions": 1,
-      "prompt_tokens": 62,
-      "completion_tokens": 189,
-      "total_tokens": 251
+      "prompt_tokens": 54,
+      "completion_tokens": 549,
+      "total_tokens": 603
     },
     {
       "id": "user_oriented_task_93",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 194,
-      "completion_tokens": 888,
-      "total_tokens": 1082
+      "prompt_tokens": 175,
+      "completion_tokens": 586,
+      "total_tokens": 761
     },
     {
       "id": "user_oriented_task_154",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 33,
-      "completion_tokens": 155,
-      "total_tokens": 188
+      "prompt_tokens": 32,
+      "completion_tokens": 159,
+      "total_tokens": 191
     },
     {
       "id": "user_oriented_task_50",
@@ -2108,125 +2108,125 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 27,
-      "completion_tokens": 220,
-      "total_tokens": 247
+      "completion_tokens": 251,
+      "total_tokens": 278
     },
     {
       "id": "user_oriented_task_8",
-      "accuracy_percent": 0.0,
-      "correct": 0,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 25,
-      "completion_tokens": 69,
-      "total_tokens": 94
+      "prompt_tokens": 24,
+      "completion_tokens": 264,
+      "total_tokens": 288
     },
     {
       "id": "user_oriented_task_115",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 47,
-      "completion_tokens": 319,
-      "total_tokens": 366
+      "prompt_tokens": 46,
+      "completion_tokens": 686,
+      "total_tokens": 732
     },
     {
       "id": "user_oriented_task_39",
-      "accuracy_percent": 100.0,
-      "correct": 4,
+      "accuracy_percent": 75.0,
+      "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 57,
-      "completion_tokens": 1243,
-      "total_tokens": 1300
+      "prompt_tokens": 55,
+      "completion_tokens": 2199,
+      "total_tokens": 2254
     },
     {
       "id": "user_oriented_task_27",
       "accuracy_percent": 100.0,
       "correct": 1,
       "total_questions": 1,
-      "prompt_tokens": 71,
-      "completion_tokens": 246,
-      "total_tokens": 317
+      "prompt_tokens": 69,
+      "completion_tokens": 616,
+      "total_tokens": 685
     },
     {
       "id": "user_oriented_task_245",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 27,
-      "completion_tokens": 88,
-      "total_tokens": 115
+      "prompt_tokens": 26,
+      "completion_tokens": 278,
+      "total_tokens": 304
     },
     {
       "id": "user_oriented_task_221",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 32,
-      "completion_tokens": 469,
-      "total_tokens": 501
+      "prompt_tokens": 31,
+      "completion_tokens": 433,
+      "total_tokens": 464
     },
     {
       "id": "user_oriented_task_48",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 288,
-      "completion_tokens": 341,
-      "total_tokens": 629
+      "prompt_tokens": 277,
+      "completion_tokens": 913,
+      "total_tokens": 1190
     },
     {
       "id": "user_oriented_task_16",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 62,
-      "completion_tokens": 109,
-      "total_tokens": 171
+      "prompt_tokens": 61,
+      "completion_tokens": 324,
+      "total_tokens": 385
     },
     {
       "id": "user_oriented_task_195",
-      "accuracy_percent": 50.0,
-      "correct": 1,
+      "accuracy_percent": 100.0,
+      "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 33,
-      "completion_tokens": 171,
-      "total_tokens": 204
+      "prompt_tokens": 34,
+      "completion_tokens": 914,
+      "total_tokens": 948
     },
     {
       "id": "user_oriented_task_10",
       "accuracy_percent": 100.0,
       "correct": 2,
       "total_questions": 2,
-      "prompt_tokens": 22,
-      "completion_tokens": 287,
-      "total_tokens": 309
+      "prompt_tokens": 23,
+      "completion_tokens": 789,
+      "total_tokens": 812
     },
     {
       "id": "user_oriented_task_79",
-      "accuracy_percent": 50.0,
-      "correct": 2,
+      "accuracy_percent": 25.0,
+      "correct": 1,
       "total_questions": 4,
-      "prompt_tokens": 76,
-      "completion_tokens": 201,
-      "total_tokens": 277
+      "prompt_tokens": 73,
+      "completion_tokens": 224,
+      "total_tokens": 297
     },
     {
       "id": "user_oriented_task_91",
-      "accuracy_percent": 100.0,
-      "correct": 2,
+      "accuracy_percent": 50.0,
+      "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 284,
-      "completion_tokens": 359,
-      "total_tokens": 643
+      "prompt_tokens": 273,
+      "completion_tokens": 1109,
+      "total_tokens": 1382
     },
     {
       "id": "user_oriented_task_32",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 76,
-      "completion_tokens": 387,
-      "total_tokens": 463
+      "prompt_tokens": 63,
+      "completion_tokens": 476,
+      "total_tokens": 539
     },
     {
       "id": "user_oriented_task_83",
@@ -2234,8 +2234,8 @@
       "correct": 2,
       "total_questions": 3,
       "prompt_tokens": 29,
-      "completion_tokens": 333,
-      "total_tokens": 362
+      "completion_tokens": 366,
+      "total_tokens": 395
     },
     {
       "id": "user_oriented_task_85",
@@ -2243,350 +2243,350 @@
       "correct": 2,
       "total_questions": 2,
       "prompt_tokens": 37,
-      "completion_tokens": 340,
-      "total_tokens": 377
+      "completion_tokens": 492,
+      "total_tokens": 529
     },
     {
       "id": "user_oriented_task_218",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 47,
-      "completion_tokens": 360,
-      "total_tokens": 407
+      "prompt_tokens": 48,
+      "completion_tokens": 932,
+      "total_tokens": 980
     },
     {
       "id": "user_oriented_task_97",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 83,
-      "completion_tokens": 334,
-      "total_tokens": 417
+      "prompt_tokens": 77,
+      "completion_tokens": 681,
+      "total_tokens": 758
     },
     {
       "id": "user_oriented_task_19",
       "accuracy_percent": 60.0,
       "correct": 3,
       "total_questions": 5,
-      "prompt_tokens": 108,
-      "completion_tokens": 109,
-      "total_tokens": 217
+      "prompt_tokens": 105,
+      "completion_tokens": 2782,
+      "total_tokens": 2887
     },
     {
       "id": "domain_oriented_task_240",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 85,
-      "completion_tokens": 621,
-      "total_tokens": 706
+      "prompt_tokens": 79,
+      "completion_tokens": 1672,
+      "total_tokens": 1751
     },
     {
       "id": "domain_oriented_task_79",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 67,
-      "completion_tokens": 355,
-      "total_tokens": 422
+      "prompt_tokens": 61,
+      "completion_tokens": 549,
+      "total_tokens": 610
     },
     {
       "id": "domain_oriented_task_165",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 54,
-      "completion_tokens": 334,
-      "total_tokens": 388
+      "prompt_tokens": 51,
+      "completion_tokens": 402,
+      "total_tokens": 453
     },
     {
       "id": "domain_oriented_task_210",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 69,
-      "completion_tokens": 687,
-      "total_tokens": 756
+      "prompt_tokens": 65,
+      "completion_tokens": 618,
+      "total_tokens": 683
     },
     {
       "id": "domain_oriented_task_162",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 59,
-      "completion_tokens": 660,
-      "total_tokens": 719
+      "prompt_tokens": 57,
+      "completion_tokens": 1005,
+      "total_tokens": 1062
     },
     {
       "id": "domain_oriented_task_48",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 82,
-      "completion_tokens": 850,
-      "total_tokens": 932
+      "prompt_tokens": 78,
+      "completion_tokens": 919,
+      "total_tokens": 997
     },
     {
       "id": "domain_oriented_task_166",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 63,
-      "completion_tokens": 401,
-      "total_tokens": 464
+      "prompt_tokens": 62,
+      "completion_tokens": 367,
+      "total_tokens": 429
     },
     {
       "id": "domain_oriented_task_10",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 93,
-      "completion_tokens": 756,
-      "total_tokens": 849
+      "prompt_tokens": 91,
+      "completion_tokens": 848,
+      "total_tokens": 939
     },
     {
       "id": "domain_oriented_task_32",
-      "accuracy_percent": 71.43,
-      "correct": 5,
+      "accuracy_percent": 42.86,
+      "correct": 3,
       "total_questions": 7,
       "prompt_tokens": 54,
-      "completion_tokens": 98,
-      "total_tokens": 152
+      "completion_tokens": 6278,
+      "total_tokens": 6332
     },
     {
       "id": "domain_oriented_task_27",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 123,
-      "completion_tokens": 1623,
-      "total_tokens": 1746
+      "prompt_tokens": 119,
+      "completion_tokens": 3105,
+      "total_tokens": 3224
     },
     {
       "id": "domain_oriented_task_13",
-      "accuracy_percent": 87.5,
-      "correct": 7,
+      "accuracy_percent": 100.0,
+      "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 80,
-      "completion_tokens": 4096,
-      "total_tokens": 4176
+      "prompt_tokens": 81,
+      "completion_tokens": 2350,
+      "total_tokens": 2431
     },
     {
       "id": "domain_oriented_task_153",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 100.0,
+      "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 73,
-      "completion_tokens": 1926,
-      "total_tokens": 1999
+      "prompt_tokens": 71,
+      "completion_tokens": 1242,
+      "total_tokens": 1313
     },
     {
       "id": "domain_oriented_task_242",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 25,
-      "completion_tokens": 216,
-      "total_tokens": 241
+      "prompt_tokens": 24,
+      "completion_tokens": 2482,
+      "total_tokens": 2506
     },
     {
       "id": "domain_oriented_task_7",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 86,
-      "completion_tokens": 340,
-      "total_tokens": 426
+      "prompt_tokens": 78,
+      "completion_tokens": 543,
+      "total_tokens": 621
     },
     {
       "id": "domain_oriented_task_23",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 248,
-      "completion_tokens": 436,
-      "total_tokens": 684
+      "prompt_tokens": 234,
+      "completion_tokens": 3840,
+      "total_tokens": 4074
     },
     {
       "id": "domain_oriented_task_95",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 81,
-      "completion_tokens": 286,
-      "total_tokens": 367
+      "prompt_tokens": 73,
+      "completion_tokens": 2275,
+      "total_tokens": 2348
     },
     {
       "id": "domain_oriented_task_216",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 69,
-      "completion_tokens": 732,
-      "total_tokens": 801
+      "prompt_tokens": 64,
+      "completion_tokens": 800,
+      "total_tokens": 864
     },
     {
       "id": "domain_oriented_task_139",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 66.67,
+      "correct": 4,
       "total_questions": 6,
-      "prompt_tokens": 64,
-      "completion_tokens": 529,
-      "total_tokens": 593
+      "prompt_tokens": 63,
+      "completion_tokens": 483,
+      "total_tokens": 546
     },
     {
       "id": "domain_oriented_task_16",
       "accuracy_percent": 88.89,
       "correct": 8,
       "total_questions": 9,
-      "prompt_tokens": 69,
-      "completion_tokens": 481,
-      "total_tokens": 550
+      "prompt_tokens": 65,
+      "completion_tokens": 648,
+      "total_tokens": 713
     },
     {
       "id": "domain_oriented_task_100",
       "accuracy_percent": 50.0,
       "correct": 1,
       "total_questions": 2,
-      "prompt_tokens": 21,
-      "completion_tokens": 276,
-      "total_tokens": 297
+      "prompt_tokens": 20,
+      "completion_tokens": 1117,
+      "total_tokens": 1137
     },
     {
       "id": "domain_oriented_task_222",
-      "accuracy_percent": 100.0,
-      "correct": 9,
+      "accuracy_percent": 88.89,
+      "correct": 8,
       "total_questions": 9,
-      "prompt_tokens": 105,
-      "completion_tokens": 1793,
-      "total_tokens": 1898
+      "prompt_tokens": 104,
+      "completion_tokens": 2479,
+      "total_tokens": 2583
     },
     {
       "id": "domain_oriented_task_171",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 142,
-      "completion_tokens": 603,
-      "total_tokens": 745
+      "prompt_tokens": 135,
+      "completion_tokens": 648,
+      "total_tokens": 783
     },
     {
       "id": "domain_oriented_task_59",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 55,
-      "completion_tokens": 638,
-      "total_tokens": 693
+      "prompt_tokens": 54,
+      "completion_tokens": 894,
+      "total_tokens": 948
     },
     {
       "id": "domain_oriented_task_152",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 78,
-      "completion_tokens": 1853,
-      "total_tokens": 1931
+      "prompt_tokens": 77,
+      "completion_tokens": 1047,
+      "total_tokens": 1124
     },
     {
       "id": "domain_oriented_task_148",
-      "accuracy_percent": 50.0,
-      "correct": 3,
+      "accuracy_percent": 66.67,
+      "correct": 4,
       "total_questions": 6,
-      "prompt_tokens": 98,
-      "completion_tokens": 558,
-      "total_tokens": 656
+      "prompt_tokens": 89,
+      "completion_tokens": 622,
+      "total_tokens": 711
     },
     {
       "id": "domain_oriented_task_50",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 37,
-      "completion_tokens": 130,
-      "total_tokens": 167
+      "prompt_tokens": 36,
+      "completion_tokens": 185,
+      "total_tokens": 221
     },
     {
       "id": "domain_oriented_task_52",
       "accuracy_percent": 60.0,
       "correct": 3,
       "total_questions": 5,
-      "prompt_tokens": 123,
-      "completion_tokens": 337,
-      "total_tokens": 460
+      "prompt_tokens": 109,
+      "completion_tokens": 7058,
+      "total_tokens": 7167
     },
     {
       "id": "domain_oriented_task_136",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 73,
-      "completion_tokens": 764,
-      "total_tokens": 837
+      "prompt_tokens": 72,
+      "completion_tokens": 920,
+      "total_tokens": 992
     },
     {
       "id": "domain_oriented_task_157",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 59,
-      "completion_tokens": 230,
-      "total_tokens": 289
+      "prompt_tokens": 57,
+      "completion_tokens": 825,
+      "total_tokens": 882
     },
     {
       "id": "domain_oriented_task_55",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 93,
-      "completion_tokens": 351,
-      "total_tokens": 444
+      "prompt_tokens": 89,
+      "completion_tokens": 1049,
+      "total_tokens": 1138
     },
     {
       "id": "domain_oriented_task_83",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 52,
-      "completion_tokens": 4096,
-      "total_tokens": 4148
+      "prompt_tokens": 47,
+      "completion_tokens": 1315,
+      "total_tokens": 1362
     },
     {
       "id": "domain_oriented_task_183",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 115,
-      "completion_tokens": 1341,
-      "total_tokens": 1456
+      "prompt_tokens": 113,
+      "completion_tokens": 2399,
+      "total_tokens": 2512
     },
     {
       "id": "domain_oriented_task_1",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 86,
-      "completion_tokens": 562,
-      "total_tokens": 648
+      "prompt_tokens": 83,
+      "completion_tokens": 2434,
+      "total_tokens": 2517
     },
     {
       "id": "domain_oriented_task_233",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 63,
-      "completion_tokens": 620,
-      "total_tokens": 683
+      "prompt_tokens": 62,
+      "completion_tokens": 493,
+      "total_tokens": 555
     },
     {
       "id": "domain_oriented_task_138",
-      "accuracy_percent": 100.0,
-      "correct": 5,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 103,
-      "completion_tokens": 855,
-      "total_tokens": 958
+      "prompt_tokens": 98,
+      "completion_tokens": 5665,
+      "total_tokens": 5763
     },
     {
       "id": "domain_oriented_task_102",
@@ -2594,620 +2594,620 @@
       "correct": 2,
       "total_questions": 3,
       "prompt_tokens": 31,
-      "completion_tokens": 54,
-      "total_tokens": 85
+      "completion_tokens": 239,
+      "total_tokens": 270
     },
     {
       "id": "domain_oriented_task_11",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 79,
-      "completion_tokens": 359,
-      "total_tokens": 438
+      "prompt_tokens": 73,
+      "completion_tokens": 381,
+      "total_tokens": 454
     },
     {
       "id": "domain_oriented_task_60",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 93,
-      "completion_tokens": 1023,
-      "total_tokens": 1116
+      "prompt_tokens": 82,
+      "completion_tokens": 1174,
+      "total_tokens": 1256
     },
     {
       "id": "domain_oriented_task_159",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 63,
-      "completion_tokens": 90,
-      "total_tokens": 153
+      "prompt_tokens": 62,
+      "completion_tokens": 791,
+      "total_tokens": 853
     },
     {
       "id": "domain_oriented_task_35",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 108,
-      "completion_tokens": 988,
-      "total_tokens": 1096
+      "prompt_tokens": 88,
+      "completion_tokens": 2276,
+      "total_tokens": 2364
     },
     {
       "id": "domain_oriented_task_202",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 56,
-      "completion_tokens": 459,
-      "total_tokens": 515
+      "prompt_tokens": 54,
+      "completion_tokens": 538,
+      "total_tokens": 592
     },
     {
       "id": "domain_oriented_task_43",
-      "accuracy_percent": 100.0,
-      "correct": 6,
+      "accuracy_percent": 83.33,
+      "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 78,
-      "completion_tokens": 505,
-      "total_tokens": 583
+      "prompt_tokens": 74,
+      "completion_tokens": 931,
+      "total_tokens": 1005
     },
     {
       "id": "domain_oriented_task_158",
-      "accuracy_percent": 100.0,
-      "correct": 4,
+      "accuracy_percent": 50.0,
+      "correct": 2,
       "total_questions": 4,
-      "prompt_tokens": 189,
-      "completion_tokens": 808,
-      "total_tokens": 997
+      "prompt_tokens": 175,
+      "completion_tokens": 4082,
+      "total_tokens": 4257
     },
     {
       "id": "domain_oriented_task_126",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 42,
-      "completion_tokens": 289,
-      "total_tokens": 331
+      "prompt_tokens": 37,
+      "completion_tokens": 717,
+      "total_tokens": 754
     },
     {
       "id": "domain_oriented_task_209",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 76,
-      "completion_tokens": 975,
-      "total_tokens": 1051
+      "prompt_tokens": 75,
+      "completion_tokens": 764,
+      "total_tokens": 839
     },
     {
       "id": "domain_oriented_task_53",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 144,
-      "completion_tokens": 977,
-      "total_tokens": 1121
+      "prompt_tokens": 129,
+      "completion_tokens": 6232,
+      "total_tokens": 6361
     },
     {
       "id": "domain_oriented_task_93",
-      "accuracy_percent": 100.0,
-      "correct": 7,
+      "accuracy_percent": 85.71,
+      "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 81,
-      "completion_tokens": 615,
-      "total_tokens": 696
+      "prompt_tokens": 76,
+      "completion_tokens": 1400,
+      "total_tokens": 1476
     },
     {
       "id": "domain_oriented_task_108",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 93,
-      "completion_tokens": 1828,
-      "total_tokens": 1921
+      "prompt_tokens": 90,
+      "completion_tokens": 971,
+      "total_tokens": 1061
     },
     {
       "id": "domain_oriented_task_12",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 100.0,
+      "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 68,
-      "completion_tokens": 420,
-      "total_tokens": 488
+      "prompt_tokens": 64,
+      "completion_tokens": 543,
+      "total_tokens": 607
     },
     {
       "id": "domain_oriented_task_218",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 57,
-      "completion_tokens": 1476,
-      "total_tokens": 1533
+      "prompt_tokens": 52,
+      "completion_tokens": 668,
+      "total_tokens": 720
     },
     {
       "id": "domain_oriented_task_191",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 109,
-      "completion_tokens": 4080,
-      "total_tokens": 4189
+      "prompt_tokens": 108,
+      "completion_tokens": 2322,
+      "total_tokens": 2430
     },
     {
       "id": "domain_oriented_task_121",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 83,
-      "completion_tokens": 340,
-      "total_tokens": 423
+      "prompt_tokens": 79,
+      "completion_tokens": 790,
+      "total_tokens": 869
     },
     {
       "id": "domain_oriented_task_39",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 84,
-      "completion_tokens": 195,
-      "total_tokens": 279
+      "prompt_tokens": 78,
+      "completion_tokens": 902,
+      "total_tokens": 980
     },
     {
       "id": "domain_oriented_task_133",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 96,
-      "completion_tokens": 445,
-      "total_tokens": 541
+      "prompt_tokens": 84,
+      "completion_tokens": 521,
+      "total_tokens": 605
     },
     {
       "id": "domain_oriented_task_45",
-      "accuracy_percent": 66.67,
-      "correct": 4,
+      "accuracy_percent": 83.33,
+      "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 74,
-      "completion_tokens": 452,
-      "total_tokens": 526
+      "prompt_tokens": 71,
+      "completion_tokens": 4110,
+      "total_tokens": 4181
     },
     {
       "id": "domain_oriented_task_228",
-      "accuracy_percent": 100.0,
-      "correct": 5,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
       "prompt_tokens": 94,
-      "completion_tokens": 367,
-      "total_tokens": 461
+      "completion_tokens": 650,
+      "total_tokens": 744
     },
     {
       "id": "domain_oriented_task_237",
-      "accuracy_percent": 71.43,
-      "correct": 5,
+      "accuracy_percent": 85.71,
+      "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 89,
-      "completion_tokens": 491,
-      "total_tokens": 580
+      "prompt_tokens": 88,
+      "completion_tokens": 547,
+      "total_tokens": 635
     },
     {
       "id": "domain_oriented_task_33",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 68,
-      "completion_tokens": 216,
-      "total_tokens": 284
+      "prompt_tokens": 61,
+      "completion_tokens": 368,
+      "total_tokens": 429
     },
     {
       "id": "domain_oriented_task_114",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 122,
-      "completion_tokens": 2110,
-      "total_tokens": 2232
+      "prompt_tokens": 117,
+      "completion_tokens": 2669,
+      "total_tokens": 2786
     },
     {
       "id": "domain_oriented_task_189",
-      "accuracy_percent": 100.0,
-      "correct": 6,
+      "accuracy_percent": 83.33,
+      "correct": 5,
       "total_questions": 6,
       "prompt_tokens": 80,
-      "completion_tokens": 775,
-      "total_tokens": 855
+      "completion_tokens": 1451,
+      "total_tokens": 1531
     },
     {
       "id": "domain_oriented_task_28",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 138,
-      "completion_tokens": 254,
-      "total_tokens": 392
+      "prompt_tokens": 121,
+      "completion_tokens": 8255,
+      "total_tokens": 8376
     },
     {
       "id": "domain_oriented_task_231",
-      "accuracy_percent": 100.0,
-      "correct": 10,
+      "accuracy_percent": 90.0,
+      "correct": 9,
       "total_questions": 10,
-      "prompt_tokens": 103,
-      "completion_tokens": 1063,
-      "total_tokens": 1166
+      "prompt_tokens": 96,
+      "completion_tokens": 1301,
+      "total_tokens": 1397
     },
     {
       "id": "domain_oriented_task_246",
-      "accuracy_percent": 75.0,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 114,
-      "completion_tokens": 1085,
-      "total_tokens": 1199
+      "prompt_tokens": 111,
+      "completion_tokens": 2469,
+      "total_tokens": 2580
     },
     {
       "id": "domain_oriented_task_145",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 64,
-      "completion_tokens": 86,
-      "total_tokens": 150
+      "prompt_tokens": 59,
+      "completion_tokens": 265,
+      "total_tokens": 324
     },
     {
       "id": "domain_oriented_task_239",
-      "accuracy_percent": 100.0,
-      "correct": 3,
+      "accuracy_percent": 66.67,
+      "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 116,
-      "completion_tokens": 556,
-      "total_tokens": 672
+      "prompt_tokens": 97,
+      "completion_tokens": 2104,
+      "total_tokens": 2201
     },
     {
       "id": "domain_oriented_task_116",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 100.0,
+      "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 111,
-      "completion_tokens": 327,
-      "total_tokens": 438
+      "prompt_tokens": 105,
+      "completion_tokens": 485,
+      "total_tokens": 590
     },
     {
       "id": "domain_oriented_task_227",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 63,
-      "completion_tokens": 2849,
-      "total_tokens": 2912
+      "prompt_tokens": 62,
+      "completion_tokens": 1213,
+      "total_tokens": 1275
     },
     {
       "id": "domain_oriented_task_180",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 95,
-      "completion_tokens": 217,
-      "total_tokens": 312
+      "prompt_tokens": 89,
+      "completion_tokens": 922,
+      "total_tokens": 1011
     },
     {
       "id": "domain_oriented_task_194",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 189,
-      "completion_tokens": 2463,
-      "total_tokens": 2652
+      "prompt_tokens": 174,
+      "completion_tokens": 2021,
+      "total_tokens": 2195
     },
     {
       "id": "domain_oriented_task_208",
-      "accuracy_percent": 71.43,
-      "correct": 5,
+      "accuracy_percent": 85.71,
+      "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 88,
-      "completion_tokens": 220,
-      "total_tokens": 308
+      "prompt_tokens": 84,
+      "completion_tokens": 364,
+      "total_tokens": 448
     },
     {
       "id": "domain_oriented_task_80",
-      "accuracy_percent": 100.0,
-      "correct": 8,
+      "accuracy_percent": 87.5,
+      "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 105,
-      "completion_tokens": 618,
-      "total_tokens": 723
+      "prompt_tokens": 103,
+      "completion_tokens": 939,
+      "total_tokens": 1042
     },
     {
       "id": "domain_oriented_task_170",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 57,
-      "completion_tokens": 290,
-      "total_tokens": 347
+      "prompt_tokens": 55,
+      "completion_tokens": 408,
+      "total_tokens": 463
     },
     {
       "id": "domain_oriented_task_169",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 74,
-      "completion_tokens": 252,
-      "total_tokens": 326
+      "prompt_tokens": 62,
+      "completion_tokens": 340,
+      "total_tokens": 402
     },
     {
       "id": "domain_oriented_task_185",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 54,
-      "completion_tokens": 277,
-      "total_tokens": 331
+      "prompt_tokens": 49,
+      "completion_tokens": 171,
+      "total_tokens": 220
     },
     {
       "id": "domain_oriented_task_112",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 55,
-      "completion_tokens": 263,
-      "total_tokens": 318
+      "prompt_tokens": 49,
+      "completion_tokens": 479,
+      "total_tokens": 528
     },
     {
       "id": "domain_oriented_task_245",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 73,
-      "completion_tokens": 152,
-      "total_tokens": 225
+      "prompt_tokens": 71,
+      "completion_tokens": 232,
+      "total_tokens": 303
     },
     {
       "id": "domain_oriented_task_179",
-      "accuracy_percent": 100.0,
-      "correct": 6,
+      "accuracy_percent": 50.0,
+      "correct": 3,
       "total_questions": 6,
-      "prompt_tokens": 334,
-      "completion_tokens": 1274,
-      "total_tokens": 1608
+      "prompt_tokens": 273,
+      "completion_tokens": 8630,
+      "total_tokens": 8903
     },
     {
       "id": "domain_oriented_task_221",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 329,
-      "completion_tokens": 375,
-      "total_tokens": 704
+      "prompt_tokens": 318,
+      "completion_tokens": 470,
+      "total_tokens": 788
     },
     {
       "id": "domain_oriented_task_177",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 75,
-      "completion_tokens": 422,
-      "total_tokens": 497
+      "prompt_tokens": 70,
+      "completion_tokens": 651,
+      "total_tokens": 721
     },
     {
       "id": "domain_oriented_task_42",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 52,
-      "completion_tokens": 304,
-      "total_tokens": 356
+      "prompt_tokens": 51,
+      "completion_tokens": 482,
+      "total_tokens": 533
     },
     {
       "id": "domain_oriented_task_40",
-      "accuracy_percent": 60.0,
-      "correct": 3,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 65,
-      "completion_tokens": 127,
-      "total_tokens": 192
+      "prompt_tokens": 64,
+      "completion_tokens": 1747,
+      "total_tokens": 1811
     },
     {
       "id": "domain_oriented_task_119",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 82,
-      "completion_tokens": 372,
-      "total_tokens": 454
+      "prompt_tokens": 73,
+      "completion_tokens": 549,
+      "total_tokens": 622
     },
     {
       "id": "domain_oriented_task_203",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 39,
-      "completion_tokens": 1331,
-      "total_tokens": 1370
+      "prompt_tokens": 37,
+      "completion_tokens": 768,
+      "total_tokens": 805
     },
     {
       "id": "domain_oriented_task_44",
-      "accuracy_percent": 100.0,
-      "correct": 5,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 107,
-      "completion_tokens": 490,
-      "total_tokens": 597
+      "prompt_tokens": 104,
+      "completion_tokens": 1224,
+      "total_tokens": 1328
     },
     {
       "id": "domain_oriented_task_75",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 105,
-      "completion_tokens": 479,
-      "total_tokens": 584
+      "prompt_tokens": 101,
+      "completion_tokens": 791,
+      "total_tokens": 892
     },
     {
       "id": "domain_oriented_task_130",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 115,
-      "completion_tokens": 232,
-      "total_tokens": 347
+      "prompt_tokens": 108,
+      "completion_tokens": 303,
+      "total_tokens": 411
     },
     {
       "id": "domain_oriented_task_144",
-      "accuracy_percent": 77.78,
-      "correct": 7,
+      "accuracy_percent": 100.0,
+      "correct": 9,
       "total_questions": 9,
-      "prompt_tokens": 187,
-      "completion_tokens": 4096,
-      "total_tokens": 4283
+      "prompt_tokens": 166,
+      "completion_tokens": 1897,
+      "total_tokens": 2063
     },
     {
       "id": "domain_oriented_task_247",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 40,
-      "completion_tokens": 228,
-      "total_tokens": 268
+      "prompt_tokens": 35,
+      "completion_tokens": 417,
+      "total_tokens": 452
     },
     {
       "id": "domain_oriented_task_134",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 84,
-      "completion_tokens": 2253,
-      "total_tokens": 2337
+      "prompt_tokens": 74,
+      "completion_tokens": 1513,
+      "total_tokens": 1587
     },
     {
       "id": "domain_oriented_task_72",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 46,
-      "completion_tokens": 539,
-      "total_tokens": 585
+      "prompt_tokens": 45,
+      "completion_tokens": 712,
+      "total_tokens": 757
     },
     {
       "id": "domain_oriented_task_160",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 66,
-      "completion_tokens": 543,
-      "total_tokens": 609
+      "prompt_tokens": 65,
+      "completion_tokens": 1592,
+      "total_tokens": 1657
     },
     {
       "id": "domain_oriented_task_174",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 50.0,
+      "correct": 3,
       "total_questions": 6,
-      "prompt_tokens": 282,
-      "completion_tokens": 1027,
-      "total_tokens": 1309
+      "prompt_tokens": 264,
+      "completion_tokens": 7469,
+      "total_tokens": 7733
     },
     {
       "id": "domain_oriented_task_46",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 70,
-      "completion_tokens": 139,
-      "total_tokens": 209
+      "prompt_tokens": 67,
+      "completion_tokens": 979,
+      "total_tokens": 1046
     },
     {
       "id": "domain_oriented_task_24",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 186,
-      "completion_tokens": 788,
-      "total_tokens": 974
+      "prompt_tokens": 183,
+      "completion_tokens": 4363,
+      "total_tokens": 4546
     },
     {
       "id": "domain_oriented_task_235",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 66,
-      "completion_tokens": 1896,
-      "total_tokens": 1962
+      "prompt_tokens": 64,
+      "completion_tokens": 974,
+      "total_tokens": 1038
     },
     {
       "id": "domain_oriented_task_199",
       "accuracy_percent": 33.33,
       "correct": 1,
       "total_questions": 3,
-      "prompt_tokens": 34,
-      "completion_tokens": 47,
-      "total_tokens": 81
+      "prompt_tokens": 33,
+      "completion_tokens": 2845,
+      "total_tokens": 2878
     },
     {
       "id": "domain_oriented_task_140",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 76,
-      "completion_tokens": 408,
-      "total_tokens": 484
+      "prompt_tokens": 69,
+      "completion_tokens": 662,
+      "total_tokens": 731
     },
     {
       "id": "domain_oriented_task_181",
       "accuracy_percent": 85.71,
       "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 128,
-      "completion_tokens": 444,
-      "total_tokens": 572
+      "prompt_tokens": 122,
+      "completion_tokens": 284,
+      "total_tokens": 406
     },
     {
       "id": "domain_oriented_task_94",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 103,
-      "completion_tokens": 225,
-      "total_tokens": 328
+      "prompt_tokens": 94,
+      "completion_tokens": 400,
+      "total_tokens": 494
     },
     {
       "id": "domain_oriented_task_107",
-      "accuracy_percent": 92.31,
-      "correct": 12,
+      "accuracy_percent": 100.0,
+      "correct": 13,
       "total_questions": 13,
-      "prompt_tokens": 184,
-      "completion_tokens": 4096,
-      "total_tokens": 4280
+      "prompt_tokens": 174,
+      "completion_tokens": 1378,
+      "total_tokens": 1552
     },
     {
       "id": "domain_oriented_task_217",
-      "accuracy_percent": 87.5,
-      "correct": 7,
+      "accuracy_percent": 100.0,
+      "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 77,
-      "completion_tokens": 4096,
-      "total_tokens": 4173
+      "prompt_tokens": 72,
+      "completion_tokens": 1884,
+      "total_tokens": 1956
     },
     {
       "id": "domain_oriented_task_97",
       "accuracy_percent": 85.71,
       "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 164,
-      "completion_tokens": 985,
-      "total_tokens": 1149
+      "prompt_tokens": 155,
+      "completion_tokens": 2976,
+      "total_tokens": 3131
     },
     {
       "id": "domain_oriented_task_15",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 86,
-      "completion_tokens": 241,
-      "total_tokens": 327
+      "prompt_tokens": 85,
+      "completion_tokens": 444,
+      "total_tokens": 529
     },
     {
       "id": "domain_oriented_task_207",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 39,
-      "completion_tokens": 17,
-      "total_tokens": 56
+      "prompt_tokens": 34,
+      "completion_tokens": 175,
+      "total_tokens": 209
     },
     {
       "id": "domain_oriented_task_96",
@@ -3215,26 +3215,26 @@
       "correct": 2,
       "total_questions": 4,
       "prompt_tokens": 58,
-      "completion_tokens": 812,
-      "total_tokens": 870
+      "completion_tokens": 811,
+      "total_tokens": 869
     },
     {
       "id": "domain_oriented_task_4",
       "accuracy_percent": 75.0,
       "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 58,
-      "completion_tokens": 180,
-      "total_tokens": 238
+      "prompt_tokens": 55,
+      "completion_tokens": 306,
+      "total_tokens": 361
     },
     {
       "id": "domain_oriented_task_128",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 91,
-      "completion_tokens": 447,
-      "total_tokens": 538
+      "prompt_tokens": 85,
+      "completion_tokens": 599,
+      "total_tokens": 684
     },
     {
       "id": "domain_oriented_task_226",
@@ -3242,206 +3242,206 @@
       "correct": 5,
       "total_questions": 5,
       "prompt_tokens": 56,
-      "completion_tokens": 4096,
-      "total_tokens": 4152
+      "completion_tokens": 1059,
+      "total_tokens": 1115
     },
     {
       "id": "domain_oriented_task_123",
-      "accuracy_percent": 100.0,
-      "correct": 6,
+      "accuracy_percent": 83.33,
+      "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 81,
-      "completion_tokens": 959,
-      "total_tokens": 1040
+      "prompt_tokens": 76,
+      "completion_tokens": 931,
+      "total_tokens": 1007
     },
     {
       "id": "domain_oriented_task_90",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 79,
-      "completion_tokens": 1013,
-      "total_tokens": 1092
+      "prompt_tokens": 74,
+      "completion_tokens": 645,
+      "total_tokens": 719
     },
     {
       "id": "domain_oriented_task_124",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 60.0,
+      "correct": 3,
       "total_questions": 5,
-      "prompt_tokens": 82,
-      "completion_tokens": 430,
-      "total_tokens": 512
+      "prompt_tokens": 73,
+      "completion_tokens": 729,
+      "total_tokens": 802
     },
     {
       "id": "domain_oriented_task_25",
-      "accuracy_percent": 100.0,
-      "correct": 5,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 206,
-      "completion_tokens": 559,
-      "total_tokens": 765
+      "prompt_tokens": 200,
+      "completion_tokens": 5394,
+      "total_tokens": 5594
     },
     {
       "id": "domain_oriented_task_98",
-      "accuracy_percent": 100.0,
-      "correct": 5,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 45,
-      "completion_tokens": 43,
-      "total_tokens": 88
+      "prompt_tokens": 43,
+      "completion_tokens": 305,
+      "total_tokens": 348
     },
     {
       "id": "domain_oriented_task_54",
       "accuracy_percent": 71.43,
       "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 130,
-      "completion_tokens": 98,
-      "total_tokens": 228
+      "prompt_tokens": 115,
+      "completion_tokens": 597,
+      "total_tokens": 712
     },
     {
       "id": "domain_oriented_task_182",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 63,
-      "completion_tokens": 412,
-      "total_tokens": 475
+      "prompt_tokens": 60,
+      "completion_tokens": 699,
+      "total_tokens": 759
     },
     {
       "id": "domain_oriented_task_168",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 76,
-      "completion_tokens": 107,
-      "total_tokens": 183
+      "prompt_tokens": 72,
+      "completion_tokens": 352,
+      "total_tokens": 424
     },
     {
       "id": "domain_oriented_task_125",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 99,
-      "completion_tokens": 4096,
-      "total_tokens": 4195
+      "prompt_tokens": 94,
+      "completion_tokens": 2095,
+      "total_tokens": 2189
     },
     {
       "id": "domain_oriented_task_172",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 83,
-      "completion_tokens": 185,
-      "total_tokens": 268
+      "prompt_tokens": 75,
+      "completion_tokens": 564,
+      "total_tokens": 639
     },
     {
       "id": "domain_oriented_task_62",
-      "accuracy_percent": 100.0,
-      "correct": 12,
+      "accuracy_percent": 91.67,
+      "correct": 11,
       "total_questions": 12,
-      "prompt_tokens": 145,
-      "completion_tokens": 1973,
-      "total_tokens": 2118
+      "prompt_tokens": 136,
+      "completion_tokens": 1773,
+      "total_tokens": 1909
     },
     {
       "id": "domain_oriented_task_18",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 80,
-      "completion_tokens": 1498,
-      "total_tokens": 1578
+      "prompt_tokens": 77,
+      "completion_tokens": 1157,
+      "total_tokens": 1234
     },
     {
       "id": "domain_oriented_task_164",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 71,
-      "completion_tokens": 1794,
-      "total_tokens": 1865
+      "prompt_tokens": 69,
+      "completion_tokens": 1143,
+      "total_tokens": 1212
     },
     {
       "id": "domain_oriented_task_122",
-      "accuracy_percent": 100.0,
-      "correct": 7,
+      "accuracy_percent": 71.43,
+      "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 105,
-      "completion_tokens": 232,
-      "total_tokens": 337
+      "prompt_tokens": 98,
+      "completion_tokens": 412,
+      "total_tokens": 510
     },
     {
       "id": "domain_oriented_task_88",
-      "accuracy_percent": 100.0,
-      "correct": 11,
+      "accuracy_percent": 90.91,
+      "correct": 10,
       "total_questions": 11,
-      "prompt_tokens": 215,
-      "completion_tokens": 755,
-      "total_tokens": 970
+      "prompt_tokens": 203,
+      "completion_tokens": 1013,
+      "total_tokens": 1216
     },
     {
       "id": "domain_oriented_task_229",
       "accuracy_percent": 90.91,
       "correct": 10,
       "total_questions": 11,
-      "prompt_tokens": 142,
-      "completion_tokens": 414,
-      "total_tokens": 556
+      "prompt_tokens": 132,
+      "completion_tokens": 538,
+      "total_tokens": 670
     },
     {
       "id": "domain_oriented_task_111",
-      "accuracy_percent": 100.0,
-      "correct": 8,
+      "accuracy_percent": 87.5,
+      "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 114,
-      "completion_tokens": 2701,
-      "total_tokens": 2815
+      "prompt_tokens": 108,
+      "completion_tokens": 981,
+      "total_tokens": 1089
     },
     {
       "id": "domain_oriented_task_129",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 121,
-      "completion_tokens": 884,
-      "total_tokens": 1005
+      "prompt_tokens": 111,
+      "completion_tokens": 846,
+      "total_tokens": 957
     },
     {
       "id": "domain_oriented_task_22",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 56,
-      "completion_tokens": 992,
-      "total_tokens": 1048
+      "prompt_tokens": 52,
+      "completion_tokens": 740,
+      "total_tokens": 792
     },
     {
       "id": "domain_oriented_task_214",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 107,
-      "completion_tokens": 4096,
-      "total_tokens": 4203
+      "prompt_tokens": 101,
+      "completion_tokens": 1353,
+      "total_tokens": 1454
     },
     {
       "id": "domain_oriented_task_86",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 88,
-      "completion_tokens": 1091,
-      "total_tokens": 1179
+      "prompt_tokens": 90,
+      "completion_tokens": 467,
+      "total_tokens": 557
     },
     {
       "id": "domain_oriented_task_188",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 144,
-      "completion_tokens": 1026,
-      "total_tokens": 1170
+      "prompt_tokens": 138,
+      "completion_tokens": 1675,
+      "total_tokens": 1813
     },
     {
       "id": "domain_oriented_task_38",
@@ -3449,656 +3449,656 @@
       "correct": 3,
       "total_questions": 3,
       "prompt_tokens": 65,
-      "completion_tokens": 692,
-      "total_tokens": 757
+      "completion_tokens": 1340,
+      "total_tokens": 1405
     },
     {
       "id": "domain_oriented_task_204",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 68,
-      "completion_tokens": 417,
-      "total_tokens": 485
+      "prompt_tokens": 65,
+      "completion_tokens": 682,
+      "total_tokens": 747
     },
     {
       "id": "domain_oriented_task_232",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 93,
-      "completion_tokens": 1684,
-      "total_tokens": 1777
+      "prompt_tokens": 91,
+      "completion_tokens": 881,
+      "total_tokens": 972
     },
     {
       "id": "domain_oriented_task_213",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 64,
-      "completion_tokens": 893,
-      "total_tokens": 957
+      "prompt_tokens": 60,
+      "completion_tokens": 878,
+      "total_tokens": 938
     },
     {
       "id": "domain_oriented_task_71",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 123,
-      "completion_tokens": 4096,
-      "total_tokens": 4219
+      "prompt_tokens": 120,
+      "completion_tokens": 2518,
+      "total_tokens": 2638
     },
     {
       "id": "domain_oriented_task_219",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 84,
-      "completion_tokens": 4096,
-      "total_tokens": 4180
+      "prompt_tokens": 79,
+      "completion_tokens": 1956,
+      "total_tokens": 2035
     },
     {
       "id": "domain_oriented_task_238",
       "accuracy_percent": 75.0,
       "correct": 3,
       "total_questions": 4,
-      "prompt_tokens": 93,
-      "completion_tokens": 230,
-      "total_tokens": 323
+      "prompt_tokens": 89,
+      "completion_tokens": 9273,
+      "total_tokens": 9362
     },
     {
       "id": "domain_oriented_task_244",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 34,
-      "completion_tokens": 82,
-      "total_tokens": 116
+      "prompt_tokens": 32,
+      "completion_tokens": 2964,
+      "total_tokens": 2996
     },
     {
       "id": "domain_oriented_task_36",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 100,
-      "completion_tokens": 1311,
-      "total_tokens": 1411
+      "prompt_tokens": 96,
+      "completion_tokens": 2640,
+      "total_tokens": 2736
     },
     {
       "id": "domain_oriented_task_104",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 39,
-      "completion_tokens": 321,
-      "total_tokens": 360
+      "prompt_tokens": 38,
+      "completion_tokens": 568,
+      "total_tokens": 606
     },
     {
       "id": "domain_oriented_task_211",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 106,
-      "completion_tokens": 3472,
-      "total_tokens": 3578
+      "prompt_tokens": 98,
+      "completion_tokens": 1209,
+      "total_tokens": 1307
     },
     {
       "id": "domain_oriented_task_184",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 153,
-      "completion_tokens": 4096,
-      "total_tokens": 4249
+      "prompt_tokens": 145,
+      "completion_tokens": 3340,
+      "total_tokens": 3485
     },
     {
       "id": "domain_oriented_task_34",
       "accuracy_percent": 100.0,
       "correct": 9,
       "total_questions": 9,
-      "prompt_tokens": 125,
-      "completion_tokens": 357,
-      "total_tokens": 482
+      "prompt_tokens": 118,
+      "completion_tokens": 1009,
+      "total_tokens": 1127
     },
     {
       "id": "domain_oriented_task_137",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 117,
-      "completion_tokens": 1013,
-      "total_tokens": 1130
+      "prompt_tokens": 108,
+      "completion_tokens": 526,
+      "total_tokens": 634
     },
     {
       "id": "domain_oriented_task_127",
       "accuracy_percent": 40.0,
       "correct": 2,
       "total_questions": 5,
-      "prompt_tokens": 58,
-      "completion_tokens": 96,
-      "total_tokens": 154
+      "prompt_tokens": 56,
+      "completion_tokens": 2512,
+      "total_tokens": 2568
     },
     {
       "id": "domain_oriented_task_99",
       "accuracy_percent": 100.0,
       "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 31,
-      "completion_tokens": 113,
-      "total_tokens": 144
+      "prompt_tokens": 29,
+      "completion_tokens": 318,
+      "total_tokens": 347
     },
     {
       "id": "domain_oriented_task_175",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 183,
-      "completion_tokens": 1333,
-      "total_tokens": 1516
+      "prompt_tokens": 170,
+      "completion_tokens": 2175,
+      "total_tokens": 2345
     },
     {
       "id": "domain_oriented_task_26",
-      "accuracy_percent": 66.67,
-      "correct": 2,
+      "accuracy_percent": 100.0,
+      "correct": 3,
       "total_questions": 3,
-      "prompt_tokens": 114,
-      "completion_tokens": 1607,
-      "total_tokens": 1721
+      "prompt_tokens": 111,
+      "completion_tokens": 3123,
+      "total_tokens": 3234
     },
     {
       "id": "domain_oriented_task_196",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 50,
-      "completion_tokens": 1179,
-      "total_tokens": 1229
+      "prompt_tokens": 46,
+      "completion_tokens": 839,
+      "total_tokens": 885
     },
     {
       "id": "domain_oriented_task_21",
-      "accuracy_percent": 71.43,
-      "correct": 5,
+      "accuracy_percent": 85.71,
+      "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 125,
-      "completion_tokens": 993,
-      "total_tokens": 1118
+      "prompt_tokens": 115,
+      "completion_tokens": 927,
+      "total_tokens": 1042
     },
     {
       "id": "domain_oriented_task_161",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 97,
-      "completion_tokens": 797,
-      "total_tokens": 894
+      "prompt_tokens": 91,
+      "completion_tokens": 4639,
+      "total_tokens": 4730
     },
     {
       "id": "domain_oriented_task_113",
-      "accuracy_percent": 100.0,
-      "correct": 7,
+      "accuracy_percent": 85.71,
+      "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 107,
-      "completion_tokens": 528,
-      "total_tokens": 635
+      "prompt_tokens": 102,
+      "completion_tokens": 411,
+      "total_tokens": 513
     },
     {
       "id": "domain_oriented_task_141",
       "accuracy_percent": 83.33,
       "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 73,
-      "completion_tokens": 610,
-      "total_tokens": 683
+      "prompt_tokens": 72,
+      "completion_tokens": 932,
+      "total_tokens": 1004
     },
     {
       "id": "domain_oriented_task_92",
-      "accuracy_percent": 87.5,
-      "correct": 7,
+      "accuracy_percent": 100.0,
+      "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 112,
-      "completion_tokens": 621,
-      "total_tokens": 733
+      "prompt_tokens": 107,
+      "completion_tokens": 582,
+      "total_tokens": 689
     },
     {
       "id": "domain_oriented_task_110",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 65,
-      "completion_tokens": 4096,
-      "total_tokens": 4161
+      "prompt_tokens": 63,
+      "completion_tokens": 1397,
+      "total_tokens": 1460
     },
     {
       "id": "domain_oriented_task_193",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 85,
-      "completion_tokens": 4096,
-      "total_tokens": 4181
+      "prompt_tokens": 81,
+      "completion_tokens": 2140,
+      "total_tokens": 2221
     },
     {
       "id": "domain_oriented_task_195",
       "accuracy_percent": 85.71,
       "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 105,
-      "completion_tokens": 943,
-      "total_tokens": 1048
+      "prompt_tokens": 100,
+      "completion_tokens": 1392,
+      "total_tokens": 1492
     },
     {
       "id": "domain_oriented_task_70",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 100.0,
+      "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 79,
-      "completion_tokens": 4096,
-      "total_tokens": 4175
+      "prompt_tokens": 75,
+      "completion_tokens": 1634,
+      "total_tokens": 1709
     },
     {
       "id": "domain_oriented_task_82",
-      "accuracy_percent": 87.5,
-      "correct": 7,
+      "accuracy_percent": 100.0,
+      "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 191,
-      "completion_tokens": 3902,
-      "total_tokens": 4093
+      "prompt_tokens": 164,
+      "completion_tokens": 1517,
+      "total_tokens": 1681
     },
     {
       "id": "domain_oriented_task_234",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 67,
-      "completion_tokens": 359,
-      "total_tokens": 426
+      "prompt_tokens": 63,
+      "completion_tokens": 401,
+      "total_tokens": 464
     },
     {
       "id": "domain_oriented_task_200",
-      "accuracy_percent": 55.56,
-      "correct": 5,
+      "accuracy_percent": 77.78,
+      "correct": 7,
       "total_questions": 9,
-      "prompt_tokens": 161,
-      "completion_tokens": 621,
-      "total_tokens": 782
+      "prompt_tokens": 147,
+      "completion_tokens": 870,
+      "total_tokens": 1017
     },
     {
       "id": "domain_oriented_task_149",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 110,
-      "completion_tokens": 365,
-      "total_tokens": 475
+      "prompt_tokens": 101,
+      "completion_tokens": 432,
+      "total_tokens": 533
     },
     {
       "id": "domain_oriented_task_156",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 70,
-      "completion_tokens": 477,
-      "total_tokens": 547
+      "prompt_tokens": 61,
+      "completion_tokens": 1740,
+      "total_tokens": 1801
     },
     {
       "id": "domain_oriented_task_56",
-      "accuracy_percent": 100.0,
-      "correct": 7,
+      "accuracy_percent": 71.43,
+      "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 91,
-      "completion_tokens": 1168,
-      "total_tokens": 1259
+      "prompt_tokens": 87,
+      "completion_tokens": 917,
+      "total_tokens": 1004
     },
     {
       "id": "domain_oriented_task_81",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 104,
-      "completion_tokens": 186,
-      "total_tokens": 290
+      "prompt_tokens": 96,
+      "completion_tokens": 3356,
+      "total_tokens": 3452
     },
     {
       "id": "domain_oriented_task_63",
-      "accuracy_percent": 81.82,
-      "correct": 9,
+      "accuracy_percent": 100.0,
+      "correct": 11,
       "total_questions": 11,
-      "prompt_tokens": 108,
+      "prompt_tokens": 103,
       "completion_tokens": 639,
-      "total_tokens": 747
+      "total_tokens": 742
     },
     {
       "id": "domain_oriented_task_155",
-      "accuracy_percent": 100.0,
-      "correct": 8,
+      "accuracy_percent": 87.5,
+      "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 98,
-      "completion_tokens": 300,
-      "total_tokens": 398
+      "prompt_tokens": 93,
+      "completion_tokens": 905,
+      "total_tokens": 998
     },
     {
       "id": "domain_oriented_task_77",
-      "accuracy_percent": 92.86,
-      "correct": 13,
+      "accuracy_percent": 85.71,
+      "correct": 12,
       "total_questions": 14,
-      "prompt_tokens": 180,
-      "completion_tokens": 2991,
-      "total_tokens": 3171
+      "prompt_tokens": 171,
+      "completion_tokens": 1931,
+      "total_tokens": 2102
     },
     {
       "id": "domain_oriented_task_29",
       "accuracy_percent": 62.5,
       "correct": 5,
       "total_questions": 8,
-      "prompt_tokens": 135,
-      "completion_tokens": 805,
-      "total_tokens": 940
+      "prompt_tokens": 129,
+      "completion_tokens": 1018,
+      "total_tokens": 1147
     },
     {
       "id": "domain_oriented_task_105",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 50,
-      "completion_tokens": 182,
-      "total_tokens": 232
+      "prompt_tokens": 44,
+      "completion_tokens": 279,
+      "total_tokens": 323
     },
     {
       "id": "domain_oriented_task_192",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 348,
-      "completion_tokens": 669,
-      "total_tokens": 1017
+      "prompt_tokens": 293,
+      "completion_tokens": 2783,
+      "total_tokens": 3076
     },
     {
       "id": "domain_oriented_task_5",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 101,
-      "completion_tokens": 280,
-      "total_tokens": 381
+      "prompt_tokens": 94,
+      "completion_tokens": 403,
+      "total_tokens": 497
     },
     {
       "id": "domain_oriented_task_142",
       "accuracy_percent": 85.71,
       "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 97,
-      "completion_tokens": 429,
-      "total_tokens": 526
+      "prompt_tokens": 88,
+      "completion_tokens": 875,
+      "total_tokens": 963
     },
     {
       "id": "domain_oriented_task_69",
-      "accuracy_percent": 100.0,
-      "correct": 6,
+      "accuracy_percent": 83.33,
+      "correct": 5,
       "total_questions": 6,
-      "prompt_tokens": 64,
-      "completion_tokens": 638,
-      "total_tokens": 702
+      "prompt_tokens": 62,
+      "completion_tokens": 1022,
+      "total_tokens": 1084
     },
     {
       "id": "domain_oriented_task_41",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 58,
-      "completion_tokens": 546,
-      "total_tokens": 604
+      "prompt_tokens": 56,
+      "completion_tokens": 809,
+      "total_tokens": 865
     },
     {
       "id": "domain_oriented_task_76",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 76,
-      "completion_tokens": 1212,
-      "total_tokens": 1288
+      "prompt_tokens": 74,
+      "completion_tokens": 1488,
+      "total_tokens": 1562
     },
     {
       "id": "domain_oriented_task_19",
-      "accuracy_percent": 88.89,
-      "correct": 8,
+      "accuracy_percent": 100.0,
+      "correct": 9,
       "total_questions": 9,
-      "prompt_tokens": 174,
-      "completion_tokens": 2213,
-      "total_tokens": 2387
+      "prompt_tokens": 159,
+      "completion_tokens": 5860,
+      "total_tokens": 6019
     },
     {
       "id": "domain_oriented_task_89",
       "accuracy_percent": 88.89,
       "correct": 8,
       "total_questions": 9,
-      "prompt_tokens": 137,
-      "completion_tokens": 627,
-      "total_tokens": 764
+      "prompt_tokens": 128,
+      "completion_tokens": 801,
+      "total_tokens": 929
     },
     {
       "id": "domain_oriented_task_74",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 71.43,
+      "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 83,
-      "completion_tokens": 338,
-      "total_tokens": 421
+      "prompt_tokens": 78,
+      "completion_tokens": 502,
+      "total_tokens": 580
     },
     {
       "id": "domain_oriented_task_167",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 65,
-      "completion_tokens": 909,
-      "total_tokens": 974
+      "prompt_tokens": 64,
+      "completion_tokens": 1027,
+      "total_tokens": 1091
     },
     {
       "id": "domain_oriented_task_101",
-      "accuracy_percent": 100.0,
-      "correct": 5,
+      "accuracy_percent": 80.0,
+      "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 46,
-      "completion_tokens": 154,
-      "total_tokens": 200
+      "prompt_tokens": 44,
+      "completion_tokens": 4294,
+      "total_tokens": 4338
     },
     {
       "id": "domain_oriented_task_17",
-      "accuracy_percent": 83.33,
-      "correct": 5,
+      "accuracy_percent": 66.67,
+      "correct": 4,
       "total_questions": 6,
-      "prompt_tokens": 58,
-      "completion_tokens": 395,
-      "total_tokens": 453
+      "prompt_tokens": 55,
+      "completion_tokens": 590,
+      "total_tokens": 645
     },
     {
       "id": "domain_oriented_task_132",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 97,
-      "completion_tokens": 4096,
-      "total_tokens": 4193
+      "prompt_tokens": 89,
+      "completion_tokens": 1538,
+      "total_tokens": 1627
     },
     {
       "id": "domain_oriented_task_241",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 174,
-      "completion_tokens": 1008,
-      "total_tokens": 1182
+      "prompt_tokens": 162,
+      "completion_tokens": 2733,
+      "total_tokens": 2895
     },
     {
       "id": "domain_oriented_task_143",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 116,
-      "completion_tokens": 2927,
-      "total_tokens": 3043
+      "prompt_tokens": 110,
+      "completion_tokens": 1540,
+      "total_tokens": 1650
     },
     {
       "id": "domain_oriented_task_220",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 111,
-      "completion_tokens": 1962,
-      "total_tokens": 2073
+      "prompt_tokens": 112,
+      "completion_tokens": 1886,
+      "total_tokens": 1998
     },
     {
       "id": "domain_oriented_task_201",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 150,
-      "completion_tokens": 763,
-      "total_tokens": 913
+      "prompt_tokens": 135,
+      "completion_tokens": 817,
+      "total_tokens": 952
     },
     {
       "id": "domain_oriented_task_3",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 59,
-      "completion_tokens": 963,
-      "total_tokens": 1022
+      "prompt_tokens": 57,
+      "completion_tokens": 841,
+      "total_tokens": 898
     },
     {
       "id": "domain_oriented_task_9",
-      "accuracy_percent": 62.5,
-      "correct": 5,
+      "accuracy_percent": 37.5,
+      "correct": 3,
       "total_questions": 8,
-      "prompt_tokens": 97,
-      "completion_tokens": 373,
-      "total_tokens": 470
+      "prompt_tokens": 92,
+      "completion_tokens": 1731,
+      "total_tokens": 1823
     },
     {
       "id": "domain_oriented_task_66",
-      "accuracy_percent": 88.89,
-      "correct": 8,
+      "accuracy_percent": 77.78,
+      "correct": 7,
       "total_questions": 9,
-      "prompt_tokens": 63,
-      "completion_tokens": 274,
-      "total_tokens": 337
+      "prompt_tokens": 58,
+      "completion_tokens": 399,
+      "total_tokens": 457
     },
     {
       "id": "domain_oriented_task_178",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 55,
-      "completion_tokens": 350,
-      "total_tokens": 405
+      "prompt_tokens": 54,
+      "completion_tokens": 392,
+      "total_tokens": 446
     },
     {
       "id": "domain_oriented_task_243",
       "accuracy_percent": 90.0,
       "correct": 9,
       "total_questions": 10,
-      "prompt_tokens": 146,
-      "completion_tokens": 1745,
-      "total_tokens": 1891
+      "prompt_tokens": 136,
+      "completion_tokens": 887,
+      "total_tokens": 1023
     },
     {
       "id": "domain_oriented_task_206",
-      "accuracy_percent": 90.91,
-      "correct": 10,
+      "accuracy_percent": 100.0,
+      "correct": 11,
       "total_questions": 11,
-      "prompt_tokens": 150,
-      "completion_tokens": 666,
-      "total_tokens": 816
+      "prompt_tokens": 147,
+      "completion_tokens": 1048,
+      "total_tokens": 1195
     },
     {
       "id": "domain_oriented_task_173",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 75,
-      "completion_tokens": 465,
-      "total_tokens": 540
+      "prompt_tokens": 74,
+      "completion_tokens": 884,
+      "total_tokens": 958
     },
     {
       "id": "domain_oriented_task_223",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 99,
-      "completion_tokens": 503,
-      "total_tokens": 602
+      "prompt_tokens": 97,
+      "completion_tokens": 888,
+      "total_tokens": 985
     },
     {
       "id": "domain_oriented_task_78",
-      "accuracy_percent": 83.33,
-      "correct": 10,
+      "accuracy_percent": 91.67,
+      "correct": 11,
       "total_questions": 12,
-      "prompt_tokens": 214,
-      "completion_tokens": 1373,
-      "total_tokens": 1587
+      "prompt_tokens": 200,
+      "completion_tokens": 11486,
+      "total_tokens": 11686
     },
     {
       "id": "domain_oriented_task_135",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 113,
-      "completion_tokens": 1345,
-      "total_tokens": 1458
+      "prompt_tokens": 106,
+      "completion_tokens": 1291,
+      "total_tokens": 1397
     },
     {
       "id": "domain_oriented_task_115",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 62,
-      "completion_tokens": 3978,
-      "total_tokens": 4040
+      "prompt_tokens": 60,
+      "completion_tokens": 1367,
+      "total_tokens": 1427
     },
     {
       "id": "domain_oriented_task_67",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 79,
-      "completion_tokens": 781,
-      "total_tokens": 860
+      "prompt_tokens": 72,
+      "completion_tokens": 602,
+      "total_tokens": 674
     },
     {
       "id": "domain_oriented_task_68",
-      "accuracy_percent": 71.43,
-      "correct": 5,
+      "accuracy_percent": 85.71,
+      "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 75,
-      "completion_tokens": 565,
-      "total_tokens": 640
+      "prompt_tokens": 68,
+      "completion_tokens": 866,
+      "total_tokens": 934
     },
     {
       "id": "domain_oriented_task_118",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 98,
-      "completion_tokens": 294,
-      "total_tokens": 392
+      "prompt_tokens": 89,
+      "completion_tokens": 453,
+      "total_tokens": 542
     },
     {
       "id": "domain_oriented_task_154",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 78,
-      "completion_tokens": 3365,
-      "total_tokens": 3443
+      "prompt_tokens": 74,
+      "completion_tokens": 1026,
+      "total_tokens": 1100
     },
     {
       "id": "domain_oriented_task_14",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 209,
-      "completion_tokens": 985,
-      "total_tokens": 1194
+      "prompt_tokens": 191,
+      "completion_tokens": 1095,
+      "total_tokens": 1286
     },
     {
       "id": "domain_oriented_task_151",
@@ -4106,404 +4106,404 @@
       "correct": 4,
       "total_questions": 5,
       "prompt_tokens": 46,
-      "completion_tokens": 309,
-      "total_tokens": 355
+      "completion_tokens": 453,
+      "total_tokens": 499
     },
     {
       "id": "domain_oriented_task_61",
       "accuracy_percent": 100.0,
       "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 43,
-      "completion_tokens": 190,
-      "total_tokens": 233
+      "prompt_tokens": 41,
+      "completion_tokens": 335,
+      "total_tokens": 376
     },
     {
       "id": "domain_oriented_task_190",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 83,
-      "completion_tokens": 882,
-      "total_tokens": 965
+      "prompt_tokens": 78,
+      "completion_tokens": 2619,
+      "total_tokens": 2697
     },
     {
       "id": "domain_oriented_task_87",
-      "accuracy_percent": 66.67,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 97,
-      "completion_tokens": 4096,
-      "total_tokens": 4193
+      "prompt_tokens": 92,
+      "completion_tokens": 7924,
+      "total_tokens": 8016
     },
     {
       "id": "domain_oriented_task_106",
-      "accuracy_percent": 88.89,
-      "correct": 8,
+      "accuracy_percent": 100.0,
+      "correct": 9,
       "total_questions": 9,
-      "prompt_tokens": 109,
-      "completion_tokens": 595,
-      "total_tokens": 704
+      "prompt_tokens": 102,
+      "completion_tokens": 514,
+      "total_tokens": 616
     },
     {
       "id": "domain_oriented_task_224",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 80,
-      "completion_tokens": 651,
-      "total_tokens": 731
+      "prompt_tokens": 74,
+      "completion_tokens": 1433,
+      "total_tokens": 1507
     },
     {
       "id": "domain_oriented_task_85",
-      "accuracy_percent": 40.0,
-      "correct": 4,
+      "accuracy_percent": 90.0,
+      "correct": 9,
       "total_questions": 10,
-      "prompt_tokens": 98,
-      "completion_tokens": 4096,
-      "total_tokens": 4194
+      "prompt_tokens": 88,
+      "completion_tokens": 2170,
+      "total_tokens": 2258
     },
     {
       "id": "domain_oriented_task_103",
       "accuracy_percent": 66.67,
       "correct": 2,
       "total_questions": 3,
-      "prompt_tokens": 33,
-      "completion_tokens": 102,
-      "total_tokens": 135
+      "prompt_tokens": 31,
+      "completion_tokens": 298,
+      "total_tokens": 329
     },
     {
       "id": "domain_oriented_task_197",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 45,
-      "completion_tokens": 452,
-      "total_tokens": 497
+      "prompt_tokens": 40,
+      "completion_tokens": 697,
+      "total_tokens": 737
     },
     {
       "id": "domain_oriented_task_8",
       "accuracy_percent": 85.71,
       "correct": 6,
       "total_questions": 7,
-      "prompt_tokens": 74,
-      "completion_tokens": 502,
-      "total_tokens": 576
+      "prompt_tokens": 72,
+      "completion_tokens": 412,
+      "total_tokens": 484
     },
     {
       "id": "domain_oriented_task_212",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 63,
-      "completion_tokens": 1338,
-      "total_tokens": 1401
+      "prompt_tokens": 61,
+      "completion_tokens": 777,
+      "total_tokens": 838
     },
     {
       "id": "domain_oriented_task_109",
-      "accuracy_percent": 72.73,
-      "correct": 8,
+      "accuracy_percent": 63.64,
+      "correct": 7,
       "total_questions": 11,
-      "prompt_tokens": 372,
-      "completion_tokens": 140,
-      "total_tokens": 512
+      "prompt_tokens": 348,
+      "completion_tokens": 295,
+      "total_tokens": 643
     },
     {
       "id": "domain_oriented_task_120",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 71.43,
+      "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 101,
-      "completion_tokens": 647,
-      "total_tokens": 748
+      "prompt_tokens": 100,
+      "completion_tokens": 569,
+      "total_tokens": 669
     },
     {
       "id": "domain_oriented_task_51",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 100,
-      "completion_tokens": 741,
-      "total_tokens": 841
+      "prompt_tokens": 95,
+      "completion_tokens": 898,
+      "total_tokens": 993
     },
     {
       "id": "domain_oriented_task_131",
-      "accuracy_percent": 80.0,
-      "correct": 4,
+      "accuracy_percent": 100.0,
+      "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 63,
-      "completion_tokens": 439,
-      "total_tokens": 502
+      "prompt_tokens": 61,
+      "completion_tokens": 436,
+      "total_tokens": 497
     },
     {
       "id": "domain_oriented_task_176",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 58,
-      "completion_tokens": 445,
-      "total_tokens": 503
+      "prompt_tokens": 55,
+      "completion_tokens": 3383,
+      "total_tokens": 3438
     },
     {
       "id": "domain_oriented_task_57",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 76,
-      "completion_tokens": 583,
-      "total_tokens": 659
+      "prompt_tokens": 70,
+      "completion_tokens": 988,
+      "total_tokens": 1058
     },
     {
       "id": "domain_oriented_task_47",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 59,
-      "completion_tokens": 433,
-      "total_tokens": 492
+      "prompt_tokens": 56,
+      "completion_tokens": 483,
+      "total_tokens": 539
     },
     {
       "id": "domain_oriented_task_186",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 106,
-      "completion_tokens": 1604,
-      "total_tokens": 1710
+      "prompt_tokens": 99,
+      "completion_tokens": 1353,
+      "total_tokens": 1452
     },
     {
       "id": "domain_oriented_task_117",
-      "accuracy_percent": 75.0,
-      "correct": 3,
+      "accuracy_percent": 100.0,
+      "correct": 4,
       "total_questions": 4,
-      "prompt_tokens": 78,
-      "completion_tokens": 290,
-      "total_tokens": 368
+      "prompt_tokens": 73,
+      "completion_tokens": 444,
+      "total_tokens": 517
     },
     {
       "id": "domain_oriented_task_37",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 57.14,
+      "correct": 4,
       "total_questions": 7,
-      "prompt_tokens": 96,
-      "completion_tokens": 254,
-      "total_tokens": 350
+      "prompt_tokens": 94,
+      "completion_tokens": 977,
+      "total_tokens": 1071
     },
     {
       "id": "domain_oriented_task_0",
-      "accuracy_percent": 50.0,
-      "correct": 2,
+      "accuracy_percent": 0.0,
+      "correct": 0,
       "total_questions": 4,
-      "prompt_tokens": 57,
-      "completion_tokens": 436,
-      "total_tokens": 493
+      "prompt_tokens": 58,
+      "completion_tokens": 30000,
+      "total_tokens": 30058
     },
     {
       "id": "domain_oriented_task_198",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 7,
       "total_questions": 7,
       "prompt_tokens": 72,
-      "completion_tokens": 384,
-      "total_tokens": 456
+      "completion_tokens": 528,
+      "total_tokens": 600
     },
     {
       "id": "domain_oriented_task_84",
       "accuracy_percent": 87.5,
       "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 86,
-      "completion_tokens": 485,
-      "total_tokens": 571
+      "prompt_tokens": 77,
+      "completion_tokens": 662,
+      "total_tokens": 739
     },
     {
       "id": "domain_oriented_task_58",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 68,
-      "completion_tokens": 1539,
-      "total_tokens": 1607
+      "prompt_tokens": 62,
+      "completion_tokens": 1368,
+      "total_tokens": 1430
     },
     {
       "id": "domain_oriented_task_20",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 112,
-      "completion_tokens": 1217,
-      "total_tokens": 1329
+      "prompt_tokens": 110,
+      "completion_tokens": 1134,
+      "total_tokens": 1244
     },
     {
       "id": "domain_oriented_task_2",
       "accuracy_percent": 100.0,
       "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 63,
-      "completion_tokens": 500,
-      "total_tokens": 563
+      "prompt_tokens": 60,
+      "completion_tokens": 583,
+      "total_tokens": 643
     },
     {
       "id": "domain_oriented_task_230",
       "accuracy_percent": 86.67,
       "correct": 13,
       "total_questions": 15,
-      "prompt_tokens": 205,
-      "completion_tokens": 613,
-      "total_tokens": 818
+      "prompt_tokens": 187,
+      "completion_tokens": 825,
+      "total_tokens": 1012
     },
     {
       "id": "domain_oriented_task_225",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 65,
-      "completion_tokens": 537,
-      "total_tokens": 602
+      "prompt_tokens": 64,
+      "completion_tokens": 225,
+      "total_tokens": 289
     },
     {
       "id": "domain_oriented_task_49",
-      "accuracy_percent": 100.0,
-      "correct": 7,
+      "accuracy_percent": 57.14,
+      "correct": 4,
       "total_questions": 7,
       "prompt_tokens": 97,
-      "completion_tokens": 520,
-      "total_tokens": 617
+      "completion_tokens": 421,
+      "total_tokens": 518
     },
     {
       "id": "domain_oriented_task_205",
       "accuracy_percent": 80.0,
       "correct": 4,
       "total_questions": 5,
-      "prompt_tokens": 53,
-      "completion_tokens": 180,
-      "total_tokens": 233
+      "prompt_tokens": 47,
+      "completion_tokens": 306,
+      "total_tokens": 353
     },
     {
       "id": "domain_oriented_task_163",
       "accuracy_percent": 88.89,
       "correct": 8,
       "total_questions": 9,
-      "prompt_tokens": 69,
-      "completion_tokens": 540,
-      "total_tokens": 609
+      "prompt_tokens": 66,
+      "completion_tokens": 402,
+      "total_tokens": 468
     },
     {
       "id": "domain_oriented_task_91",
       "accuracy_percent": 71.43,
       "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 55,
-      "completion_tokens": 216,
-      "total_tokens": 271
+      "prompt_tokens": 54,
+      "completion_tokens": 2311,
+      "total_tokens": 2365
     },
     {
       "id": "domain_oriented_task_73",
       "accuracy_percent": 100.0,
       "correct": 5,
       "total_questions": 5,
-      "prompt_tokens": 71,
-      "completion_tokens": 394,
-      "total_tokens": 465
+      "prompt_tokens": 65,
+      "completion_tokens": 859,
+      "total_tokens": 924
     },
     {
       "id": "domain_oriented_task_64",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 100.0,
+      "correct": 7,
       "total_questions": 7,
-      "prompt_tokens": 86,
-      "completion_tokens": 951,
-      "total_tokens": 1037
+      "prompt_tokens": 75,
+      "completion_tokens": 918,
+      "total_tokens": 993
     },
     {
       "id": "domain_oriented_task_146",
       "accuracy_percent": 83.33,
       "correct": 10,
       "total_questions": 12,
-      "prompt_tokens": 176,
-      "completion_tokens": 199,
-      "total_tokens": 375
+      "prompt_tokens": 171,
+      "completion_tokens": 2628,
+      "total_tokens": 2799
     },
     {
       "id": "domain_oriented_task_30",
-      "accuracy_percent": 75.0,
-      "correct": 6,
+      "accuracy_percent": 87.5,
+      "correct": 7,
       "total_questions": 8,
-      "prompt_tokens": 103,
-      "completion_tokens": 402,
-      "total_tokens": 505
+      "prompt_tokens": 96,
+      "completion_tokens": 4149,
+      "total_tokens": 4245
     },
     {
       "id": "domain_oriented_task_236",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 91,
-      "completion_tokens": 647,
-      "total_tokens": 738
+      "prompt_tokens": 81,
+      "completion_tokens": 663,
+      "total_tokens": 744
     },
     {
       "id": "domain_oriented_task_6",
-      "accuracy_percent": 85.71,
-      "correct": 6,
+      "accuracy_percent": 71.43,
+      "correct": 5,
       "total_questions": 7,
-      "prompt_tokens": 102,
-      "completion_tokens": 254,
-      "total_tokens": 356
+      "prompt_tokens": 96,
+      "completion_tokens": 379,
+      "total_tokens": 475
     },
     {
       "id": "domain_oriented_task_147",
       "accuracy_percent": 100.0,
       "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 83,
-      "completion_tokens": 369,
-      "total_tokens": 452
+      "prompt_tokens": 81,
+      "completion_tokens": 519,
+      "total_tokens": 600
     },
     {
       "id": "domain_oriented_task_65",
-      "accuracy_percent": 87.5,
-      "correct": 7,
+      "accuracy_percent": 100.0,
+      "correct": 8,
       "total_questions": 8,
-      "prompt_tokens": 57,
-      "completion_tokens": 345,
-      "total_tokens": 402
+      "prompt_tokens": 55,
+      "completion_tokens": 1272,
+      "total_tokens": 1327
     },
     {
       "id": "domain_oriented_task_215",
-      "accuracy_percent": 90.91,
-      "correct": 10,
+      "accuracy_percent": 81.82,
+      "correct": 9,
       "total_questions": 11,
-      "prompt_tokens": 166,
-      "completion_tokens": 836,
-      "total_tokens": 1002
+      "prompt_tokens": 149,
+      "completion_tokens": 1185,
+      "total_tokens": 1334
     },
     {
       "id": "domain_oriented_task_150",
-      "accuracy_percent": 66.67,
-      "correct": 6,
+      "accuracy_percent": 88.89,
+      "correct": 8,
       "total_questions": 9,
-      "prompt_tokens": 98,
-      "completion_tokens": 4096,
-      "total_tokens": 4194
+      "prompt_tokens": 90,
+      "completion_tokens": 1899,
+      "total_tokens": 1989
     },
     {
       "id": "domain_oriented_task_187",
-      "accuracy_percent": 83.33,
-      "correct": 5,
-      "total_questions": 6,
-      "prompt_tokens": 62,
-      "completion_tokens": 894,
-      "total_tokens": 956
-    },
-    {
-      "id": "domain_oriented_task_31",
       "accuracy_percent": 100.0,
       "correct": 6,
       "total_questions": 6,
-      "prompt_tokens": 143,
-      "completion_tokens": 698,
-      "total_tokens": 841
+      "prompt_tokens": 59,
+      "completion_tokens": 1862,
+      "total_tokens": 1921
+    },
+    {
+      "id": "domain_oriented_task_31",
+      "accuracy_percent": 66.67,
+      "correct": 4,
+      "total_questions": 6,
+      "prompt_tokens": 127,
+      "completion_tokens": 14609,
+      "total_tokens": 14736
     }
   ]
 }
