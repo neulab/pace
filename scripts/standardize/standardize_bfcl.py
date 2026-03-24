@@ -80,48 +80,18 @@ from typing import Dict, List, Set, Tuple, Optional
 from collections import defaultdict
 
 from utils import (
+    normalize_model_name,
     write_csv,
     resolve_paths,
     print_summary,
 )
 
-# Model name mappings for BFCL (model dir name -> normalized name)
-BFCL_MODEL_NAME_LOOKUP: Dict[str, str] = {
-    "claude-opus-4-5-20251101-FC": "Claude-4.5-Opus",
-    "claude-sonnet-4-5-20250929-FC": "Claude-4.5-Sonnet",
-    "claude-opus-4-6-FC": "Claude-4.6-Opus",
-    "DeepSeek-V3.2-Exp-FC": "DeepSeek-V3.2",
-    "gemini-2.5-flash-FC": "Gemini-2.5-Flash",
-    "gemini-3-flash-preview-FC": "Gemini-3-Flash-Preview",
-    "gemini-3-pro-preview-FC": "Gemini-3-Pro-Preview",
-    "gpt-5.2-2025-12-11-FC": "GPT-5.2",
-    "gpt-5.2-codex-FC": "GPT-5.2-Codex",
-    "kimi-k2-thinking-FC": "Kimi-K2",
-    "kimi-k2.5-FC": "Kimi-K2.5",
-    "meta-llama_Llama-4-Maverick-17B-128E-Instruct-FP8-FC": "Llama-4-Maverick-Instruct",
-    "meta-llama_Llama-4-Scout-17B-16E-Instruct-FC": "Llama-4-Scout-Instruct",
-    "minimax-m2p1-FC": "MiniMax-M2.1",
-    "minimax-m2p5-FC": "MiniMax-M2.5",
-    "nvidia_nemotron-3-nano-30b-a3b-FC": "Nemotron-3-Nano",
-    "o3-2025-04-16-FC": "o3",
-    "o4-mini-2025-04-16-FC": "o4-mini",
-    "qwen3-235b-a22b-instruct-2507-FC": "Qwen3-235B-A22B",
-    "qwen3-30b-a3b-instruct-2507-FC": "Qwen3-30B-A3B",
-    "qwen3-coder-480b-a35b-FC": "Qwen3-Coder-480B-A35B-Instruct",
-    "GLM-4.7-FC": "GLM-4.7",
-}
-
-
 def normalize_bfcl_model_name(raw_name: str) -> str:
     """Normalize a BFCL model directory name to a standardized format."""
-    if raw_name in BFCL_MODEL_NAME_LOOKUP:
-        return BFCL_MODEL_NAME_LOOKUP[raw_name]
-    # Try removing -FC suffix and looking up again
-    stripped = raw_name.replace("-FC", "")
-    if stripped in BFCL_MODEL_NAME_LOOKUP:
-        return BFCL_MODEL_NAME_LOOKUP[stripped]
-    # Return as-is if not found (will be caught during processing)
-    raise ValueError(f"BFCL model not in BFCL_MODEL_NAME_LOOKUP: {raw_name}")
+    try: return normalize_model_name(raw_name)
+    except: 
+        stripped = raw_name.replace("-FC", "")
+        return normalize_model_name(stripped)
 
 
 def _extract_task_name_from_file(filepath: Path, category: str) -> str:
