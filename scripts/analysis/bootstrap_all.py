@@ -11,13 +11,14 @@ Example usage:
     python bootstrap_all.py \
         --sources humaneval mbpp livecodebench \
         --targets swebench gaia \
-        --train_size 200 --eval_size 200 \
+        --train_pct 0.8 --eval_pct 0.2 \
         --boot_source_k 100 --boot_target_k 100
 
 This will:
 1. Merge all instances from humaneval + mbpp + livecodebench into one source
 2. Merge all instances from swebench + gaia into one target
-3. Run bootstrap once on merged_source -> merged_target
+3. Split target: 80% for training, 20% for evaluation
+4. Run bootstrap once on merged_source -> merged_target
 """
 
 import argparse
@@ -106,12 +107,12 @@ def merge_benchmarks(
         models, model_dicts = load_benchmark_data(bench_name, base_dir)
         all_model_sets.append(set(models))
         bench_data[bench_name] = model_dicts
-        print(f"  - {bench_name}: {len(models)} models, "
+        print(f"  - {bench_name}: {len(models)} models, {models}"
               f"{sum(len(d) for d in model_dicts.values())} total instances")
     
     # Find common models across all benchmarks
     common_models = set.intersection(*all_model_sets) if all_model_sets else set()
-    print(f"  Common models across all benchmarks: {len(common_models)}")
+    print(f"  Common models across all benchmarks: {len(common_models)} {common_models}")
     
     # Merge data for common models
     merged_model_dicts: Dict[str, Dict[str, float]] = {}
@@ -140,8 +141,8 @@ def run_pipeline_for_merged(
     plot_dir: Path = Path("plots"),
     title_prefix: str = "",
     k_source: Optional[int] = None,
-    target_train_size: int = 400,
-    target_eval_size: int = 100,
+    target_train_pct: float = 0.8,
+    target_eval_pct: float = 0.2,
     n_outer: int = 10,
     n_restarts_inner: int = 10,
     boot_source_k: int = 200,
@@ -154,15 +155,23 @@ def run_pipeline_for_merged(
     candidate_cap: Optional[int] = None,
     annotate: bool = True,
 ) -> Dict:
-    """Run the bootstrap pipeline on merged source and target datasets."""
+    """Run the bootstrap pipeline on merged source and target datasets.
+    
+    Args:
+        target_train_pct: Fraction of target instances for training (0.0 to 1.0)
+        target_eval_pct: Fraction of target instances for evaluation (0.0 to 1.0)
+    """
     
     omit_models = set(omit_models or [])
-    tag = title_prefix or f"{'_'.join(src_merged.bench_names)}_to_{'_'.join(tgt_merged.bench_names)}"
+    tag = title_prefix or f"{'_'.join(src_merged.bench_names)}_to_{'_'.join(tgt_merged.bench_names)}_{k_source}"
     
     # 1) Find common models
     src_models = set(src_merged.list_models()) - omit_models
+    print(f"src_models: {src_models}")
     tgt_models = set(tgt_merged.list_models()) - omit_models
+    print(f"tgt_models: {tgt_models}")
     models = sorted(src_models.intersection(tgt_models))
+    print(f"final models: {models}")
     
     if not models:
         raise RuntimeError(f"No overlapping models between merged source and target")
@@ -180,12 +189,25 @@ def run_pipeline_for_merged(
     print(f"Source matrix: {A_src.shape} (models x instances)")
     print(f"Target matrix: {A_tgt.shape} (models x instances)")
     
-    # 4) Split target into train/eval
+    # 4) Split target into train/eval using percentages
     N_tgt = A_tgt.shape[1]
-    if target_train_size + target_eval_size > N_tgt:
-        target_train_size = min(target_train_size, N_tgt // 2)
-        target_eval_size = min(target_eval_size, N_tgt - target_train_size)
-        print(f"[WARN] Adjusted target split to train={target_train_size}, eval={target_eval_size} (N={N_tgt})")
+    
+    # Validate percentages
+    if target_train_pct + target_eval_pct > 1.0:
+        raise ValueError(f"train_pct ({target_train_pct}) + eval_pct ({target_eval_pct}) > 1.0")
+    
+    # Calculate actual sizes from percentages
+    target_train_size = int(N_tgt * target_train_pct)
+    target_eval_size = int(N_tgt * target_eval_pct)
+    
+    # Ensure at least 1 instance in each split if pct > 0
+    if target_train_pct > 0 and target_train_size == 0:
+        target_train_size = 1
+    if target_eval_pct > 0 and target_eval_size == 0:
+        target_eval_size = 1
+    
+    print(f"Target split: train={target_train_size} ({target_train_pct:.0%}), "
+          f"eval={target_eval_size} ({target_eval_pct:.0%}) of {N_tgt} total")
     
     rng_split = np.random.default_rng(split_seed)
     perm = rng_split.permutation(N_tgt)
@@ -290,6 +312,8 @@ def run_pipeline_for_merged(
         "models_used": models,
         "params": {
             "k_source": k_source,
+            "target_train_pct": target_train_pct,
+            "target_eval_pct": target_eval_pct,
             "target_train_size": target_train_size,
             "target_eval_size": target_eval_size,
             "n_outer": n_outer,
@@ -335,14 +359,14 @@ Examples:
   python bootstrap_all.py \\
       --sources humaneval mbpp livecodebench \\
       --targets swebench gaia \\
-      --train_size 200 --eval_size 200 \\
+      --train_pct 0.8 --eval_pct 0.2 \\
       --boot_source_k 100 --boot_target_k 100
 
   # Find proxy instances from code benchmarks for SWE-bench
   python bootstrap_all.py \\
       --sources humaneval mbpp humaneval_chat mbpp_chat \\
       --targets swebench \\
-      --train_size 150 --eval_size 150 \\
+      --train_pct 0.7 --eval_pct 0.3 \\
       --boot_source_k 100 --boot_target_k 100 \\
       --k_source 200
 
@@ -350,7 +374,7 @@ Examples:
   python bootstrap_all.py \\
       --sources gpqa logiqa mmlu \\
       --targets swebench gaia \\
-      --train_size 200 --eval_size 200
+      --train_pct 0.8 --eval_pct 0.2
         """
     )
     
@@ -366,11 +390,13 @@ Examples:
     parser.add_argument("--output_dir", type=str, default="../../analysis/merged",
                         help="Output directory for results")
     
-    # Size parameters
-    parser.add_argument("--train_size", type=int, default=200,
-                        help="Target train size (default: 200)")
-    parser.add_argument("--eval_size", type=int, default=200,
-                        help="Target eval size (default: 200)")
+    # Target split parameters (percentages)
+    parser.add_argument("--train_pct", type=float, default=0.8,
+                        help="Fraction of target instances for training (default: 0.8)")
+    parser.add_argument("--eval_pct", type=float, default=0.2,
+                        help="Fraction of target instances for evaluation (default: 0.2)")
+    
+    # Bootstrap parameters
     parser.add_argument("--boot_source_k", type=int, default=100,
                         help="Source bootstrap sample size (default: 100)")
     parser.add_argument("--boot_target_k", type=int, default=100,
@@ -435,8 +461,8 @@ Examples:
             plot_dir=output_dir,
             title_prefix=tag,
             k_source=args.k_source,
-            target_train_size=args.train_size,
-            target_eval_size=args.eval_size,
+            target_train_pct=args.train_pct,
+            target_eval_pct=args.eval_pct,
             n_outer=args.n_outer,
             n_restarts_inner=args.n_restarts,
             boot_source_k=args.boot_source_k,
