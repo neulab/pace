@@ -88,11 +88,15 @@ from utils import (
 # Model name mappings for BFCL (model dir name -> normalized name)
 BFCL_MODEL_NAME_LOOKUP: Dict[str, str] = {
     "claude-opus-4-5-20251101-FC": "Claude-4.5-Opus",
+    "claude-sonnet-4-5-20250929-FC": "Claude-4.5-Sonnet",
     "claude-opus-4-6-FC": "Claude-4.6-Opus",
+    "DeepSeek-V3.2-Exp-FC": "DeepSeek-V3.2",
     "gemini-2.5-flash-FC": "Gemini-2.5-Flash",
     "gemini-3-flash-preview-FC": "Gemini-3-Flash-Preview",
+    "gemini-3-pro-preview-FC": "Gemini-3-Pro-Preview",
     "gpt-5.2-2025-12-11-FC": "GPT-5.2",
     "gpt-5.2-codex-FC": "GPT-5.2-Codex",
+    "kimi-k2-thinking-FC": "Kimi-K2",
     "kimi-k2.5-FC": "Kimi-K2.5",
     "meta-llama_Llama-4-Maverick-17B-128E-Instruct-FP8-FC": "Llama-4-Maverick-Instruct",
     "meta-llama_Llama-4-Scout-17B-16E-Instruct-FC": "Llama-4-Scout-Instruct",

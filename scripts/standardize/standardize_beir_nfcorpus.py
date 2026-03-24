@@ -38,19 +38,6 @@ from utils import (
     print_summary,
 )
 
-
-def _get_model_name_for_dir(dirname: str) -> str:
-    """Try to normalize a model directory name.
-
-    Falls back to the dirname itself if not found in MODEL_NAME_LOOKUP.
-    """
-    try:
-        return normalize_model_name(dirname)
-    except ValueError:
-        # If not found in lookup, return the dirname as-is
-        return dirname
-
-
 def _extract_metrics_from_json(
     metrics_file: Path, verbose: bool
 ) -> List[Tuple[str, float, str]]:
@@ -125,7 +112,7 @@ def standardize_beir_nfcorpus(
 
     for model_dir in model_dirs:
         raw_model = model_dir.name
-        model_name = _get_model_name_for_dir(raw_model)
+        model_name = normalize_model_name(raw_model)
 
         if verbose:
             print(f"\nProcessing model: {raw_model} -> {model_name}")

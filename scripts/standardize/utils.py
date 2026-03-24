@@ -35,6 +35,7 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
 
     # Gemini models
     "gemini--gemini-2.0-flash": "Gemini-2.0-Flash",
+    "gemini_gemini-2.0-flash": "Gemini-2.0-Flash",
     "gemini--gemini-2.0-flash-exp": "Gemini-2.0-Flash",
     "gemini--gemini-2.5-flash": "Gemini-2.5-Flash",
     "gemini--gemini-2.5-pro": "Gemini-2.5-Pro",
@@ -43,12 +44,17 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
 
     # Anthropic Claude models (neulab)
     "neulab--claude-opus-4-5-20251101": "Claude-4.5-Opus",
+    "neulab_claude-opus-4-5-20251101": "Claude-4.5-Opus",
     "neulab--claude-sonnet-4-20250514": "Claude-4-Sonnet",
+    "anthropic_claude-sonnet-4-20250514": "Claude-4-Sonnet",
+    "neulab_claude-sonnet-4-5-20250929": "Claude-4.5-Sonnet",
     "neulab--claude-sonnet-4-5-20250929": "Claude-4.5-Sonnet",
 
     # Other models (neulab)
     "neulab--kimi-k2-0711-preview": "Kimi-K2-Preview",
+    "neulab_kimi-k2-0711-preview": "Kimi-K2-Preview",
     "neulab--qwen3-coder-480b-a35b-instruct": "Qwen3-Coder-480B-A35B-Instruct",
+    "openai_qwen_qwen3-coder": "Qwen3-Coder-480B-A35B-Instruct",
     "neulab--gpt-4.1-mini-2025-04-14": "GPT-4.1-mini",
     "neulab--gpt-4o-2024-08-06": "GPT-4o",
     "neulab--llama4-maverick-instruct": "Llama-4-Maverick-Instruct",
@@ -56,6 +62,7 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "neulab--llama4-scout-instruct": "Llama-4-Scout-Instruct",
     "neulab--qwen3-235b-a22b": "Qwen3-235B-A22B",
     "neulab--gpt-oss-120b": "GPT-OSS-120B",
+    "neulab_gpt-oss-120b": "GPT-OSS-120B",
 
     # Standalone raw names (appear in some datasets)
     "gpt-oss-120b": "GPT-OSS-120B",
@@ -84,6 +91,7 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "GPT-4o": "GPT-4o",
     "GPT-4.1-mini": "GPT-4.1-mini",
     "gpt-5": "GPT-5",
+    "openai_gpt-5": "GPT-5",
     "GPT-5": "GPT-5",
     "GPT-5-mini": "GPT-5-mini",
     "GPT-5-nano": "GPT-5-nano",
@@ -109,13 +117,16 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "kimik": "Kimi-K2",
     "kimi-k2-0711-preview": "Kimi-K2-Preview",
     "Kimi-K2-Thinking": "Kimi-K2",
+    "fireworks_ai_accounts_fireworks_models_kimi-k2-thinking": "Kimi-K2",
     "Kimi-K2-Instruct": "Kimi-K2-Instruct",
     "Kimi-K2": "Kimi-K2",
     "Kimi-K2.5": "Kimi-K2.5",
     "azure_ai__Kimi-K2.5": "Kimi-K2.5",
+    "fireworks_ai_accounts_fireworks_models_kimi-k2p5": "Kimi-K2.5",
     "DeepSeek-V3.2": "DeepSeek-V3.2",
     "azure_ai__DeepSeek-V3.2": "DeepSeek-V3.2",
     "deepseek-v3p2": "DeepSeek-V3.2",
+    "fireworks_ai_accounts_fireworks_models_deepseek-v3p2": "DeepSeek-V3.2",
     "qwen3-coder-480b-a35b-instruct": "Qwen3-Coder-480B-A35B-Instruct",
     "Qwen3-Coder-480B-A35B-Instruct": "Qwen3-Coder-480B-A35B-Instruct",
     "Qwen3-Coder-480B": "Qwen3-Coder-480B-A35B-Instruct",
@@ -132,13 +143,16 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "Qwen2.5-Coder-32B-Instruct": "Qwen2.5-Coder-32B-Instruct",
     "MiniMax-M2.5": "MiniMax-M2.5",
     "fireworks_ai__accounts__fireworks__models__minimax-m2p5": "MiniMax-M2.5",
+    "fireworks_ai_accounts_fireworks_models_minimax-m2p5": "MiniMax-M2.5",
     "MiniMax-M2.1": "MiniMax-M2.1",
+    "fireworks_ai_accounts_fireworks_models_minimax-m2p1": "MiniMax-M2.1",
     "fireworks_ai__accounts__fireworks__models__minimax-m2p1": "MiniMax-M2.1",
     "GLM-4.7": "GLM-4.7",
     "fireworks_ai__accounts__fireworks__models__glm-4p7": "GLM-4.7",
+    "fireworks_ai_accounts_fireworks_models_glm-4p7": "GLM-4.7",
     "GLM-5": "GLM-5",
     "fireworks_ai__accounts__fireworks__models__glm-5": "GLM-5",
-    "DeepSeek-V3.2-Reasoner": "DeepSeek-V3.2-Reasoner",
+    "DeepSeek-V3.2-Reasoner": "DeepSeek-V3.2",
 
     "azure__gpt-5.2": "GPT-5.2",
     "azure_ai__grok-4-fast-non-reasoning": "Grok-4-Fast",
@@ -162,10 +176,12 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "minimax-m2p1": "MiniMax-M2.1",
     "minimax-m2p5": "MiniMax-M2.5",
     "nvidia-nemotron-3-nano-30b-a3b-bf16": "Nemotron-3-Nano",
+    "openai_nvidia_nvidia-nemotron-3-nano-30b-a3b-bf16": "Nemotron-3-Nano",
     "anthropic__claude-opus-4-5": "Claude-4.5-Opus",
     "anthropic__claude-sonnet-4-5": "Claude-4.5-Sonnet",
     "azure_ai__gpt-5.2": "GPT-5.2",
     "azure_ai__gpt-5.2-codex": "GPT-5.2-Codex",
+    "azure_ai_gpt-5.2-codex": "GPT-5.2-Codex",
     "models__kimi-k2p5": "Kimi-K2.5",
     "neulab__claude-3-7-sonnet-20250219": "Claude-3.7-Sonnet",
 }
@@ -229,6 +245,10 @@ def normalize_model_name(raw_name: str, reasoning_level: Optional[str] = None) -
         base_name = MODEL_NAME_LOOKUP[raw_name]
     elif raw_name.replace("__", "--") in MODEL_NAME_LOOKUP:
         base_name = MODEL_NAME_LOOKUP[raw_name.replace("__", "--")]
+    elif raw_name.replace("__", "_") in MODEL_NAME_LOOKUP:
+        base_name = MODEL_NAME_LOOKUP[raw_name.replace("__", "_")]
+    elif raw_name.replace("_", "__") in MODEL_NAME_LOOKUP:
+        base_name = MODEL_NAME_LOOKUP[raw_name.replace("_", "__")]
     elif raw_name.replace("--", "-") in MODEL_NAME_LOOKUP:
         base_name = MODEL_NAME_LOOKUP[raw_name.replace("--", "-")]
     elif raw_name.replace("__high", "") in MODEL_NAME_LOOKUP:
