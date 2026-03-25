@@ -53,12 +53,19 @@ class MergedBenchDataset:
     bench_names: List[str]
     label: str
     model_dicts: Dict[str, Dict[str, float]]  # model_name -> {instance_id -> score}
+    all_instance_ids: List[str]  # All instance IDs across all benchmarks
     
     def list_models(self) -> List[str]:
         return sorted(self.model_dicts.keys())
     
     def get_model_dict(self, model_name: str) -> Dict[str, float]:
         return self.model_dicts.get(model_name, {})
+    
+    def get_model_dict_with_zeros(self, model_name: str) -> Dict[str, float]:
+        """Get model dict, filling missing instances with 0.0."""
+        base_dict = self.model_dicts.get(model_name, {})
+        # Fill any missing instance IDs with 0.0
+        return {iid: base_dict.get(iid, 0.0) for iid in self.all_instance_ids}
 
 
 def load_benchmark_data(
@@ -92,45 +99,81 @@ def merge_benchmarks(
     bench_names: List[str],
     base_dir: Path,
     label: str,
+    target_models: Optional[List[str]] = None,
 ) -> MergedBenchDataset:
     """Merge multiple benchmarks into a single dataset.
     
     Instance IDs are prefixed with benchmark name to ensure uniqueness.
-    Only models that exist in ALL benchmarks are kept.
+    
+    Args:
+        bench_names: List of benchmark names to merge
+        base_dir: Base directory for standardized results
+        label: Label for this merged dataset
+        target_models: If provided, include exactly these models (filling missing
+                       benchmark data with zeros). If None, only keep models that
+                       exist in ALL benchmarks.
     """
     print(f"\nMerging benchmarks for {label}: {bench_names}")
     
     all_model_sets: List[set] = []
     bench_data: Dict[str, Dict[str, Dict[str, float]]] = {}  # bench -> model -> dict
+    bench_instance_ids: Dict[str, set] = {}  # bench -> set of instance IDs
     
     for bench_name in bench_names:
         models, model_dicts = load_benchmark_data(bench_name, base_dir)
         all_model_sets.append(set(models))
         bench_data[bench_name] = model_dicts
-        print(f"  - {bench_name}: {len(models)} models, {models}"
-              f"{sum(len(d) for d in model_dicts.values())} total instances")
+        
+        # Collect all instance IDs for this benchmark (from any model)
+        instance_ids = set()
+        for d in model_dicts.values():
+            instance_ids.update(d.keys())
+        bench_instance_ids[bench_name] = instance_ids
+        
+        print(f"  - {bench_name}: {len(models)} models, {len(instance_ids)} instances")
     
-    # Find common models across all benchmarks
-    common_models = set.intersection(*all_model_sets) if all_model_sets else set()
-    print(f"  Common models across all benchmarks: {len(common_models)} {common_models}")
+    # Collect ALL instance IDs across all benchmarks
+    all_instance_ids = sorted(set().union(*bench_instance_ids.values()) if bench_instance_ids else set())
     
-    # Merge data for common models
+    if target_models is not None:
+        # Use specified models, filling missing data with zeros
+        models_to_use = target_models
+        print(f"  Using specified models: {len(models_to_use)} models")
+        
+        # Check which models are missing from which benchmarks
+        for model in models_to_use:
+            missing_benches = [b for b in bench_names if model not in bench_data[b]]
+            if missing_benches:
+                print(f"    [INFO] {model} missing from {missing_benches}, will use 0 scores")
+    else:
+        # Find common models across all benchmarks (original behavior)
+        common_models = set.intersection(*all_model_sets) if all_model_sets else set()
+        models_to_use = sorted(common_models)
+        print(f"  Common models across all benchmarks: {len(models_to_use)}")
+    
+    # Merge data for selected models
     merged_model_dicts: Dict[str, Dict[str, float]] = {}
     
-    for model in sorted(common_models):
+    for model in models_to_use:
         merged_dict: Dict[str, float] = {}
         for bench_name in bench_names:
             if model in bench_data[bench_name]:
+                # Model has data for this benchmark
                 merged_dict.update(bench_data[bench_name][model])
+            else:
+                # Model missing from this benchmark - fill with zeros
+                for iid in bench_instance_ids[bench_name]:
+                    merged_dict[iid] = 0.0
         merged_model_dicts[model] = merged_dict
     
-    total_instances = sum(len(d) for d in merged_model_dicts.values()) // len(common_models) if common_models else 0
-    print(f"  Merged dataset: {len(common_models)} models, ~{total_instances} instances per model")
+    total_instances = len(all_instance_ids)
+    print(f"  Merged dataset: {len(models_to_use)} models, {total_instances} instances per model")
     
     return MergedBenchDataset(
         bench_names=bench_names,
         label=label,
         model_dicts=merged_model_dicts,
+        all_instance_ids=all_instance_ids,
     )
 
 
@@ -138,6 +181,8 @@ def run_pipeline_for_merged(
     src_merged: MergedBenchDataset,
     tgt_merged: MergedBenchDataset,
     omit_models: Optional[List[str]] = None,
+    train_models: Optional[List[str]] = None,
+    eval_models: Optional[List[str]] = None,
     plot_dir: Path = Path("plots"),
     title_prefix: str = "",
     k_source: Optional[int] = None,
@@ -160,37 +205,91 @@ def run_pipeline_for_merged(
     Args:
         target_train_pct: Fraction of target instances for training (0.0 to 1.0)
         target_eval_pct: Fraction of target instances for evaluation (0.0 to 1.0)
+        train_models: If provided, use these models for training (greedy selection).
+                      Models missing from benchmarks get 0 scores.
+        eval_models: If provided, use these models for evaluation.
+                     Models missing from benchmarks get 0 scores.
     """
     
     omit_models = set(omit_models or [])
     tag = title_prefix or f"{'_'.join(src_merged.bench_names)}_to_{'_'.join(tgt_merged.bench_names)}_{k_source}"
     
-    # 1) Find common models
-    src_models = set(src_merged.list_models()) - omit_models
-    print(f"src_models: {src_models}")
-    tgt_models = set(tgt_merged.list_models()) - omit_models
-    print(f"tgt_models: {tgt_models}")
-    models = sorted(src_models.intersection(tgt_models))
-    print(f"final models: {models}")
+    # 1) Determine models for training and evaluation
+    if train_models is not None and eval_models is not None:
+        # Use separate model sets for training and evaluation
+        train_model_set = [m for m in train_models if m not in omit_models]
+        eval_model_set = [m for m in eval_models if m not in omit_models]
+        print(f"Train models ({len(train_model_set)}): {train_model_set}")
+        print(f"Eval models ({len(eval_model_set)}): {eval_model_set}")
+        
+        if not train_model_set:
+            raise RuntimeError("No train models after filtering")
+        if not eval_model_set:
+            raise RuntimeError("No eval models after filtering")
+        
+        # Build matrices for training models (with zero-fill for missing benchmarks)
+        src_dicts_train = [src_merged.get_model_dict_with_zeros(m) for m in train_model_set]
+        tgt_dicts_train = [tgt_merged.get_model_dict_with_zeros(m) for m in train_model_set]
+        
+        # Build matrices for eval models (with zero-fill for missing benchmarks)
+        src_dicts_eval = [src_merged.get_model_dict_with_zeros(m) for m in eval_model_set]
+        tgt_dicts_eval = [tgt_merged.get_model_dict_with_zeros(m) for m in eval_model_set]
+        
+        # Build train matrices
+        A_src_train, src_ids = dicts_to_matrix(src_dicts_train, fill_value=0.0)
+        A_tgt_train, tgt_ids = dicts_to_matrix(tgt_dicts_train, fill_value=0.0)
+        
+        # Build eval matrices
+        A_src_eval, src_ids_eval = dicts_to_matrix(src_dicts_eval, fill_value=0.0)
+        A_tgt_eval, tgt_ids_eval = dicts_to_matrix(tgt_dicts_eval, fill_value=0.0)
+        
+        # Verify instance IDs match
+        assert src_ids == src_ids_eval, "Source instance IDs mismatch between train/eval"
+        assert tgt_ids == tgt_ids_eval, "Target instance IDs mismatch between train/eval"
+        
+        print(f"\nTraining: {len(train_model_set)} models")
+        print(f"Evaluation: {len(eval_model_set)} models")
+        print(f"Source matrix: {A_src_train.shape} (train), {A_src_eval.shape} (eval)")
+        print(f"Target matrix: {A_tgt_train.shape} (train), {A_tgt_eval.shape} (eval)")
+        
+        models = train_model_set  # For reporting
+        use_separate_eval = True
+        
+    else:
+        # Original behavior: use same models for training and evaluation
+        src_models = set(src_merged.list_models()) - omit_models
+        print(f"src_models: {src_models}")
+        tgt_models = set(tgt_merged.list_models()) - omit_models
+        print(f"tgt_models: {tgt_models}")
+        models = sorted(src_models.intersection(tgt_models))
+        print(f"final models: {models}")
+        
+        if not models:
+            raise RuntimeError(f"No overlapping models between merged source and target")
+        
+        print(f"\nRunning pipeline with {len(models)} models")
+        
+        # Build model output dicts in same order
+        src_dicts = [src_merged.get_model_dict(m) for m in models]
+        tgt_dicts = [tgt_merged.get_model_dict(m) for m in models]
+        
+        # Build matrices
+        A_src_train, src_ids = dicts_to_matrix(src_dicts, fill_value=0.0)
+        A_tgt_train, tgt_ids = dicts_to_matrix(tgt_dicts, fill_value=0.0)
+        
+        # Same matrices for eval
+        A_src_eval = A_src_train
+        A_tgt_eval = A_tgt_train
+        
+        train_model_set = models
+        eval_model_set = models
+        use_separate_eval = False
     
-    if not models:
-        raise RuntimeError(f"No overlapping models between merged source and target")
-    
-    print(f"\nRunning pipeline with {len(models)} models")
-    
-    # 2) Build model output dicts in same order
-    src_dicts = [src_merged.get_model_dict(m) for m in models]
-    tgt_dicts = [tgt_merged.get_model_dict(m) for m in models]
-    
-    # 3) Build matrices
-    A_src, src_ids = dicts_to_matrix(src_dicts, fill_value=0.0)
-    A_tgt, tgt_ids = dicts_to_matrix(tgt_dicts, fill_value=0.0)
-    
-    print(f"Source matrix: {A_src.shape} (models x instances)")
-    print(f"Target matrix: {A_tgt.shape} (models x instances)")
+    print(f"Source matrix: {A_src_train.shape} (models x instances)")
+    print(f"Target matrix: {A_tgt_train.shape} (models x instances)")
     
     # 4) Split target into train/eval using percentages
-    N_tgt = A_tgt.shape[1]
+    N_tgt = A_tgt_train.shape[1]
     
     # Validate percentages
     if target_train_pct + target_eval_pct > 1.0:
@@ -214,25 +313,31 @@ def run_pipeline_for_merged(
     tgt_train_cols = perm[:target_train_size].tolist()
     tgt_eval_cols = perm[target_train_size:target_train_size + target_eval_size].tolist()
     
-    y_tgt_eval = compute_mean_over_indices(A_tgt, tgt_eval_cols) if target_eval_size > 0 else compute_mean_over_indices(A_tgt, tgt_train_cols)
-    y_tgt_train = compute_mean_over_indices(A_tgt, tgt_train_cols)
+    # Compute target means using training models for training, eval models for eval
+    y_tgt_train = compute_mean_over_indices(A_tgt_train, tgt_train_cols)
+    if use_separate_eval:
+        # Use eval models for evaluation
+        y_tgt_eval = compute_mean_over_indices(A_tgt_eval, tgt_eval_cols) if target_eval_size > 0 else compute_mean_over_indices(A_tgt_eval, tgt_train_cols)
+    else:
+        y_tgt_eval = compute_mean_over_indices(A_tgt_train, tgt_eval_cols) if target_eval_size > 0 else compute_mean_over_indices(A_tgt_train, tgt_train_cols)
     
-    # 5) Two-sided bootstrap max corr sample
+    # 5) Two-sided bootstrap max corr sample (using training models/matrices)
     x_boot_max, y_boot_max, boot_max_corr = two_sided_bootstrap_max_sample(
-        A_src, A_tgt, tgt_train_cols,
+        A_src_train, A_tgt_train, tgt_train_cols,
         k_src=boot_source_k, k_tgt=boot_target_k,
         n_boot=n_boot, seed=boot_seed,
     )
     
-    # 6) Voting-based subset selection
+    # 6) Voting-based subset selection (using training models/matrices)
     if k_source is None:
         k_source = boot_source_k
     
+    # For voting, use eval models' target performance as the evaluation signal
     S_vote, vote_counts, eval_corrs, boot_corrs = vote_source_instances_over_target_bootstraps(
-        A_src,
-        A_tgt,
+        A_src_train,
+        A_tgt_train,
         tgt_train_cols,
-        y_tgt_eval,
+        y_tgt_eval,  # Evaluate using eval model performance
         k_src=k_source,
         tgt_boot_k=boot_target_k,
         n_outer=n_outer,
@@ -244,35 +349,42 @@ def run_pipeline_for_merged(
     )
     
     # 7) Evaluate final subset
-    x_vote = compute_mean_over_indices(A_src, S_vote)
-    corr_train_p = pearson_corr(x_vote, y_tgt_train)
-    corr_train_s = spearman_corr(x_vote, y_tgt_train)
-    corr_eval_p = pearson_corr(x_vote, y_tgt_eval)
-    corr_eval_s = spearman_corr(x_vote, y_tgt_eval)
+    # Training correlation: use training models
+    x_vote_train = compute_mean_over_indices(A_src_train, S_vote)
+    corr_train_p = pearson_corr(x_vote_train, y_tgt_train)
+    corr_train_s = spearman_corr(x_vote_train, y_tgt_train)
+    
+    # Eval correlation: use eval models
+    if use_separate_eval:
+        x_vote_eval = compute_mean_over_indices(A_src_eval, S_vote)
+    else:
+        x_vote_eval = x_vote_train
+    corr_eval_p = pearson_corr(x_vote_eval, y_tgt_eval)
+    corr_eval_s = spearman_corr(x_vote_eval, y_tgt_eval)
     
     print(f"\nFinal correlations:")
-    print(f"  Train: Pearson={corr_train_p:.4f}, Spearman={corr_train_s:.4f}")
-    print(f"  Eval:  Pearson={corr_eval_p:.4f}, Spearman={corr_eval_s:.4f}")
+    print(f"  Train ({len(train_model_set)} models): Pearson={corr_train_p:.4f}, Spearman={corr_train_s:.4f}")
+    print(f"  Eval ({len(eval_model_set)} models): Pearson={corr_eval_p:.4f}, Spearman={corr_eval_s:.4f}")
     
     # 8) Create output directory and save plots
     out_dir = plot_dir
     out_dir.mkdir(parents=True, exist_ok=True)
     
-    # Scatter plot: voted subset vs eval
+    # Scatter plot: voted subset vs eval (using eval models)
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.scatter(x_vote, y_tgt_eval, alpha=0.7)
+    ax.scatter(x_vote_eval, y_tgt_eval, alpha=0.7)
     if annotate:
-        for i, m in enumerate(models):
-            ax.annotate(m, (x_vote[i], y_tgt_eval[i]), fontsize=6, alpha=0.7)
+        for i, m in enumerate(eval_model_set):
+            ax.annotate(m, (x_vote_eval[i], y_tgt_eval[i]), fontsize=6, alpha=0.7)
     ax.set_xlabel(f"Source (merged): {', '.join(src_merged.bench_names)}")
     ax.set_ylabel(f"Target (merged): {', '.join(tgt_merged.bench_names)}")
     ax.set_title(f"{tag}\nEval Pearson={corr_eval_p:.4f}, Spearman={corr_eval_s:.4f}")
     
     # Add regression line
-    if len(x_vote) > 1:
-        z = np.polyfit(x_vote, y_tgt_eval, 1)
+    if len(x_vote_eval) > 1:
+        z = np.polyfit(x_vote_eval, y_tgt_eval, 1)
         p = np.poly1d(z)
-        x_line = np.linspace(min(x_vote), max(x_vote), 100)
+        x_line = np.linspace(min(x_vote_eval), max(x_vote_eval), 100)
         ax.plot(x_line, p(x_line), "r--", alpha=0.5)
     
     fig.tight_layout()
@@ -309,7 +421,9 @@ def run_pipeline_for_merged(
         "title": tag,
         "source_benchmarks": src_merged.bench_names,
         "target_benchmarks": tgt_merged.bench_names,
-        "models_used": models,
+        "train_models": train_model_set,
+        "eval_models": eval_model_set,
+        "models_used": models,  # Keep for backward compat
         "params": {
             "k_source": k_source,
             "target_train_pct": target_train_pct,
@@ -324,8 +438,8 @@ def run_pipeline_for_merged(
             "boot_seed": boot_seed,
             "split_seed": split_seed,
         },
-        "source_matrix_shape": list(A_src.shape),
-        "target_matrix_shape": list(A_tgt.shape),
+        "source_matrix_shape": list(A_src_train.shape),
+        "target_matrix_shape": list(A_tgt_train.shape),
         "corr_train": {"pearson": float(corr_train_p), "spearman": float(corr_train_s)},
         "corr_eval": {"pearson": float(corr_eval_p), "spearman": float(corr_eval_s)},
         "boot_max_corr": float(boot_max_corr),
@@ -375,6 +489,13 @@ Examples:
       --sources gpqa logiqa mmlu \\
       --targets swebench gaia \\
       --train_pct 0.8 --eval_pct 0.2
+
+  # Use separate train/eval model splits (models missing from benchmarks get 0 scores)
+  python bootstrap_all.py \\
+      --sources humaneval mbpp \\
+      --targets swebench \\
+      --train_models GPT-5.2 Claude-4.5-Opus Gemini-3-Pro-Preview \\
+      --eval_models GPT-5.2-Codex MiniMax-M2.1
         """
     )
     
@@ -385,6 +506,14 @@ Examples:
                         help="List of target benchmark names to merge")
     parser.add_argument("--base_dir", default=str(STD_BASE),
                         help="Base directory for standardized_results")
+    
+    # Model selection (optional: if both provided, use separate train/eval model sets)
+    parser.add_argument("--train_models", nargs="+", default=None,
+                        help="List of model names to use for training (greedy selection). "
+                             "If a model is missing from a benchmark, it gets 0 scores.")
+    parser.add_argument("--eval_models", nargs="+", default=None,
+                        help="List of model names to use for evaluation. "
+                             "If a model is missing from a benchmark, it gets 0 scores.")
     
     # Output
     parser.add_argument("--output_dir", type=str, default="../../analysis/merged",
@@ -429,22 +558,37 @@ Examples:
     base_dir = Path(args.base_dir)
     output_dir = Path(args.output_dir)
     
+    # Determine target models for merging
+    # If train_models or eval_models are specified, we need all those models
+    if args.train_models is not None or args.eval_models is not None:
+        if args.train_models is None or args.eval_models is None:
+            print("ERROR: Both --train_models and --eval_models must be specified together")
+            return 1
+        all_models = list(set(args.train_models) | set(args.eval_models))
+    else:
+        all_models = None  # Will use common models across benchmarks
+    
     print("="*70)
     print("BOOTSTRAP ON MERGED BENCHMARKS")
     print("="*70)
     print(f"Sources: {args.sources}")
     print(f"Targets: {args.targets}")
+    if args.train_models:
+        print(f"Train models: {args.train_models}")
+        print(f"Eval models: {args.eval_models}")
     
-    # Merge source benchmarks
+    # Merge source benchmarks (with target models if specified)
     src_merged = merge_benchmarks(
         args.sources, base_dir, 
-        label="source_" + "_".join(args.sources)
+        label="source_" + "_".join(args.sources),
+        target_models=all_models,
     )
     
-    # Merge target benchmarks
+    # Merge target benchmarks (with target models if specified)
     tgt_merged = merge_benchmarks(
         args.targets, base_dir,
-        label="target_" + "_".join(args.targets)
+        label="target_" + "_".join(args.targets),
+        target_models=all_models,
     )
     
     # Create tag for output
@@ -458,6 +602,8 @@ Examples:
             src_merged,
             tgt_merged,
             omit_models=omit_models,
+            train_models=args.train_models,
+            eval_models=args.eval_models,
             plot_dir=output_dir,
             title_prefix=tag,
             k_source=args.k_source,
@@ -481,7 +627,8 @@ Examples:
         print("="*70)
         print(f"Source benchmarks: {args.sources}")
         print(f"Target benchmarks: {args.targets}")
-        print(f"Models used: {len(results['models_used'])}")
+        print(f"Train models: {len(results['train_models'])}")
+        print(f"Eval models: {len(results['eval_models'])}")
         print(f"Source instances: {results['source_matrix_shape'][1]}")
         print(f"Target instances: {results['target_matrix_shape'][1]}")
         print(f"\nCorrelations:")
