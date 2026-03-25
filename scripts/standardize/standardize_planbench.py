@@ -138,12 +138,7 @@ def standardize_planbench(input_root: Path, output_root: Path, verbose: bool = T
         
         for model_dir in sorted(model_dirs):
             raw_model = model_dir.name
-            try:
-                model_name = get_model_name(provider, raw_model)
-            except ValueError as e:
-                if verbose:
-                    print(f"  Warning: {e}")
-                continue
+            model_name = get_model_name(provider, raw_model)
                 
             if verbose:
                 print(f"\nProcessing: {provider}/{raw_model} -> {model_name}")
