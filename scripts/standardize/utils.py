@@ -38,6 +38,7 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "gemini_gemini-2.0-flash": "Gemini-2.0-Flash",
     "gemini--gemini-2.0-flash-exp": "Gemini-2.0-Flash",
     "gemini--gemini-2.5-flash": "Gemini-2.5-Flash",
+    "neulab__gemini-2.5-flash-preview-04-17": "Gemini-2.5-Flash",
     "gemini--gemini-2.5-pro": "Gemini-2.5-Pro",
     "gemini--gemini-3-flash-preview": "Gemini-3-Flash-Preview",
     "gemini--gemini-3-pro-preview": "Gemini-3-Pro-Preview",
