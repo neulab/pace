@@ -129,6 +129,7 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "fireworks_ai_accounts_fireworks_models_deepseek-v3p2": "DeepSeek-V3.2",
     "qwen3-coder-480b-a35b-instruct": "Qwen3-Coder-480B-A35B-Instruct",
     "Qwen3-Coder-480B-A35B-Instruct": "Qwen3-Coder-480B-A35B-Instruct",
+    "qwen3-coder": "Qwen3-Coder-480B-A35B-Instruct",
     "Qwen3-Coder-480B": "Qwen3-Coder-480B-A35B-Instruct",
     "Qwen3-Coder-Next": "Qwen3-Coder-Next",
     "Qwen3.5-Flash": "Qwen3.5-Flash",
