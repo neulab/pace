@@ -44,6 +44,8 @@ PLANBENCH_TASKS = (
     "task_2_plan_optimality",
     "task_3_plan_verification",
     "task_4_plan_reuse",
+    "task_5_plan_generalization",
+    "task_6_replanning",
     "task_7_plan_execution",
     "task_8_1_goal_shuffling",
     "task_8_2_full_to_partial",
@@ -153,9 +155,7 @@ def standardize_planbench(input_root: Path, output_root: Path, verbose: bool = T
                 task = json_file.stem
                 
                 if task not in PLANBENCH_TASKS:
-                    if verbose:
-                        print(f"  Skipping unrecognized task: {task}")
-                    continue
+                    raise ValueError(f"task not in PLANBENCH_TASKS: {task}")
 
                 out_dir = base_out / task
                 out_dir.mkdir(parents=True, exist_ok=True)
