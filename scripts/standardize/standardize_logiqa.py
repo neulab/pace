@@ -38,10 +38,10 @@ def _is_logiqa_file(filename: str) -> bool:
 def _extract_id(data: Dict[str, Any], fallback_idx: int) -> str:
     if "doc_id" in data:
         try:
-            return str(data["doc_id"])
+            return f'{data["doc_id"]}_{data['filter']}'
         except Exception:
             pass
-    return str(fallback_idx)
+    raise ValueError(f"no valid id")
 
 
 def _to_float(v: Any) -> float | None:
