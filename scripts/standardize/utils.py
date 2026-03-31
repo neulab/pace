@@ -43,7 +43,9 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "gemini--gemini-3-flash-preview": "Gemini-3-Flash-Preview",
     "gemini--gemini-3-pro-preview": "Gemini-3-Pro-Preview",
 
-    # Anthropic Claude models (neulab)
+    # Anthropic Claude models
+    "Claude-4-Opus": "Claude-4-Opus",
+    "Claude-4-Sonnet": "Claude-4-Sonnet",
     "neulab--claude-opus-4-5-20251101": "Claude-4.5-Opus",
     "neulab_claude-opus-4-5-20251101": "Claude-4.5-Opus",
     "neulab--claude-sonnet-4-20250514": "Claude-4-Sonnet",
@@ -190,6 +192,11 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "azure_ai_gpt-5.2-codex": "GPT-5.2-Codex",
     "models__kimi-k2p5": "Kimi-K2.5",
     "neulab__claude-3-7-sonnet-20250219": "Claude-3.7-Sonnet",
+    "anthropic__claude-sonnet-4-5-20250929": "Claude-4.5-Sonnet",
+    "anthropic__claude-opus-4-5-20251101": "Claude-4.5-Opus",
+    "azure_ai__Kimi-K2-Thinking": "Kimi-K2",
+    "nvidia__nemotron-3-nano-30b-a3b": "Nemotron-3-Nano",
+    "qwen__qwen3-coder": "Qwen3-Coder-480B-A35B-Instruct",
 }
 
 def parse_model_name_from_filename(filename: str) -> Tuple[str, Optional[str]]:
