@@ -1,0 +1,419 @@
+[
+  {
+    "score": "rouge_1: 58.69, rouge_2: 56.48, rouge_l: 58.69"
+  },
+  {
+    "pred": "Discover, Appreciate, & Understand the Animal World!",
+    "gold": "Discover, Appreciate, & Understand the Animal World!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Publish your poetry online",
+    "gold": "Publish your poetry online",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Book your next fishing trip",
+    "gold": "Book your next fishing trip",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Online Invitations & Greeting Cards",
+    "gold": "The Gold Standard in Online Invitations & Digital Cards",
+    "instance_score": {
+      "rouge_1": 57.14285668367348,
+      "rouge_2": 33.3333328888889,
+      "rouge_l": 57.14285668367348
+    }
+  },
+  {
+    "pred": "Find your drive",
+    "gold": "Car rentals from trusted, local hosts",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Local, trusted pet care",
+    "gold": "Local, trusted pet care",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "How to Be a Caregiver for Someone With Arthritis",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Find your outdoors",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Find senior living near you",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "The user wants me to identify the main heading of the webpage shown in the screenshot. Looking at the image, I can see this is the APMEX website (American Precious Metals Exchange). \n \n The most prominent text on the page appears to be the banner/advertisement that says \"Gold & Silver Eagle Coins on Sale\" with the subheading \"Unlock Limited-Time Savings.\"\n \n However, looking at the structure, there are several headings:\n 1. The banner: \"Gold & Silver Eagle Coins on Sale\"\n 2. The section below: \"Gold and Silver Popular Categories\"\n 3. Another section: \"Top Picks to Explore\"\n \n The main heading that stands out as the primary promotional message is \"Gold & Silver Eagle Coins on Sale\" which is displayed in large, bold text on the main banner/slider.\n \n Wait, let me look more carefully. The user is asking for \"the main text within the screenshot, which can be regarded as the heading of the webpage.\"\n \n Looking at the visual hierarchy:\n - The APMEX logo is at the top\n - The main banner has \"Gold & Silver Eagle Coins on Sale\" in very large text\n - Below that is \"Gold and Silver Popular Categories\"\n \n The most prominent heading that appears to be the main focus of this page is \"Gold & Silver Eagle Coins on Sale\" or possibly \"Gold and Silver Popular Categories\" depending on interpretation.\n \n Actually, looking at the banner more carefully, the text reads:\n \"Gold & Silver\n Eagle Coins on Sale\"\n \n And below the banner:\n \"Gold and Silver Popular Categories\"\n \n Given that this appears to be the homepage or a main landing page, and considering the prominent banner, the main heading would likely be \"Gold & Silver Eagle Coins on Sale\" or the section heading \"Gold and Silver Popular Categories.\"\n \n But the user is asking for the main heading of the webpage. Looking at the screenshot, the most dominant text is the banner headline: \"Gold & Silver Eagle Coins on Sale\"\n \n However, I should consider what the actual main heading (H1) of the page is. In many e-commerce sites, the main heading might be the section title.\n \n Let me look at the text again:\n - Banner: \"Gold & Silver Eagle Coins on Sale\" with \"Unlock Limited-Time Savings\" underneath\n - Section: \"Gold and Silver Popular Categories\"\n - Section: \"Top Picks to Explore\"\n \n The banner \"Gold & Silver Eagle Coins on Sale\" is the most visually prominent and appears",
+    "gold": "Gold and Silver Popular Categories",
+    "instance_score": {
+      "rouge_1": 5.36912745191658,
+      "rouge_2": 2.2988505445310556,
+      "rouge_l": 5.36912745191658
+    }
+  },
+  {
+    "pred": "Basketball-Reference",
+    "gold": "Basketball Stats and History Statistics, scores, and history for the NBA, ABA, WNBA, and top European competition.",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "\u201cI\u2019m Definitely Going To Show What I\u2019m Made Of,\u201d Says Fundora Ahead Of Tszyu Clash",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Free Online Calculators",
+    "gold": "Free Online Calculators",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The user is asking me to identify the main text/heading of the webpage shown in the screenshot. Looking at the image, I can see it's the Crate & Barrel website homepage.\n \n The most prominent text elements I can identify are:\n 1. \"Crate&Barrel\" - the logo at the top\n 2. \"free shipping sitewide\" - large text in the middle section\n 3. \"4 DAYS LEFT\" - above the free shipping text\n 4. \"furniture built for forever\" - at the bottom\n \n The main heading or most prominent promotional message appears to be \"free shipping sitewide\" which is displayed in large, bold text in the center-left area of the main banner.\n \n However, looking at the context and the way it's presented, the main heading could also be considered the \"Crate&Barrel\" brand name. But typically when asked for the \"main text within the screenshot, which can be regarded as the heading of the webpage,\" this usually refers to the primary promotional message or the main headline.\n \n Looking at the visual hierarchy:\n - The largest text in the main content area is \"free shipping sitewide\"\n - Above it says \"4 DAYS LEFT\"\n - The brand logo \"Crate&Barrel\" is at the top\n \n Given the prominence and size, \"free shipping sitewide\" appears to be the main heading/hero text of the page.\n \n Wait, let me look more carefully. The text \"free shipping sitewide\" is very large and prominent. But I should also consider if there are other main headings.\n \n Actually, looking at the bottom section, there's \"furniture built for forever\" which is also large.\n \n But the main promotional banner in the center has \"free shipping sitewide\" as the most prominent text.\n \n Let me think about this differently. The user wants the \"main text within the screenshot, which can be regarded as the heading of the webpage.\"\n \n Looking at the image again, the most prominent single piece of text that serves as a headline is:\n \"free shipping sitewide\"\n \n This is displayed in large, bold black letters and is the focal point of the main banner area.\n \n I should provide this as the answer without any explanation, as the user requested \"do not output any explanation or any other contents.\"\n \n Actually, looking more carefully at the image, I see there are multiple sections. But the main hero banner has \"free shipping sitewide\" as the main text.",
+    "gold": "Crate and Barrel",
+    "instance_score": {
+      "rouge_1": 3.7267080379614987,
+      "rouge_2": 0.0,
+      "rouge_l": 3.7267080379614987
+    }
+  },
+  {
+    "pred": "Interested in unions & collective bargaining?",
+    "gold": "Interested in unions & collective bargaining?",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "How can we help you?",
+    "gold": "For Your Home",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Easily find scholarships that fit you",
+    "gold": "Easily find scholarships that fit you",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "#1 Provider in Online\nTraffic School, Defensive Driving & Drivers Ed",
+    "gold": "#1 Provider in Online\nTraffic School, Defensive Driving & Drivers Ed",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Discover Land for Sale, All Across America",
+    "gold": "Discover Land for Sale, All Across America",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find Used Farm Equipment",
+    "gold": "Find Used Farm Equipment",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Massachusetts Institute of Technology",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Beyond the Guidebook",
+    "gold": "Beyond the Guidebook",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Discover your family story",
+    "gold": "Discover your family story",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Welcome to MyModivcare!",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Earth just had its warmest February on record",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Find your table for any occasion",
+    "gold": "Find your table for any occasion",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Online invitations to celebrate all of life\u2019s moments",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Your Climate Credit is coming",
+    "gold": "Your Climate Credit is coming",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Football Stats and History The complete source for current and historical NFL, AFL, and AAFC players, teams, scores and leaders.",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Better insurance starts here",
+    "gold": "Welcome to Progressive Insurance\u00ae",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Loving pet care in your neighborhood\u2122\nBook trusted sitters and dog walkers.",
+    "gold": "Loving pet care in your neighborhood\u2122",
+    "instance_score": {
+      "rouge_1": 66.66666622222223,
+      "rouge_2": 62.499999570312504,
+      "rouge_l": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Securing your today and tomorrow",
+    "gold": "Securing your today and tomorrow",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Lulu's Story",
+    "gold": "Providing expertise, innovation and world-class care",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Secretary Blinken's Travel",
+    "gold": "Secretary Blinken\u2019s Travel",
+    "instance_score": {
+      "rouge_1": 66.66666616666667,
+      "rouge_2": 0.0,
+      "rouge_l": 66.66666616666667
+    }
+  },
+  {
+    "pred": "Welcome to Texas.gov",
+    "gold": "Welcome to Texas.gov",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Your wedding team and everything in between",
+    "gold": "Your wedding team and everything in between",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "NEXT MOVES US FORWARD",
+    "gold": "TEXAS STATE UNIVERSITY",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "USAA has insurance, banking and retirement solutions.",
+    "gold": "USAA has insurance, banking and retirement solutions.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "FIND THE VALVOLINE\u2122 SOLUTION THAT'S RIGHT FOR YOU",
+    "gold": "FIND THE VALVOLINE\u2122 SOLUTION THAT'S RIGHT FOR YOU",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "VIPLeague | Live Sports Streaming",
+    "gold": "VIPLeague | Live Sports Streaming",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": " ",
+    "gold": "Periods of Snow Across the Great Lakes and Northeast; Elevated Fire Weather Conditions in the Ohio Valley and Mid-Atlantic",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Find people, contact info & background checks",
+    "gold": "Find people, contact info & background checks",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Welcome to wikiHow, the most trusted how-to site on the internet.",
+    "gold": "Welcome to wikiHow, the most trusted how-to site on the internet.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Wikipedia\nThe Free Encyclopedia",
+    "gold": "Wikipedia\nThe Free Encyclopedia",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "World History Encyclopedia",
+    "gold": "World History Encyclopedia",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Central and Western, People's Republic of China",
+    "gold": "Central and Western, People's Republic of China",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  }
+]

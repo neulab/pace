@@ -1,0 +1,2210 @@
+[
+  {
+    "score": "rouge_1: 96.25, rouge_2: 94.65, rouge_l: 96.25"
+  },
+  {
+    "pred": "See lists of animals that start with every letter of the alphabet, from A to Z. We track all types of animals like lions and tigers, dogs and cats, even dinosaurs and spiders. Choose your favorite letter below to see all animals that start with it today.",
+    "gold": "See lists of animals that start with every letter of the alphabet, from A to Z. We track all types of animals like lions and tigers, dogs and cats, even dinosaurs and spiders. Choose your favorite letter below to see all animals that start with it today.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The web's largest poetry writing group - from beginners to experts. Improve your poetry, create a fan base, and read the best poetry of our generation. Allpoetry is home base for poets.",
+    "gold": "The web's largest poetry writing group - from beginners to experts. Improve your poetry, create a fan base, and read the best poetry of our generation. Allpoetry is home base for poets.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Be a Hero \u2013 Sign up to receive our emails today and we'll donate a meal to a shelter dog on your behalf.",
+    "gold": "Be a Hero \u2013 Sign up to receive our emails today and we'll donate a meal to a shelter dog on your behalf.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Don't let allergies put a leash on your dog's summer fun! Ditch the itch.\n\nTry The #1 Allergy & Itch Supplement For Dogs",
+    "gold": "Don\u2019t let allergies put a leash on your dog\u2019s summer fun! Ditch the itch. Try The #1 Allergy & Itch Supplement For Dogs",
+    "instance_score": {
+      "rouge_1": 91.30434732608695,
+      "rouge_2": 86.36363586363636,
+      "rouge_l": 91.30434732608695
+    }
+  },
+  {
+    "pred": "Stay up to date with the latest news, tips and show times. MLF is committed to extending the life of the sport.",
+    "gold": "Stay up to date with the latest news, tips and show times. MLF is committed to extending the life of the sport.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Also **UNLIMITED** downloads (for 31 days after the day of making donation) are available for **ALL** contributors who will donate during the fundraising period till April 1, 2024.",
+    "gold": "Also UNLIMITED downloads (for 31 days after the day of making donation) are available for ALL contributors who will donate during the fundraising period till April 1, 2024.",
+    "instance_score": {
+      "rouge_1": 92.59259209259261,
+      "rouge_2": 85.18518468518519,
+      "rouge_l": 92.59259209259261
+    }
+  },
+  {
+    "pred": "Z-Library is one of the largest online libraries in the world that contains over 14,900,000 books and 84,837,000 articles. We aim to make literature accessible to everyone. Today (March 15, 2024) we've started additional fundraising to project maintenance and development.",
+    "gold": "Z-Library is one of the largest online libraries in the world that contains over 14,900,000 books and 84,837,000 articles. We aim to make literature accessible to everyone. Today (March 15, 2024) we've started additional fundraising to project maintenance and development.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Pretty much since he signed, all reports have suggested Russell Wilson will be the Week 1 starter for the Pittsburgh Steelers. That...",
+    "gold": "Pretty much since he signed, all reports have suggested Russell Wilson will be the Week 1 starter for the Pittsburgh Steelers. That...",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The legal tampering period of free agency began just a week ago, last Monday, and already it has been the wildest offseason...",
+    "gold": "The legal tampering period of free agency began just a week ago, last Monday, and already it has been the wildest offseason...",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Buy Or Sell: The Steelers \"won\" the Diontae Johnson trade after getting CB Donte Jackson at a reduced salary. Explanation: Acquired via...",
+    "gold": "Buy Or Sell: The Steelers \u201cwon\u201d the Diontae Johnson trade after getting CB Donte Jackson at a reduced salary. Explanation: Acquired via...",
+    "instance_score": {
+      "rouge_1": 95.45454495454547,
+      "rouge_2": 90.4761899761905,
+      "rouge_l": 95.45454495454547
+    }
+  },
+  {
+    "pred": "Shortly after news that the Pittsburgh Steelers had landed future Hall of Fame quarterback Russell Wilson in free agency on a one-year,...",
+    "gold": "Shortly after news that the Pittsburgh Steelers had landed future Hall of Fame quarterback Russell Wilson in free agency on a one-year,...",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "For questions or information about the third party liability insurance for trips in the US, consumers in Maryland and the licensed states listed here may contact Turo Insurance Agency at (415) 508-0283 or claims@turo.agency. For questions about how damage to a host's vehicle is handled, visit the Turo Support site.",
+    "gold": "For questions or information about the third party liability insurance for trips in the US, consumers in Maryland and the licensed states listed here may contact Turo Insurance Agency at (415) 508-0283 or claims@turo.agency. For questions about how damage to a host\u2019s vehicle is handled, visit the Turo Support site.",
+    "instance_score": {
+      "rouge_1": 97.61904711904762,
+      "rouge_2": 95.91836684693878,
+      "rouge_l": 97.61904711904762
+    }
+  },
+  {
+    "pred": "When a trip is booked in the state of Washington, physical damage to the host's vehicle is covered by insurance purchased by Turo, but the Turo insurance does not change the contractual responsibilities of hosts or guests with respect to physical damage to a host's vehicle.",
+    "gold": "When a trip is booked in the state of Washington, physical damage to the host\u2019s vehicle is covered by insurance purchased by Turo, but the Turo insurance does not change the contractual responsibilities of hosts or guests with respect to physical damage to a host\u2019s vehicle.",
+    "instance_score": {
+      "rouge_1": 96.8749995,
+      "rouge_2": 92.85714235714286,
+      "rouge_l": 96.8749995
+    }
+  },
+  {
+    "pred": "* Any personal insurance you may have that covers damage to the host's vehicle would kick in before your protection plan, except in limited situations for trips booked in Maryland, but this protects your own wallet. Liability insurance is provided under a policy issued to Turo by Travelers Excess and Surplus Lines Company. Terms, conditions, and exclusions apply. The policy does not provide coverage for damage to a host's vehicle.",
+    "gold": "* Any personal insurance you may have that covers damage to the host\u2019s vehicle would kick in before your protection plan, except in limited situations for trips booked in Maryland, but this protects your own wallet. Liability insurance is provided under a policy issued to Turo by Travelers Excess and Surplus Lines Company. Terms, conditions, and exclusions apply. The policy does not provide coverage for damage to a host\u2019s vehicle.",
+    "instance_score": {
+      "rouge_1": 98.24561353508771,
+      "rouge_2": 95.5223875597015,
+      "rouge_l": 98.24561353508771
+    }
+  },
+  {
+    "pred": "Go prepared in a rugged 4x4 to take on winter roads with ease, or a camper van to take you to the trees.",
+    "gold": "Go prepared in a rugged 4x4 to take on winter roads with ease, or a camper van to take you to the trees.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Whether you're looking for daily walks, planning a trip, stuck at work, or just want your best friend to have some company \u2014 we offer any day, anytime care.",
+    "gold": "Whether you're looking for daily walks, planning a trip, stuck at work, or just want your best friend to have some company \u2014 we offer any day, anytime care.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Are you a dog lover with pet care experience? Want to earn money working with dogs? Learn more about becoming a dog walker, sitter, or trainer in your city.",
+    "gold": "Are you a dog lover with pet care experience? Want to earn money working with dogs? Learn more about becoming a dog walker, sitter, or trainer in your city.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Why do some couples keep the home fires burning while for others the embers grow dim? Here's what some romantic partners are doing right",
+    "gold": "Why do some couples keep the home fires burning while for others the embers grow dim? Here\u2019s what some romantic partners are doing right",
+    "instance_score": {
+      "rouge_1": 95.45454495454547,
+      "rouge_2": 91.30434732608695,
+      "rouge_l": 95.45454495454547
+    }
+  },
+  {
+    "pred": "Take off with Aerobrew Coffee Company! Our unique air roasting method ensures the freshest and most flavorful cup of aviation coffee you'll ever have.",
+    "gold": "Take off with Aerobrew Coffee Company! Our unique air roasting method ensures the freshest and most flavorful cup of aviation coffee you'll ever have.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Gill has become the OEM original equipment battery for Raytheon, Cessna, LearJet, Mooney, Piper, Ayres, Airtractor, Maule, Scheizer and others in the aviation industry",
+    "gold": "Gill has become the OEM original equipment battery for Raytheon, Cessna, LearJet, Mooney, Piper, Ayres, Airtractor, Maule, Scheizer and others in the aviation industry",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "West - Corona, CA\nSouthwest - Chandler, AZ\nCentral - Fort Worth, TX\nMidwest - West Chicago, IL\nNortheast - Middletown, PA\nEast - Peachtree City, GA\nAlaska - Palmer, AK\nCanada - Brantford, ON",
+    "gold": "West - Corona, CA Southwest - Chandler, AZ Central - Fort Worth, TX Midwest - West Chicago, IL Northeast - Middletown, PA East - Peachtree City, GA Alaska - Palmer, AK Canada - Brantford, ON",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Aircraft engines usually don't wear out, they rust out! Particularly cams and lifters in owner-flown aircraft, which may not fly at least once per week.",
+    "gold": "Aircraft engines usually don't wear out, they rust out! Particularly cams and lifters in owner-flown aircraft, which may not fly at least once per week.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "From their trusted line of Stratus products to their innovative flight data monitoring solutions, Appareo Aviation has been developing game-changing products for more than 15 years.",
+    "gold": "From their trusted line of Stratus products to their innovative flight data monitoring solutions, Appareo Aviation has been developing game-changing products for more than 15 years.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Aircraft Spruce supplies components for a wide variety of homebuilt aircraft including the Lancair, Vans Aircraft, and Cozy, as well as factory built parts for Cessna, Piper, Beech, and Mooney. Products include: Garmin avionics, tools, charts, propellers, spruce, software, instruments, aircraft engines and parts, aviation headsets, landing gear components, and aircraft batteries. We also carry a full line of aviation grade hardware, covering supplies, composite materials, airframe parts, electrical components, and steel and aluminum. For airplane parts and pilot supplies, Aircraft Spruce is the leading aviation supply house in the world. Shop with Aircraft Spruce for all your aviation needs!",
+    "gold": "Aircraft Spruce supplies components for a wide variety of homebuilt aircraft including the Lancair, Vans Aircraft, and Cozy, as well as factory built parts for Cessna, Piper, Beech, and Mooney. Products include: Garmin avionics, tools, charts, propellers, spruce, software, instruments, aircraft engines and parts, aviation headsets, landing gear components, and aircraft batteries. We also carry a full line of aviation grade hardware, covering supplies, composite materials, airframe parts, electrical components, and steel and aluminum. For airplane parts and pilot supplies, Aircraft Spruce is the leading aviation supply house in the world. Shop with Aircraft Spruce for all your aviation needs!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Aircraft Spruce & Specialty Co. has been the supplier that aircraft builders, owners, pilots, and aviation businesses have depended on since 1965. We carry a wide selection of aircraft parts, building materials, avionics, and pilot supplies all of which are offered here on our website and in the famous Aircraft Spruce catalog. You can depend on Aircraft Spruce for prompt shipping and competitive pricing on all orders.",
+    "gold": "Aircraft Spruce & Specialty Co. has been the supplier that aircraft builders, owners, pilots, and aviation businesses have depended on since 1965. We carry a wide selection of aircraft parts, building materials, avionics, and pilot supplies all of which are offered here on our website and in the famous Aircraft Spruce catalog. You can depend on Aircraft Spruce for prompt shipping and competitive pricing on all orders.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "skySensor isn't just the aesthetic match for your right wingtip, it also includes a dual-band ADS-B receiver, static pressure sensor, and internal GPS. Easily receive traffic and weather via WiFi to GDL90 compatible EFB applications.",
+    "gold": "skySensor isn't just the aesthetic match for your right wingtip, it also includes a dual-band ADS-B receiver, static pressure sensor, and internal GPS. Easily receive traffic and weather via WiFi to GDL90 compatible EFB applications.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The score shown is the overall experience rating which is an average of the reviews submitted for those communities. The overall experience rating is a star rating that ranges from 1 being the lowest to 5 being the highest.",
+    "gold": "The score shown is the overall experience rating which is an average of the reviews submitted for those communities. The overall experience rating is a star rating that ranges from 1 being the lowest to 5 being the highest.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Assisted living facilities offer housing and care for active seniors who may need support with activities of daily living, like bathing, dressing, and medication management.",
+    "gold": "Assisted living facilities offer housing and care for active seniors who may need support with activities of daily living, like bathing, dressing, and medication management.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Winners of our **Best Meals and Dining Award** are the best communities for meals and dining, as determined by recent, highly rated reviews.",
+    "gold": "Winners of our Best Meals and Dining Award are the best communities for meals and dining, as determined by recent, highly rated reviews.",
+    "instance_score": {
+      "rouge_1": 90.90909040909091,
+      "rouge_2": 81.81818131818183,
+      "rouge_l": 90.90909040909091
+    }
+  },
+  {
+    "pred": "APMEX, the leading Precious Metals dealer in the United States, understands the needs of Gold and Silver investors. Now surpassing 20 years in business, APMEX distinguishes itself through exceptional customer service, unmatched product quality and options, and a brain trust of resources to help investors develop their ideal investment portfolio. Read More",
+    "gold": "APMEX, the leading Precious Metals dealer in the United States, understands the needs of Gold and Silver investors. Now surpassing 20 years in business, APMEX distinguishes itself through exceptional customer service, unmatched product quality and options, and a brain trust of resources to help investors develop their ideal investment portfolio. Read More",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "This question is one of the most important for investors to answer. After all, experts suggest limits on how much of any types of investments should go into...",
+    "gold": "This question is one of the most important for investors to answer. After all, experts suggest limits on how much of any types of investments should go into...",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "If you are concerned about the volatility of the stock market, you're not alone. The extreme highs and lows of the stock market often lead investors...",
+    "gold": "If you are concerned about the volatility of the stock market, you\u2019re not alone. The extreme highs and lows of the stock market often lead investors...",
+    "instance_score": {
+      "rouge_1": 95.45454495454547,
+      "rouge_2": 91.30434732608695,
+      "rouge_l": 95.45454495454547
+    }
+  },
+  {
+    "pred": "After considering why, how much, and what Precious Metals products to buy, an investor's next step is how to buy them. Gold and Silver are different than...",
+    "gold": "After considering why, how much, and what Precious Metals products to buy, an investor\u2019s next step is how to buy them. Gold and Silver are different than...",
+    "instance_score": {
+      "rouge_1": 95.83333283333334,
+      "rouge_2": 92.30769180769232,
+      "rouge_l": 95.83333283333334
+    }
+  },
+  {
+    "pred": "Our QuickShip\u00ae program guarantees any eligible order will be processed & shipped within one business day. APMEX offers an industry-exclusive $10 credit if your order is delayed.",
+    "gold": "Our QuickShip\u00ae program guarantees any eligible order will be processed & shipped within one business day. APMEX offers an industry-exclusive $10 credit if your order is delayed.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We believe in rewarding our customers for their loyalty and giving something back whenever we can. Learn more about some of our most popular Bullion Club benefits.",
+    "gold": "We believe in rewarding our customers for their loyalty and giving something back whenever we can. Learn more about some of our most popular Bullion Club benefits.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "APMEX's founder Scott Thomas took an interest in coins at a young age working with his grandfather's collection. Six months into the eBay business, as the coin inventory increased, the need arose for a bigger space and more of an online presence. Customers supported the move and followed the products over to APMEX.com for their buying and selling needs. Since the move online, with our customers' experience with our site and products as a priority, APMEX has kept growing into one of the nation's largest online Precious Metals companies.",
+    "gold": "APMEX\u2019s founder Scott Thomas took an interest in coins at a young age working with his grandfather\u2019s collection. Six months into the eBay business, as the coin inventory increased, the need arose for a bigger space and more of an online presence. Customers supported the move and followed the products over to APMEX.com for their buying and selling needs. Since the move online, with our customers\u2019 experience with our site and products as a priority, APMEX has kept growing into one of the nation\u2019s largest online Precious Metals companies.",
+    "instance_score": {
+      "rouge_1": 94.02985024626867,
+      "rouge_2": 91.95402248850574,
+      "rouge_l": 94.02985024626867
+    }
+  },
+  {
+    "pred": "We are an Authorized Purchaser of the United States Mint and we partner with 18 respected mints around the world. Discover More about the partnerships that shape our business.",
+    "gold": "We are an Authorized Purchaser of the United States Mint and we partner with 18 respected mints around the world.\u00a0Discover More about the partnerships that shape our business.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "arXiv is a free distribution service and an open-access archive for nearly 2.4 million scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics. Materials on this site are not peer-reviewed by arXiv.",
+    "gold": "arXiv is a free distribution service and an open-access archive for nearly 2.4 million scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics. Materials on this site are not peer-reviewed by arXiv.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Daniel Suarez edged rivals Ryan Blaney and Kyle Busch by mere inches in a thrilling three-wide photo-finish to win Sunday's Ambetter Health 400 at Atlanta Motor Speedway.",
+    "gold": "Daniel Suarez edged rivals Ryan Blaney and Kyle Busch by mere inches in a thrilling three-wide photo-finish to win Sunday\u2019s Ambetter Health 400 at Atlanta Motor Speedway.",
+    "instance_score": {
+      "rouge_1": 96.29629579629629,
+      "rouge_2": 92.30769180769232,
+      "rouge_l": 96.29629579629629
+    }
+  },
+  {
+    "pred": "Includes indexed lists of players. International leagues include top European leagues and EuroLeague and EuroCup competitions, as well as China's CBA, Australia's NBL, and Men's Olympics.",
+    "gold": "Includes indexed lists of players. International leagues include top European leagues and EuroLeague and EuroCup competitions, as well as China's CBA, Australia's NBL, and Men's Olympics.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "All logos are the trademark & property of their owners and not Sports Reference LLC. We present them here for purely educational purposes. Our reasoning for presenting offensive logos.",
+    "gold": "All logos are the trademark & property of their owners and not Sports Reference LLC. We present them here for purely educational purposes. Our reasoning for presenting offensive logos.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Do you have a sports website? Or write about sports? We have tools and resources that can help you use sports data. Find out more.",
+    "gold": "Do you have a sports website? Or write about sports? We have tools and resources that can help you use sports data. Find out more.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The SPORTS REFERENCE and STATHEAD trademarks are owned exclusively by Sports Reference LLC. Use without license or authorization is expressly prohibited.",
+    "gold": "The SPORTS REFERENCE and STATHEAD trademarks are owned exclusively by Sports Reference LLC. Use without license or authorization is expressly prohibited.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Tilting in time between the student antiwar protests in the U.S. during the late 1960s and contemporary anti-administration demonstrations on the streets of Paris, Silverman's examination of the nature of rebellion, the influence of family, and one's pursuit of individuality coalesces around the stories of Minnow and Keen.",
+    "gold": "\u200bTilting in time between the student antiwar protests in the U.S. during the late 1960s and contemporary anti-administration demonstrations on the streets of Paris, Silverman\u2019s examination of the nature of rebellion, the influence of family, and one\u2019s pursuit of individuality coalesces around the stories of Minnow and Keen.",
+    "instance_score": {
+      "rouge_1": 91.42857092857143,
+      "rouge_2": 89.58333283333334,
+      "rouge_l": 91.42857092857143
+    }
+  },
+  {
+    "pred": "Curious about Booklist Reader, Booklist's patron-facing magazine? Learn about our features, read testimonials, and see how Booklist subscribers can share Booklist Reader digitally (for free!) by checking out our Booklist Reader information packet.",
+    "gold": "Curious about\u00a0Booklist Reader,\u00a0Booklist\u2019s\u00a0patron-facing magazine? Learn about our features, read testimonials, and see how\u00a0Booklist\u00a0subscribers can share\u00a0Booklist Reader\u00a0digitally (for free!) by checking out our\u00a0Booklist Reader\u00a0information packet.",
+    "instance_score": {
+      "rouge_1": 96.29629579629629,
+      "rouge_2": 93.5483865967742,
+      "rouge_l": 96.29629579629629
+    }
+  },
+  {
+    "pred": "In this episode of *Shelf Care Interview*, Sarah Hunter talks with Stephanie V. W. Lucianovic about her latest picture book, *Touch the Sky*",
+    "gold": "In this episode of Shelf Care Interview, Sarah Hunter talks with Stephanie V. W. Lucianovic about her latest picture book, Touch the Sky",
+    "instance_score": {
+      "rouge_1": 82.60869515217392,
+      "rouge_2": 68.18181768181819,
+      "rouge_l": 82.60869515217392
+    }
+  },
+  {
+    "pred": "Helly Acton is a copywriter from London with past lives in Zimbabwe, the Middle East, and Australia. She studied Law at King's College London before following a more creative path into advertising. At 26, she took a career break to travel in Africa and Asia, before landing in Sydney. Six",
+    "gold": "Helly Acton is a copywriter from London with past lives in Zimbabwe, the Middle East, and Australia. She studied Law at King\u2019s College London before following a more creative path into advertising. At 26, she took a career break to travel in Africa and Asia, before landing in Sydney. Six years and one life-affirming breakup later, she returned home and threw herself into online dating in the city.",
+    "instance_score": {
+      "rouge_1": 85.71428522178259,
+      "rouge_2": 81.03448227065994,
+      "rouge_l": 85.71428522178259
+    }
+  },
+  {
+    "pred": "Family is a perennial topic in picture books, but these titles, reviewed in *Booklist* between March 15, 2023, and March 1, 2024, do an exceptional job of portraying everything from the simple joys of a day at the pool to the lovably exasperating attention of a little sibling to quiet, meaningful bonds",
+    "gold": "Family is a perennial topic in picture books, but these titles, reviewed in Booklist between March 15, 2023, and March 1, 2024, do an exceptional job of portraying everything from the simple joys of a day at the pool to the lovably exasperating attention of a little sibling to quiet, meaningful bonds with grandparents.",
+    "instance_score": {
+      "rouge_1": 95.45454495480372,
+      "rouge_2": 94.11764655901577,
+      "rouge_l": 95.45454495480372
+    }
+  },
+  {
+    "pred": "Mary Liza Hartong lives and writes in her hometown of Nashville. She graduated from Dartmouth College with a degree in English and Women's, Gender, and Sexuality Studies. She also holds a master's from Dartmouth in Creative Writing and a master's from the University College Cork in",
+    "gold": "Mary Liza Hartong lives and writes in her hometown of Nashville. She graduated from Dartmouth College with a degree in English and Women\u2019s, Gender, and Sexuality Studies. She also holds a master\u2019s from Dartmouth in Creative Writing and a master\u2019s from the University College Cork in British and American Literature via Fulbright grant.",
+    "instance_score": {
+      "rouge_1": 85.7142852179592,
+      "rouge_2": 83.5164830194421,
+      "rouge_l": 85.7142852179592
+    }
+  },
+  {
+    "pred": "These mysteries, each a quest for personal and social justice, share key elements with Sara Paretsky's *Pay Dirt*, from secrets about family landholdings tied to the racist violence of the Civil War to the revelations of historical records and from the horrors of the opioid epidemic to",
+    "gold": "These mysteries, each a quest for personal and social justice, share key elements with Sara Paretsky\u2019s\u00a0Pay Dirt, from secrets about family landholdings tied to the racist violence of the Civil War\u00a0to the revelations of historical records and from\u00a0the horrors of the opioid\u00a0epidemic to sleuths under threat and trailer-park life.",
+    "instance_score": {
+      "rouge_1": 86.07594886909149,
+      "rouge_2": 85.10638248076053,
+      "rouge_l": 86.07594886909149
+    }
+  },
+  {
+    "pred": "Cara Hunter is the author of instant *New York Times* best-selling thriller *Murder in the Family* as well as the *Sunday Times* best-selling crime novels featuring DI Adam Fawley and his Oxford-based police team.",
+    "gold": "Cara Hunter\u00a0is the author of instant\u00a0New York Times\u00a0best-selling thriller\u00a0Murder in the Family\u00a0as well as the\u00a0Sunday Times\u00a0best-selling crime novels featuring DI Adam Fawley and his Oxford-based police team.",
+    "instance_score": {
+      "rouge_1": 82.75862018965518,
+      "rouge_2": 68.7499995,
+      "rouge_l": 82.75862018965518
+    }
+  },
+  {
+    "pred": "Sebastian Fundora took a call on Sunday to see if he would be open to replacing Keith Thurman in the main event in Las Vegas against Tim Tszyu on march 30.",
+    "gold": "Sebastian Fundora took a call on Sunday to see if he would be open to replacing Keith Thurman in the main event in Las Vegas against Tim Tszyu on march 30.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Calculator has shortcuts for powers or exponents or their inverses, for 1/x, and repeating operations of addition, subtraction, multiplication, division and exponents. See additional instructions on the Basic Calculator page.",
+    "gold": "Calculator has shortcuts for powers or exponents or their inverses, for 1/x, and repeating operations of addition, subtraction, multiplication, division and exponents. See additional instructions on the Basic Calculator page.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "City-Data sees over 14 million users per month and has been featured in 121 books, on CNN, WABC in New York, Bay News 9 in Tampa Bay and USA Today's Hot Sites, among others.",
+    "gold": "City-Data sees over 14 million users per month and has been featured in 121 books, on CNN, WABC in New York, Bay News 9 in Tampa Bay and USA Today's Hot Sites, among others.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "By collecting and analyzing data from a variety of government and private sources, we're able to create detailed, informative profiles for every city in the United States. From crime rates to weather patterns, you'll find the data you're looking for on City-Data.com.",
+    "gold": "By collecting and analyzing data from a variety of government and private sources, we're able to create detailed, informative profiles for every city in the United States. From crime rates to weather patterns, you\u2019ll find the data you're looking for on City-Data.com.",
+    "instance_score": {
+      "rouge_1": 97.36842055263159,
+      "rouge_2": 95.23809473809524,
+      "rouge_l": 97.36842055263159
+    }
+  },
+  {
+    "pred": "You can compare all of these data on a single map, view photos and comments submitted by our users and easily find neighborhoods you want to live in!",
+    "gold": "You can compare all of these data on a single map, view photos and comments submitted by our users and easily find neighborhoods you want to live in!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We have collected assessment data for over 34 million properties around the United States. Not only can you find home and property values, but also the history of a property's value, land and building area, number of rooms, stories, additions, construction type, year of construction and more.",
+    "gold": "We have collected assessment data for over 34 million properties around the United States. Not only can you find home and property values, but also the history of a property's value, land and building area, number of rooms, stories, additions, construction type, year of construction and more.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We have over 74,000 city photos not found anywhere else, graphs of the latest real estate prices and sales trends, recent home sales, a home value estimator, hundreds of thousands of maps, satellite photos, demographic data (race, income, ancestries, education, employment), geographic data, state profiles, crime data, registered sex offenders, cost of living, housing, religions, businesses, local news links based on our exclusive technology, birthplaces of famous people, political contributions, city government finances, employment, weather, natural disasters, hospitals, schools and libraries.",
+    "gold": "We have over 74,000 city photos not found anywhere else, graphs of the latest real estate prices and sales trends, recent home sales, a home value estimator, hundreds of thousands of maps, satellite photos, demographic data (race, income, ancestries, education, employment), geographic data, state profiles, crime data, registered sex offenders, cost of living, housing, religions, businesses, local news links based on our exclusive technology, birthplaces of famous people, political contributions, city government finances, employment, weather, natural disasters, hospitals, schools and libraries.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find restaurants that you might enjoy, verify their compliance with state regulations, read reviews, browse restaurants in the neighborhood, and describe your experiences. We have inspection results and violations for over 700,000 restaurants, as well as ratings and reviews written by people who have previously visited them.",
+    "gold": "Find restaurants that you might enjoy, verify their compliance with state regulations, read reviews, browse restaurants in the neighborhood, and describe your experiences. We have inspection results and violations for over 700,000 restaurants, as well as ratings and reviews written by people who have previously visited them.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "1.5 million members, 15,000 new posts a day. Subjects range from relocation and city descriptions to hobbies and parenting. No matter what your interests are, you'll find your fit at the City-Data Forum!",
+    "gold": "1.5 million members, 15,000 new posts a day. Subjects range from relocation and city descriptions to hobbies and parenting. No matter what your interests are, you'll find your fit at the City-Data Forum!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Our Fuel Calculator allows you to determine the amount and cost of fuel for a trip, as well as compare both trip and yearly costs for two vehicles.",
+    "gold": "Our Fuel Calculator allows you to determine the amount and cost of fuel for a trip, as well as compare both trip and yearly costs for two vehicles.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find cities matching your requirements. Choose up to 10 criteria from our large database, set their desired ranges with easy-to-use visual controls and narrow the results using several available filters.",
+    "gold": "Find cities matching your requirements. Choose up to 10 criteria from our large database, set their desired ranges with easy-to-use visual controls and narrow the results using several available filters.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "This tool will help you find ideal meeting places between points, as well as the \"travel radius\" of a single point using different transportation modes. Unlike other tools that use simple approximations, the travel times in this tool are calculated using the road network analyzed with a routing algorithm.",
+    "gold": "This tool will help you find ideal meeting places between points, as well as the \"travel radius\" of a single point using different transportation modes. Unlike other tools that use simple approximations, the travel times in this tool are calculated using the road network analyzed with a routing algorithm.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Use our city comparison tool to analyze and compare two cities. Geographical and statistical data, demographics, current and historical values - it's all here. Making a decision on where to move is easier than ever!",
+    "gold": "Use our city comparison tool to analyze and compare two cities. Geographical and statistical data, demographics, current and historical values - it\u2019s all here. Making a decision on where to move is easier than ever!",
+    "instance_score": {
+      "rouge_1": 96.8749995,
+      "rouge_2": 94.11764655882354,
+      "rouge_l": 96.8749995
+    }
+  },
+  {
+    "pred": "At City-Data, we gather location data for a wide variety of places. Using this data, we generate highly precise large-radius isochrone maps. We then utilize these isochrone maps to create user-friendly interactive maps that help you determine your travel time to the nearest location of your chosen category.",
+    "gold": "At City-Data, we gather location data for a wide variety of places. Using this data, we generate highly precise large-radius isochrone maps. We then utilize these isochrone maps to create user-friendly interactive maps that help you determine your travel time to the nearest location of your chosen category.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Outside uses cookies and similar technologies to help our site function, as well as the placement of cookies and similar technologies on behalf of Outside and our third-party partners and for tailored advertising and marketing. Want to know more or manage your preferences? Click \"Cookie Preferences\" and read our Privacy Policy. By clicking \"Accept All\" you consent to the setting of these cookies and technologies. By clicking \"Decline All\" you decline all non-necessary cookies and similar technologies. By continuing to use this website, you agree to our Privacy Policy.",
+    "gold": "Outside uses cookies and similar technologies to help our site function, as well as the placement of cookies and similar technologies on behalf of Outside and our third-party partners and for tailored advertising and marketing. Want to know more or manage your preferences? Click \u201cCookie Preferences\u201d and read our Privacy Policy. By clicking \u201cAccept All\u201d you consent to the setting of these cookies and technologies. By clicking \u201cDecline All\u201d you decline all non-necessary cookies and similar technologies. By continuing to use this website, you agree to our Privacy Policy.",
+    "instance_score": {
+      "rouge_1": 90.74074024074075,
+      "rouge_2": 89.47368371052632,
+      "rouge_l": 90.74074024074075
+    }
+  },
+  {
+    "pred": "In 1979, Steve Roper and Allen Steck released 'Fifty Classic Climbs of North America.' This modern take is for the weekend warrior.",
+    "gold": "In 1979, Steve Roper and Allen Steck released 'Fifty Classic Climbs of North America.' This modern take is for the weekend warrior.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Establishing new routes is tons of work and takes a vision and drive (and lots of free time), but it's also a selfish pursuit, done to make the FAer happy.",
+    "gold": "Establishing new routes is tons of work and takes a vision and drive (and lots of free time), but it's also a selfish pursuit, done to make the FAer happy.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Allison Vest is a three-time Canadian Bouldering Champion. Here, in the form of a poem, she offers a mantra for other female climbers.",
+    "gold": "Allison Vest is a three-time Canadian Bouldering Champion. Here, in the form of a poem, she offers a mantra for other female climbers.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The EQM35 Pro is a good grab&go mount to go to your favourite dark site with a measured photographic payload of about 7 kgs. It can track the sky very well but it needs some tweaking to get it work right. Adjusting the engagement between worm and worm gears on both axis as well as releasing a bit the central nuts of both",
+    "gold": "The EQM35 Pro is a good grab&go mount to go to your favourite dark site with a measured photographic payload of about 7 kgs. It can track the sky very well but it needs some tweaking to get it work right. Adjusting the engagement between worm and worm gears on both axis as well as releasing a bit the central nuts of both axis are operations of vital importance to get good guiding. It will never perform like an Astrophysics but overall it can be a good mount if you want a lightweight, portable mount to use with scopes up to 6\u201d under dark skies.",
+    "instance_score": {
+      "rouge_1": 80.95238047052155,
+      "rouge_2": 76.54320940405425,
+      "rouge_l": 80.95238047052155
+    }
+  },
+  {
+    "pred": "The scope, as tested for this review, would be one that I would be willing to give to a person that I did not like, but even then, I like astronomy too much to spite someone away from the hobby. For free, this telescope was worth picking up and providing a day's worth of entertainment, but I would rather spend $27.99 on other",
+    "gold": "The scope, as tested for this review, would be one that I would be willing to give to a person that I did not like, but even then, I like astronomy too much to spite someone away from the hobby. For free, this telescope was worth picking up and providing a day\u2019s worth of entertainment, but I would rather spend $27.99 on other equipment. Conclusion: Do not buy, whether in \u201cClassic\u201d or \u201cModern Era\u201d trim.",
+    "instance_score": {
+      "rouge_1": 88.49557472597698,
+      "rouge_2": 87.87878738292014,
+      "rouge_l": 88.49557472597698
+    }
+  },
+  {
+    "pred": "In the end, all of my friend's and my work testing the telescope and documenting in detail its deficiencies against its stated specifications were a waste of time and energy, and ultimately changed nothing. Daystar would not stand behind its product. At this point, I would never purchase another telescope from them.",
+    "gold": "In the end, all of my friend\u2019s and my work testing the telescope and documenting in detail its deficiencies against its stated specifications were a waste of time and energy, and ultimately changed nothing. Daystar would not stand behind its product. At this point, I would never purchase another telescope from them.",
+    "instance_score": {
+      "rouge_1": 97.61904711904762,
+      "rouge_2": 96.07843087254902,
+      "rouge_l": 97.61904711904762
+    }
+  },
+  {
+    "pred": "The scope, as tested for this review, would be one that I would be willing to give to a person that I did not like, but even then, I like astronomy too much to spite someone away from the hobby. For free, this telescope was worth picking up and providing a day's worth of entertainment, but I would rather spend $27.99 on other",
+    "gold": "The scope, as tested for this review, would be one that I would be willing to give to a person that I did not like, but even then, I like astronomy too much to spite someone away from the hobby. For free, this telescope was worth picking up and providing a day\u2019s worth of entertainment, but I would rather spend $27.99 on other equipment. Conclusion: Do not buy, whether in \u201cClassic\u201d or \u201cModern Era\u201d trim.",
+    "instance_score": {
+      "rouge_1": 88.49557472597698,
+      "rouge_2": 87.87878738292014,
+      "rouge_l": 88.49557472597698
+    }
+  },
+  {
+    "pred": "In the end, all of my friend's and my work testing the telescope and documenting in detail its deficiencies against its stated specifications were a waste of time and energy, and ultimately changed nothing. Daystar would not stand behind its product. At this point, I would never purchase another telescope from them.",
+    "gold": "In the end, all of my friend\u2019s and my work testing the telescope and documenting in detail its deficiencies against its stated specifications were a waste of time and energy, and ultimately changed nothing. Daystar would not stand behind its product. At this point, I would never purchase another telescope from them.",
+    "instance_score": {
+      "rouge_1": 97.61904711904762,
+      "rouge_2": 96.07843087254902,
+      "rouge_l": 97.61904711904762
+    }
+  },
+  {
+    "pred": "If today's entry level scopes could offer this combination of optical performance and smooth/rigid mounts \u2013 the manufacturers wouldn't be bedeviled by constant negative reviews.",
+    "gold": "If today\u2019s entry level scopes could offer this combination of optical performance and smooth/rigid mounts \u2013 the manufacturers wouldn\u2019t be bedeviled by constant negative reviews.",
+    "instance_score": {
+      "rouge_1": 91.9999995,
+      "rouge_2": 83.33333283333334,
+      "rouge_l": 91.9999995
+    }
+  },
+  {
+    "pred": "While a long time ago, I was educated as a physicist and was a power engineer until I migrated to other areas of the power industry. Mine is a useful perspective to bring to a review of the electro-mechanical equipment used in astrophotography, and I am reviewing my Paramount MyT mount after about 10 years of use. Here is",
+    "gold": "While a long time ago, I was educated as a physicist and was a power engineer until I migrated to other areas of the power industry. Mine is a useful perspective to bring to a review of the electro-mechanical equipment used in astrophotography, and I am reviewing my Paramount MyT mount after about 10 years of use. Here is the punch line: while there is serial defect and a series of lessons learned, I love this mount and the Software Bisque company, and their support of this product is flawless. I have experience with other mid-size mounts as well.",
+    "instance_score": {
+      "rouge_1": 78.57142809438777,
+      "rouge_2": 74.02597355970653,
+      "rouge_l": 78.57142809438777
+    }
+  },
+  {
+    "pred": "If you've got a light scope and don't mind the gross lack of precision, this might be the platform for you, but I wouldn't use anything larger than a 12, and that's pushing it, if you can even get it undamaged right out of the box. I've heard other stories of it working fine especially if tweaked, but in my experience it was an expensive",
+    "gold": "If you\u2019ve got a light scope and don\u2019t mind the gross lack of precision, this might be the platform for you, but I wouldn\u2019t use anything larger than a 12, and that\u2019s pushing it, if you can even get it undamaged right out of the box. I\u2019ve heard other stories of it working fine especially if tweaked, but in my experience it was an expensive failed lesson.",
+    "instance_score": {
+      "rouge_1": 89.28571378587372,
+      "rouge_2": 83.07692257704143,
+      "rouge_l": 89.28571378587372
+    }
+  },
+  {
+    "pred": "It is difficult to find downsides for such a telescope. There are certainly some aspects that can be improved, as I pointed out in the review, but overall it is a jewel. The best proof is that since I have it I used the Takahashi four times: twice to compare it to the Supermaser and twice for observations with friends (one of them broke his leg",
+    "gold": "It is difficult to find downsides for such a telescope. There are certainly some aspects that can be improved, as I pointed out in the review, but overall it is a jewel. The best proof is that since I have it I used the Takahashi four times: twice to compare it to the Supermaser and twice for observations with friends (one of them broke his leg and couldn\u2019t reach the eyepiece with the Supermaser).",
+    "instance_score": {
+      "rouge_1": 96.29629579698218,
+      "rouge_2": 94.20289805240496,
+      "rouge_l": 96.29629579698218
+    }
+  },
+  {
+    "pred": "Bottom line: They're worthless \u2013 don't buy one. If someone gives you one, put it in the garbage and cut them out of your will. They put out so much good astro gear. I can only think that this scope and other bargain basement scopes must fall under a different division. But I suppose as long as Walmart, Costco and the rest of",
+    "gold": "Bottom line: They\u2019re worthless \u2013 don\u2019t buy one. If someone gives you one, put it in the garbage and cut them out of your will. They put out so much good astro gear. I can only think that this scope and other bargain basement scopes must fall under a different division. But I suppose as long as Walmart, Costco and the rest of the retailers can sell them to an unsuspecting public \u2013 it will continue. Celestron should be embarrassed to sell this scope. I can only wonder how many budding astronomists have been turned off by scopes like these?",
+    "instance_score": {
+      "rouge_1": 79.69924763525356,
+      "rouge_2": 73.41772104214068,
+      "rouge_l": 79.69924763525356
+    }
+  },
+  {
+    "pred": "Overall, I am very happy with my OGMA. It's much more reliable than my QHY has ever been. Juan has been super receptive to my communications, and I have no doubt that if something did go wrong, he'd be 100% behind his product. I am still tweaking some settings, and will likely start running 180 second exposures as well.",
+    "gold": "Overall, I am very happy with my OGMA. It's much more reliable than my QHY has ever been. Juan has been super receptive to my communications, and I have no doubt that if something did go wrong, he'd be 100% behind his product. I am still tweaking some settings, and will likely start running 180 second exposures as well. If you\u2019re an astrophotographer living in the US, I think this one should be a no-brainer.",
+    "instance_score": {
+      "rouge_1": 87.93103399004163,
+      "rouge_2": 87.69230719988165,
+      "rouge_l": 87.93103399004163
+    }
+  },
+  {
+    "pred": "I am fascinated by the scope. It is simple, elegant, well made and performs well (in limited testing) \u2013 and it has a history, which I always consider important. (will your Uber Chinese APO still be around in 50 years with a story to tell\u2026?)",
+    "gold": "I am fascinated by the scope. It is simple, elegant, well made and performs well (in limited testing) \u2013 and it has a history, which I always consider important. (will your Uber Chinese APO still be around in 50 years with a story to tell\u2026?)",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "I would recommend the HAZ46 mount to anyone that wants a rock solid, portable, easy to use mount with excellent GoTo, tracking, and sharp star tracking (for up to 30s exposures as tested). It is an expensive mount and does not fit every pocket book, so price is one negative aspect especially for imaging aficionados who may",
+    "gold": "I would recommend the HAZ46 mount to anyone that wants a rock solid, portable, easy to use mount with excellent GoTo, tracking, and sharp star tracking (for up to 30s exposures as tested). It is an expensive mount and does not fit every pocket book, so price is one negative aspect especially for imaging aficionados who may not want to pay a lot for a simple alt-azi mount. I cannot comment on long term astrophotography, however, after shooting about 15-20, 30 second exposures with my dslr\u2019s I am very pleased with how tight the stars appear. I am happy to say that the HAZ46 strain wave gear/motor control system is a vast improvement over the older MiniTower2, etc. which I have used for many years. The HAZ46 Mount is a keeper and will be fielded at both of the upcoming eclipses for solar imaging and viewing.",
+    "instance_score": {
+      "rouge_1": 63.74999956570313,
+      "rouge_2": 56.56565615998368,
+      "rouge_l": 63.74999956570313
+    }
+  },
+  {
+    "pred": "I think Ales went the extra mile to make a telescope that can please many amateur astronomers. Affordable, excellent glass, and a well thought out ring, plate, and handle system. Mine came fully assembled and ready to go from Starizona.",
+    "gold": "I think Ales went the extra mile to make a telescope that can please many amateur astronomers. Affordable, excellent glass, and a well thought out ring, plate, and handle system. Mine came fully assembled and ready to go from Starizona.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The Brooks Hyperion Elite 4 is the brand's best carbon racing shoe, but it still falls short of the standards set by some of its rivals",
+    "gold": "The Brooks Hyperion Elite 4 is the brand\u2019s best carbon racing shoe, but it still falls short of the standards set by some of its rivals",
+    "instance_score": {
+      "rouge_1": 95.83333283333334,
+      "rouge_2": 91.9999995,
+      "rouge_l": 95.83333283333334
+    }
+  },
+  {
+    "pred": "The Saucony Peregrine 14 is similar to the Peregrine 13, and so remains one of the best all-round running shoes for the trails",
+    "gold": "The Saucony Peregrine 14 is similar to the Peregrine 13, and so remains one of the best all-round running shoes for the trails",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The Saucony Guide 17 is a cushioned stability running shoe that provides a smoother and more enjoyable ride than the Guide 16",
+    "gold": "The Saucony Guide 17 is a cushioned stability running shoe that provides a smoother and more enjoyable ride than the Guide 16",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find out what the New York City Half Marathon route has in store for runners and get your hands on a course map",
+    "gold": "Find out what the New York City Half Marathon route has in store for runners and get your hands on a course map",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "If you're training for a marathon then getting your fueling and recovery right is vital, and it doesn't hurt to take some extra vitamins too",
+    "gold": "If you\u2019re training for a marathon then getting your fueling and recovery right is vital, and it doesn\u2019t hurt to take some extra vitamins too",
+    "instance_score": {
+      "rouge_1": 91.66666616666667,
+      "rouge_2": 83.33333283333334,
+      "rouge_l": 91.66666616666667
+    }
+  },
+  {
+    "pred": "With over 100 stores in North America and franchise partners in 9 countries, Crate & Barrel, Crate & Kids and CB2 are the international destination for lasting, modern furniture, textiles, kitchen, tableware and home decor. See More",
+    "gold": "With over 100 stores in North America and franchise partners in 9 countries, Crate & Barrel, Crate & Kids and CB2 are the international destination for lasting, modern furniture, textiles, kitchen, tableware and home decor. See More",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "CycleTrader.com is **the** online source for all your motorcycle needs. Looking to sell a motorcycle? We can help. Place your motorcycle ad in front of millions of monthly visitors today. Ready to buy a cheap motorcycle, a motorcycle trailer or an electric motorcycle? We can help with that too \u2014 browse over 300,000 new and used motorcycles for sale nationwide from all of your favorite manufacturers like Harley-Davidson, Honda, Kawasaki, Suzuki, Yamaha, BMW, Victory, Ducati, Triumph, and KTM. You can easily estimate monthly payments, get insurance quotes, and set up price alerts for the bikes you're interested in while you search. Make sure to follow us on social media for everything motorcycle, on and off the road!",
+    "gold": "CycleTrader.com is the online source for all your motorcycle needs. Looking to sell a motorcycle? We can help. Place your motorcycle ad in front of millions of monthly visitors today. Ready to buy a cheap motorcycle, a motorcycle trailer or an electric motorcycle? We can help with that too \u2015 browse over 300,000 new and used motorcycles for sale nationwide from all of your favorite manufacturers like Harley-Davidson, Honda, Kawasaki, Suzuki, Yamaha, BMW, Victory, Ducati, Triumph, and KTM. You can easily estimate monthly payments, get insurance quotes, and set up price alerts for the bikes you\u2019re interested in while you search. Make sure to follow us on social media for everything motorcycle, on and off the road!",
+    "instance_score": {
+      "rouge_1": 97.23756856078874,
+      "rouge_2": 94.69026498672567,
+      "rouge_l": 97.23756856078874
+    }
+  },
+  {
+    "pred": "This website uses cookies, including session tracking technology, to learn how you use the website in real-time, serve targeted marketing, and improve the site.",
+    "gold": "This website uses cookies, including session tracking technology, to learn how you use the website in real-time, serve targeted marketing, and improve the site.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The HIRE Vets Medallion Program recognizes companies that go above and beyond in hiring and supporting veterans. Apply by April 30.",
+    "gold": "The HIRE Vets Medallion Program recognizes companies that go above and beyond in hiring and supporting veterans. Apply by April 30.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Our new website in English and Spanish makes it easier for migrant workers in the U.S. to find information about their rights.",
+    "gold": "Our new website in English and Spanish makes it easier for migrant workers in the U.S. to find information about their rights.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Our Mental Health at Work Initiative leverages DOL's expertise, programs, policies, partnerships and authority to advance mental health and wellness in the workforce.",
+    "gold": "Our Mental Health at Work Initiative leverages DOL's expertise, programs, policies, partnerships and authority to advance mental health and wellness in the workforce.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Our Good Jobs Initiative is providing critical information to workers, employers and the government as they work to improve job quality and create access to good jobs.",
+    "gold": "Our Good Jobs Initiative is providing critical information to workers, employers and the government as they work to improve job quality and create access to good jobs.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "It is our commitment to be the best pizza joint in Malaysia and offer great value for all pizza lovers from around the world. Domino's Pizza has won the hearts of many with a variety of great-tasting signature pizzas delivered quickly to your doorstep while maintaining the freshness and its state of piping hotness, for a hearty meal with family and friends. Domino's Pizza Malaysia has grown by leaps and bounds since it first began its operations in 1997. From a single store in USJ with a headcount of 15 staffs, the pizza chain today has over 260 stores in Malaysia and over 40 stores in Singapore with a headcount of over 4,000 staffs. Domino's Pizza Malaysia has grown strength to strength in providing great value through delicious pizzas delivered fast. Throughout time, Domino's has also been upgrading its menu and food choices by offering limited-time flavors and variety such as Cheese Volcano Pizza, Ssamjeang Pizza, and Mega Cheese Pizza.",
+    "gold": "It is our commitment to be the best pizza joint in Malaysia and offer great value for all pizza lovers from around the world. Domino's Pizza has won the hearts of many with a variety of great-tasting signature pizzas delivered quickly to your doorstep while maintaining the freshness and its state of piping hotness, for a hearty meal with family and friends. Domino's Pizza Malaysia has grown by leaps and bounds since it first began its operations in 1997. From a single store in USJ with a headcount of 15 staffs, the pizza chain today has over 260 stores in Malaysia and over 40 stores in Singapore with a headcount of over 4,000 staffs. Domino's Pizza Malaysia has grown strength to strength in providing great value through delicious pizzas delivered fast. Throughout time, Domino's has also been upgrading its menu and food choices by offering limited-time flavors and variety such as\u00a0Cheese Volcano Pizza, Ssamjeang Pizza, and Mega Cheese Pizza.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Pick Up is valid with a minimum of any purchase. Surcharge applies for extra condiments. Domino's reserves the right to replace and/or amend the terms & conditions without prior notice.",
+    "gold": "Pick Up is valid with a minimum of any purchase. Surcharge applies for extra condiments. Domino\u2019s reserves the right to replace and/or amend the terms & conditions without prior notice.",
+    "instance_score": {
+      "rouge_1": 96.55172363793105,
+      "rouge_2": 93.10344777586208,
+      "rouge_l": 96.55172363793105
+    }
+  },
+  {
+    "pred": "Look for a Domino's Pizza restaurant near you when you are in search of the best and freshest pizza. Be it for delivery or takeaway from the nearest Domino's pizza outlet, we have pizza makers ready to make fresh and hot pizzas to satisfy your cravings.",
+    "gold": "Look for a Domino's Pizza restaurant near you when you are in search of the best and freshest pizza. Be it for delivery or takeaway from the nearest Domino's pizza outlet, we have pizza makers ready to make fresh and hot pizzas to satisfy your cravings.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "*Surcharge applies for the following crusts (Cheese Burst & Cheese Tarik), Classics, First Class and Premium range. Illustrations shown are for representation only. Price is inclusive of 6% Service Tax. Prices are subject to change without prior notice.",
+    "gold": "*Surcharge applies for the following crusts (Cheese Burst & Cheese Tarik), Classics, First Class and Premium range. Illustrations shown are for representation only. Price is inclusive of 6% Service Tax. Prices are subject to change without prior notice.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Our best value! Unlimited access to 9 different products for a single race day - only $30. Plan includes everything in Silver plus access to Selections & Race Lens.",
+    "gold": "Our best value! Unlimited access to 9 different products for a single race day - only $30. Plan includes everything in Silver plus access to Selections & Race Lens.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Bronze Day Pass plans provide unlimited access to all cards on a single race day. Plan provides access to PPs, TrackMaster FlashNet, and TrackMaster EquiGraphix.",
+    "gold": "Bronze Day Pass plans provide unlimited access to all cards on a single race day. Plan provides access to PPs, TrackMaster FlashNet, and TrackMaster EquiGraphix.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Silver Day Pass plans provide unlimited access to all cards on a single race day. Plan includes everything in Bronze plus access to Performance Cycles & E-Graphs.",
+    "gold": "Silver Day Pass plans provide unlimited access to all cards on a single race day. Plan includes everything in Bronze plus access to Performance Cycles & E-Graphs.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "This week's Spotlight Owner is West Point Thoroughbreds, whose Jaxon Traveler won the Equibase Featured Race of the Week - the Grade 3 Whitmore Stakes at Oaklawn Park.",
+    "gold": "This week's Spotlight Owner is West Point Thoroughbreds, whose Jaxon Traveler won the Equibase Featured Race of the Week - the Grade 3 Whitmore Stakes at Oaklawn Park.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Fastweb is a **free** scholarship search platform that connects students to college scholarships, **trade school scholarships**, and financial aid tools. Our goal is to help you find scholarships to make college or vocational school more affordable.",
+    "gold": "Fastweb is a free scholarship search platform that connects students to college scholarships, trade school scholarships, and financial aid tools. Our goal is to help you find scholarships to make college or vocational school more affordable.",
+    "instance_score": {
+      "rouge_1": 91.80327818865898,
+      "rouge_2": 82.85714235714288,
+      "rouge_l": 91.80327818865898
+    }
+  },
+  {
+    "pred": "**The leading scholarship database,** our platform is designed to simplify the scholarship search for high school, trade school students, and college students. No more digging to find scholarships you qualify for. Students create a profile and get personalized scholarship recommendations.",
+    "gold": "The leading scholarship database, our platform is designed to simplify the scholarship search for high school, trade school students, and college students. No more digging to find scholarships you qualify for. Students create a profile and get personalized scholarship recommendations.",
+    "instance_score": {
+      "rouge_1": 94.2857137857143,
+      "rouge_2": 92.30769180769232,
+      "rouge_l": 94.2857137857143
+    }
+  },
+  {
+    "pred": "When you need to find a beautiful gift to send to a loved one turn to From You Flowers the online **flower delivery** experts. We offer hundreds of online gifts to choose from for quick delivery and an easy check-out process. Simply choose what type of gift you would like to send from fruit gift baskets to succulent plants and flower arrangements. A selection of our products can be customized with a personalized photo vase, which invites you to upload a photo and add text that will make the vase a one-of-a-kind gift. Celebrate your love this year with a perfect Mother's Day flower delivery.",
+    "gold": "When you need to find a beautiful gift to send to a loved one turn to From You Flowers the online flower delivery experts. We offer hundreds of online gifts to choose from for quick delivery and an easy check-out process. Simply choose what type of gift you would like to send from fruit gift baskets to succulent plants and flower arrangements. A selection of our products can be customized with a personalized photo vase, which invites you to upload a photo and add text that will make the vase a one-of-a-kind gift. Celebrate your love this year with a perfect Mother's Day flower delivery.",
+    "instance_score": {
+      "rouge_1": 98.64864814873997,
+      "rouge_2": 97.53694531282002,
+      "rouge_l": 98.64864814873997
+    }
+  },
+  {
+    "pred": "From You Flowers is a same day flower delivery and gift specialist. When you are in need of a last-minute gift to send to celebrate a birthday, anniversary, Valentine's Day, or Mother's Day (and more) we offer beautiful bouquets, gifts and plants for delivery today. Our local florist partners near you are here to create a gift with fresh blooms, delivered with a free card message that you can write to personalize the gift. For same day delivery simply choose a same day item and place the order prior to 3pm in the delivery zip code, we'll do the rest! Whether you are looking for a classic one dozen red roses, modern rainbow roses or a mixed floral bouquet we have flower stems and colors that are perfect for everyone in your life.",
+    "gold": "From You Flowers is a same day flower delivery and gift specialist. When you are in need of a last-minute gift to send to celebrate a birthday, anniversary, Valentine's Day, or Mother's Day (and more) we offer beautiful bouquets, gifts and plants for delivery today. Our local florist partners near you are here to create a gift with fresh blooms, delivered with a free card message that you can write to personalize the gift. For same day delivery simply choose a same day item and place the order prior to 3pm in the delivery zip code, we'll do the rest! Whether you are looking for a classic one dozen red roses, modern rainbow roses or a mixed floral bouquet we have flower stems and colors that are perfect for everyone in your life.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Making scientific research open has never been more important. But for research to be trusted, it must be of the highest quality. Facing an industry-wide rise in fraudulent science, Frontiers has increased its focus on safeguarding quality.",
+    "gold": "Making scientific research open has never been more important. But for research to be trusted, it must be of the highest quality. Facing an industry-wide rise in fraudulent science, Frontiers has increased its focus on safeguarding quality.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Scientists demonstrate the use of next-generation satellite data and advanced modeling to build virtual replicas of the terrestrial water cycle that can track water resources and create detailed simulations of flooding and other extreme events.",
+    "gold": "Scientists demonstrate the use of next-generation satellite data and advanced modeling to build virtual replicas of the terrestrial water cycle that can track water resources and create detailed simulations of flooding and other extreme events.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Scientists hypothesize that as-yet unrecognized inflammatory stress is spreading among people at unprecedented rates, affecting our cognitive ability to address climate change, war, and other critical issues.",
+    "gold": "Scientists hypothesize that as-yet unrecognized inflammatory stress is spreading among people at unprecedented rates, affecting our cognitive ability to address climate change, war, and other critical issues.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Based on the average user savings between January 2022 and December 2022. Search for your prescription on our website or mobile app to see how much you can save.",
+    "gold": "Based on the average user savings between January 2022 and December 2022. Search for your prescription on our website or mobile app to see how much you can save.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Grainger is America's trusted source for MRO supplies and industrial products. For over 90 years, we've built a tradition of getting customers the products and services they need. Grainger offers over a million products from thousands of trusted MRO suppliers, plus online features and a mobile app that let customers order their MRO equipment and manage their orders whenever and wherever they are. We back this up with 24/7 customer service and technical support from experts with deep knowledge of MRO tools and products.",
+    "gold": "Grainger is America\u2019s trusted source for MRO supplies and industrial products. For over 90 years, we\u2019ve built a tradition of getting customers the products and services they need. Grainger offers over a million products from thousands of trusted MRO suppliers, plus online features and a mobile app that let customers order their MRO equipment and manage their orders whenever and wherever they are. We back this up with 24/7 customer service and technical support from experts with deep knowledge of MRO tools and products.",
+    "instance_score": {
+      "rouge_1": 96.66666616666667,
+      "rouge_2": 95.18072239156626,
+      "rouge_l": 96.66666616666667
+    }
+  },
+  {
+    "pred": "By entering your email address, you agree to our Terms of Use and acknowledge the Privacy Policy. HGTV and its affiliates may use your email address to provide updates, ads, and offers.",
+    "gold": "By entering your email address, you agree to our Terms of Use and acknowledge the Privacy Policy. HGTV and its affiliates may use your email address to provide updates, ads, and offers.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "By entering your email address, you agree to our Terms of Use and acknowledge the Privacy Policy. HGTV and its affiliates may use your email address to provide updates, ads, and offers.",
+    "gold": "By entering your email address, you agree to our Terms of Use and acknowledge the Privacy Policy. HGTV and its affiliates may use your email address to provide updates, ads, and offers.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Sunnier days are right around the corner. Whether you're planning for a spring break adventure or getting a head start on summer travel plans, let Hilton help curate your warm weather getaway.",
+    "gold": "Sunnier days are right around the corner. Whether you're planning for a spring break adventure or getting a head start on summer travel plans, let Hilton help curate your warm weather getaway.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Discover the ways the Hilton Honors app will enhance your stay. Book hotels, explore destinations, earn rewards, and so much more.",
+    "gold": "Discover the ways the Hilton Honors app will enhance your stay. Book hotels, explore destinations, earn rewards, and so much more.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Whenever and wherever you travel, we're here for you. Whether you are searching for a vacation destination thinking about a staycation at a nearby hotel, IHG has over 6,000 hotels and resorts to choose from.",
+    "gold": "Whenever and wherever you travel, we\u2019re here for you. Whether you are searching for a vacation destination\u00a0thinking about a staycation at a nearby hotel, IHG has over 6,000 hotels and resorts to choose from.",
+    "instance_score": {
+      "rouge_1": 96.55172363793105,
+      "rouge_2": 94.11764655882354,
+      "rouge_l": 96.55172363793105
+    }
+  },
+  {
+    "pred": "Travel like you mean it with IHG One Rewards, our award winning loyalty program makes it easier for you to see the world and get rewarded while doing it.",
+    "gold": "Travel like you mean it with IHG One Rewards, our award winning loyalty program makes it easier for you to see the world and get rewarded while doing it.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Book direct at 6,000+ destinations, add hotels to your Wishlist, and connect instantly with Wi-Fi Auto Connect. It's all in the app.",
+    "gold": "Book direct at 6,000+ destinations, add hotels to your Wishlist, and connect instantly with Wi-Fi Auto Connect. It\u2019s all in the app.",
+    "instance_score": {
+      "rouge_1": 95.45454495454547,
+      "rouge_2": 90.4761899761905,
+      "rouge_l": 95.45454495454547
+    }
+  },
+  {
+    "pred": "Law professor and economist Neil H. Buchanan discusses the conventional wisdom that delays in Donald Trump's legal cases benefit him politically, as Trump hopes to win the 2024 election before facing legal consequences.",
+    "gold": "Law professor and economist Neil H. Buchanan discusses the conventional wisdom that delays in Donald Trump\u2019s legal cases benefit him politically, as Trump hopes to win the 2024 election before facing legal consequences.",
+    "instance_score": {
+      "rouge_1": 96.77419304838712,
+      "rouge_2": 93.7499995,
+      "rouge_l": 96.77419304838712
+    }
+  },
+  {
+    "pred": "Explore the membership connecting legal professionals with resources and benefits to achieve their professional and practice-growth goals. Free Justia Connect Basic Memberships unlock access to core program features, while upgraded Justia Connect Pro Memberships offer expanded benefits.",
+    "gold": "Explore the membership connecting legal professionals with resources and benefits to achieve their professional and practice-growth goals. Free Justia Connect Basic Memberships unlock access to core program features, while upgraded Justia Connect Pro Memberships offer expanded benefits.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The lawsuit argues that state officials have violated the National Voter Registration Act by failing to maintain voter rolls in many counties ahead of the 2024 presidential election. Read More.",
+    "gold": "The lawsuit argues that state officials have violated the National Voter Registration Act by failing to maintain voter rolls in many counties ahead of the 2024 presidential election. Read More.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "**Stanford Copyright and Fair Use Center**\nThis site contains a wealth of primary and secondary copyright and fair use resources including sample copyright and fair use guidelines for librarians.",
+    "gold": "Stanford Copyright and Fair Use Center This site contains a wealth of primary and secondary copyright and fair use resources including sample copyright and fair use guidelines for librarians.",
+    "instance_score": {
+      "rouge_1": 91.30434732608695,
+      "rouge_2": 87.9999995,
+      "rouge_l": 91.30434732608695
+    }
+  },
+  {
+    "pred": "**LGBTQ+ Legal Resource Center**\nJustia's LGBTQ+ Legal Resource Center provides up-to-date information about legal issues uniquely or disproportionately affecting LGBTQ+ individuals in areas including family law, employment law, immigration, housing, military service, juvenile law, and other topics.",
+    "gold": "LGBTQ+ Legal Resource Center Justia's LGBTQ+ Legal Resource Center provides up-to-date information about legal issues uniquely or disproportionately affecting LGBTQ+ individuals in areas including family law, employment law, immigration, housing, military service, juvenile law, and other topics.",
+    "instance_score": {
+      "rouge_1": 96.77419304890739,
+      "rouge_2": 94.11764655925606,
+      "rouge_l": 96.77419304890739
+    }
+  },
+  {
+    "pred": "**Supreme Court Center**\nJustia provides a searchable and browsable database of all US Supreme Court decisions since the 1790s, as well as links to related sources. We also sponsor the Oyez Project, a multimedia archive that contains audio of Supreme Court oral arguments.",
+    "gold": "Supreme Court Center Justia provides a searchable and browsable database of all US Supreme Court decisions since the 1790s, as well as links to related sources. We also sponsor the Oyez Project, a multimedia archive that contains audio of Supreme Court oral arguments.",
+    "instance_score": {
+      "rouge_1": 95.77464738742314,
+      "rouge_2": 93.82715999390336,
+      "rouge_l": 95.77464738742314
+    }
+  },
+  {
+    "pred": "Justia offers free webinars for all lawyers and virtual CLE courses for Justia Connect Pro members. Check out our upcoming programs below, or explore our full catalog in the Justia CLE & Webinars Center.",
+    "gold": "Justia offers free webinars for all lawyers and virtual CLE courses for Justia Connect Pro members. Check out our upcoming programs below, or explore our full catalog in the Justia CLE & Webinars Center.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "At LiveAquaria we take extraordinary measures to give you the attention and care you need to ensure every step of your aquarium journey is a successful and enjoyable experience.",
+    "gold": "At LiveAquaria we take extraordinary measures to give you the attention and care you need to ensure every step of your aquarium journey is a successful and enjoyable experience.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "You'll find extensive information on every species available at LiveAquaria to make the process of researching and purchasing aquarium inhabitants informative and convenient. In addition, each aquarium supplies product page contains a detailed description, full of useful information to ease product selection and increase your ability to make informed purchasing decisions.",
+    "gold": "You'll find extensive information on every species available at LiveAquaria to make the process of researching and purchasing aquarium inhabitants informative and convenient. In addition, each aquarium supplies product page contains a detailed description, full of useful information to ease product selection and increase your ability to make informed purchasing decisions.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Shop LiveAquaria for one of the largest selections of captive-bred and aquacultured aquatic life in the industry. LiveAquaria seeks out the best fish, corals, and invertebrates from the most responsible suppliers, aquaculture facilities, breeders, and hatcheries in the United States, Asia, and Europe to provide aquarium hobbyists a viable alternative to wild-harvested fish whenever possible.",
+    "gold": "Shop LiveAquaria for one of the largest selections of captive-bred and aquacultured aquatic life in the industry. LiveAquaria seeks out the best fish, corals, and invertebrates from the most responsible suppliers, aquaculture facilities, breeders, and hatcheries in the United States, Asia, and Europe to provide aquarium hobbyists a viable alternative to wild-harvested fish whenever possible.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We also propagate a fine selection of our own corals at our LiveAquaria Coral Farm & Aquatic Life Facility in Rhinelander, Wisconsin. This cutting-edge facility is also home to our popular Diver's Den\u00ae WYSIWYG (What-You-See-Is-What-You-Get) Store where you can shop online for one-of-a-kind Marine and Freshwater Fish; Aquacultured Corals; Clams, LPS Corals; SPS Corals, Maricultured Corals; Polyp, Mushroom, and Soft Corals; Nonphotosynthetic (NPS) Corals; and Invertebrates you are unlikely to see anywhere else.",
+    "gold": "We also propagate a fine selection of our own corals at our LiveAquaria Coral Farm & Aquatic Life Facility in Rhinelander, Wisconsin. This cutting-edge facility is also home to our popular Diver's Den\u00ae WYSIWYG (What-You-See-Is-What-You-Get) Store where you can shop online for one-of-a-kind Marine and Freshwater Fish; Aquacultured Corals; Clams, LPS Corals; SPS Corals, Maricultured Corals; Polyp, Mushroom, and Soft Corals; Nonphotosynthetic (NPS) Corals; and Invertebrates you are unlikely to see anywhere else.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Hungry for Pi? Check out NASA's Pi Day challenge and put your wits to the test solving problems just like NASA scientists and engineers.",
+    "gold": "Hungry for Pi? Check out NASA's Pi Day challenge and put your wits to the test solving problems just like NASA scientists and engineers.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Deductive reasoning and inductive reasoning are easy to mix up. Learn what the difference is and see examples of each type of scientific reasoning.",
+    "gold": "Deductive reasoning and inductive reasoning are easy to mix up. Learn what the difference is and see examples of each type of scientific reasoning.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Malaysia airlines flight 370 disappeared somewhere in the Indian ocean a decade ago. Now, Malaysia's transport minister wants to renew the search for the missing airplane.",
+    "gold": "Malaysia airlines flight 370 disappeared somewhere in the Indian ocean a decade ago. Now, Malaysia's transport minister wants to renew the search for the missing airplane.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We finally understand why blueberries are blue \u2014 and the secret lies not in the flesh or skin, but the waxy coating around it.",
+    "gold": "We finally understand why blueberries are blue \u2014 and the secret lies not in the flesh or skin, but the waxy coating around it.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "By letting different processing units \u2014 like GPUs, NPUs and hardware accelerators \u2014 work in parallel, rather than in sequence, systems can be up to twice as fast and consume 50% less energy.",
+    "gold": "By letting different processing units \u2014 like GPUs, NPUs and hardware accelerators \u2014 work in parallel, rather than in sequence, systems can be up to twice as fast and consume 50% less energy.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Scientists built an app that let them control a robot using hand gestures while wearing the Apple Vision Pro VR headset.",
+    "gold": "Scientists built an app that let them control a robot using hand gestures while wearing the Apple Vision Pro VR headset.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Cerebras' Wafer Scale Engine 3 (WSE-3) chip contains four trillion transistors and will power the 8-exaFLOP Condor Galaxy 3 supercomputer one day.",
+    "gold": "Cerebras' Wafer Scale Engine 3 (WSE-3) chip contains four trillion transistors and will power the 8-exaFLOP Condor Galaxy 3 supercomputer one day.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "DEAL Unlike regular bathroom scales, the RENPHO Smart Scales provide 13 body composition metrics like body fat and muscle mass \u2014 and they've been reduced to $29.99 at Walmart.",
+    "gold": "DEAL Unlike regular bathroom scales, the RENPHO Smart Scales provide 13 body composition metrics like body fat and muscle mass \u2014 and they\u2019ve been reduced to $29.99 at Walmart.",
+    "instance_score": {
+      "rouge_1": 96.42857092857145,
+      "rouge_2": 93.10344777586208,
+      "rouge_l": 96.42857092857145
+    }
+  },
+  {
+    "pred": "DEAL The Samsung Galaxy Buds2 are one of our favorite all-time running headphones thanks to qualities like their comfort. They're also now selling with $43.28 off at Walmart.",
+    "gold": "DEAL The Samsung Galaxy Buds2 are one of our favorite all-time running headphones thanks to qualities like their comfort. They\u2019re also now selling with $43.28 off at Walmart.",
+    "instance_score": {
+      "rouge_1": 96.55172363793105,
+      "rouge_2": 92.85714235714286,
+      "rouge_l": 96.55172363793105
+    }
+  },
+  {
+    "pred": "Just as humans rely on their eyes to make precise movements with their hands, hummingbird hawk-moths use continuous visual feedback to precisely position their proboscis in the center of flowers.",
+    "gold": "Just as humans rely on their eyes to make precise movements with their hands, hummingbird hawk-moths use continuous visual feedback to precisely position their proboscis in the center of flowers.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "A study conducted on two snake farms has found that breeding pythons for meat is more energy and resource-efficient than current livestock production, offering a viable protein alternative.",
+    "gold": "A study conducted on two snake farms has found that breeding pythons for meat is more energy and resource-efficient than current livestock production, offering a viable protein alternative.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "From the identity location of Cleopatra's tomb to the fate of the Ark of the Covenant, some historical mysteries may never be solved.",
+    "gold": "From the identity location of Cleopatra's tomb to the fate of the Ark of the Covenant, some historical mysteries may never be solved.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "No other dictionary matches M-W's accuracy and scholarship in defining word meanings. Our pronunciation help, synonyms, usage and grammar tips set the standard. Go beyond dictionary lookups with Word of the Day, facts and observations on language, lookup trends, and wordplay from the editors at Merriam-Webster Dictionary.",
+    "gold": "No other dictionary matches M-W's accuracy and scholarship in defining word meanings. Our pronunciation help, synonyms, usage and grammar tips set the standard. Go beyond dictionary lookups with Word of the Day, facts and observations on language, lookup trends, and wordplay from the editors at Merriam-Webster Dictionary.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Get real-world AI tips and tricks from Microsoft employees like Liam on how to build a workout routine, recap meeting notes, and more.",
+    "gold": "Get real-world AI tips and tricks from Microsoft employees like Liam on how to build a workout routine, recap meeting notes, and more.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Tune into this free digital event on March 21 at 9:00 AM PDT and explore the latest ways to scale AI for business with Copilot, Windows, and Surface.",
+    "gold": "Tune into this free digital event on March 21 at 9:00 AM PDT and explore the latest ways to scale AI for business with Copilot, Windows, and Surface.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "2024 marks the seventh season of Minor League Baseball's Copa de la Diversi\u00f3n program in which teams assume alternate identities that engage with and celebrate their region's Hispanic fan base.",
+    "gold": "2024 marks the seventh season of Minor League Baseball's Copa de la Diversi\u00f3n program in which teams assume alternate identities that engage with and celebrate their region's Hispanic fan base.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Like Jackson Holliday and Gunnar Henderson before him, Samuel Basallo is an elite young talent in the O's system who can realistically challenge for the No. 1 overall prospect spot.",
+    "gold": "Like Jackson Holliday and Gunnar Henderson before him, Samuel Basallo is an elite young talent in the O's system who can realistically challenge for the No. 1 overall prospect spot.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Four action-packed days later, Spring Breakout has proven to be a huge hit ... on and off the field. The game's youngest stars put on great shows in Arizona and Florida.",
+    "gold": "Four action-packed days later, Spring Breakout has proven to be a huge hit ... on and off the field. The game's youngest stars put on great shows in Arizona and Florida.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The first Spring Breakout showcased stellar performances across the game by prospects. Thirty players from 18 organizations were named First and Second Team All-Stars.",
+    "gold": "The first Spring Breakout showcased stellar performances across the game by prospects. Thirty players from 18 organizations were named First and Second Team All-Stars.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Boston's 2023 first-round pick Kyle Teel looks to emulate former All-Star and fellow ACC catcher Jason Varitek as he climbs through the Minor Leagues.",
+    "gold": "Boston's 2023 first-round pick Kyle Teel looks to emulate former All-Star and fellow ACC catcher Jason Varitek as he climbs through the Minor Leagues.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Human sweat contains a protein that may protect some people against Lyme disease, scientists report. \"We think there are real implications here for a preventative and possibly a therapeutic based on this protein,\" Michal Caspi Tal says.",
+    "gold": "Human sweat contains a protein that may protect some people against Lyme disease, scientists report. \u201cWe think there are real implications here for a preventative and possibly a therapeutic based on this protein,\u201d Michal Caspi Tal says.",
+    "instance_score": {
+      "rouge_1": 94.2857137857143,
+      "rouge_2": 88.8888883888889,
+      "rouge_l": 94.2857137857143
+    }
+  },
+  {
+    "pred": "If companies are so focused on cybersecurity, why are data breaches still rising? \"In many cases, companies fall victim to these attacks because they aren't aware of the risks that they are taking,\" Professor Stuart Madnick writes in The Wall Street Journal.",
+    "gold": "If companies are so focused on cybersecurity, why are data breaches still rising? \u201cIn many cases, companies fall victim to these attacks because they aren\u2019t aware of the risks that they are taking,\u201d Professor Stuart Madnick writes in The Wall Street Journal.",
+    "instance_score": {
+      "rouge_1": 92.10526265789474,
+      "rouge_2": 85.36585315853658,
+      "rouge_l": 92.10526265789474
+    }
+  },
+  {
+    "pred": "MIT OpenCourseWare's YouTube channel inspires millions of learners across the globe to expand their knowledge and develop new skills for free.",
+    "gold": "MIT OpenCourseWare\u2019s YouTube channel inspires millions of learners across the globe to expand their knowledge and develop new skills for free.",
+    "instance_score": {
+      "rouge_1": 95.23809473809524,
+      "rouge_2": 89.9999995,
+      "rouge_l": 95.23809473809524
+    }
+  },
+  {
+    "pred": "A new study found that government subsidies for green technology are more effective when they account for the role of social learning in consumer decisions.",
+    "gold": "A new study found that government subsidies for green technology are more effective when they account for the role of social learning in consumer decisions.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Jeehwan Kim aims to push electronics past silicon, whose performance faces limits as more computing power is packed into ever-smaller devices. His group is exploring materials, devices, and systems that could take over where silicon leaves off.",
+    "gold": "Jeehwan Kim aims to push electronics past silicon, whose performance faces limits as more computing power is packed into ever-smaller devices. His group is exploring materials, devices, and systems that could take over where silicon leaves off.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "As a leading provider of eye health services, we offer a comprehensive selection of popular glasses and brands for every budget and lifestyle.",
+    "gold": "As a leading provider of eye health services, we offer a comprehensive selection of popular glasses and brands for every budget and lifestyle.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The simple MyHeritage DNA test will reveal your unique ethnic background, and match you with newfound relatives. Discover the specific groups you descend from among **2,114 geographic regions**, and take family history to the next level with the most affordable DNA test on the market.",
+    "gold": "The simple MyHeritage DNA test will reveal your unique ethnic background, and match you with newfound relatives. Discover the specific groups you descend from among 2,114 geographic regions, and take family history to the next level with the most affordable DNA test on the market.",
+    "instance_score": {
+      "rouge_1": 94.5945940945946,
+      "rouge_2": 90.69767391860465,
+      "rouge_l": 94.5945940945946
+    }
+  },
+  {
+    "pred": "Your past begins with your family tree and it's easy to build one on MyHeritage. Add names, dates, photos and stories and share with your family.",
+    "gold": "Your past begins with your family tree and it's easy to build one on MyHeritage. Add names, dates, photos and stories and share with your family.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Dive into our huge international records database \u2013 just search a name to learn more about your ancestors. With exclusive content and accurate results we'll help you uncover more than you ever imagined.",
+    "gold": "Dive into our huge international records database \u2013 just search a name to learn more about your ancestors. With exclusive content and accurate results we'll help you uncover more than you ever imagined.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We've added a helpful feature to our website! You'll find a little assistant at the bottom right of the page. It can assist you in signing in or signing up, booking trips, organizing transportation, getting support for your rides, and easily finding phone numbers and contact information. Explore it now!",
+    "gold": "We've added a helpful feature to our website! You'll find a little assistant at the bottom right of the page. It can assist you in signing in or signing up, booking trips, organizing transportation, getting support for your rides, and easily finding phone numbers and contact information. Explore it now!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "On Monday, March 11, the Biden-Harris Administration released the President's Budget for Fiscal Year 2025, which will allow NASA to continue advancing our understanding of Earth and space for the benefit of all.",
+    "gold": "On Monday, March 11, the Biden-Harris Administration released the President\u2019s Budget for Fiscal Year 2025, which will allow NASA to continue advancing our understanding of Earth and space for the benefit of all.",
+    "instance_score": {
+      "rouge_1": 96.55172363793105,
+      "rouge_2": 93.7499995,
+      "rouge_l": 96.55172363793105
+    }
+  },
+  {
+    "pred": "Los Angeles's best new restaurants, ideal for your next brunch, lunch, or...",
+    "gold": "Los Angeles\u2019s best new restaurants, ideal for your next brunch, lunch, or dinner, are home to some of the city\u2019s hottest tables.",
+    "instance_score": {
+      "rouge_1": 64.70588189619379,
+      "rouge_2": 56.249999548828136,
+      "rouge_l": 64.70588189619379
+    }
+  },
+  {
+    "pred": "LA's star-studded dining scene means the celebratory meal options are...",
+    "gold": "LA\u2019s star-studded dining scene means the celebratory meal options are limitless. From classic Californian wine bars to sky-high charmers, there\u2019s a spot to match your special occasion energy, whether you\u2019re toasting to a milestone birthday or Some Personal News. These places prove there\u2019s never been a better time to book a festive meal here. Read on for a guide to nine LA restaurants perfect for celebrating in style.",
+    "instance_score": {
+      "rouge_1": 26.865671387836937,
+      "rouge_2": 21.05263137015236,
+      "rouge_l": 26.865671387836937
+    }
+  },
+  {
+    "pred": "The City of Angels's best restaurants are pros at delivering transformative\u2026",
+    "gold": "The City of Angels\u2019s best restaurants are pros at delivering transformative culinary experiences. Read on for a guide to the 19 places that are essential to Los Angeles.",
+    "instance_score": {
+      "rouge_1": 48.64864823082542,
+      "rouge_2": 37.83783744338933,
+      "rouge_l": 48.64864823082542
+    }
+  },
+  {
+    "pred": "Outside uses cookies and similar technologies to help our site function, and for advertising and marketing. Want to know more or manage your preferences? Navigate to MANAGE COOKIE PREFERENCES on the footer of any of our sites.",
+    "gold": "Outside uses cookies and similar technologies to help our site function, and for advertising and marketing. Want to know more or manage your preferences? Navigate to MANAGE COOKIE PREFERENCES on the footer of any of our sites.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Meet the famous Alaskan husky\u2014and Iditarod finisher\u2014who got miffed at a musher and chomped her truck's brake lines. (Allegedly. Because a lot of people think this pup is innocent.)",
+    "gold": "Meet the famous Alaskan husky\u2014and Iditarod finisher\u2014who got miffed at a musher and chomped her truck\u2019s brake lines. (Allegedly. Because a lot of people think this pup is innocent.)",
+    "instance_score": {
+      "rouge_1": 96.55172363793105,
+      "rouge_2": 93.10344777586208,
+      "rouge_l": 96.55172363793105
+    }
+  },
+  {
+    "pred": "In the wake of the pandemic, Rebecca Vance spiraled into a hidden world of conspiracy theory, convincing herself that global elites had ordered COVID-19 lockdowns as part of a plot to usher in a dictatorial government. She and her sister took Rebecca's son, loaded up a car, and headed for the Colorado backcountry. They would never return.",
+    "gold": "In the wake of the pandemic, Rebecca Vance spiraled into a hidden world of conspiracy theory, convincing herself that global elites had ordered COVID-19 lockdowns as part of a plot to usher in a dictatorial government. She and her sister took Rebecca\u2019s son, loaded up a car, and headed for the Colorado backcountry. They would never return.",
+    "instance_score": {
+      "rouge_1": 97.95918317346938,
+      "rouge_2": 96.42857092857145,
+      "rouge_l": 97.95918317346938
+    }
+  },
+  {
+    "pred": "Lusti has built a career\u2014and a life\u2014on toughness and a preternatural ability to ski through puckering technical terrain. Her greatest challenge may be learning to let herself be soft.",
+    "gold": "Lusti has built a career\u2014and a life\u2014on toughness and a preternatural ability to ski through puckering technical terrain. Her greatest challenge may be learning to let herself be soft.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Outside's ethics guru weighs in on whether it's all right to name a Utah development project after one of the West's most notorious anti-development advocates",
+    "gold": "Outside\u2019s ethics guru weighs in on whether it\u2019s all right to name a Utah development project after one of the West's most notorious anti-development advocates",
+    "instance_score": {
+      "rouge_1": 91.9999995,
+      "rouge_2": 87.4999995,
+      "rouge_l": 91.9999995
+    }
+  },
+  {
+    "pred": "You're not imagining it\u2014trip costs are pricier than they've been in five years. We've got some simple strategies to keep costs down even while rates are headed up. Don't book your vacation until you read this.",
+    "gold": "You\u2019re not imagining it\u2014trip costs are pricier than they\u2019ve been in five years. We\u2019ve got some simple strategies to keep costs down even while rates are headed up. Don\u2019t book your vacation until you read this.",
+    "instance_score": {
+      "rouge_1": 88.23529361764706,
+      "rouge_2": 79.99999950000002,
+      "rouge_l": 88.23529361764706
+    }
+  },
+  {
+    "pred": "Cookies & Privacy\nWe use cookies to provide a better experience for you, tailor content, and measure ads. By clicking OK, you agree to this and our Privacy Policy. You can update these options at any time.",
+    "gold": "Cookies & Privacy We use cookies to provide a better experience for you, tailor content, and measure ads. By clicking OK, you agree to this and our Privacy Policy. You can update these options at any time.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "*Providing your email address means you agree to Petco's **Terms of Use** and have read our **Financial Incentive Terms** and **Privacy Policy**",
+    "gold": "*Providing your email address means you agree to Petco's Terms of Use and have read our Financial Incentive Terms and Privacy Policy",
+    "instance_score": {
+      "rouge_1": 73.17073120761451,
+      "rouge_2": 52.38095188095239,
+      "rouge_l": 73.17073120761451
+    }
+  },
+  {
+    "pred": "Four quarterbacks go off the board with the first four picks in this 2024 NFL Mock Draft after the first wave of 2024 NFL free agency.",
+    "gold": "Four quarterbacks go off the board with the first four picks in this 2024 NFL Mock Draft after the first wave of 2024 NFL free agency.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Who do you cheer for? PFF grades every player in every game for every team. Dive deep into your fandom and follow your team on PFF for exclusive team stats and NFL team rankings.",
+    "gold": "Who do you cheer for? PFF grades every player in every game for every team. Dive deep into your fandom and follow your team on PFF for exclusive team stats and NFL team rankings.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "PFF analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft.",
+    "gold": "PFF analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "A chance to take a broader look at the first real team-building opportunity of the offseason and grade how each AFC team has done.",
+    "gold": "A chance to take a broader look at the first real team-building opportunity of the offseason and grade how each AFC team has done.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "After a flurry of moves from Monday to Thursday, more than 200 players have found a new home in the NFL. With that, we give you our recap of free agency so far, with an analysis of each team's biggest moves.",
+    "gold": "After a flurry of moves from Monday to Thursday, more than 200 players have found a new home in the NFL. With that, we give you our recap of free agency so far, with an analysis of each team\u2019s biggest moves.",
+    "instance_score": {
+      "rouge_1": 97.2972967972973,
+      "rouge_2": 94.99999950000002,
+      "rouge_l": 97.2972967972973
+    }
+  },
+  {
+    "pred": "Do you have a sports website? Or write about sports? We have tools and resources that can help you use sports data. Find out more.",
+    "gold": "Do you have a sports website? Or write about sports? We have tools and resources that can help you use sports data. Find out more.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The SPORTS REFERENCE and STATHEAD trademarks are owned exclusively by Sports Reference LLC. Use without license or authorization is expressly prohibited.",
+    "gold": "The SPORTS REFERENCE and STATHEAD trademarks are owned exclusively by Sports Reference LLC. Use without license or authorization is expressly prohibited.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "All logos are the trademark & property of their owners and not Sports Reference LLC. We present them here for purely educational purposes. Our reasoning for presenting offensive logos.",
+    "gold": "All logos are the trademark & property of their owners and not Sports Reference LLC. We present them here for purely educational purposes. Our reasoning for presenting offensive logos.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Box scores contain team and player stats and for recent seasons win probabilities and advanced stats. *All Pro Football Box Scores From 1920 to Present*",
+    "gold": "Box scores contain team and player stats and for recent seasons win probabilities and advanced stats. All Pro Football Box Scores From 1920 to Present",
+    "instance_score": {
+      "rouge_1": 90.4761899761905,
+      "rouge_2": 87.4999995,
+      "rouge_l": 90.4761899761905
+    }
+  },
+  {
+    "pred": "We're excited to announce that new grids will drop on Immaculate Grid, the viral sports-themed trivia game, at **6 AM every day!**",
+    "gold": "We're excited to announce that new grids will drop on Immaculate Grid, the viral sports-themed trivia game, at 6 AM every day!",
+    "instance_score": {
+      "rouge_1": 90.90909040909091,
+      "rouge_2": 85.71428521428571,
+      "rouge_l": 90.90909040909091
+    }
+  },
+  {
+    "pred": "If you're a soccer fan, you've got to try it!",
+    "gold": "If you're a soccer fan, you've got to try it! Stathead is your all-access pass to the FBref database. Try it for free; your first month is on us!",
+    "instance_score": {
+      "rouge_1": 55.555555154321,
+      "rouge_2": 48.64864828049672,
+      "rouge_l": 55.555555154321
+    }
+  },
+  {
+    "pred": "From customized auto insurance to superior claims service, our people and technology will support you every step of the way. Join us today and experience why we're one of the best insurance companies.",
+    "gold": "From customized auto insurance to superior claims service, our people and technology will support you every step of the way. Join us today and experience why we're one of the best insurance companies.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "\u2021\u2021Annual premium for a basic liability policy excludes travel trailer and is not available in all states. RV insurance not available in DC or HI.",
+    "gold": "\u2020\u2020Annual premium for a basic liability policy excludes travel trailer and is not available in all states. RV insurance not available in DC or HI.",
+    "instance_score": {
+      "rouge_1": 95.45454495454547,
+      "rouge_2": 95.45454495454547,
+      "rouge_l": 95.45454495454547
+    }
+  },
+  {
+    "pred": "*National average 12 month savings (auto = $744, bundle = $779) by new customers surveyed who saved with Progressive between June 2022 and May 2023. Potential savings will vary.",
+    "gold": "*National average 12 month savings (auto = $744, bundle = $779) by new customers surveyed who saved with Progressive between June 2022 and May 2023. Potential savings will vary.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Figure based on 2020 consumer data collected by Hagerty on single car quotes, with premiums $5000 and under, from several daily driver (or \"Everyday\") auto insurance carriers.",
+    "gold": "Figure based on 2020 consumer data collected by Hagerty on single car quotes, with premiums $5000 and under, from several daily driver (or \"Everyday\") auto insurance carriers.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Name Your Price\u00ae is available in most states for new policies. Price and coverage match limited by state law. Amounts entered outside of our range of coverage prices will be shown the closest available coverage package.",
+    "gold": "Name Your Price\u00ae is available in most states for new policies. Price and coverage match limited by state law. Amounts entered outside of our range of coverage prices will be shown the closest available coverage package.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Progressive Home\u00ae policies are placed through Progressive Advantage Agency, Inc. with insurers affiliated with Progressive and with unaffiliated insurers. Each insurer is solely responsible for the claims on its policies and pays PAA for policies sold. Prices, coverages and privacy policies vary among these insurers, who may share information about you with us. PAA's compensation from these insurers may vary between the insurers and based on the policy you buy, sales volume and/or profitability of policies sold. See a list of all the insurers that write Progressive Home policies, or contact us for more details.",
+    "gold": "Progressive Home\u00ae policies are placed through Progressive Advantage Agency, Inc. with insurers affiliated with Progressive and with unaffiliated insurers. Each insurer is solely responsible for the claims on its policies and pays PAA for policies sold. Prices, coverages and privacy policies vary among these insurers, who may share information about you with us. PAA's compensation from these insurers may vary between the insurers and based on the policy you buy, sales volume and/or profitability of policies sold. See a list of all the insurers that write Progressive Home policies, or contact us for more details.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "PAA and Progressive are not responsible for the content or operation of others' websites or how others handle or use your information.",
+    "gold": "PAA and Progressive are not responsible for the content or operation of others' websites or how others handle or use your information.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "How you buy your Progressive Home policy \u2014 directly through us (online, by mobile device or by phone) or through an independent agent/broker rather than PAA \u2014 determines which insurers are available to you. Use the Get a Quote link to get a rate from one of the insurers. Or contact us to see if we can get you a rate from any of the other insurers. Policies sold through agents and brokers are available from them and through https://www.progressiveagent.com.",
+    "gold": "How you buy your Progressive Home policy \u2014 directly through us (online, by mobile device or by phone) or through an independent agent/broker rather than PAA \u2014 determines which insurers are available to you. Use the Get a Quote link to get a rate from one of the insurers. Or contact us to see if we can get you a rate from any of the other insurers. Policies sold through agents and brokers are available from them and through https://www.progressiveagent.com.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "At Progressive, we've built our business around understanding what you need and what's important for you to protect. That's why we offer a wide range of insurance products to meet your specific needs, including customized coverages.",
+    "gold": "At Progressive, we've built our business around understanding what you need and what's important for you to protect. That's why we offer a wide range of insurance products to meet your specific needs, including customized coverages.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Discussions of Battery packs and Chargers and topics relating to Ni-Cad's, NiMH, Li-Ion and Li-Po battery types which power RC models.",
+    "gold": "Discussions of Battery packs and Chargers and topics relating to Ni-Cad's, NiMH, Li-Ion and Li-Po battery types which power RC models.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Electric RC aircraft with an 80\" wingspan, 60\" wingspan for biplanes, 140\" combined width and length for jets, or true 1/4 scale models.",
+    "gold": "Electric RC aircraft with an 80\" wingspan, 60\" wingspan for biplanes, 140\" combined width and length for jets, or true 1/4 scale models.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "A forum for all things related to Cross Country Soaring - large sailplanes designed for cross country, electronics such as variometers and GPS devices, strategy/tactics used in cross country soaring events, locations that can support cross country flying, and anything else related to the flying of large sailplanes across long distances.",
+    "gold": "A forum for all things related to Cross Country Soaring - large sailplanes designed for cross country, electronics such as variometers and GPS devices, strategy/tactics used in cross country soaring events, locations that can support cross country flying, and anything else related to the flying of large sailplanes across long distances.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We are helping California transition to a cleaner energy future. We are investing in the electric grid and delivering more renewable energy without compromising reliability.",
+    "gold": "We are helping California transition to a cleaner energy future. We are investing in the electric grid and delivering more renewable energy without compromising reliability.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Beware of Scams \u2013 We do not have a disconnection department and an SCE agent will not call you to demand payment over the phone.",
+    "gold": "Beware of Scams \u2013 We do not have a disconnection department and an SCE agent will not call you to demand payment over the phone.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Be alert. Stay safe. Call 9-1-1 to report a life-threatening emergency. Click the link below to get information on what to do in the event of a safety hazard.",
+    "gold": "Be alert. Stay safe. Call 9-1-1 to report a life-threatening emergency. Click the link below to get information on what to do in the event of a safety hazard.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "From eco-friendly rebates to modernizing our grid, we're committed to making clean energy more accessible and reliable for all Southern Californians. Because together, we have the power to make our Golden State green. See how you can become a part of this bold clean energy mission today.",
+    "gold": "From eco-friendly rebates to modernizing our grid, we\u2019re committed to making clean energy more accessible and reliable for all Southern Californians. Because together, we have the power to make our Golden State green. See how you can become a part of this bold clean energy mission today.",
+    "instance_score": {
+      "rouge_1": 97.61904711904762,
+      "rouge_2": 95.55555505555556,
+      "rouge_l": 97.61904711904762
+    }
+  },
+  {
+    "pred": "Key investments focus on improving the customer experience, reducing wait times at all stages of the disability process and on our National 800 Number, modernizing our information technology, improving overpayment and underpayment processes, and advancing equity by increasing access to our programs.",
+    "gold": "Key investments focus on improving the customer experience, reducing wait times at all stages of the disability process and on our National 800 Number, modernizing our information technology, improving overpayment and underpayment processes, and advancing equity by increasing access to our programs.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "This year's International Women of Courage are simply extraordinary. Whether they are advocating for peace, standing up for human rights, or exposing corruption, courage is a deliberate and daily choice.",
+    "gold": "This year\u2019s International Women of Courage are simply extraordinary. Whether they are advocating for peace, standing up for human rights, or exposing corruption, courage is a deliberate and daily choice.",
+    "instance_score": {
+      "rouge_1": 96.42857092857145,
+      "rouge_2": 93.10344777586208,
+      "rouge_l": 96.42857092857145
+    }
+  },
+  {
+    "pred": "StyleCraze is my go-to site for updates on makeup and fashion. From lipstick reviews to outfit ideas, it has it all!",
+    "gold": "\u201cStyleCraze is my guilty pleasure. I have always struggled with weight management, but the tips and information on all the latest diet and fitness trends have helped me stay in shape!\u201d",
+    "instance_score": {
+      "rouge_1": 16.66666618055557,
+      "rouge_2": 3.9999995200000575,
+      "rouge_l": 16.66666618055557
+    }
+  },
+  {
+    "pred": "Authorized Online Dealers for: Ace Den Hartog, Aluminum Tank Industries (ATI), Aquamate, Banjo, Bushman, Chem-Tainer, Contain Water Systems, Custom Roto Molding, Desert Plastics, Dura-cast, Enduraplas, Fol-Da-Tank, Fluidall/Tote A Lube, Husky Containment,Norwesco, Nationwide Tank & Pipe,Original Rainwater Pillow, PolyJohn, Poly-Mart, Powerblanket, Quadel Industries, Rain Harvesting, Ronco, Rotoplas, Sherman Roto, Snyder Industries, SurgeBusters, Todd Marine, Trionic, UltraTech International, Walrus Pumps, and many leading plastic tank manufacturers from across the U.S.",
+    "gold": "Authorized Online Dealers for: Ace Den Hartog, Aluminum Tank Industries (ATI), Aquamate, Banjo, Bushman, Chem-Tainer, Contain Water Systems, Custom Roto Molding, Desert Plastics, Dura-cast, Enduraplas, Fol-Da-Tank, Fluidall/Tote A Lube, Husky Containment,Norwesco, Nationwide Tank & Pipe,Original Rainwater Pillow, PolyJohn, Poly-Mart, Powerblanket, Quadel Industries, Rain Harvesting, Ronco, Rotoplas, Sherman Roto, Snyder Industries, SurgeBusters, Todd Marine, Trionic, UltraTech International, Walrus Pumps, and many leading plastic tank manufacturers from across the U.S.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Tank-Depot has the world's largest supply of plastic storage tanks, water tanks, septic tanks, septic cistern tanks, plastic holding tanks, plastic rv holding tanks & water tanks, IBC tanks, cone bottom tanks, plastic drinking water tanks, double wall tanks and commercial water tanks for industrial usage! We also offer custom tanks for special projects. We offer all shapes and sizes of polyethylene tanks and pride ourselves on matching up a product to your needs.",
+    "gold": "Tank-Depot has the world's largest supply of plastic storage tanks, water tanks, septic tanks, septic cistern tanks, plastic holding tanks, plastic rv holding tanks & water tanks, IBC tanks, cone bottom tanks, plastic drinking water tanks, double wall tanks and commercial water tanks for industrial usage! We also offer custom tanks for special projects. We offer all shapes and sizes of polyethylene tanks and pride ourselves on matching up a product to your needs.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Texas.gov is the official website of the State of Texas. From here, we'll guide you to online services, resources, and information around our great state.",
+    "gold": "Texas.gov is the official website of the State of Texas. From here, we\u2019ll guide you to online services, resources, and information around our great state.",
+    "instance_score": {
+      "rouge_1": 95.65217341304349,
+      "rouge_2": 91.9999995,
+      "rouge_l": 95.65217341304349
+    }
+  },
+  {
+    "pred": "The site uses cookies to provide you with a great user experience. By using Texas.gov, you accept our use of cookies. For more detail, view our Site Policies.",
+    "gold": "The site uses cookies to provide you with a great user experience. By using Texas.gov, you accept our use of cookies. For more detail, view our Site Policies.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Enjoy the Lone Star State's parks, historical landmarks, campgrounds, fishing, hunting, exhibits, fairs, and culture. We'll connect you with what you need\u2014and want to do.",
+    "gold": "Enjoy the Lone Star State\u2019s parks, historical landmarks, campgrounds, fishing, hunting, exhibits, fairs, and culture. We\u2019ll connect you with what you need\u2014and want to do.",
+    "instance_score": {
+      "rouge_1": 91.66666616666667,
+      "rouge_2": 83.33333283333334,
+      "rouge_l": 91.66666616666667
+    }
+  },
+  {
+    "pred": "Texas government agencies offer a range of resident and business services for Texans. Find the service and agency that can help you.",
+    "gold": "Texas government agencies offer a range of resident and business services for Texans. Find the service and agency that can help you.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find business resources that help you run and grow your company\u2014from job seeking and recruitment, to economic development programs and help with business taxes.",
+    "gold": "Find business resources that help you run and grow your company\u2014from job seeking and recruitment, to economic development programs and help with business taxes.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Do you need records for major life events like birth, death, marriage, or divorce? Good news! You can order these records online easily and securely.",
+    "gold": "Do you need records for major life events like birth, death, marriage, or divorce? Good news! You can order these records online easily and securely.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Used books are often treasures that are out-of-print or rare. With Wish Lists you can choose to be notified the instant we find a copy, see how often we find rare titles, and see who else is interested.",
+    "gold": "Used books are often treasures that are out-of-print or rare. With Wish Lists you can choose to be notified the instant we find a copy, see how often we find rare titles, and see who else is interested.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "When you've found the books you want we'll ship qualifying orders to your door for **FREE** in 100% recyclable packaging. If there is no demand for a book, we will donate it to charity, or we'll recycle it.",
+    "gold": "When you've found the books you want we'll ship qualifying orders to your door for FREE in 100% recyclable packaging. If there is no demand for a book, we will donate it to charity, or we'll recycle it.",
+    "instance_score": {
+      "rouge_1": 97.05882302941177,
+      "rouge_2": 94.5945940945946,
+      "rouge_l": 97.05882302941177
+    }
+  },
+  {
+    "pred": "We have more than 13 million titles to choose from, from the earliest board books to the all-time classics of literature.",
+    "gold": "We have more than 13 million titles to choose from, from the earliest board books to the all-time classics of literature.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "We're gearing up for the total solar eclipse on April 8! We share 7 awesome places to see totality, and give you the tools to find your perfect location. Full Story",
+    "gold": "We\u2019re gearing up for the total solar eclipse on April 8! We share 7 awesome places to see totality, and give you the tools to find your perfect location. Full Story",
+    "instance_score": {
+      "rouge_1": 96.55172363793105,
+      "rouge_2": 96.66666616666667,
+      "rouge_l": 96.55172363793105
+    }
+  },
+  {
+    "pred": "**Upgraded New Holland T8 Series Tractor** For 2025, New Holland is introducing new model additions to its GENESIS T8 Series with PLM Intelligence that boast greater power. The newcomers to the T8 Series deliver a surge in horsepower and refined engine control with the same powerful and reliable engine as current T8 Series models.",
+    "gold": "Upgraded New Holland T8 Series Tractor For 2025, New Holland is introducing new model additions to its GENESIS T8 Series with PLM Intelligence that boast greater power. The newcomers to the T8 Series deliver a surge in horsepower and refined engine control with the same powerful and reliable engine as current T8 Series models.",
+    "instance_score": {
+      "rouge_1": 95.1219507195122,
+      "rouge_2": 93.87755052040816,
+      "rouge_l": 95.1219507195122
+    }
+  },
+  {
+    "pred": "**New Holland Reveals T9 SmartTrax with PLM Intelligence for Model Year 2025** For the most demanding tasks out in the field, having the right system - wheel unit or track - is make or break. With the launch of the T9 SmartTrax with PLM Intelligence from New Holland for model year 2025 comes a track system built to deliver unmatched performance - regardless of the field conditions.",
+    "gold": "New Holland Reveals T9 SmartTrax with PLM Intelligence for Model Year 2025 For the most demanding tasks out in the field, having the right system - wheel unit or track - is make or break. With the launch of the T9 SmartTrax with PLM Intelligence from New Holland for model year 2025 comes a track system built to deliver unmatched performance - regardless of the field conditions.",
+    "instance_score": {
+      "rouge_1": 97.91666616688369,
+      "rouge_2": 95.86776809507548,
+      "rouge_l": 97.91666616688369
+    }
+  },
+  {
+    "pred": "We're the most beautiful university in Texas and the most welcoming community, too. See why 38,000 students like you are proud to call this place home.",
+    "gold": "We're the most beautiful university in Texas and the most welcoming community, too. See why 38,000 students like you are proud to call this place home.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "6 USAA Roadside Assistance\u2122 is part of USAA Towing and Labor coverage and applies to covered vehicles only. USAA Roadside Assistance is provided through Cross Country Motor Club, Inc., Medford, MA 02155, except in AK, CA, HI, OR, WI and WY, where services are provided through Cross Country Motor Club of California, Inc., Thousand Oaks, CA 91360. NOTE: If you need to use Roadside Assistance for an insured vehicle that does not have USAA Towing and Labor coverage, you will be responsible for all charges and services performed. Roadside Assistance coverage does not cover the cost of repair parts. Additional premium required for towing and labor coverage with Roadside Assistance.",
+    "gold": "Note 6 USAA Roadside Assistance\u2122 is part of USAA Towing and Labor coverage and applies to covered vehicles only. USAA Roadside Assistance is provided through Cross Country Motor Club, Inc., Medford, MA 02155, except in AK, CA, HI, OR, WI and WY, where services are provided through Cross Country Motor Club of California, Inc., Thousand Oaks, CA 91360. NOTE: If you need to use Roadside Assistance for an insured vehicle that does not have USAA Towing and Labor coverage, you will be responsible for all charges and services performed. Roadside Assistance coverage does not cover the cost of repair parts. Additional premium required for towing and labor coverage with Roadside Assistance.",
+    "instance_score": {
+      "rouge_1": 99.34640472877953,
+      "rouge_2": 99.49238528681492,
+      "rouge_l": 99.34640472877953
+    }
+  },
+  {
+    "pred": "Important notice for those residing in the European Union and the United Kingdom: By continuing to use this website, you agree to our use of cookies as described in the Privacy Statements for the European Union and the United Kingdom.\n\nPart VII Transfer: Information about the transfer of insurance business from USAA Limited to USAA S.A. (Soci\u00e9t\u00e9 Anonyme) under Part VII of the Financial Services and Markets Act 2000 (Transfer).",
+    "gold": "Important notice for those residing in the European Union and the United Kingdom: By continuing to use this website, you agree to our use of cookies as described in the Privacy Statements for the European Union and the United Kingdom. Part VII Transfer: Information about the transfer of insurance business from USAA Limited to USAA S.A. (Soci\u00e9t\u00e9 Anonyme) under Part VII of the Financial Services and Markets Act 2000 (Transfer).",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "2 Countrywide average price for policyholders who have $2,500 personal property coverage, $100,000 liability coverage and $5,000 medical payments coverage as of January 2024. Rates vary by location and risk. Rates are subject to change.",
+    "gold": "Note 2 Countrywide average price for policyholders who have $2,500 personal property coverage, $100,000 liability coverage and $5,000 medical payments coverage as of January 2024. Rates vary by location and risk. Rates are subject to change.",
+    "instance_score": {
+      "rouge_1": 98.4615379616568,
+      "rouge_2": 98.55072413778618,
+      "rouge_l": 98.4615379616568
+    }
+  },
+  {
+    "pred": "Use of the term \"member\" or \"membership\" refers to membership in USAA Membership Services and does not convey any legal or ownership rights in USAA. Restrictions apply and are subject to change. To join USAA, separated military personnel must have received a discharge type of Honorable or General Under Honorable Conditions. Eligible former dependents of USAA members may join USAA.",
+    "gold": "Use of the term \"member\" or \"membership\" refers to membership in USAA Membership Services and does not convey any legal or ownership rights in USAA. Restrictions apply and are subject to change. To join USAA, separated military personnel must have received a discharge type of Honorable or General Under Honorable Conditions. Eligible former dependents of USAA members may join USAA.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "The Director of the Administrative Office of the U.S. Courts reports on activities of the Administrative Office of the United States Courts.",
+    "gold": "The Director of the Administrative Office of the U.S. Courts reports on\u00a0activities of the Administrative Office of the United States Courts.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Here you will find links to standard forms used in the U.S. Courts. Specific court forms or those customized by the courts for their use are available directly from the court.",
+    "gold": "Here you will find links to standard forms used in the U.S. Courts. Specific court forms or those customized by the courts for their use are available directly from the court.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "As The Original, we've been innovating to solve problems for over 150 years. We create products that improve the performance of automotive and industrial equipment, and solutions that help your business grow and thrive.",
+    "gold": "As The Original, we\u2019ve been innovating to solve problems for over 150 years. We create products that improve the performance of automotive and industrial equipment, and solutions that help your business grow and thrive.",
+    "instance_score": {
+      "rouge_1": 96.77419304838712,
+      "rouge_2": 93.93939343939395,
+      "rouge_l": 96.77419304838712
+    }
+  },
+  {
+    "pred": "Valvoline Instant Oil Change has over 1,500 locations offering stay-in-your-car vehicle maintenance services from certified technicians. Our no-appointment necessary oil changes only take about 15 minutes and include an 18-point",
+    "gold": "Valvoline Instant Oil Change has over 1,500 locations offering stay-in-your-car vehicle maintenance services from certified technicians. Our no-appointment necessary oil changes only take about 15 minutes and include an 18-point safety check!",
+    "instance_score": {
+      "rouge_1": 96.77419304890739,
+      "rouge_2": 96.66666616722222,
+      "rouge_l": 96.77419304890739
+    }
+  },
+  {
+    "pred": "Hi sports nuts! We are nutty for sports here and we offer you the biggest and best selection of sports online. It doesn't matter what sport you like, you can find it here. We travel round the planet on an endless search for the best sports streams. VIPLeague never stop updating and checking so you don't need to. We listen to the people who use the site and bring you the live sports streams you want, how you want them and when you want them. No fees or subscriptions, just quality free Sports Streaming.",
+    "gold": "Hi sports nuts! We are nutty for sports here and we offer you the biggest and best selection of sports online. It doesn\u2019t matter what sport you like, you can find it here. We travel round the planet on an endless search for the best sports streams. VIPLeague never stop updating and checking so you don\u2019t need to. We listen to the people who use the site and bring you the live sports streams you want, how you want them and when you want them. No fees or subscriptions, just quality free Sports Streaming.",
+    "instance_score": {
+      "rouge_1": 96.92307642307692,
+      "rouge_2": 95.50561747752809,
+      "rouge_l": 96.92307642307692
+    }
+  },
+  {
+    "pred": "The EPL is watched all over the world and it doesn't matter where you are, you can watch it here, every minute, every game. The VIP League football schedule is sometimes so long it takes minutes to read it. Games from all over the world are listed there and we cover them all. But don't worry, you can use the search to find your team's games; from Manchester City to Real Madrid to Celtic.",
+    "gold": "The EPL is watched all over the world and it doesn\u2019t matter where you are, you can watch it here, every minute, every game. The VIP League football schedule is sometimes so long it takes minutes to read it. Games from all over the world are listed there and we cover them all. But don\u2019t worry, you can use the search to find your team\u2019s games; from Manchester City to Real Madrid to Celtic.",
+    "instance_score": {
+      "rouge_1": 94.44444394444444,
+      "rouge_2": 91.30434732608695,
+      "rouge_l": 94.44444394444444
+    }
+  },
+  {
+    "pred": "College football is intense and competitive but the NFL brings you the best action. You can see every touchdown here on the best quality streams. In fact, you can catch all the action from all sports, because did we mention we are nutty for sports here. We go nuts for the NBA and college basketball too. And every game from the MLB and NHL sends us to squirrel heaven.",
+    "gold": "College football is intense and competitive but the NFL brings you the best action. You can see every touchdown here on the best quality streams. In fact, you can catch all the action from all sports, because did we mention we are nutty for sports here. We go nuts for the NBA and college basketball too. And every game from the MLB and NHL sends us to squirrel heaven.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Our online tools make the process as simple and clear as possible, and we're working to improve your experience all the time.",
+    "gold": "Our online tools make the process as simple and clear as possible, and we\u2019re working to improve your experience all the time.",
+    "instance_score": {
+      "rouge_1": 94.73684160526315,
+      "rouge_2": 90.4761899761905,
+      "rouge_l": 94.73684160526315
+    }
+  },
+  {
+    "pred": "Yes, I'd like to receive special offer emails from VistaPrint, as well as news about products, services and my designs in progress. Read our Privacy and Cookie policy.",
+    "gold": "Yes, I'd like to receive special offer emails from VistaPrint, as well as news about products, services and my designs in progress. Read our Privacy and Cookie policy.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "**PRICING PROMISE:** Walgreens will honor the lowest price posted on the sales floor for in-store purchases, regardless of time limitations on the sales floor; internet advertised prices excluded as internet price may differ from in-store price.",
+    "gold": "Walgreens will honor the lowest price posted on the sales floor for in-store purchases, regardless of time limitations on the sales floor; internet advertised prices excluded as internet price may differ from in-store price.",
+    "instance_score": {
+      "rouge_1": 96.29629579698218,
+      "rouge_2": 96.87499950048829,
+      "rouge_l": 96.29629579698218
+    }
+  },
+  {
+    "pred": "A cold front followed by a clipper storm will bring periods of snow to the Great Lakes and Northeast U.S. through midweek. Lake-enhanced snow downwind of some of the Great Lakes will bring higher accumulations. Strong, gusty winds and dry air may produce elevated fire weather conditions across the Ohio Valley today and the Mid-Atlantic on Wednesday. Read More >",
+    "gold": "A cold front followed by a clipper storm will bring periods of snow to the Great Lakes and Northeast U.S. through midweek. Lake-enhanced snow downwind of some of the Great Lakes will bring higher accumulations. Strong, gusty winds and dry air may produce elevated fire weather condtions across the Ohio Valley today and the Mid-Atlantic on Wednesday. Read More >",
+    "instance_score": {
+      "rouge_1": 97.95918317346938,
+      "rouge_2": 96.49122757017544,
+      "rouge_l": 97.95918317346938
+    }
+  },
+  {
+    "pred": "WEATHER SAFETY\nNOAA Weather Radio\nStormReady\nHeat\nLightning\nHurricanes\nThunderstorms\nTornadoes\nRip Currents\nFloods\nTsunamis\nTsunamiReady\nWinter Weather\nUltra Violet Radiation\nAir Quality\nDamage/Fatality/Injury Statistics\nRed Cross\nFederal Emergency Management Agency (FEMA) Brochures\nSafe Boating",
+    "gold": "WEATHER SAFETY NOAA Weather Radio StormReady Heat Lightning Hurricanes Thunderstorms Tornadoes Rip Currents Floods Tsunamis TsunamiReady Winter Weather Ultra Violet Radiation Air Quality Damage/Fatality/Injury Statistics Red Cross Federal Emergency Management Agency (FEMA) Brochures Safe Boating",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "ABOUT\nOrganization\nNWS Transformation\nStrategic Plan\nFor NWS Employees\nInternational\nNational Centers\nProducts and Services\nCareers\nGlossary\nContact Us\nSocial Media",
+    "gold": "ABOUT Organization NWS Transformation Strategic Plan For NWS Employees International National Centers Products and Services Careers Glossary Contact Us Social Media",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "EDUCATION\nNWS Education Home\nBe A Force of Nature\nNOAA Education Resources\nGlossary\nJetStream\nNWS Training Portal\nNOAA Library\nFor Students, Parents and Teachers\nBrochures",
+    "gold": "EDUCATION NWS Education Home Be A Force of Nature NOAA Education Resources Glossary JetStream NWS Training Portal NOAA Library For Students, Parents and Teachers Brochures",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "**INFORMATION CENTER**\nSpace Weather\nDaily Briefing\nMarine\nClimate\nFire Weather\nAviation\nForecast Models\nWater\nGIS\nCooperative Observers\nStorm Spotters\nTsunami Warning System\nNational Water Center\nInternational Weather",
+    "gold": "INFORMATION CENTER Space Weather Daily Briefing Marine Climate Fire Weather Aviation Forecast Models Water GIS Cooperative Observers Storm Spotters Tsunami Warning System National Water Center International Weather",
+    "instance_score": {
+      "rouge_1": 91.66666616666667,
+      "rouge_2": 92.30769180769232,
+      "rouge_l": 91.66666616666667
+    }
+  },
+  {
+    "pred": "Whitepages is the authority in people search, established in 1997. With comprehensive contact information, including cell phone numbers, for over 250 million people nationwide, and **Whitepages SmartCheck** , the fast, comprehensive background check compiled from criminal and other records from all 50 states. Whitepages provides answers to over 2 million searches every day and powers the top ranked domains: **Whitepages** , **411** , and Switchboard.",
+    "gold": "Whitepages is the authority in people search, established in 1997. With comprehensive contact information, including cell phone numbers, for over 250 million people nationwide, and Whitepages SmartCheck , the fast, comprehensive background check compiled from criminal and other records from all 50 states. Whitepages provides answers to over 2 million searches every day and powers the top ranked domains: Whitepages , 411 , and Switchboard.",
+    "instance_score": {
+      "rouge_1": 93.9999995002,
+      "rouge_2": 89.0624995,
+      "rouge_l": 93.9999995002
+    }
+  },
+  {
+    "pred": "For over a decade, we've been on a mission: to help everyone in the world learn how to do anything. Today, we're asking that you join us. Any amount that you can contribute helps us to continue providing readers like you with trusted, accurate and up-to-date information. **Please consider supporting our continued work with a contribution to wikiHow.**",
+    "gold": "For over a decade, we\u2019ve been on a mission: to help everyone in the world learn how to do anything. Today, we\u2019re asking that you join us. Any amount that you can contribute helps us to continue providing readers like you with trusted, accurate and up-to-date information. Please consider supporting our continued work with a contribution to wikiHow.",
+    "instance_score": {
+      "rouge_1": 92.78350465469232,
+      "rouge_2": 88.4955747212781,
+      "rouge_l": 92.78350465469232
+    }
+  },
+  {
+    "pred": "Fake news, misinformation, disinformation \u2014 you hear a lot about these terms these days. But what can you do about them? Take our free courses to find out.",
+    "gold": "Fake news, misinformation, disinformation \u2014 you hear a lot about these terms these days. But what can you do about them? Take our free courses to find out.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Millions of readers rely on wikiHow every single day. Your support helps us accomplish our mission: enabling every person in the world to learn how to do anything.",
+    "gold": "Millions of readers rely on wikiHow every single day. Your support helps us accomplish our mission: enabling every person in the world to learn how to do anything.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Since 2005, wikiHow has helped billions of people learn how to solve problems large and small. We work with credentialed experts, a team of trained researchers, and a devoted community to create the most reliable, comprehensive and delightful how-to content on the Internet.",
+    "gold": "Since 2005, wikiHow has helped billions of people learn how to solve problems large and small. We work with credentialed experts, a team of trained researchers, and a devoted community to create the most reliable, comprehensive and delightful how-to content on the Internet.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Save your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app.",
+    "gold": "Save your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "**World History Publishing** is a non-profit company registered in the United Kingdom.\n**World History Foundation** is a non-profit organization registered in Canada.",
+    "gold": "World History Publishing is a non-profit company registered in the United Kingdom. World History Foundation is a non-profit organization registered in Canada.",
+    "instance_score": {
+      "rouge_1": 79.99999950000002,
+      "rouge_2": 64.70588185294119,
+      "rouge_l": 79.99999950000002
+    }
+  },
+  {
+    "pred": "Numerous educational institutions recommend us, including **Oxford University**. Our publication has been reviewed for educational use by **Common Sense Education**, **Internet Scout (University of Wisconsin)**, **Merlot (California State University)**, **OER Commons** and the **School Library Journal**. Please note that some of these recommendations are listed under our old name, Ancient History Encyclopedia.",
+    "gold": "Numerous educational institutions recommend us, including Oxford University. Our publication has been reviewed for educational use by Common Sense Education, Internet Scout (University of Wisconsin), Merlot (California State University), OER Commons and the School Library Journal. Please note that some of these recommendations are listed under our old name, Ancient History Encyclopedia.",
+    "instance_score": {
+      "rouge_1": 75.9999995,
+      "rouge_2": 62.7450975392157,
+      "rouge_l": 75.9999995
+    }
+  },
+  {
+    "pred": "World History Encyclopedia is a non-profit organization. For only $5 per month you can become a member and support our mission to engage people with cultural heritage and to improve history education worldwide.",
+    "gold": "World History Encyclopedia is a non-profit organization. For only $5 per month you can become a member and support our mission to engage people with cultural heritage and to improve history education worldwide.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  }
+]

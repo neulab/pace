@@ -1,0 +1,419 @@
+[
+  {
+    "score": "rouge_1: 77.90, rouge_2: 75.03, rouge_l: 77.90"
+  },
+  {
+    "pred": "Discover, Appreciate, & Understand the Animal World!",
+    "gold": "Discover, Appreciate, & Understand the Animal World!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Publish your poetry online",
+    "gold": "Publish your poetry online",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Book your next fishing trip",
+    "gold": "Book your next fishing trip",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Online Invitations & Greeting Cards",
+    "gold": "The Gold Standard in Online Invitations & Digital Cards",
+    "instance_score": {
+      "rouge_1": 57.14285668367348,
+      "rouge_2": 33.3333328888889,
+      "rouge_l": 57.14285668367348
+    }
+  },
+  {
+    "pred": "Find your drive",
+    "gold": "Car rentals from trusted, local hosts",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Local, trusted pet care",
+    "gold": "Local, trusted pet care",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "How to Be a Caregiver for Someone With Arthritis",
+    "gold": "How to Be a Caregiver for Someone With Arthritis",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find your outdoors",
+    "gold": "Find your outdoors",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find senior living near you",
+    "gold": "Find senior living near you",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Gold & Silver Eagle Coins on Sale",
+    "gold": "Gold and Silver Popular Categories",
+    "instance_score": {
+      "rouge_1": 33.33333284722222,
+      "rouge_2": 0.0,
+      "rouge_l": 33.33333284722222
+    }
+  },
+  {
+    "pred": "BASKETBALL REFERENCE",
+    "gold": "Basketball Stats and History Statistics, scores, and history for the NBA, ABA, WNBA, and top European competition.",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "\u201cI\u2019m Definitely Going To Show What I\u2019m Made Of,\u201d Says Fundora Ahead Of Tszyu Clash",
+    "gold": "\u201cI\u2019m Definitely Going To Show What I\u2019m Made Of,\u201d Says Fundora Ahead Of Tszyu Clash",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Free Online Calculators",
+    "gold": "Free Online Calculators",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "free shipping sitewide",
+    "gold": "Crate and Barrel",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Interested in unions & collective bargaining?",
+    "gold": "Interested in unions & collective bargaining?",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "How can we help you?",
+    "gold": "For Your Home",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Easily find scholarships that fit you",
+    "gold": "Easily find scholarships that fit you",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Traffic School, Defensive Driving & Drivers Ed",
+    "gold": "#1 Provider in Online\nTraffic School, Defensive Driving & Drivers Ed",
+    "instance_score": {
+      "rouge_1": 77.77777730246915,
+      "rouge_2": 74.99999953125,
+      "rouge_l": 77.77777730246915
+    }
+  },
+  {
+    "pred": "Discover Land for Sale, All Across America",
+    "gold": "Discover Land for Sale, All Across America",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find Used Farm Equipment",
+    "gold": "Find Used Farm Equipment",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Human sweat contains a protein that may protect some people against Lyme disease, scientists report. \u201cWe think there are real implications here for a preventative and possibly a therapeutic based on this protein,\u201d Michal Caspi Tal says.",
+    "gold": "Massachusetts Institute of Technology",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Beyond the Guidebook",
+    "gold": "Beyond the Guidebook",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Discover your family story",
+    "gold": "Discover your family story",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Welcome to MyModivcare!",
+    "gold": "Welcome to MyModivcare!",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Earth just had its warmest February on record",
+    "gold": "Earth just had its warmest February on record",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find your table for any occasion",
+    "gold": "Find your table for any occasion",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Online invitations to celebrate all of life's moments",
+    "gold": "Online invitations to celebrate all of life\u2019s moments",
+    "instance_score": {
+      "rouge_1": 87.4999995,
+      "rouge_2": 71.42857092857143,
+      "rouge_l": 87.4999995
+    }
+  },
+  {
+    "pred": "Your Climate Credit is coming",
+    "gold": "Your Climate Credit is coming",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "PRO FOOTBALL REFERENCE",
+    "gold": "Football Stats and History The complete source for current and historical NFL, AFL, and AAFC players, teams, scores and leaders.",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Better insurance starts here",
+    "gold": "Welcome to Progressive Insurance\u00ae",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "Loving pet care in your neighborhood\u2122",
+    "gold": "Loving pet care in your neighborhood\u2122",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Securing your today and tomorrow",
+    "gold": "Securing your today and tomorrow",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Providing expertise, innovation and world-class care",
+    "gold": "Providing expertise, innovation and world-class care",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Secretary Blinken\u2019s Travel",
+    "gold": "Secretary Blinken\u2019s Travel",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Welcome to Texas.gov",
+    "gold": "Welcome to Texas.gov",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Your wedding team and everything in between",
+    "gold": "Your wedding team and everything in between",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "NEXT MOVES US FORWARD",
+    "gold": "TEXAS STATE UNIVERSITY",
+    "instance_score": {
+      "rouge_1": 0.0,
+      "rouge_2": 0.0,
+      "rouge_l": 0.0
+    }
+  },
+  {
+    "pred": "USAA has insurance, banking and retirement solutions.",
+    "gold": "USAA has insurance, banking and retirement solutions.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "FIND THE VALVOLINE\u2122 SOLUTION THAT\u2019S RIGHT FOR YOU",
+    "gold": "FIND THE VALVOLINE\u2122 SOLUTION THAT'S RIGHT FOR YOU",
+    "instance_score": {
+      "rouge_1": 87.4999995,
+      "rouge_2": 71.42857092857143,
+      "rouge_l": 87.4999995
+    }
+  },
+  {
+    "pred": "VIPLeague | Live Sports Streaming",
+    "gold": "VIPLeague | Live Sports Streaming",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Periods of Snow Across the Great Lakes and Northeast; Elevated Fire Weather Conditions in the Ohio Valley and Mid-Atlantic",
+    "gold": "Periods of Snow Across the Great Lakes and Northeast; Elevated Fire Weather Conditions in the Ohio Valley and Mid-Atlantic",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Find people, contact info & background checks",
+    "gold": "Find people, contact info & background checks",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Welcome to wikiHow, the most trusted how-to site on the internet.",
+    "gold": "Welcome to wikiHow, the most trusted how-to site on the internet.",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Wikipedia",
+    "gold": "Wikipedia\nThe Free Encyclopedia",
+    "instance_score": {
+      "rouge_1": 39.99999968,
+      "rouge_2": 0.0,
+      "rouge_l": 39.99999968
+    }
+  },
+  {
+    "pred": "World History Encyclopedia",
+    "gold": "World History Encyclopedia",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  },
+  {
+    "pred": "Central and Western, People's Republic of China",
+    "gold": "Central and Western, People's Republic of China",
+    "instance_score": {
+      "rouge_1": 99.9999995,
+      "rouge_2": 99.9999995,
+      "rouge_l": 99.9999995
+    }
+  }
+]

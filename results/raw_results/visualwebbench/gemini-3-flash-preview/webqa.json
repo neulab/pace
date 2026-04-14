@@ -1,0 +1,2959 @@
+[
+  {
+    "score": "f1: 85.59"
+  },
+  {
+    "pred": "Animal and fact.",
+    "gold": [
+      "Sawfish"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "The 7 Best Pet Products at Walmart This January",
+    "gold": [
+      "The 7 Best Pet Products at Walmart"
+    ],
+    "instance_score": {
+      "f1": 87.4999995078125
+    }
+  },
+  {
+    "pred": "YouTube Channel",
+    "gold": [
+      "YouTube Channel"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Killer whale knocking a dolphin mid-air",
+    "gold": [
+      "Killer Whale and Dolphin"
+    ],
+    "instance_score": {
+      "f1": 19.99999952000001
+    }
+  },
+  {
+    "pred": "kneeling at the gate of hell",
+    "gold": [
+      "kneeling at the gate of hell"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Facebook",
+    "gold": [
+      "Facebook",
+      "facebook"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Jun '21",
+    "gold": [
+      "Jun '21"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "A B Banjo Paterson",
+    "gold": [
+      "A B Banjo Paterson"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3,865,147",
+    "gold": [
+      "3,865,147 items",
+      "3,865,147"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "12/31/2014",
+    "gold": [
+      "12/31/2014"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "95,158",
+    "gold": [
+      "95,158 items",
+      "95,158"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "45",
+    "gold": [
+      "45 fishing charters",
+      "45"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "4.8/5",
+    "gold": [
+      "4.8/5",
+      "4.8",
+      "4.8 out of 5"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Dog Allergy Supplements",
+    "gold": [
+      "Dog Allergy Supplements"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "ABSOLUTELY, NOPE!",
+    "gold": [
+      "ABSOLUTELY, NOPE!",
+      "ABSOLUTELY and NOPE!"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 20, 2024",
+    "gold": [
+      "Wednesday, March 20, 2024"
+    ],
+    "instance_score": {
+      "f1": 85.7142852244898
+    }
+  },
+  {
+    "pred": "$38 million",
+    "gold": [
+      "$38 million"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Business",
+    "gold": [
+      "News Feed"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "$1",
+    "gold": [
+      "$1"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3",
+    "gold": [
+      "3",
+      "three"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Bass Pro Shops REDCREST 2024",
+    "gold": [
+      "Bass Pro Shops REDCREST 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Toyota Series",
+    "gold": [
+      "Toyota Series"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "32 pounds 8 ounces",
+    "gold": [
+      "32 - 08"
+    ],
+    "instance_score": {
+      "f1": 28.57142808163266
+    }
+  },
+  {
+    "pred": "Leesburg, FL",
+    "gold": [
+      "Leesburg, FL"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Become an MLF Member",
+    "gold": [
+      "Become an MLF Member"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3",
+    "gold": [
+      "three lines",
+      "three",
+      "3 lines"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Z",
+    "gold": [
+      "Z line",
+      "Z"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Off",
+    "gold": [
+      "NO",
+      "No",
+      "no"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "1",
+    "gold": [
+      "One line",
+      "One",
+      "1",
+      "1 line"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Happy Birthday",
+    "gold": [
+      "Happy Birthday"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Easter",
+    "gold": [
+      "Easter"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 15, 2024 \u2013 April 1, ",
+    "gold": [
+      "March 15, 2024 - April 1, 2024"
+    ],
+    "instance_score": {
+      "f1": 83.33333283333334
+    }
+  },
+  {
+    "pred": "Books, Articles, General, Fulltext.",
+    "gold": [
+      "General Search, Fulltext Search",
+      "General Search and Fulltext Search"
+    ],
+    "instance_score": {
+      "f1": 24.99999950000001
+    }
+  },
+  {
+    "pred": "project maintenance and development",
+    "gold": [
+      "Project maintenance and development",
+      "project maintenance and development"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Unlimited downloads",
+    "gold": [
+      "Unlimited downloads for 31 days"
+    ],
+    "instance_score": {
+      "f1": 57.14285673469389
+    }
+  },
+  {
+    "pred": "Aggressive",
+    "gold": [
+      "Aggressive offseason"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Clothing",
+    "gold": [
+      "Pittsburgh Steelers Fan Gear",
+      "Pittsburgh Steelers"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Career & Finance",
+    "gold": [
+      "Career & Finance"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Cycle syncing workouts",
+    "gold": [
+      "Cycle syncing workouts"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "03/21/2024",
+    "gold": [
+      "03/21/2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "10:00 AM",
+    "gold": [
+      "10:00 AM"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Search",
+    "gold": [
+      "Car rentals from trusted, local hosts"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "France",
+    "gold": [
+      "France"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$273",
+    "gold": [
+      "Save up to $273",
+      "$273",
+      "273"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Training",
+    "gold": [
+      "Training"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "5",
+    "gold": [
+      "Five",
+      "5",
+      "Five categories",
+      "5 categories"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "6 models",
+    "gold": [
+      "6 models"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "U.S. First Ladies",
+    "gold": [
+      "A book about U.S. First Ladies",
+      "U.S. First Ladies"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Data privacy concerns.",
+    "gold": [
+      "Data privacy concerns"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "April 2nd",
+    "gold": [
+      "April 2nd"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Hangar B, Booths 1-9",
+    "gold": [
+      "Hangar B, Booth 1-9"
+    ],
+    "instance_score": {
+      "f1": 74.9999995
+    }
+  },
+  {
+    "pred": "Coffee",
+    "gold": [
+      "Aviation coffee",
+      "aviation coffee"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "$4.75",
+    "gold": [
+      "$4.75 per lb.",
+      "$4.75"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Yellow Cake Mix",
+    "gold": [
+      "Baker's Corner Yellow Cake Mix"
+    ],
+    "instance_score": {
+      "f1": 74.99999953125
+    }
+  },
+  {
+    "pred": "$75",
+    "gold": [
+      "$75 or more.",
+      "$75 or more",
+      "$75"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "99\u00a2",
+    "gold": [
+      "99 cents per 2-lb. bag.",
+      "99 cents"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "1.9 mi",
+    "gold": [
+      "1.9 mi",
+      "1.9 miles"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Elysian Park West Loop Trail",
+    "gold": [
+      "Elysian Park West Loop Trail"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Moderate",
+    "gold": [
+      "Moderate"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "4",
+    "gold": [
+      "Four",
+      "4"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Try AllTrails+ for free",
+    "gold": [
+      "Free trial",
+      "free trial",
+      "try for free",
+      "try AllTrails+ for free"
+    ],
+    "instance_score": {
+      "f1": 74.9999995
+    }
+  },
+  {
+    "pred": "Hospital or rehab facility discharge, dementia and Alzheimer\u2019s care.",
+    "gold": [
+      "Hospital discharge or rehab facility discharge, Dementia and Alzheimer's care"
+    ],
+    "instance_score": {
+      "f1": 73.68421002770083
+    }
+  },
+  {
+    "pred": "800.375.9006",
+    "gold": [
+      "800.375.9006"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Platinum",
+    "gold": [
+      "Platinum"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Customer Favorites, Back In Stock, New Arrivals",
+    "gold": [
+      "Customer Favorites, Back In Stock, New Arrivals",
+      "Customer Favorites, Back In Stock and New Arrivals"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Information For...",
+    "gold": [
+      "Information For..."
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Publications section",
+    "gold": [
+      "Publications"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Coal mining photography exhibit",
+    "gold": [
+      "Historical Coal Mining Communities"
+    ],
+    "instance_score": {
+      "f1": 24.99999950000001
+    }
+  },
+  {
+    "pred": "Primary sources, teaching tools, and student and educator programs.",
+    "gold": [
+      "Primary sources and tools for teaching with documents, and student and educator programs",
+      "Primary sources and tools for teaching with documents, and student and educator programs."
+    ],
+    "instance_score": {
+      "f1": 63.157894249307475
+    }
+  },
+  {
+    "pred": "Astrophysics",
+    "gold": [
+      "Astrophysics"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Computer Science",
+    "gold": [
+      "Computer Science"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Mathematics",
+    "gold": [
+      "Mathematics"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Quaker State 400",
+    "gold": [
+      "Quaker State 400"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "September 2024",
+    "gold": [
+      "September 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Walmart",
+    "gold": [
+      "Walmart"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "2025",
+    "gold": [
+      "2025"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "40-28",
+    "gold": [
+      "40-28",
+      "win 40, loss 28"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$9/month",
+    "gold": [
+      "$9/month",
+      "$9 per month"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "WAS, DET, SAS",
+    "gold": [
+      "WAS, DET, SAS"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Jim Rowinski",
+    "gold": [
+      "Jim Rowinski"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Megan Hughes",
+    "gold": [
+      "Megan Hughes"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "15 hours ago",
+    "gold": [
+      "15 hours ago",
+      "15 HOURS AGO"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Trellis design",
+    "gold": [
+      "Trellis design"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Washing machine settings",
+    "gold": [
+      "Washing machine settings",
+      "Washing Machine Settings"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Subscribe.",
+    "gold": [
+      "Subscribe",
+      "SUBSCRIBE"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "There\u2019s Going to Be Trouble",
+    "gold": [
+      "There's Going to Be Trouble"
+    ],
+    "instance_score": {
+      "f1": 79.99999950000002
+    }
+  },
+  {
+    "pred": "Jen Silverman",
+    "gold": [
+      "Jen Silverman"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Tim Tszyu and Sebastian Fundora",
+    "gold": [
+      "Tim Tszyu vs Sebastian Fundora",
+      "Tim TSZYU vs SEBASTIAN FUNDORA"
+    ],
+    "instance_score": {
+      "f1": 79.99999950000002
+    }
+  },
+  {
+    "pred": "43 minutes ago",
+    "gold": [
+      "43 minutes ago",
+      "43m ago"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Spring wedding themes",
+    "gold": [
+      "Spring Wedding Themes"
+    ],
+    "instance_score": {
+      "f1": 33.33333283333334
+    }
+  },
+  {
+    "pred": "1 day ago",
+    "gold": [
+      "1 day ago",
+      "1 DAY AGO"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Stephanie Cain and Shelby Wax",
+    "gold": [
+      "Stephanie Cain and Shelby Wax"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Wedding party",
+    "gold": [
+      "Mixed-Gender Wedding Party"
+    ],
+    "instance_score": {
+      "f1": 39.99999952000001
+    }
+  },
+  {
+    "pred": "Registry & Gifts",
+    "gold": [
+      "Registry & Gifts"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Nowruz",
+    "gold": [
+      "Nowruz",
+      "the holiday of Nowruz"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Iran, Iraq, India, Afghanistan, Central Asia",
+    "gold": [
+      "Iran, Iraq, India, Afghanistan, Central Asia"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Fast Flowers: Time-Elapsed Spring Blooms",
+    "gold": [
+      "Fast Flowers: Time-Elapsed Spring Blooms"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Fraction Calculator",
+    "gold": [
+      "Fraction Calculator"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Payment Calculator",
+    "gold": [
+      "Payment Calculator"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Hours Calculator",
+    "gold": [
+      "Hours Calculator"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Division symbol",
+    "gold": [
+      "/"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Due Date Calculator",
+    "gold": [
+      "Due Date Calculator"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Clear all",
+    "gold": [
+      "Clear all input",
+      "clear",
+      "Clear"
+    ],
+    "instance_score": {
+      "f1": 79.99999952
+    }
+  },
+  {
+    "pred": "Financial",
+    "gold": [
+      "Financial"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3",
+    "gold": [
+      "Three"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Financial",
+    "gold": [
+      "Financial"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "5",
+    "gold": [
+      "three",
+      "3",
+      "Three"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Grey",
+    "gold": [
+      "Gray",
+      "grey"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Fifty More Classic Climbs of North America",
+    "gold": [
+      "Fifty More Classic Climbs of North America"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Anthony Walsh",
+    "gold": [
+      "Anthony Walsh",
+      "ANTHONY WALSH"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Outside Festival",
+    "gold": [
+      "Outside Festival June 1-2",
+      "OUTSIDE FESTIVAL JUNE 1-2"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Red",
+    "gold": [
+      "Red"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "EQM35 Pro - getting it working right",
+    "gold": [
+      "EQM35 Pro - getting it working right"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "PhilH",
+    "gold": [
+      "PhilH"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$27.99",
+    "gold": [
+      "$27.99"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Robert Asumendi",
+    "gold": [
+      "Robert Asumendi"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Nick Mitchell",
+    "gold": [
+      "Nick Mitchell"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Pony",
+    "gold": [
+      "Pony"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Growing Roses",
+    "gold": [
+      "Guide to growing roses",
+      "Growing roses"
+    ],
+    "instance_score": {
+      "f1": 49.99999950000001
+    }
+  },
+  {
+    "pred": "80+",
+    "gold": [
+      "80+",
+      "more than 80"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "150 mi.",
+    "gold": [
+      "150 mi.",
+      "150 miles"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "8",
+    "gold": [
+      "8 makes",
+      "8",
+      "eight",
+      "Eight"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Intel",
+    "gold": [
+      "Intel Core",
+      "Intel"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Monitors",
+    "gold": [
+      "Monitors"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 14, 2024",
+    "gold": [
+      "March 14, 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Good Jobs Initiative",
+    "gold": [
+      "The Good Jobs Initiative"
+    ],
+    "instance_score": {
+      "f1": 85.7142852244898
+    }
+  },
+  {
+    "pred": "50%",
+    "gold": [
+      "50%"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "10AM - 5PM and 9PM - 11PM",
+    "gold": [
+      "10AM-5PM & 9PM-11PM"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Pick up only.",
+    "gold": [
+      "Pick up only"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "03-18-2024",
+    "gold": [
+      "03-18-2024",
+      "Mar. 8, 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Top Story",
+    "gold": [
+      "Top Story",
+      "TOP STORY"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$600,000",
+    "gold": [
+      "$600,000"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "National Treasure",
+    "gold": [
+      "National Treasure"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$418,800",
+    "gold": [
+      "$418,800"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 9",
+    "gold": [
+      "Sat, Mar 09"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Uncle Ernie",
+    "gold": [
+      "Uncle Ernie"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "The Matrix",
+    "gold": [
+      "Matrix",
+      "Matrix Wiki"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "3",
+    "gold": [
+      "Three",
+      "3"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "My Hero Academia",
+    "gold": [
+      "My Hero Academia"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Register for Online Account",
+    "gold": [
+      "Register for Online Account"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Outages, Pay Bill, Moving",
+    "gold": [
+      "Outages, Pay Bill, Moving",
+      "OUTAGES, PAY BILL, MOVING"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "CUSTOMER SERVICE",
+    "gold": [
+      "Customer Service",
+      "CUSTOMER SERVICE"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$39.99",
+    "gold": [
+      "$39.99"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3rd",
+    "gold": [
+      "3rd most-cited publisher",
+      "3rd"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "2.5 billion",
+    "gold": [
+      "2.5 billion"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$99",
+    "gold": [
+      "Over $99",
+      "$99"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "80%",
+    "gold": [
+      "Up to 80%",
+      "80%"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Lab, Office & Hospitality Supplies",
+    "gold": [
+      "Lab, Office & Hospitality Supplies"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "17",
+    "gold": [
+      "17",
+      "Seventeen"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "20%",
+    "gold": [
+      "Up to 20% savings",
+      "20%"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Married to Real Estate",
+    "gold": [
+      "Married to Real Estate"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Latest ideas, products and projects.",
+    "gold": [
+      "Latest ideas, products and projects"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "12pm | 11c",
+    "gold": [
+      "12pm | 11c"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Waldorf Astoria Los Cabos Pedregal",
+    "gold": [
+      "Waldorf Astoria Los Cabos Pedregal, Mexico"
+    ],
+    "instance_score": {
+      "f1": 72.72727223140495
+    }
+  },
+  {
+    "pred": "1",
+    "gold": [
+      "1 guest",
+      "One",
+      "1"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Spa services",
+    "gold": [
+      "Spa services",
+      "Spa service",
+      "spa service"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Government & Politics",
+    "gold": [
+      "Government & Politics"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "28",
+    "gold": [
+      "28 PTS",
+      "28"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "1970s",
+    "gold": [
+      "1970s"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Business & Industry",
+    "gold": [
+      "Business & Industry",
+      "BUSINESS & INDUSTRY"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "4.8/5 Stars",
+    "gold": [
+      "4.8/5 Stars",
+      "4.8"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "22,100",
+    "gold": [
+      "22,100 Reviews",
+      "22,100"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Over 9 million",
+    "gold": [
+      "Over 9 million students"
+    ],
+    "instance_score": {
+      "f1": 85.7142852244898
+    }
+  },
+  {
+    "pred": "$2.54",
+    "gold": [
+      "$2.54"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "356,276",
+    "gold": [
+      "356,276"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Grocery",
+    "gold": [
+      "Grocery"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "80,000 points",
+    "gold": [
+      "80,000 points"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "1 877 424 2449",
+    "gold": [
+      "1 877 424 2449",
+      "1-877-424-2449"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "03/20/2024",
+    "gold": [
+      "03/20/2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Document Upload Tool",
+    "gold": [
+      "Document Upload Tool"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "9",
+    "gold": [
+      "9",
+      "Nine"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "English",
+    "gold": [
+      "English"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Mom",
+    "gold": [
+      "Mom"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Wedding dress",
+    "gold": [
+      "Trumpet/Mermaid Wedding Dresses",
+      "Trumpet/Mermaid Wedding D..."
+    ],
+    "instance_score": {
+      "f1": 39.99999952000001
+    }
+  },
+  {
+    "pred": "8",
+    "gold": [
+      "8",
+      "Eight"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Fragrances & Beauty",
+    "gold": [
+      "Fragrances & Beauty"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "(877) 834-1434",
+    "gold": [
+      "(877) 834-1434"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Laws: Cases & Codes",
+    "gold": [
+      "US States"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Family Law",
+    "gold": [
+      "Family Law"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Experts & Expert Witnesses",
+    "gold": [
+      "Experts & Expert Witnesses"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "33,596",
+    "gold": [
+      "33,596",
+      "33,596 Waterfront"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Residential",
+    "gold": [
+      "Residential with 224,361 listings",
+      "Residential"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$7.64",
+    "gold": [
+      "$7.64"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "10 for $15",
+    "gold": [
+      "10 for $15"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Great Jin dynasty elites",
+    "gold": [
+      "Lavish tombs in China"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Under 40 HP",
+    "gold": [
+      "Under 40 HP"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Planting",
+    "gold": [
+      "Planting"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Cotton",
+    "gold": [
+      "Cotton"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Welding, Brazing & Soldering",
+    "gold": [
+      "Welding, Brazing & Soldering"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Suspending",
+    "gold": [
+      "Suspending"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$292.12",
+    "gold": [
+      "292.12"
+    ],
+    "instance_score": {
+      "f1": 49.99999950000001
+    }
+  },
+  {
+    "pred": "$32.13",
+    "gold": [
+      "32.13"
+    ],
+    "instance_score": {
+      "f1": 49.99999950000001
+    }
+  },
+  {
+    "pred": "Weekly Ad",
+    "gold": [
+      "Closets",
+      "CLOSETS"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Green",
+    "gold": [
+      "Green"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 19, 2024",
+    "gold": [
+      "March 19, 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "8",
+    "gold": [
+      "Six",
+      "6"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "airs",
+    "gold": [
+      "airs",
+      "Airs"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3/31",
+    "gold": [
+      "Offer ends 3/31",
+      "3/31",
+      "31st, Mar."
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Surface Laptop Studio 2",
+    "gold": [
+      "Surface Laptop Studio 2"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "77 Massachusetts Avenue, Cambridge, MA, USA",
+    "gold": [
+      "77 Massachusetts Avenue, Cambridge, MA, USA"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Michal Caspi Tal",
+    "gold": [
+      "Michal Caspi Tal"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "5.10",
+    "gold": [
+      "5.10"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Utah",
+    "gold": [
+      "Utah"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Epinephrine",
+    "gold": [
+      "Epinephrine"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3/26",
+    "gold": [
+      "Order by 3/26",
+      "3/26",
+      "26th Mar."
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$599",
+    "gold": [
+      "$599",
+      "999"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Bell Gardens - CA",
+    "gold": [
+      "Bell Gardens - CA"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$999",
+    "gold": [
+      "$999",
+      "999"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Blue",
+    "gold": [
+      "Blue",
+      "blue"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Google and Apple",
+    "gold": [
+      "Google, Apple",
+      "Google and Apple"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "3 p.m.",
+    "gold": [
+      "3 p.m. EDT"
+    ],
+    "instance_score": {
+      "f1": 85.7142852244898
+    }
+  },
+  {
+    "pred": "NASA and SpaceX",
+    "gold": [
+      "NASA and SpaceX"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "6:30 AM",
+    "gold": [
+      "6:30 AM"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "57 times",
+    "gold": [
+      "57 times today",
+      "57",
+      "57 times"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Mediterranean",
+    "gold": [
+      "Mediterranean"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$$$$",
+    "gold": [
+      "$$$"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "1306",
+    "gold": [
+      "1306 reviews",
+      "1306"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Tasha Zemke",
+    "gold": [
+      "Tasha Zemke"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Guilty or Innocent? How a Sled Dog Named Blowhole Chewed His Way to",
+    "gold": [
+      "Guilty or Innocent? How a Sled Dog Named Blowhole Chewed His Way to Social Media Fame"
+    ],
+    "instance_score": {
+      "f1": 89.65517191914388
+    }
+  },
+  {
+    "pred": "David Breashears",
+    "gold": [
+      "David Breashears"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Alison Osius and Frederick Dreier",
+    "gold": [
+      "Alison Osius and Frederick Dreier"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Instant RSVP tracking, guest messaging.",
+    "gold": [
+      "Instant RSVP tracking"
+    ],
+    "instance_score": {
+      "f1": 49.999999531250005
+    }
+  },
+  {
+    "pred": "Parties",
+    "gold": [
+      "PARTIES",
+      "Parties",
+      "parties"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Greetings",
+    "gold": [
+      "Greetings",
+      "GREETINGS"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Light blue",
+    "gold": [
+      "blue",
+      "Blue"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Los Angeles, CA, US",
+    "gold": [
+      "Los Angeles, CA, US"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Open Door Awards",
+    "gold": [
+      "2023 OPEN DOOR AWARDS",
+      "the 2023 OPEN DOOR AWARDS"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Language selector, Browse Spaces, List Your Space, Log In, Sign Up.",
+    "gold": [
+      "Language, Browse Spaces, List Your Space, Log In, Sign Up",
+      "Language, Browse Spaces, List Your Space,  Log In, Sign Up"
+    ],
+    "instance_score": {
+      "f1": 85.71428521541952
+    }
+  },
+  {
+    "pred": "Zesty Paws",
+    "gold": [
+      "$14.97"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "$16.97",
+    "gold": [
+      "$15.97"
+    ],
+    "instance_score": {
+      "f1": 49.99999950000001
+    }
+  },
+  {
+    "pred": "$31.99",
+    "gold": [
+      "$31.99"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$2.01",
+    "gold": [
+      "$0.01",
+      "0.01"
+    ],
+    "instance_score": {
+      "f1": 49.99999950000001
+    }
+  },
+  {
+    "pred": "Bird Deals",
+    "gold": [
+      "Bird Deals"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$24.49",
+    "gold": [
+      "$24.49",
+      "24.49"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Trevor Sikkema",
+    "gold": [
+      "Trevor Sikkema"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "PFF Greenline",
+    "gold": [
+      "PFF Greenline"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Red",
+    "gold": [
+      "blue",
+      "Blue"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "COLLEGE & DRAFT",
+    "gold": [
+      "COLLEGE & DRAFT",
+      "College and Draft"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "1 hour",
+    "gold": [
+      "3 hours",
+      "three hours",
+      "Three hours"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "S. Scheffler",
+    "gold": [
+      "S. Scheffler"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "T2, -3",
+    "gold": [
+      "POS T2 R4 -3"
+    ],
+    "instance_score": {
+      "f1": 33.3333328888889
+    }
+  },
+  {
+    "pred": "Martin takes closer look at what makes Scheffler's PLAYERS win so special",
+    "gold": [
+      "Martin takes closer look at what makes Scheffler's PLAYERS win so special"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "K-12",
+    "gold": [
+      "K-12"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "12-5",
+    "gold": [
+      "12-5",
+      "win 12, loss 5"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Arizona Cardinals",
+    "gold": [
+      "ARI"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "0",
+    "gold": [
+      "2 teams",
+      "Two teams"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "Zack Kuntz",
+    "gold": [
+      "Zack Kuntz"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "6",
+    "gold": [
+      "Six",
+      "6",
+      "six"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Auto",
+    "gold": [
+      "Auto"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "64,418",
+    "gold": [
+      "64,418"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Today 08:27 PM",
+    "gold": [
+      "Today 08:27 PM"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Radios",
+    "gold": [
+      "Radios"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Welcome to my offish!",
+    "gold": [
+      "Welcome to my offish!"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "93",
+    "gold": [
+      "93"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Reef Aquarium Discussion",
+    "gold": [
+      "Reef Aquarium Discussion"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Troylee",
+    "gold": [
+      "Troylee"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$150k",
+    "gold": [
+      "$150k"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "101+ lbs",
+    "gold": [
+      "101+ lbs"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Doggy Day Care, Dog Walking",
+    "gold": [
+      "Doggy Day Care, Dog Walking"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "6",
+    "gold": [
+      "6",
+      "Six",
+      "six"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "LAX",
+    "gold": [
+      "LAX"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Round trip",
+    "gold": [
+      "Round trip"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "One options",
+    "gold": [
+      "2",
+      "Two",
+      "two"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "1099/1042S",
+    "gold": [
+      "1099/1042S"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Check eligibility for benefits",
+    "gold": [
+      "Check eligibility for benefits"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Report stolen number",
+    "gold": [
+      "Report stolen number"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 18, 2024",
+    "gold": [
+      "March 18, 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Harden Maze",
+    "gold": [
+      "Harden Maze"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 17th, 2024",
+    "gold": [
+      "March 17th, 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "1.3M",
+    "gold": [
+      "1.3M"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "100+",
+    "gold": [
+      "100+"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Shelly Shimoni",
+    "gold": [
+      "Shelly Shimoni"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Less than 3 minutes.",
+    "gold": [
+      "Less than 3 minutes"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Valves",
+    "gold": [
+      "Valves"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Valves), 7 (Thermostats), 8 (Electrical).\nInterestingly, \"Tools\"",
+    "gold": [
+      "8",
+      "Eight",
+      "eight"
+    ],
+    "instance_score": {
+      "f1": 24.999999781250004
+    }
+  },
+  {
+    "pred": "March 31, 2024",
+    "gold": [
+      "March 31st, 2024"
+    ],
+    "instance_score": {
+      "f1": 66.66666616666667
+    }
+  },
+  {
+    "pred": "5%",
+    "gold": [
+      "5%"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "(866) 926-5603",
+    "gold": [
+      "(866) 926-5603"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Sign up",
+    "gold": [
+      "Sign up"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Meet and set up tastings.",
+    "gold": [
+      "Set up tastings"
+    ],
+    "instance_score": {
+      "f1": 49.999999531250005
+    }
+  },
+  {
+    "pred": "72 Million",
+    "gold": [
+      "72 Million"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "300",
+    "gold": [
+      "300+"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  },
+  {
+    "pred": "850+",
+    "gold": [
+      "850+"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$3.59",
+    "gold": [
+      "from $3.59",
+      "$3.59"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "The Giver",
+    "gold": [
+      "The Giver"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Free book credit",
+    "gold": [
+      "Get a FREE BOOK credit"
+    ],
+    "instance_score": {
+      "f1": 24.999999531250005
+    }
+  },
+  {
+    "pred": "The Silent Patient",
+    "gold": [
+      "The Silent Patient"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "6:35:34pm",
+    "gold": [
+      "6:35:34pm"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Date to Date Calculator",
+    "gold": [
+      "Date to Date Calculator"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Glendale (Fashion Center), CA",
+    "gold": [
+      "Glendale (Fashion Center), CA"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$26,420",
+    "gold": [
+      "$26,420"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "252 miles",
+    "gold": [
+      "252 miles"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "48",
+    "gold": [
+      "48 Matches",
+      "48"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "20 years",
+    "gold": [
+      "20 years"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "830 horsepower",
+    "gold": [
+      "830"
+    ],
+    "instance_score": {
+      "f1": 66.66666622222223
+    }
+  },
+  {
+    "pred": "Melissa Breyer",
+    "gold": [
+      "Melissa Breyer"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "539K",
+    "gold": [
+      "539K"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "2024",
+    "gold": [
+      "2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Student loans",
+    "gold": [
+      "Student loans"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "New Court Programs Inspire Students to Enter Legal Profession",
+    "gold": [
+      "New Court Programs Inspire Students to Enter Legal Profession"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "March 12, 2024",
+    "gold": [
+      "March 12, 2024"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Tyra Tennyson Francis, MD",
+    "gold": [
+      "Tyra Tennyson Francis, MD"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Help ease anxiety.",
+    "gold": [
+      "To help ease anxiety"
+    ],
+    "instance_score": {
+      "f1": 57.14285665306124
+    }
+  },
+  {
+    "pred": "Handball",
+    "gold": [
+      "Handball"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "24",
+    "gold": [
+      "24",
+      "twenty-four",
+      "Twenty-four"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "$75",
+    "gold": [
+      "$75+",
+      "$75"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "20%",
+    "gold": [
+      "20%"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "03/19/24 at 13:22 UTC",
+    "gold": [
+      "03/19/24 at 13:22 UTC"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Green",
+    "gold": [
+      "Green",
+      "green"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "People search, reverse phone, reverse address.",
+    "gold": [
+      "People Search, Reverse Phone, Reverse Address"
+    ],
+    "instance_score": {
+      "f1": 19.999999500000015
+    }
+  },
+  {
+    "pred": "Wikidata",
+    "gold": [
+      "Wikidata"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Free textbooks",
+    "gold": [
+      "Free textbooks"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Media Library",
+    "gold": [
+      "Media Library"
+    ],
+    "instance_score": {
+      "f1": 99.9999995
+    }
+  },
+  {
+    "pred": "Central and Western",
+    "gold": [
+      "Houston,",
+      "Houston"
+    ],
+    "instance_score": {
+      "f1": 0.0
+    }
+  }
+]

@@ -1,0 +1,1211 @@
+[
+  {
+    "score": "rouge_1: 35.49, rouge_2: 12.86, rouge_l: 32.10"
+  },
+  {
+    "pred": "Discover, appreciate, and understand the animal world! Search or browse A-Z Animals to learn about any animal. New animals added daily with facts, photos, and more.",
+    "gold": "Explore the largest, most trusted collection of animal facts and media. Discover, appreciate, and understand over 1,000 animals. Dive into daily updates, articles, and quizzes on the natural world at A-Z Animals.",
+    "instance_score": {
+      "rouge_1": 37.73584856105376,
+      "rouge_2": 14.285713791454096,
+      "rouge_l": 37.73584856105376
+    }
+  },
+  {
+    "pred": "The web's largest poetry writing group - from beginners to experts. Improve your poetry, create a fan base, and read the best poetry of our generation. Allpoetry is home base for poets.",
+    "gold": "Join All Poetry, the world's largest poetry community. Share your work, get feedback, and improve your writing. Participate in contests, read a wide range of poetry, and connect with poets from around the world.",
+    "instance_score": {
+      "rouge_1": 38.70967691935484,
+      "rouge_2": 3.1249995004883613,
+      "rouge_l": 29.032257564516133
+    }
+  },
+  {
+    "pred": "Internet Archive is a non-profit library of millions of free books, movies, software, music, websites, and more. Search the history of over 866 billion web pages on the Internet.",
+    "gold": "Explore the Internet Archive, a non-profit digital library offering free access to millions of books, movies, music, software, and over 624 billion web pages archived through the Wayback Machine.",
+    "instance_score": {
+      "rouge_1": 64.15094289782843,
+      "rouge_2": 21.42857092857144,
+      "rouge_l": 56.60377308650766
+    }
+  },
+  {
+    "pred": "Book your next fishing trip with FishingBooker, the world's largest online travel fishing company. Find and book fishing charters in Los Angeles, Long Beach, Huntington Beach and more destinations worldwide.",
+    "gold": "Discover and book your ideal fishing charter worldwide. Compare prices, read reviews, and find the perfect fishing experience for families, sportfishing enthusiasts, and more.",
+    "instance_score": {
+      "rouge_1": 29.16666617447917,
+      "rouge_2": 7.692307198964529,
+      "rouge_l": 29.16666617447917
+    }
+  },
+  {
+    "pred": "Shop dog products at iHeartDogs. Find hemp oil, hip & joint supplements, allergy supplements, dog toys, senior dog care, and natural food toppers. Every purchase helps shelter dogs in need.",
+    "gold": "Shop at iHeartDogs for a variety of dog-related products including toys, supplements, and apparel. Your purchase supports our mission to help shelter dogs in need.",
+    "instance_score": {
+      "rouge_1": 46.1538456545858,
+      "rouge_2": 15.094339127091509,
+      "rouge_l": 38.46153796227811
+    }
+  },
+  {
+    "pred": "The Kyiv Independent - Ukraine's English-language news source delivering independent journalism on war, business, opinion, and culture. Support independent journalism in Ukraine.",
+    "gold": "Stay updated with the latest news from Ukraine: in-depth analysis, features on Ukrainian politics, economy, and society, as well as breaking news and investigative reports. Support independent journalism in Ukraine.",
+    "instance_score": {
+      "rouge_1": 34.04255270258036,
+      "rouge_2": 16.326530129112886,
+      "rouge_l": 34.04255270258036
+    }
+  },
+  {
+    "pred": "Bass Pro Shops REDCREST 2024 results and coverage. Dustin Connell wins as 2-time REDCREST Champion with 83-00 weight. View final results, anglers, and event details from Lay Lake in Birmingham, Ala.",
+    "gold": "Join the world's largest tournament-fishing organization. Follow live updates, check schedules, view results, and explore membership options for bass fishing events. Register for tournaments and shop for fishing gear.",
+    "instance_score": {
+      "rouge_1": 7.407406910150927,
+      "rouge_2": 0.0,
+      "rouge_l": 7.407406910150927
+    }
+  },
+  {
+    "pred": "Plan your trip and check real-time service status for MTA subway, bus, and rail. View delays, planned service changes, elevator & escalator status, and schedule information.",
+    "gold": "Official New York Metropolitan Transportation Authority site providing up-to-date transit service status, trip planning, maps, schedules, fare information, and more.",
+    "instance_score": {
+      "rouge_1": 18.604650665224458,
+      "rouge_2": 0.0,
+      "rouge_l": 18.604650665224458
+    }
+  },
+  {
+    "pred": "Punchbowl is the gold standard in online invitations and greeting cards. Send beautiful digital invitations for birthdays, baby showers, weddings, Easter celebrations, and more. Browse thank you cards, anniversary cards, and new baby greeting cards.",
+    "gold": "Discover elegant online invitations and greeting cards for all occasions. Instantly send free e-invites and ecards by text or email, and track RSVPs in real-time. Perfect for birthdays, baby showers, holidays, and more. Personalize your digital invites for a unique touch.",
+    "instance_score": {
+      "rouge_1": 37.499999507812504,
+      "rouge_2": 21.91780772377558,
+      "rouge_l": 37.499999507812504
+    }
+  },
+  {
+    "pred": "Z-Library is one of the largest online libraries in the world with over 14,900,000 books and 84,837,000 articles. Your gateway to knowledge and culture. Accessible for everyone.",
+    "gold": "Z-Library is one of the largest online libraries with over 14,900,000 books and 84,837,000 articles available for free. Explore a vast collection of ebooks and articles, and support knowledge access through fundraising.",
+    "instance_score": {
+      "rouge_1": 62.962962465706454,
+      "rouge_2": 45.614034591566636,
+      "rouge_l": 62.962962465706454
+    }
+  },
+  {
+    "pred": "Steelers Depot is your source for Pittsburgh Steelers news, analysis, rumors, draft coverage, and NFL Draft information.",
+    "gold": "Visit Steelers Depot for comprehensive Pittsburgh Steelers coverage including news, articles, rumors, film breakdowns, and updates. Stay informed on all things Steelers with in-depth analysis and fan discussions.",
+    "instance_score": {
+      "rouge_1": 34.14634098750744,
+      "rouge_2": 9.302325114115762,
+      "rouge_l": 34.14634098750744
+    }
+  },
+  {
+    "pred": "The Everygirl is a lifestyle publication covering career, finance, fashion, beauty, living, wellness, and relationships for women seeking inspiration and advice.",
+    "gold": "The Everygirl is your number one source for female empowerment, providing articles on career advice, fashion tips, beauty trends, and lifestyle inspiration for the creative, career-driven woman.",
+    "instance_score": {
+      "rouge_1": 30.434782117202268,
+      "rouge_2": 8.695651682419687,
+      "rouge_l": 21.739129943289235
+    }
+  },
+  {
+    "pred": "Find your drive with Turo, the world's largest car sharing marketplace. Rent cars from trusted, local hosts for any occasion. Browse unique vehicles including the Tesla Cybertruck.",
+    "gold": "Discover unique cars for rent worldwide on Turo. Skip the rental counter and book the perfect car for your next adventure, provided by local hosts.",
+    "instance_score": {
+      "rouge_1": 32.65306072636402,
+      "rouge_2": 3.9999995008000626,
+      "rouge_l": 28.5714280733028
+    }
+  },
+  {
+    "pred": "Book 5-star pet caregivers near you for dog walking, overnight stays, drop-in visits, wellness, and training. Local, trusted pet care available any day, anytime.",
+    "gold": "Discover reliable pet care services with Wag! Book local 5-star pet caregivers for dog walking, overnight sitting, in-home training, and more. Get vet advice and deals on pet health & wellness.",
+    "instance_score": {
+      "rouge_1": 39.21568577931565,
+      "rouge_2": 22.64150894268424,
+      "rouge_l": 39.21568577931565
+    }
+  },
+  {
+    "pred": "AARP is the nation's largest nonprofit organization empowering people 50 and older. Find resources on health, money, work, retirement, caregiving, and more.",
+    "gold": "AARP is a nonprofit organization focused on supporting Americans 50+ with resources on health, money, jobs, social security, and more to enhance their quality of life.",
+    "instance_score": {
+      "rouge_1": 43.47826037334594,
+      "rouge_2": 26.086956025519854,
+      "rouge_l": 43.47826037334594
+    }
+  },
+  {
+    "pred": "Aircraft Spruce & Specialty Co. is the aviation superstore for all your aircraft and pilot needs. Shop airframe parts, avionics, engine parts, pilot supplies, and more. Call 877-4-SPRUCE.",
+    "gold": "Shop at Aircraft Spruce for a vast selection of certified and homebuilt aircraft parts, avionics, pilot supplies, and more. Find everything you need for your aviation needs in one place.",
+    "instance_score": {
+      "rouge_1": 52.83018818084728,
+      "rouge_2": 17.857142357780628,
+      "rouge_l": 49.0566032751869
+    }
+  },
+  {
+    "pred": "Discover this week's deals on groceries and goods at ALDI. View our weekly specials, shop online, and find quality products at low prices every day.",
+    "gold": "Discover affordable, quality products at ALDI. Shop in-store or online for weekly specials, seasonal recipes, and exclusive brands. Save big on groceries and more.",
+    "instance_score": {
+      "rouge_1": 43.47826036956523,
+      "rouge_2": 25.531914393843376,
+      "rouge_l": 43.47826036956523
+    }
+  },
+  {
+    "pred": "Find your outdoors with AllTrails. Explore nearby trails, search by city, park, or trail name, and discover local favorites for hiking, biking, and outdoor activities.",
+    "gold": "Discover the perfect hiking, running, and biking trails with AllTrails. Explore over 400,000 trail guides with maps, photos, and reviews from our community of outdoor enthusiasts. Find local favorites near Los Angeles and start your outdoor adventure today!",
+    "instance_score": {
+      "rouge_1": 37.93103399762188,
+      "rouge_2": 9.836065096479464,
+      "rouge_l": 37.93103399762188
+    }
+  },
+  {
+    "pred": "Find senior living options near you with A Place for Mom. Compare assisted living, memory care, and independent living communities. Get free, unbiased recommendations and pricing from expert senior living advisors.",
+    "gold": "Discover top-rated assisted living, memory care, and independent living communities near you. Read reviews, compare pricing, and connect with a Senior Living Advisor for personalized guidance.",
+    "instance_score": {
+      "rouge_1": 46.1538456545858,
+      "rouge_2": 29.629629132373125,
+      "rouge_l": 46.1538456545858
+    }
+  },
+  {
+    "pred": "Buy gold and silver bullion online at APMEX. Shop gold coins, silver bars, platinum, palladium and rare coins. Trusted precious metals dealer with competitive prices and exclusive rewards.",
+    "gold": "Shop at APMEX for a wide selection of precious metals including gold, silver, platinum, and palladium bullion. Discover collectible coins, currency, and more with secure shipping on orders over $199.",
+    "instance_score": {
+      "rouge_1": 41.509433466714135,
+      "rouge_2": 7.142856643494932,
+      "rouge_l": 33.962263655393386
+    }
+  },
+  {
+    "pred": "The National Archives and Records Administration (NARA) is the nation's record keeper. Research our records, request military service records, find educator resources, plan a visit, and view America's founding documents.",
+    "gold": "Explore the National Archives, the nation's record keeper for historical documents, photos, and records. Access veterans' service records, educator resources, and plan your visit to the museum. Stay informed with the latest Archives News and shop online for publications.",
+    "instance_score": {
+      "rouge_1": 39.34426179844129,
+      "rouge_2": 14.925372643350428,
+      "rouge_l": 39.34426179844129
+    }
+  },
+  {
+    "pred": "arXiv is a free distribution service and an open-access archive for nearly 2.4 million scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics.",
+    "gold": "arXiv.org is a free distribution service and an open-access archive for scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering, systems science, and economics. It provides over 2.4 million e-prints in various research areas. Materials on this site are not peer-reviewed by arXiv.",
+    "instance_score": {
+      "rouge_1": 76.54320939368998,
+      "rouge_2": 65.90909042561984,
+      "rouge_l": 76.54320939368998
+    }
+  },
+  {
+    "pred": "Atlanta Motor Speedway is home to NASCAR racing and exciting events like Monster Jam. Buy tickets for the Quaker State 400 Available at Walmart September 6-8, 2024 and other upcoming events.",
+    "gold": "Visit Atlanta Motor Speedway for top NASCAR races, events, and year-round entertainment. Explore ticket options, event dates, and venue information for racing enthusiasts and families. Located just 25 miles south of Atlanta.",
+    "instance_score": {
+      "rouge_1": 24.561403008925833,
+      "rouge_2": 6.557376549314739,
+      "rouge_l": 24.561403008925833
+    }
+  },
+  {
+    "pred": "Statistics, scores, and history for the NBA, ABA, WNBA, and top European competition.",
+    "gold": "Explore comprehensive NBA & WNBA statistics, scores, player and team history, and basketball standings on Basketball-Reference.com. Access detailed player profiles, recent debuts, and historical data for the ABA, NBL, G League, and international competitions.",
+    "instance_score": {
+      "rouge_1": 23.25581355110871,
+      "rouge_2": 4.347825701323287,
+      "rouge_l": 23.25581355110871
+    }
+  },
+  {
+    "pred": "Better Homes & Gardens provides expert advice on home decorating, home improvement, gardening, housekeeping, recipes, shopping, holidays, and more.",
+    "gold": "Explore Better Homes & Gardens for expert home decor advice, DIY project ideas, gardening tips, cleaning hacks, delicious recipes, and more. Inspiring beautiful living for over a century.",
+    "instance_score": {
+      "rouge_1": 39.99999952000001,
+      "rouge_2": 17.77777729777779,
+      "rouge_l": 39.99999952000001
+    }
+  },
+  {
+    "pred": "Bicycling magazine covers bike reviews, gear, training tips, nutrition advice, repair guides, and cycling news to help riders of all levels improve their performance and enjoy the sport.",
+    "gold": "Explore expert cycling advice with the latest bike reviews, news, and tips for improving your riding skills and fitness on Bicycling.",
+    "instance_score": {
+      "rouge_1": 25.531914404708022,
+      "rouge_2": 4.255318660027218,
+      "rouge_l": 12.765956957899524
+    }
+  },
+  {
+    "pred": "Booklist - Leading book discovery. Book reviews, newsletters, webinars, podcasts, and book awards for librarians and book lovers. Download the Booklist Reader Toolkit and enhance your reader services.",
+    "gold": "Explore expert book reviews for public and school libraries, find the best reads for your book club, and discover top picks from the ALA on Booklist Online.",
+    "instance_score": {
+      "rouge_1": 26.086956021739137,
+      "rouge_2": 0.0,
+      "rouge_l": 21.73912993478262
+    }
+  },
+  {
+    "pred": "Boxing news, results, rankings, and schedules. Read about Sebastian Fundora stepping in to face Tim Tszyu on March 30, plus interviews with Ishmael Davis, Sandy Ryan, and more boxing coverage.",
+    "gold": "Stay updated with the latest boxing news, results, schedules, and exclusive interviews. Watch free videos, follow upcoming fights and join our large boxing community forum.",
+    "instance_score": {
+      "rouge_1": 23.07692258357989,
+      "rouge_2": 3.773584410110425,
+      "rouge_l": 19.23076873742605
+    }
+  },
+  {
+    "pred": "Brides is your ultimate guide to planning your wedding, with 90 years of expert advice and inspiration for every couple. Find wedding ideas, real weddings, rings, fashion, beauty, registry tips, and relationship advice.",
+    "gold": "Explore BRIDES for comprehensive wedding planning advice, etiquette answers, and inspiration for your ceremony. Find spring wedding themes, fashion tips, and gift ideas.",
+    "instance_score": {
+      "rouge_1": 31.999999520000006,
+      "rouge_2": 11.111110628257908,
+      "rouge_l": 27.999999520000006
+    }
+  },
+  {
+    "pred": "Explore the first day of spring in the Northern Hemisphere, marking the vernal equinox, and learn about Nowruz, the Persian new year celebration, its traditions, and how it's celebrated across Iran, Iraq, India, Afghanistan, and Central Asia.",
+    "gold": "Access a comprehensive online encyclopedia from Encyclopaedia Britannica featuring objective articles, biographies, videos, and images from experts, covering topics like the vernal equinox, Nowruz celebrations, seasonal changes, and nature's renewal.",
+    "instance_score": {
+      "rouge_1": 13.333332835555575,
+      "rouge_2": 6.15384565964501,
+      "rouge_l": 13.333332835555575
+    }
+  },
+  {
+    "pred": "Free online calculators for finance, fitness, health, math and more. Including mortgage calculator, BMI calculator, scientific calculator, loan calculator, and many other free calculators.",
+    "gold": "Access a variety of free online calculators at Calculator.net, including tools for finance, health & fitness, math, and more, each with detailed information to assist with quick and in-depth calculations.",
+    "instance_score": {
+      "rouge_1": 29.166666188368062,
+      "rouge_2": 7.5471693200427525,
+      "rouge_l": 29.166666188368062
+    }
+  },
+  {
+    "pred": "Free online calculators for math, finance, time and date, construction, conversions, and more. Basic calculator with percentage and square root buttons. Operate with mouse, keyboard, or touch.",
+    "gold": "Explore a comprehensive range of online calculators for various categories including finance, mathematics, and more. Find tools for loans, APR, algebra, trigonometry, conversions, and physics. Use our free online calculator with advanced functions like square roots and percentages.",
+    "instance_score": {
+      "rouge_1": 34.48275813555292,
+      "rouge_2": 15.87301538825902,
+      "rouge_l": 31.03448227348396
+    }
+  },
+  {
+    "pred": "Detailed profiles for every city in the United States. From crime rates to weather patterns, find comprehensive data on cities, schools, neighborhoods, assessments, and restaurants. City-Data sees over 14 million users per month.",
+    "gold": "Explore comprehensive statistics and data for every city in the USA at City-Data.com. Find real estate trends, relocation info, crime rates, cost of living, demographics, home values, school information, weather patterns, and more for informed decisions.",
+    "instance_score": {
+      "rouge_1": 35.294117147491356,
+      "rouge_2": 14.705881854671295,
+      "rouge_l": 35.294117147491356
+    }
+  },
+  {
+    "pred": "Climbing news, skills, gear reviews, and information about climbing destinations, people, and the climbing community from Climbing Magazine.",
+    "gold": "Explore the world of climbing with Climbing Magazine. Get the latest climbing news, in-depth interviews, fascinating features, and expert skills advice, all since 1970.",
+    "instance_score": {
+      "rouge_1": 32.43243195032871,
+      "rouge_2": 4.999999511250048,
+      "rouge_l": 32.43243195032871
+    }
+  },
+  {
+    "pred": "Cloudy Nights is your astronomical community featuring telescope reviews, articles, photo gallery, forums, and discussions about astronomy equipment, observations, and celestial events.",
+    "gold": "Cloudy Nights is an astronomical community offering forums, articles, reviews, and photo galleries for astronomy enthusiasts. Discuss telescopes, astrophotography, star gazing, and more with fellow stargazers.",
+    "instance_score": {
+      "rouge_1": 47.82608646030246,
+      "rouge_2": 13.043477764650302,
+      "rouge_l": 39.13043428638942
+    }
+  },
+  {
+    "pred": "Your health and fitness guide featuring expert workout guides, training tips, gear reviews, and the latest fitness news including CrossFit Open coverage, running shoes, and treadmill recommendations.",
+    "gold": "Explore Coach for expert fitness advice, workout guides, nutrition tips, and gear reviews. Your ultimate guide to an active lifestyle with the latest on CrossFit, running, and abs workouts.",
+    "instance_score": {
+      "rouge_1": 42.307691810650894,
+      "rouge_2": 7.4074069080933125,
+      "rouge_l": 38.46153796449705
+    }
+  },
+  {
+    "pred": "Country Living Magazine features home decorating ideas, gardening tips, recipes, and lifestyle inspiration for those who love the country lifestyle.",
+    "gold": "Discover inspiring home decorating ideas, delicious recipes, gardening tips, and antique treasures from the editors of Country Living. Explore charming country lifestyle content and shop for unique items.",
+    "instance_score": {
+      "rouge_1": 56.52173864555766,
+      "rouge_2": 21.739129949905493,
+      "rouge_l": 34.78260821077505
+    }
+  },
+  {
+    "pred": "Shop Crate & Barrel for high-quality furniture, home decor, kitchen, bedding, and more. Enjoy free shipping sitewide on orders over $49, plus up to 60% off during the Spring Savings Event.",
+    "gold": "Discover a curated selection of furniture, home decor, kitchen essentials, and more at Crate & Barrel. Shop now for modern designs, seasonal items, and exclusive sales. Create your perfect wedding or baby registry today.",
+    "instance_score": {
+      "rouge_1": 31.249999500488286,
+      "rouge_2": 15.873015374149677,
+      "rouge_l": 21.874999500488293
+    }
+  },
+  {
+    "pred": "Find new and used motorcycles for sale on Cycle Trader. Browse by make including Honda, Harley-Davidson, Kawasaki, BMW, Indian, KTM and more. Search nationwide listings, sell your motorcycle, research prices and reviews.",
+    "gold": "Explore a vast selection of motorcycles for sale at Cycle Trader. Buy, sell, and search for new and used motorcycles from top brands like Harley-Davidson, Kawasaki, Yamaha, and more. Shop securely online with nationwide listings available.",
+    "instance_score": {
+      "rouge_1": 38.70967691987514,
+      "rouge_2": 24.2424237442608,
+      "rouge_l": 38.70967691987514
+    }
+  },
+  {
+    "pred": "Shop Dell for laptops, desktops, monitors, PC accessories, IT infrastructure, AI solutions, and more. Explore new Latitude laptops with AI-enhanced productivity featuring Intel Core Ultra processors.",
+    "gold": "Shop the latest Dell computers & technology solutions. Laptops, desktops, gaming pcs, monitors, workstations & servers. FREE & FAST DELIVERY",
+    "instance_score": {
+      "rouge_1": 18.18181769834712,
+      "rouge_2": 0.0,
+      "rouge_l": 18.18181769834712
+    }
+  },
+  {
+    "pred": "The U.S. Department of Labor's mission is to foster, promote, and develop the welfare of the wage earners, job seekers, and retirees of the United States.",
+    "gold": "Official homepage of the U.S. Department of Labor, featuring the latest updates on American workplace issues, labor laws, job opportunities, and resources for workers and employers.",
+    "instance_score": {
+      "rouge_1": 30.434782109640835,
+      "rouge_2": 15.68627400999617,
+      "rouge_l": 30.434782109640835
+    }
+  },
+  {
+    "pred": "Order Domino's Pizza online for delivery or pick up. Enjoy 50% off regular pizza pick up, JIMAT123 deals from RM11, and try the new Cheese Volcano pizza. Check our menu, promotions, and locate stores near you.",
+    "gold": "Order your favorite Domino's Pizza online in Malaysia for delivery or takeaway. Enjoy exclusive online deals, over 250 stores nationwide, and a wide range of pizzas, sides, and desserts.",
+    "instance_score": {
+      "rouge_1": 33.333332838333334,
+      "rouge_2": 12.698412204585557,
+      "rouge_l": 29.99999950500001
+    }
+  },
+  {
+    "pred": "Duke Energy provides reliable electric and gas service to homes. Pay your bill, start or stop service, report outages, and get financial help. Explore our products, services, and outdoor lighting solutions.",
+    "gold": "Duke Energy's official website providing information on energy savings, residential services, billing, outages, and customer support for homeowners.",
+    "instance_score": {
+      "rouge_1": 17.021276123132655,
+      "rouge_2": 4.255318687188823,
+      "rouge_l": 17.021276123132655
+    }
+  },
+  {
+    "pred": "Earth.com - Your source for the latest news, videos, and images about nature, science, and life. Featuring top stories on spring equinox, climate change, wildlife, and environmental topics.",
+    "gold": "Explore Earth.com for the latest environmental news, fascinating Earth facts, and actionable ways to participate in preserving our planet. Discover trending stories on climate change, wildlife conservation, and the arrival of the spring equinox in the Northern Hemisphere.",
+    "instance_score": {
+      "rouge_1": 43.33333283833333,
+      "rouge_2": 15.151514662993588,
+      "rouge_l": 36.66666617166668
+    }
+  },
+  {
+    "pred": "Equibase - Your official source for horse racing results, entries, picks, race lens, past performances, leaders, and horsemen information. Track graded stakes entries, results, and leading horses with comprehensive racing statistics.",
+    "gold": "Visit Equibase for comprehensive horse racing data including entries, results, statistics, mobile access, and more. Stay updated with the latest racing information, graded stakes entries and results, and leading horses and earnings.",
+    "instance_score": {
+      "rouge_1": 48.14814764814814,
+      "rouge_2": 19.67213064767537,
+      "rouge_l": 40.74074024074074
+    }
+  },
+  {
+    "pred": "The entertainment site where fans come first. Your daily source for all things TV, movies, and games, including Star Wars, Fallout, Marvel, DC and more.",
+    "gold": "Fandom is the ultimate destination for fans of TV, movies, games, and more. Explore wikis, catch up on your favorite shows, and join a community of enthusiasts.",
+    "instance_score": {
+      "rouge_1": 28.571428071636824,
+      "rouge_2": 7.9999995008000315,
+      "rouge_l": 28.571428071636824
+    }
+  },
+  {
+    "pred": "Fastweb is a free scholarship search platform that connects students to college scholarships, trade school scholarships, and financial aid tools to make college or vocational school more affordable.",
+    "gold": "Fastweb is the leading scholarship database offering a free search platform for high school, college, and trade school students to find scholarships, internships, and financial aid opportunities to make education more affordable.",
+    "instance_score": {
+      "rouge_1": 66.66666617283951,
+      "rouge_2": 31.034482260998814,
+      "rouge_l": 55.5555550617284
+    }
+  },
+  {
+    "pred": "FirstEnergy is committed to making customers' lives brighter, the environment better and our communities stronger. Manage your account, pay bills, report outages, and access customer service.",
+    "gold": "FirstEnergy Corp. Official Site: Serving over 6 million customers, FirstEnergy provides safe, reliable electric service across the Midwest and Mid-Atlantic regions. Access account information, outage updates, and services.",
+    "instance_score": {
+      "rouge_1": 15.68627400999617,
+      "rouge_2": 0.0,
+      "rouge_l": 11.764705382545197
+    }
+  },
+  {
+    "pred": "Order flowers online from From You Flowers for same day delivery. Shop birthday flowers, sympathy arrangements, plants, gift baskets and more. Save 15% sitewide with code 050.",
+    "gold": "Discover beautiful flowers and thoughtful gifts for every occasion at FromYouFlowers. Enjoy same-day delivery options for last-minute surprises. Shop best-selling bouquets, plants, and gift baskets. Perfect for birthdays, anniversaries, and special moments.",
+    "instance_score": {
+      "rouge_1": 29.09090859107439,
+      "rouge_2": 3.5087714336719693,
+      "rouge_l": 25.454544954710745
+    }
+  },
+  {
+    "pred": "Frontiers is a leading open access publisher and research network. Explore our journals, submit your research, and discover how we empower scientists to create solutions for healthy lives on a healthy planet.",
+    "gold": "Frontiers is an open access publisher empowering researchers with peer-reviewed scientific articles across academia. Stay informed with the latest publications, events, blogs, and news.",
+    "instance_score": {
+      "rouge_1": 23.07692258357989,
+      "rouge_2": 11.11111062208507,
+      "rouge_l": 23.07692258357989
+    }
+  },
+  {
+    "pred": "Shop for FPV drones, drone bundles, frames, electronics, motors, batteries, radios, and propellers at GetFPV. Free same day shipping on orders over $99. Get exclusive deals and browse featured products from top brands.",
+    "gold": "Discover the perfect drone at GetFPV.com, your one-stop shop for FPV drones, equipment, and accessories. Catering to both professionals and hobbyists, we offer a wide selection of drone bundles, frames, and parts. Enjoy free shipping in the USA on orders over $99 and international shipping options.",
+    "instance_score": {
+      "rouge_1": 38.35616389116158,
+      "rouge_2": 20.512820028928346,
+      "rouge_l": 38.35616389116158
+    }
+  },
+  {
+    "pred": "Compare prescription drug prices and find coupons at pharmacies near you. Save up to 80% on your medications with GoodRx - the free way to find the lowest prices.",
+    "gold": "Find the best prices for prescription drugs at over 70,000 pharmacies across the US. Use GoodRx to compare costs and get discounts to save up to 80% on your medications instantly.",
+    "instance_score": {
+      "rouge_1": 49.0566032751869,
+      "rouge_2": 17.241378810939374,
+      "rouge_l": 41.509433463866145
+    }
+  },
+  {
+    "pred": "Grainger is your premier industrial supplies and equipment provider with over 1.5 million products to keep you up and running. Use Grainger.com for fast and easy ordering with next-day delivery available.",
+    "gold": "Shop at Grainger for over one million industrial supply products across categories like safety, electrical, tools, cleaning, HVAC, and more with next-day delivery and 24/7 support.",
+    "instance_score": {
+      "rouge_1": 37.03703653978053,
+      "rouge_2": 7.01754336718994,
+      "rouge_l": 33.33333283607682
+    }
+  },
+  {
+    "pred": "Haas Automation is the largest machine tool builder in the western world, manufacturing a complete line of CNC vertical machining centers, horizontal machining centers, CNC lathes, and rotary products.",
+    "gold": "Explore Haas Automation's range of CNC machinery, including vertical and horizontal machining centers, lathes, and rotary products, all engineered for quality and available with financing deals and savings.",
+    "instance_score": {
+      "rouge_1": 39.99999950000001,
+      "rouge_2": 18.518518018518527,
+      "rouge_l": 39.99999950000001
+    }
+  },
+  {
+    "pred": "Get inspired with HGTV's home decorating ideas, design tips, and how-tos. Watch your favorite HGTV shows, browse photos, and enter sweepstakes.",
+    "gold": "Explore HGTV for your home design and decorating needs. Find inspiration through photos, design tips, and step-by-step guides for interior design, home decor, landscaping, and home improvement. Stay updated with HGTV show schedules and exclusive content.",
+    "instance_score": {
+      "rouge_1": 37.499999513888895,
+      "rouge_2": 7.272726809917385,
+      "rouge_l": 33.33333284722222
+    }
+  },
+  {
+    "pred": "Book your stay at Hilton hotels and resorts worldwide. Search for destinations, find special rates, and plan your perfect getaway from poolside lounging to serene spa days.",
+    "gold": "Discover a world of hospitality with Hilton, featuring a variety of hotels and distinct brands worldwide. Secure the best rates for your next stay by booking directly. Experience exceptional service and comfort with Hilton.",
+    "instance_score": {
+      "rouge_1": 25.454544958677694,
+      "rouge_2": 3.3898300155128553,
+      "rouge_l": 25.454544958677694
+    }
+  },
+  {
+    "pred": "Your playful portal to the past. Test your knowledge with fun history quizzes covering Government & Politics, Science & Technology, The Arts & Pop Culture, Sports & Leisure, Ancient History, Business & Industry, and more.",
+    "gold": "Test your knowledge of history with daily quizzes, explore 'This Day in History' features, and enjoy a variety of historical topics from politics to pop culture on this interactive platform.",
+    "instance_score": {
+      "rouge_1": 23.3333328338889,
+      "rouge_2": 6.349205852355796,
+      "rouge_l": 19.999999500555568
+    }
+  },
+  {
+    "pred": "Discover the 10 tallest buildings in NYC that represent the city's iconic architecture. Explore these impressive skyscrapers and their unique designs.",
+    "gold": "Explore Homedit for the latest in home decor and design inspiration, featuring articles on the tallest buildings in NYC, architecture, landscaping, and DIY home improvement.",
+    "instance_score": {
+      "rouge_1": 29.268292183224276,
+      "rouge_2": 9.090908595041348,
+      "rouge_l": 29.268292183224276
+    }
+  },
+  {
+    "pred": "I Drive Safely is the #1 provider in online traffic school, defensive driving courses and drivers ed. Over 9 million students served with 100% satisfaction guarantee. Rated 4.8/5 stars with 22,100 reviews.",
+    "gold": "Join America's leading online driving school for traffic school, defensive driving, drivers ed, and driving safety courses. Quick, easy, and reliable education to dismiss tickets and get your driver's license.",
+    "instance_score": {
+      "rouge_1": 27.11864357138754,
+      "rouge_2": 6.557376550389718,
+      "rouge_l": 23.728813062912966
+    }
+  },
+  {
+    "pred": "Shop iHerb for vitamins, supplements, sports nutrition, beauty products, and more. Get 15% off orders over $60 with promo code 315SALE24. Free shipping available on qualifying orders.",
+    "gold": "Shop at iHerb for 30,000+ healthy products. Enjoy discounts on supplements, personal care, and groceries. Get rewards and savings with promo codes.",
+    "instance_score": {
+      "rouge_1": 38.297871846084206,
+      "rouge_2": 8.510637803531038,
+      "rouge_l": 38.297871846084206
+    }
+  },
+  {
+    "pred": "Book hotels and resorts worldwide with IHG Hotels & Resorts. Earn up to 80,000 points in paradise for a limited time. Join IHG One Rewards for exclusive benefits and bonus points.",
+    "gold": "Book direct at IHG for the best rates at our hotels and resorts. Find exclusive offers, earn points with IHG One Rewards, and enjoy our Best Price Guarantee across Holiday Inn, Crowne Plaza, and more.",
+    "instance_score": {
+      "rouge_1": 35.08771879963066,
+      "rouge_2": 12.499999501953145,
+      "rouge_l": 31.578946869806096
+    }
+  },
+  {
+    "pred": "Pay your taxes, get your refund status, find IRS forms, and get help with tax questions. File your taxes for free, make a payment, get your tax record, and access IRS tools and applications.",
+    "gold": "Official IRS website providing assistance for tax filing, payment, refunds, and tools to check refund status and get answers to federal tax questions. Access forms, instructions, and account services.",
+    "instance_score": {
+      "rouge_1": 39.99999950000001,
+      "rouge_2": 6.666666168888927,
+      "rouge_l": 35.9999995
+    }
+  },
+  {
+    "pred": "Shop JJ's House for stunning wedding dresses, bridesmaid dresses, prom dresses, mother of the bride dresses, and special occasion wear. Enjoy 50% off + 2000 points for new customers. Try before you buy available.",
+    "gold": "Explore the latest 2024 fashion at JJ's House for weddings, proms, and special events. Shop stunning dresses and accessories at great prices. Sign up now for 50% off and 2000 points for new friends. Your perfect look awaits!",
+    "instance_score": {
+      "rouge_1": 41.26984077097506,
+      "rouge_2": 19.999999501632672,
+      "rouge_l": 38.09523759637189
+    }
+  },
+  {
+    "pred": "Shop luxury watches, handbags, sunglasses, fragrances, jewelry, and accessories at Jomashop. Big Winter Sale with up to 75% off top brands like Omega, Rolex, Tissot, Gucci, and more. Free shipping available.",
+    "gold": "Shop at Jomashop for an extensive selection of luxury watches, pens, handbags, jewelry, and crystal. Find exclusive deals on top brands like Tag Heuer, Rolex, Breitling, Movado, Cartier, and Citizen, plus Swarovski Crystal, Montblanc Pens, and more. Enjoy discounts and sales events on high-quality luxury items.",
+    "instance_score": {
+      "rouge_1": 36.619717821860746,
+      "rouge_2": 15.999999520000014,
+      "rouge_l": 30.985915004959335
+    }
+  },
+  {
+    "pred": "Free legal information, lawyers, legal forms, law encyclopedias, and discussions. Justia provides free access to law resources for the public and legal professionals.",
+    "gold": "Justia offers free legal information including guides on injury law, family law, and intellectual property, resources for legal research, and directories for finding lawyers, legal aid, and pro bono services.",
+    "instance_score": {
+      "rouge_1": 32.55813904164413,
+      "rouge_2": 7.843136764321446,
+      "rouge_l": 32.55813904164413
+    }
+  },
+  {
+    "pred": "Discover land for sale across America with over 10 million acres of farms, ranches, residential, hunting, waterfront, recreational, and other land types available. Search by city, county, state, or ID.",
+    "gold": "Explore a vast selection of rural properties across America on Land and Farm. Find farms, ranches, residential land, and hunting grounds for sale. Start your search today for the perfect piece of land near you.",
+    "instance_score": {
+      "rouge_1": 29.508196222520837,
+      "rouge_2": 9.523809026958958,
+      "rouge_l": 26.22950769793067
+    }
+  },
+  {
+    "pred": "Find & buy the right laptop, tablet, desktop or server. Build your own PC today or call our sales team 1-855-253-6686. Lenovo Official US Site.",
+    "gold": "Discover exclusive deals on Lenovo laptops, tablets, and PCs. Enjoy personalized shopping and exceptional customer service. Call 1-855-253-6686 for assistance.",
+    "instance_score": {
+      "rouge_1": 9.302325088155786,
+      "rouge_2": 0.0,
+      "rouge_l": 9.302325088155786
+    }
+  },
+  {
+    "pred": "Shop LiveAquaria for quality aquatic life direct to your door. Find freshwater fish, marine fish, coral, freshwater plants, invertebrates, pond supplies, aquarium supplies and foods with free shipping on orders $229 and up.",
+    "gold": "Explore LiveAquaria, the ultimate online destination for high-quality freshwater and saltwater fish, plants, invertebrates, corals, and more. Enjoy a vast selection of aquarium supplies, food, and equipment, plus free shipping on qualifying orders. Shop now for your aquatic life needs.",
+    "instance_score": {
+      "rouge_1": 47.761193535308536,
+      "rouge_2": 11.267605138662985,
+      "rouge_l": 41.791044281577186
+    }
+  },
+  {
+    "pred": "The latest science news and discoveries from Live Science, covering space, health, planet Earth, animals, archaeology, physics, math and human behavior.",
+    "gold": "Explore the latest scientific discoveries in various fields including space, health, planet Earth, and more. Stay informed with our in-depth articles on groundbreaking research, daily discoveries, and the fascinating breakthroughs that impact our world.",
+    "instance_score": {
+      "rouge_1": 27.45097991541715,
+      "rouge_2": 11.32075424706303,
+      "rouge_l": 27.45097991541715
+    }
+  },
+  {
+    "pred": "Find used farm equipment for sale on Machinery Pete. Search tractors, combines, harvesters, planters, and other agricultural equipment by category, make, and model. The most trusted name in farm equipment.",
+    "gold": "Shop for quality used farm equipment at Machinery Pete. Find the best deals on tractors, harvesters, planters, and more from top brands. Sell your own equipment with ease.",
+    "instance_score": {
+      "rouge_1": 45.28301836810253,
+      "rouge_2": 18.181817681983485,
+      "rouge_l": 41.50943346244215
+    }
+  },
+  {
+    "pred": "MakeMyTrip is India's leading online travel company for flight bookings, hotel reservations, holiday packages, bus and train tickets. Get best deals and offers on domestic and international flights, hotels, and holiday packages.",
+    "gold": "Book your travel with MakeMyTrip and enjoy savings on domestic flights, hotels, holiday packages, and more. Use code MMTDEAL for discounts up to \u20b95000. Find the best deals on air tickets, hotels, and holiday packages for both domestic and international travel. Special offers on hotel bookings and flight tickets available online.",
+    "instance_score": {
+      "rouge_1": 55.88235245674742,
+      "rouge_2": 24.691357552202415,
+      "rouge_l": 44.11764657439447
+    }
+  },
+  {
+    "pred": "McMaster-Carr is the complete source for your plant with over 700,000 products. 98% of products ordered ship from stock and deliver same or next day.",
+    "gold": "Shop at McMaster-Carr for a comprehensive selection of industrial supplies, including fasteners, adhesives, welding equipment, and more, with most items ready to ship.",
+    "instance_score": {
+      "rouge_1": 25.531914393843376,
+      "rouge_2": 0.0,
+      "rouge_l": 21.27659524490721
+    }
+  },
+  {
+    "pred": "Menards is a home improvement store offering a wide selection of products including building materials, appliances, furniture, patio furniture, doors, windows, and closet organization. Shop weekly ad deals with 11% rebate on everything.",
+    "gold": "Discover huge savings on home improvement products at Menards. Shop for tools, lumber, appliances, pet supplies, lawn and garden essentials, and more. Enjoy our 11% rebate on everything!",
+    "instance_score": {
+      "rouge_1": 35.08771880209296,
+      "rouge_2": 10.169491029014676,
+      "rouge_l": 31.578946872268393
+    }
+  },
+  {
+    "pred": "The dictionary by Merriam-Webster is America's most trusted online dictionary for English word definitions, meanings, and pronunciation. #702wordsmatter",
+    "gold": "Explore the most trusted online English dictionary from Merriam-Webster: find definitions, synonyms, antonyms, word origins, example sentences, and more.",
+    "instance_score": {
+      "rouge_1": 44.44444394598766,
+      "rouge_2": 11.428570928979614,
+      "rouge_l": 33.33333283487655
+    }
+  },
+  {
+    "pred": "Explore Microsoft products and services for your home or business. Shop Surface, Microsoft 365, Xbox, Windows, Azure, and more. Find deals on laptops, PCs, gaming consoles, and accessories.",
+    "gold": "Discover the latest Microsoft products and services for personal and business use. Shop for Surface devices, Microsoft 365 subscriptions, Xbox consoles and games, Windows software, and more. Get exclusive deals, download resources, and access customer support.",
+    "instance_score": {
+      "rouge_1": 29.090908595041327,
+      "rouge_2": 16.129031766389193,
+      "rouge_l": 29.090908595041327
+    }
+  },
+  {
+    "pred": "The Official Site of Minor League Baseball. MiLB.com features news, scores, schedules, standings, stats, tickets, and information for Minor League Baseball teams and players.",
+    "gold": "The Official Site of Minor League Baseball. Get the latest news, live game radio broadcasts, statistics, schedules, rosters, features, and video clips. Explore the Copa de la Diversi\u00f3n program and engage with the Hispanic fan base.",
+    "instance_score": {
+      "rouge_1": 37.03703656172839,
+      "rouge_2": 21.05263110495538,
+      "rouge_l": 37.03703656172839
+    }
+  },
+  {
+    "pred": "The Massachusetts Institute of Technology \u2014 a coeducational, privately endowed research university founded in 1861 \u2014 is dedicated to advancing knowledge and educating students in science, technology, and other areas of scholarship that will best serve the nation and the world in the 21st century.",
+    "gold": "Explore MIT's commitment to education and innovation. Read updates from campus, discover research on Lyme disease, and connect with the Massachusetts Institute of Technology community.",
+    "instance_score": {
+      "rouge_1": 26.229507719430266,
+      "rouge_2": 8.823528955017325,
+      "rouge_l": 19.672130670249945
+    }
+  },
+  {
+    "pred": "Mountain Project is a rock climbing route guide featuring over 306,000 routes shared by climbers. Find climbing routes by type, difficulty, and location with our Route Finder tool. Explore top classic climbs, connect with the climbing community, and stay updated with leading news.",
+    "gold": "Explore a comprehensive climbing guide with over 300,000 routes and photos. Get insights from a community of climbers, find climbing areas, and access route guides for all levels. Join the adventure with fellow enthusiasts.",
+    "instance_score": {
+      "rouge_1": 30.303029807162535,
+      "rouge_2": 0.0,
+      "rouge_l": 30.303029807162535
+    }
+  },
+  {
+    "pred": "Shop Bob's Discount Furniture for everyday low prices on quality furniture, mattresses, dining sets, home decor and more. Affordable dining sets starting at $599. Flexible financing options available with 6, 12, 30, and 60 month plans.",
+    "gold": "Discover exceptional furniture deals at Bob's Discount Furniture. Shop for quality furniture for your living room, bedroom, dining, and more. Enjoy special financing offers.",
+    "instance_score": {
+      "rouge_1": 35.7142852372449,
+      "rouge_2": 10.34482710761001,
+      "rouge_l": 35.7142852372449
+    }
+  },
+  {
+    "pred": "MyEyeDr. offers comprehensive eye care services including eye exams, eyewear, and contact lenses. We welcome all insurances. Schedule your appointment today and find frames that fit your face and style.",
+    "gold": "Visit MyEyeDr. for comprehensive eye care services, quality eyewear, and professional optometrists. Book an appointment online, find a location near you, and explore our patient-focused approach. We accept all insurances.",
+    "instance_score": {
+      "rouge_1": 39.99999950148761,
+      "rouge_2": 13.793102948275878,
+      "rouge_l": 39.99999950148761
+    }
+  },
+  {
+    "pred": "Discover your family story with MyHeritage. Grow your family tree, find new relatives, and explore billions of historical records with a 14-day FREE trial. Take a DNA test to reveal your ethnic background from 2,114 geographic regions.",
+    "gold": "Discover your ancestry with MyHeritage by creating a family tree and taking a DNA test for genetic testing. Access over 20 billion historical records for comprehensive genealogy research and enjoy a 14-day free trial.",
+    "instance_score": {
+      "rouge_1": 41.93548337148804,
+      "rouge_2": 17.64705832396195,
+      "rouge_l": 41.93548337148804
+    }
+  },
+  {
+    "pred": "Welcome to MyModivcare! We can get you where you need to go. Book a ride, access the portal, download forms, and contact us. We make it easy to schedule and manage your trip in a variety of ways.",
+    "gold": "Discover Modivcare's convenient medical transportation services. Book rides to your medical appointments easily with our online booking, access portal, and downloadable forms. Get the support you need for a hassle-free journey to health facilities.",
+    "instance_score": {
+      "rouge_1": 31.2499995,
+      "rouge_2": 2.8571423587755973,
+      "rouge_l": 24.99999950000001
+    }
+  },
+  {
+    "pred": "NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.",
+    "gold": "Official NASA website providing the latest news, images, and videos related to space exploration, scientific discovery, and aeronautics research, including updates on the 2024 Total Solar Eclipse and upcoming events.",
+    "instance_score": {
+      "rouge_1": 13.6363631621901,
+      "rouge_2": 0.0,
+      "rouge_l": 13.6363631621901
+    }
+  },
+  {
+    "pred": "NOAA is a federal agency focused on the condition of the oceans and the atmosphere. It plays several roles in society, from providing weather forecasts to managing fisheries to protecting coastal ecosystems.",
+    "gold": "Official website of the National Oceanic and Atmospheric Administration (NOAA), U.S. Department of Commerce. Find information on climate, weather forecasts, oceans, and coasts. Read about the latest research on environmental science, and explore educational resources.",
+    "instance_score": {
+      "rouge_1": 16.66666616722224,
+      "rouge_2": 3.0303025321396597,
+      "rouge_l": 16.66666616722224
+    }
+  },
+  {
+    "pred": "Find restaurant reviews, make reservations, and book your table for any occasion. OpenTable helps you discover the perfect restaurant and book for breakfast, lunch, dinner, or any special event.",
+    "gold": "Book your next meal with OpenTable: Find restaurants, read diner reviews, see menus, and earn rewards. Make real-time online reservations for breakfast, lunch, or dinner at fine dining establishments.",
+    "instance_score": {
+      "rouge_1": 30.188678749733004,
+      "rouge_2": 7.272726772892596,
+      "rouge_l": 26.415093844072636
+    }
+  },
+  {
+    "pred": "Outside is America's leading active lifestyle brand. We cover running, cycling, hiking, camping, climbing, skiing, and more with expert gear reviews, adventure stories, training tips, and travel guides.",
+    "gold": "Explore the best in travel, adventure, fitness, and outdoor culture with Outside. Get the latest on sports gear, health tips, and stories from the wilderness to the urban landscape. Join the Outside community for events, podcasts, and long reads on outdoor living.",
+    "instance_score": {
+      "rouge_1": 13.33333283833335,
+      "rouge_2": 2.9411759917820848,
+      "rouge_l": 13.33333283833335
+    }
+  },
+  {
+    "pred": "Online invitations to celebrate all of life's moments. Create beautiful digital invitations for spring parties, weddings, graduations, kids' birthdays, and business events with instant RSVP tracking, guest messaging, and more.",
+    "gold": "Create personalized online invitations, cards, and flyers for weddings, holidays, birthdays, and other meaningful events. Design with style and ease for any occasion.",
+    "instance_score": {
+      "rouge_1": 29.166666180555563,
+      "rouge_2": 3.921568136870496,
+      "rouge_l": 29.166666180555563
+    }
+  },
+  {
+    "pred": "Find and book unique spaces for meetings, events, photo shoots, film productions, and more. Peerspace offers thousands of creative venues available by the hour.",
+    "gold": "Discover and book the perfect space for your meeting, event, or production with Peerspace. Choose from over 13,000 venues, read real reviews, and easily find a space in your area.",
+    "instance_score": {
+      "rouge_1": 19.999999503200012,
+      "rouge_2": 3.846153352810714,
+      "rouge_l": 15.999999503200012
+    }
+  },
+  {
+    "pred": "Shop Petco for pet supplies, food, treats, and more for dogs, cats, fish, birds, small pets, and reptiles. Find deals, best selling products, pharmacy services, and save 35% off your first repeat delivery order.",
+    "gold": "Shop at Petco for all your pet supply needs. Find food, treats, and accessories for dogs, cats, fish, and more. Enjoy savings with repeat delivery, curbside pickup, and exclusive deals.",
+    "instance_score": {
+      "rouge_1": 48.27586157134364,
+      "rouge_2": 22.580644663371498,
+      "rouge_l": 41.37930984720571
+    }
+  },
+  {
+    "pred": "PFF's NFL Mock Draft Simulator lets you trade players, picks and mock all seven rounds of the 2024 NFL Draft. Get the latest mock drafts, player grades, fantasy football rankings, and premium stats for every NFL team.",
+    "gold": "Stay ahead of the game with PFF's comprehensive football analysis. Get the latest NFL Draft guides, player grades, rankings, and stats. Explore our tools for fantasy football strategy and NFL Draft simulations.",
+    "instance_score": {
+      "rouge_1": 51.72413743341262,
+      "rouge_2": 21.212120716253455,
+      "rouge_l": 44.82758570927467
+    }
+  },
+  {
+    "pred": "The official home of the PGA TOUR. Providing live scoring, stats, player information, news, video highlights and the official FedExCup leaderboard.",
+    "gold": "Official PGA TOUR website with live scoring, news, stats, video, player profiles, and tournament information for the PGA TOUR, Champions Tour, and Korn Ferry Tour.",
+    "instance_score": {
+      "rouge_1": 42.857142361678,
+      "rouge_2": 13.636363140495886,
+      "rouge_l": 33.33333283786848
+    }
+  },
+  {
+    "pred": "PG&E provides natural gas and electric service to residential and business customers in Northern and Central California. Pay your bill, manage your account, report outages, and learn about energy-saving programs and clean energy options.",
+    "gold": "Official PG&E website providing information on natural gas and electric services for residential and business customers in California. Access account details, outage information, energy-saving tips, and learn about clean energy initiatives.",
+    "instance_score": {
+      "rouge_1": 51.7241374310345,
+      "rouge_2": 31.74603124716554,
+      "rouge_l": 48.275861568965524
+    }
+  },
+  {
+    "pred": "Schoology Learning is a K-12 learning management system that serves as a centralized hub for personalized teaching and learning, connecting teachers, students, and families in a single platform.",
+    "gold": "Explore Schoology Learning, a K-12 Learning Management System by PowerSchool that offers a centralized platform for personalized education, connecting teachers, students, and families.",
+    "instance_score": {
+      "rouge_1": 59.57446758714352,
+      "rouge_2": 28.571428076634742,
+      "rouge_l": 51.06382928927117
+    }
+  },
+  {
+    "pred": "The complete source for current and historical NFL, AFL, and AAFC players, teams, scores and leaders.",
+    "gold": "Your go-to resource for comprehensive pro football statistics, including player profiles, team stats, season overviews, NFL standings, historical data, and trivia games.",
+    "instance_score": {
+      "rouge_1": 16.666666191358036,
+      "rouge_2": 0.0,
+      "rouge_l": 16.666666191358036
+    }
+  },
+  {
+    "pred": "Get insurance quotes from Progressive. Save on auto, home, motorcycle, RV, boat, and life insurance. Bundle and save with America's #1 combined personal and commercial auto insurance company.",
+    "gold": "Secure top-rated insurance coverage for your vehicle, property, and life with Progressive. Get a fast quote, bundle options for savings, and enjoy 24/7 customer support.",
+    "instance_score": {
+      "rouge_1": 25.531914393843376,
+      "rouge_2": 3.921568129181148,
+      "rouge_l": 25.531914393843376
+    }
+  },
+  {
+    "pred": "RCGroups.com - pair pair pair pair pair pair pair pair pair pair pair Radio Control forums for RC aircraft, batteries, chargers, electric power systems, radios, servos, simulators, and flight accessories discussions.",
+    "gold": "Join RC Groups, the world's largest online community for radio control enthusiasts. Discuss and share everything about electric and fuel RC airplanes, helicopters, boats, cars, and more. Find forums, blogs, videos, and classifieds dedicated to RC hobbyists.",
+    "instance_score": {
+      "rouge_1": 14.814814331961607,
+      "rouge_2": 0.0,
+      "rouge_l": 11.111110628257908
+    }
+  },
+  {
+    "pred": "Reef2Reef Saltwater and Reef Aquarium Forum - Join the community to discuss reef aquariums, coral care, fish disease treatment, equipment, and connect with fellow reef hobbyists.",
+    "gold": "Join the REEF2REEF Saltwater and Reef Aquarium Forum community to discuss various aquarium topics, share tank photos, get advice on fish, coral care, and participate in giveaways.",
+    "instance_score": {
+      "rouge_1": 47.99999950080001,
+      "rouge_2": 31.37254851980008,
+      "rouge_l": 39.9999995008
+    }
+  },
+  {
+    "pred": "Rescue Me helps dogs, cats, horses, birds, and other animals find homes. Over 1,277,693 animals adopted on Rescue Me! A 501c3 public charity helping animals find loving homes.",
+    "gold": "Explore Rescue Me! to find thousands of rescue dogs, cats, horses, birds, and other animals looking for homes. Post and browse adoptable pets for individuals, rescue groups, and shelters. Join the mission to connect rescue animals with loving families.",
+    "instance_score": {
+      "rouge_1": 43.636363149752064,
+      "rouge_2": 21.874999517578136,
+      "rouge_l": 39.99999951338843
+    }
+  },
+  {
+    "pred": "RotoWire provides fantasy sports news, projections, rankings, and player information for NFL, MLB, NBA, NHL, golf, and more. Get expert analysis, DFS picks, sports betting advice, and draft tools for all your fantasy leagues.",
+    "gold": "Stay ahead in your fantasy leagues with RotoWire's expert analysis and tools. Get the latest updates and insights for NFL, MLB, NBA, NHL, Soccer, and more. Access NCAA Tournament team previews, player rankings, and fantasy draft resources.",
+    "instance_score": {
+      "rouge_1": 51.61290272788763,
+      "rouge_2": 23.18840529804664,
+      "rouge_l": 41.93548337304891
+    }
+  },
+  {
+    "pred": "Find trusted pet sitters and dog walkers in your neighborhood. Book boarding, house sitting, drop-in visits, doggy day care, and dog walking services for your dog or cat on Rover.",
+    "gold": "Find reliable pet care in your area. Connect with 5-star sitters and dog walkers for dog boarding, house sitting, doggy day care, and more. Book and pay securely with Rover.",
+    "instance_score": {
+      "rouge_1": 65.38461488461539,
+      "rouge_2": 31.578946868574953,
+      "rouge_l": 61.53846103846155
+    }
+  },
+  {
+    "pred": "Southern California Edison is one of the largest electric utilities in the United States, providing reliable and clean energy to customers across Southern California. Pay your bill, report outages, start or stop service, and find ways to save.",
+    "gold": "Southern California Edison (SCE) provides energy solutions, rebates, and incentives for efficient appliances and systems, alongside tools for managing electricity costs and billing. Learn about clean energy initiatives, outage updates, and customer service options.",
+    "instance_score": {
+      "rouge_1": 19.354838211758597,
+      "rouge_2": 8.69565167485825,
+      "rouge_l": 19.354838211758597
+    }
+  },
+  {
+    "pred": "Book low fares on Southwest Airlines for flights, hotels, cars, and vacations. Find special offers starting at $76 one-way from Los Angeles. Earn Rapid Rewards points and enjoy no change fees.",
+    "gold": "Official Southwest Airlines website offers affordable air travel, hotel bookings, car rentals, and vacation packages. Find special offers and book your trip online.",
+    "instance_score": {
+      "rouge_1": 23.529411280276825,
+      "rouge_2": 11.53846105029588,
+      "rouge_l": 23.529411280276825
+    }
+  },
+  {
+    "pred": "Official Social Security website. Apply for Social Security benefits, Medicare, and SSI. Check eligibility, get benefits estimates, manage your account, replace your card, and update your information.",
+    "gold": "The official website of the U.S. Social Security Administration, providing access to information on Social Security benefits, Medicare, eligibility, applications, and managing your account.",
+    "instance_score": {
+      "rouge_1": 39.99999950024692,
+      "rouge_2": 12.499999500868073,
+      "rouge_l": 35.55555505580247
+    }
+  },
+  {
+    "pred": "Stanford Medicine provides world-class care, expertise and innovation. Find a doctor, location, request an appointment, or refer a patient at Stanford Medicine Children's Health.",
+    "gold": "Stanford Medicine Children\u2019s Health: Exclusive pediatric and obstetric care network offering world-class services for children, including the Johnson Center for Pregnancy and Newborn Services.",
+    "instance_score": {
+      "rouge_1": 18.60465066306113,
+      "rouge_2": 4.444443944691414,
+      "rouge_l": 18.60465066306113
+    }
+  },
+  {
+    "pred": "The U.S. Department of State leads America's foreign policy through diplomacy, advocacy, and assistance by advancing the interests of the American people, their safety and economic prosperity.",
+    "gold": "Official website of the U.S. Department of State. Providing information on Secretary Blinken's travels, policy issues, country relations, and latest news related to the United States' foreign policy and international affairs.",
+    "instance_score": {
+      "rouge_1": 33.962263652545396,
+      "rouge_2": 20.689654674791928,
+      "rouge_l": 30.188678746885024
+    }
+  },
+  {
+    "pred": "Search players, stats or odds for NBA, NFL, NHL, MLB, Premier League, PGA, Fantasy and Money. Get trending sports stats, stat stories, and real-time updates on StatMuse.",
+    "gold": "Get real-time answers to sports statistics, game scores, schedules, betting odds, and fantasy insights for NBA, NFL, NHL, MLB, Premier League, and PGA on StatMuse.",
+    "instance_score": {
+      "rouge_1": 51.99999950080001,
+      "rouge_2": 27.999999500800005,
+      "rouge_l": 47.99999950080001
+    }
+  },
+  {
+    "pred": "StyleCraze is your guide to a better lifestyle and a better you. Get expert advice on makeup, hair care, skin care, hairstyles, and health & wellness with 6000+ extensively researched articles from 500+ subject matter experts.",
+    "gold": "Visit StyleCraze for comprehensive beauty and wellness tips from experts. Discover the latest in makeup, hair care, skin care, and health with our well-researched articles.",
+    "instance_score": {
+      "rouge_1": 43.636363149752064,
+      "rouge_2": 17.241378825208102,
+      "rouge_l": 43.636363149752064
+    }
+  },
+  {
+    "pred": "Shop plumbing, heating, HVAC, PEX, fittings, valves, tools and electrical supplies at SupplyHouse.com. Free shipping on orders over $99. Join the free TradeMaster program for lower prices and more benefits.",
+    "gold": "Visit SupplyHouse.com for a wide selection of HVAC, PEX, radiant heat, hydronic heating, and plumbing supplies at competitive prices. Benefit from free shipping on orders over $99, a vast inventory, reliable delivery, and easy returns. Join our TRADEMASTER program for additional savings.",
+    "instance_score": {
+      "rouge_1": 48.571428081632654,
+      "rouge_2": 19.444443958333345,
+      "rouge_l": 45.71428522448981
+    }
+  },
+  {
+    "pred": "Shop Tank Depot for water tanks, storage tanks, septic tanks, cone bottom tanks, IBC totes, and more. Get 10% off with code SPRING10. Best freight rates and expert support at (866) 926-5603.",
+    "gold": "Discover a vast array of storage solutions at Tank-Depot. Shop for high-quality water tanks, septic tanks, poly tanks, steel tanks, and more. Take advantage of our current sales and promotions for great savings.",
+    "instance_score": {
+      "rouge_1": 32.72727222743803,
+      "rouge_2": 12.698412198538694,
+      "rouge_l": 29.09090859107439
+    }
+  },
+  {
+    "pred": "Texas.gov is the official website of the State of Texas. From here, we'll guide you to online services, resources, and information around our great state.",
+    "gold": "Official Texas State Website - Find government services, information, and resources for residents, businesses, and visitors. Access vital records and explore Texas.",
+    "instance_score": {
+      "rouge_1": 19.04761855215421,
+      "rouge_2": 0.0,
+      "rouge_l": 19.04761855215421
+    }
+  },
+  {
+    "pred": "Plan your wedding with The Knot. Find top-rated wedding vendors including photographers, reception venues, and cakes for every budget, background and style. Sign up today to build your wedding team.",
+    "gold": "Plan your dream wedding with The Knot - your personal wedding planner. Find vendors, get inspiration, and access all the tools you need for a seamless planning experience.",
+    "instance_score": {
+      "rouge_1": 34.615384115384614,
+      "rouge_2": 14.545454045619852,
+      "rouge_l": 34.615384115384614
+    }
+  },
+  {
+    "pred": "The Spruce Crafts offers expert-tested DIY projects, crafting tutorials, and hobby guides with over 1,000 original photos and how-to projects for 72 million annual readers.",
+    "gold": "Explore a wide range of DIY projects and craft ideas at The Spruce Crafts. From paper crafts to needlecrafts, find inspiration for your next creative endeavor.",
+    "instance_score": {
+      "rouge_1": 27.999999500800005,
+      "rouge_2": 8.163264806330726,
+      "rouge_l": 15.999999500800016
+    }
+  },
+  {
+    "pred": "The Spruce Pets provides expert, vet-reviewed pet care information for dogs, cats, birds, small pets, aquariums, reptiles, and horses, with 2000+ medically reviewed articles and 850+ products reviewed.",
+    "gold": "Explore expert pet care advice and tips on The Spruce Pets. From adoption guides to training and health care, we're here for all your pet-related needs.",
+    "instance_score": {
+      "rouge_1": 27.450979892349103,
+      "rouge_2": 11.538461039201204,
+      "rouge_l": 15.68627400999617
+    }
+  },
+  {
+    "pred": "ThriftBooks sells millions of used books at the lowest everyday prices. We personally assess every book's quality and offer rare, out-of-print treasures. We deliver the joy of reading in recyclable packaging with free standard shipping on US orders over $15.",
+    "gold": "Shop over 13 million new and used books at unbeatable prices with free shipping on orders over $15. Find your next read from a wide selection of genres, enjoy special deals, and earn rewards with every purchase.",
+    "instance_score": {
+      "rouge_1": 39.43661921920254,
+      "rouge_2": 15.999999500800016,
+      "rouge_l": 39.43661921920254
+    }
+  },
+  {
+    "pred": "Current local time and date, world clock, time zones, meeting planner, weather, sun and moon times, calculators, timers, and calendar tools for locations worldwide.",
+    "gold": "Explore timeanddate.com for accurate current times, time zones, calendars, weather forecasts, and astronomical information. No registration required for access to world clocks, time zone maps, calculators, and more.",
+    "instance_score": {
+      "rouge_1": 29.787233548211862,
+      "rouge_2": 3.921568132256887,
+      "rouge_l": 21.27659525033953
+    }
+  },
+  {
+    "pred": "Shop Total Wine & More for the best selection of wine, spirits, and beer. Find limited-time specials, wine deals, and personalized recommendations. Collect points, earn rewards, and enjoy the lowest prices for over 30 years.",
+    "gold": "Discover an extensive selection of over 8,000 wines, 3,000 spirits, and 2,500 beers at competitive prices. Shop with Total Wine & More for the best deals and services, with options for delivery, curbside pickup, or in-store shopping.",
+    "instance_score": {
+      "rouge_1": 43.07692257798817,
+      "rouge_2": 22.85714235755103,
+      "rouge_l": 39.99999950106509
+    }
+  },
+  {
+    "pred": "Find your perfect Toyota vehicle. Narrow it down by price, mpg or whatever you like. Explore and build Toyota cars, trucks, SUVs and hybrids including the 4Runner, bZ4X, Camry and Camry Hybrid.",
+    "gold": "Explore a wide range of new Toyota vehicles for sale. Find the perfect model with filters for price, MPG, and more. Customize and build your ideal Toyota today.",
+    "instance_score": {
+      "rouge_1": 33.962263652545396,
+      "rouge_2": 3.4482753644471584,
+      "rouge_l": 33.962263652545396
+    }
+  },
+  {
+    "pred": "TractorData.com is the internet's largest tractor resource with data on 17,556 farm, lawn, and industrial tractors. For 20 years TractorData.com has been providing tractor specifications to farmers, homeowners, and the machinery industry.",
+    "gold": "Explore TractorData.com for comprehensive information on over 17,556 farm, lawn, and industrial tractors. Find specifications, news, and data for brands like John Deere, Kubota, Ford, and more. Your resource for tractor details and machinery data.",
+    "instance_score": {
+      "rouge_1": 44.06779611031313,
+      "rouge_2": 17.910447262196495,
+      "rouge_l": 40.67796560183855
+    }
+  },
+  {
+    "pred": "Treehugger is your source for sustainability news and advice. Learn about eco-friendly living, green design, environmental science, wildlife, and more from our expert writers.",
+    "gold": "Explore Treehugger, your go-to destination for sustainability and green living, featuring eco-friendly advice, news, and inspiration for modern lifestyles.",
+    "instance_score": {
+      "rouge_1": 34.99999951125,
+      "rouge_2": 4.878048287923905,
+      "rouge_l": 24.999999511250007
+    }
+  },
+  {
+    "pred": "Texas State University is a public research university in San Marcos, Texas. Explore our majors and programs, request information, and apply now for 2024 admissions.",
+    "gold": "Explore Texas State University's official website for information on academics, admissions, student life, research, and more. Apply now and move forward with your education.",
+    "instance_score": {
+      "rouge_1": 26.086956021739137,
+      "rouge_2": 4.255318649162576,
+      "rouge_l": 17.3913038478261
+    }
+  },
+  {
+    "pred": "USAA provides insurance, banking, and retirement solutions for military members, veterans, and their eligible family members. Get auto quotes, checking accounts, home insurance, credit cards, loans, and more.",
+    "gold": "Explore USAA's insurance, banking, retirement, and investment services tailored for military members, veterans, and their families. Join USAA for competitive auto rates, no-monthly fee banking, and more.",
+    "instance_score": {
+      "rouge_1": 45.83333283420139,
+      "rouge_2": 30.188678745461022,
+      "rouge_l": 45.83333283420139
+    }
+  },
+  {
+    "pred": "The official website of the United States Courts providing information about federal courts, court records, services, forms, judges, judgeships, statistics, reports, rules, and policies.",
+    "gold": "Official website of the United States Courts. Find resources on federal court cases, judicial news, court records, and information about the federal judiciary, including services and forms, judgeships, and educational resources.",
+    "instance_score": {
+      "rouge_1": 57.1428566430654,
+      "rouge_2": 26.41509384834461,
+      "rouge_l": 48.97959133694294
+    }
+  },
+  {
+    "pred": "Find the Valvoline solution that's right for you. Valvoline Instant Oil Change offers stay-in-your-car vehicle maintenance services at over 1,500 locations. Valvoline Global Operations creates products that improve automotive and industrial equipment performance.",
+    "gold": "Discover premium vehicle services and products at Valvoline. With a legacy of innovation since 1866, find the right solutions for your automotive needs.",
+    "instance_score": {
+      "rouge_1": 37.037036548010974,
+      "rouge_2": 0.0,
+      "rouge_l": 29.62962914060357
+    }
+  },
+  {
+    "pred": "Verywell Family provides trusted pregnancy and parenting advice from experts. Get information on getting pregnant, pregnancy week by week, ages and stages, kids' health, and product recommendations for babies and children.",
+    "gold": "Explore expert-reviewed advice on pregnancy, baby development, parenting, and children's health. Find tips, tools, and product recommendations for families at every stage.",
+    "instance_score": {
+      "rouge_1": 24.999999507812507,
+      "rouge_2": 11.764705397923896,
+      "rouge_l": 20.833332841145847
+    }
+  },
+  {
+    "pred": "VEVOR offers tough tools at half price. Shop multi-function snow cone machines, restaurant & food service equipment, lawn & garden tools, automotive supplies, and power tools with free delivery, 30-day no-hassle returns, and 12-month warranty.",
+    "gold": "Shop at VEVOR for a wide selection of professional-grade tools, kitchen appliances, home and garden essentials, and more. Enjoy free delivery, 30-day returns, and a 12-month warranty on quality products at competitive prices.",
+    "instance_score": {
+      "rouge_1": 39.34426179629133,
+      "rouge_2": 12.121211621671279,
+      "rouge_l": 36.06557327170116
+    }
+  },
+  {
+    "pred": "VIPLeague offers free live sports streaming for all major sports including football, basketball, baseball, hockey, Formula 1, MotoGP, MMA, WWE, boxing, tennis, golf, rugby, and more. Watch live sports streams online for free.",
+    "gold": "VIPLeague offers free live sports streaming for a variety of events including football, NFL, NBA, MLB, NHL, rugby, motorsports, and more. No subscription required, just quality live sports streaming.",
+    "instance_score": {
+      "rouge_1": 44.44444394513032,
+      "rouge_2": 28.07017494244384,
+      "rouge_l": 44.44444394513032
+    }
+  },
+  {
+    "pred": "Vistaprint empowers small businesses to create custom marketing materials including business cards, postcards, signs, banners, labels, stickers and more. Save $50 off orders $150+ with code BMSM.",
+    "gold": "Explore Vistaprint's wide range of custom printing services for business cards, marketing materials, signage, promotional products, and more. Take advantage of exclusive deals and discounts on high-quality custom prints and personalized gifts.",
+    "instance_score": {
+      "rouge_1": 21.81818131834712,
+      "rouge_2": 7.017543363496495,
+      "rouge_l": 18.181817681983485
+    }
+  },
+  {
+    "pred": "Walgreens: America's online pharmacy for prescriptions, health & wellness products, photo services, and more. Get FREE 1-hour delivery on orders $35+, schedule vaccines, and enjoy savings with rewards.",
+    "gold": "Shop a wide selection of health, wellness, and pharmacy products at our store. Refill prescriptions, schedule vaccinations, and find great deals on photo gifts. Enjoy free 1-hour delivery on orders $35+ and save with our latest offers.",
+    "instance_score": {
+      "rouge_1": 33.333332838333334,
+      "rouge_2": 9.523809034013633,
+      "rouge_l": 33.333332838333334
+    }
+  },
+  {
+    "pred": "NOAA National Weather Service. Weather forecasts, warnings, and alerts for the United States. Get local weather forecasts by city, state or ZIP code, view active alerts, radar, satellite imagery, and past weather data.",
+    "gold": "Official National Weather Service website providing weather forecasts, warnings, and safety information across the United States, including detailed alerts for snow, fire conditions, and other severe weather events.",
+    "instance_score": {
+      "rouge_1": 39.285713788265305,
+      "rouge_2": 20.33898255443839,
+      "rouge_l": 32.142856645408166
+    }
+  },
+  {
+    "pred": "Find people, contact info & background checks. Search for people by name, phone number, or address. Get cell phone numbers, addresses, relatives, criminal records and more. Trusted by over 30 million people every month.",
+    "gold": "Whitepages is the authority in people search, established in 1997. With comprehensive contact information for over 275 million people including cell phones, the most complete background check data compiled from records in all 50 states, and much more, we're not the old white pages directory or phone book. We provide answers to over 2 million searches every day, helping 35 million users every month find people.",
+    "instance_score": {
+      "rouge_1": 29.885057012551204,
+      "rouge_2": 4.081632206372395,
+      "rouge_l": 27.586206437838552
+    }
+  },
+  {
+    "pred": "wikiHow is the most trusted how-to site on the internet. Learn how to do anything with expert co-authored articles, trending how-to guides, quizzes, and step-by-step tutorials on thousands of topics.",
+    "gold": "Explore wikiHow, the world's leading how-to guide with expert co-authored articles offering step-by-step instructions and advice on a wide range of topics, from household repairs to personal growth.",
+    "instance_score": {
+      "rouge_1": 36.363635863801655,
+      "rouge_2": 7.142856643494932,
+      "rouge_l": 29.09090859107439
+    }
+  },
+  {
+    "pred": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+    "gold": "Wikipedia, the free encyclopedia that anyone can edit. Access articles in multiple languages, covering countless topics. Hosted by the Wikimedia Foundation.",
+    "instance_score": {
+      "rouge_1": 27.027026530314103,
+      "rouge_2": 15.384614884944133,
+      "rouge_l": 27.027026530314103
+    }
+  },
+  {
+    "pred": "World History Encyclopedia is a non-profit organization publishing the world's most read history encyclopedia. Our mission is to engage people with cultural heritage and to improve history education worldwide.",
+    "gold": "Explore a comprehensive online resource for historical knowledge, featuring fact-checked articles, multimedia, interactive maps, and educational material. A non-profit organization dedicated to engaging users with world history and cultural heritage.",
+    "instance_score": {
+      "rouge_1": 32.727272228760334,
+      "rouge_2": 7.017543359803052,
+      "rouge_l": 32.727272228760334
+    }
+  },
+  {
+    "pred": "Weather Underground provides local & long-range weather forecasts, weatherreports, maps & tropical weather conditions for the Central and Western, People's Republic of China area.",
+    "gold": "Visit Weather Underground for up-to-the-minute weather information and forecasts for locations worldwide, including severe weather alerts, local and long-range forecasts, and tropical weather updates.",
+    "instance_score": {
+      "rouge_1": 43.902438527067225,
+      "rouge_2": 8.695651673913073,
+      "rouge_l": 34.146340966091614
+    }
+  }
+]

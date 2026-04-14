@@ -1,0 +1,1972 @@
+[
+  {
+    "score": "accuracy: 96.44"
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 7,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 7,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 6,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 2,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 5,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 7,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 3,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 5,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 3,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 4,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  }
+]

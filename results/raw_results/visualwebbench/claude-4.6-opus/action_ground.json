@@ -1,0 +1,726 @@
+[
+  {
+    "score": "accuracy: 97.09"
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 3,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 4,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "F",
+    "gold": 5,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "H",
+    "gold": 7,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "C",
+    "gold": 2,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "D",
+    "gold": 3,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "B",
+    "gold": 1,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "Looking at the screenshot, I need to find a clickable element related to \"Wind Advisory.\" I can see in the legend at the bottom of the map, there's a \"Wind Advisory\" label. Let me look for the element that corresponds to Wind Advisory information.\n\nI can see \"Wind Advisory\" listed in the legend area at the bottom of the map. The task asks me to know more about Wind Advisory, so I should click on the Wind Advisory legend item/link.\n\nLooking at the available labeled candidates, I don't see a direct label on \"Wind Advisory\" in the legend. However, let me reconsider the options available:\n\n- A: SEARCH\n- B: FORECAST\n- C: Enter location\n- D: Read More (link in the text)\n- E: ACTIVE ALERTS\n- F: City, ST input\n- G: Get Weather button\n- H: Warnings By State dropdown\n\nThe \"Read More\" link (D) appears to be related to the current weather advisory text which mentions \"Snow and strong winds\" - this could lead to more details about wind-related advisories. But looking more carefully, \"ACTIVE ALERTS\" (E) would be the section where I could find detailed information about Wind Advisory.\n\nActually, looking more carefully at the page, the most direct way to know more about Wind Advisory would be through the ACTIVE ALERTS section.\n\nE",
+    "gold": 3,
+    "instance_score": {
+      "correct": 0
+    }
+  },
+  {
+    "pred": "E",
+    "gold": 4,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "A",
+    "gold": 0,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  },
+  {
+    "pred": "G",
+    "gold": 6,
+    "instance_score": {
+      "correct": 1
+    }
+  }
+]
