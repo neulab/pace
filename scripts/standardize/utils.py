@@ -197,6 +197,12 @@ MODEL_NAME_LOOKUP: Dict[str, str] = {
     "azure_ai__Kimi-K2-Thinking": "Kimi-K2",
     "nvidia__nemotron-3-nano-30b-a3b": "Nemotron-3-Nano",
     "qwen__qwen3-coder": "Qwen3-Coder-480B-A35B-Instruct",
+
+    # VisualWebBench directory names
+    "claude-4.5-opus":   "Claude-4.5-Opus",
+    "claude-4.5-sonnet": "Claude-4.5-Sonnet",
+    "claude-4.6-opus":   "Claude-4.6-Opus",
+    "kimi-k2.5":         "Kimi-K2.5",
 }
 
 def parse_model_name_from_filename(filename: str) -> Tuple[str, Optional[str]]:
