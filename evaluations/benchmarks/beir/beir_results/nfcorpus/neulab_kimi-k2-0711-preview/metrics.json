@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "neulab/kimi-k2-0711-preview",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.52786,
+    "NDCG@5": 0.44203,
+    "NDCG@10": 0.39326,
+    "NDCG@20": 0.34847
+  },
+  "map": {
+    "MAP@1": 0.06872,
+    "MAP@5": 0.13259,
+    "MAP@10": 0.15163,
+    "MAP@20": 0.16273
+  },
+  "recall": {
+    "Recall@1": 0.06872,
+    "Recall@5": 0.15079,
+    "Recall@10": 0.17916,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.54489,
+    "P@5": 0.38328,
+    "P@10": 0.28762,
+    "P@20": 0.18963
+  }
+}

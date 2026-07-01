@@ -1,0 +1,12 @@
+evaluation/res/
+**__pycache__**/
+setup2.txt
+keys2.json
+cmd.txt
+keys.txt
+run1.sh
+run2.sh
+temp.txt
+setup.txt
+debug2.py
+debug3.py

@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "fireworks_ai/accounts/fireworks/models/minimax-m2p5",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.46285,
+    "NDCG@5": 0.3993,
+    "NDCG@10": 0.36096,
+    "NDCG@20": 0.32985
+  },
+  "map": {
+    "MAP@1": 0.05977,
+    "MAP@5": 0.11619,
+    "MAP@10": 0.13449,
+    "MAP@20": 0.14756
+  },
+  "recall": {
+    "Recall@1": 0.05977,
+    "Recall@5": 0.13815,
+    "Recall@10": 0.17025,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.47988,
+    "P@5": 0.35108,
+    "P@10": 0.26749,
+    "P@20": 0.18963
+  }
+}

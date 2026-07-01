@@ -1,0 +1,38 @@
+dataset_path: EleutherAI/logiqa
+dataset_name: logiqa
+dataset_kwargs:
+  trust_remote_code: true
+tag: logiqa
+output_type: generate_until
+training_split: train
+validation_split: validation
+test_split: test
+doc_to_text: !function utils_logiqa_cot.doc_to_text
+doc_to_target: !function utils_logiqa_cot.doc_to_target
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "regex"
+        regex_pattern: "(?i)(?:the answer is|answer is|the correct answer is)\\s*(\\([A-D]\\))"
+      - function: "take_first"
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        regex_pattern: "(\\([A-D]\\))"
+        group_select: -1
+      - function: "take_first"
+generation_kwargs:
+  until:
+    - "</s>"
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 1024
+num_fewshot: 0
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+metadata:
+  version: 1.0

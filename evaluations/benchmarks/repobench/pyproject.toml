@@ -1,0 +1,27 @@
+[project]
+name = "repobench"
+version = "1.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "litellm",
+    "openai",
+    "datasets",
+    "pandas",
+    "transformers",
+    "torch",
+    "fuzzywuzzy",
+    "tqdm",
+    "fire",
+    "codebleu",
+    "python-Levenshtein",
+    "tree-sitter>=0.22,<0.23",
+    "tree-sitter-python>=0.21,<0.22",
+    "tree-sitter-java>=0.21,<0.22",
+]
+
+[tool.uv]
+override-dependencies = [
+    "tree-sitter>=0.22,<0.23",
+    "tree-sitter-python>=0.21,<0.22",
+    "tree-sitter-java>=0.21,<0.22",
+]

@@ -1,0 +1,82 @@
+{
+  "claude-3-opus-20240229": {
+    "llm_output": "[\n  \"In the list above, what element follows the {ordid}?\",\n  \"From the preceding list, identify the element that succeeds the {ordid}.\",\n  \"Within the list provided above, what item comes after the {ordid}?\",\n  \"Referring to the list above, what is the subsequent element to the {ordid}?\",\n  \"Considering the list presented above, determine the element that immediately follows the {ordid}.\",\n  \"Based on the list given above, ascertain the item that appears next after the {ordid}.\",\n  \"Examining the list above, what element directly succeeds the {ordid}?\",\n  \"What is the element that comes immediately after the {ordid} in the list provided above?\",\n  \"In the sequence of elements listed above, identify the one that follows the {ordid}.\",\n  \"Looking at the list above, what item comes next after the {ordid}?\",\n  \"Given the list above, what is the element that immediately succeeds the {ordid}?\",\n  \"Referencing the list provided above, determine the item that comes after the {ordid}.\",\n  \"What element follows the {ordid} in the sequence presented in the list above?\",\n  \"From the list above, identify the element that appears immediately after the {ordid}.\",\n  \"In the list presented above, what is the item that follows the {ordid}?\",\n  \"Considering the sequence of elements in the list above, what comes after the {ordid}?\",\n  \"Based on the list given above, what element succeeds the {ordid}?\",\n  \"Analyzing the list above, determine the item that follows the {ordid}.\",\n  \"In the list provided above, what is the next element after the {ordid}?\",\n  \"Examining the sequence of elements in the list above, identify the one that comes after the {ordid}.\"\n]",
+    "parse_result": [
+      "In the list above, what element follows the {ordid}?",
+      "From the preceding list, identify the element that succeeds the {ordid}.",
+      "Within the list provided above, what item comes after the {ordid}?",
+      "Referring to the list above, what is the subsequent element to the {ordid}?",
+      "Considering the list presented above, determine the element that immediately follows the {ordid}.",
+      "Based on the list given above, ascertain the item that appears next after the {ordid}.",
+      "Examining the list above, what element directly succeeds the {ordid}?",
+      "What is the element that comes immediately after the {ordid} in the list provided above?",
+      "In the sequence of elements listed above, identify the one that follows the {ordid}.",
+      "Looking at the list above, what item comes next after the {ordid}?",
+      "Given the list above, what is the element that immediately succeeds the {ordid}?",
+      "Referencing the list provided above, determine the item that comes after the {ordid}.",
+      "What element follows the {ordid} in the sequence presented in the list above?",
+      "From the list above, identify the element that appears immediately after the {ordid}.",
+      "In the list presented above, what is the item that follows the {ordid}?",
+      "Considering the sequence of elements in the list above, what comes after the {ordid}?",
+      "Based on the list given above, what element succeeds the {ordid}?",
+      "Analyzing the list above, determine the item that follows the {ordid}.",
+      "In the list provided above, what is the next element after the {ordid}?",
+      "Examining the sequence of elements in the list above, identify the one that comes after the {ordid}."
+    ]
+  },
+  "gemini-1.5-pro-latest": {
+    "llm_output": "",
+    "parse_result": ""
+  },
+  "gpt-4o": {
+    "llm_output": "```json\n[\n    \"Can you identify the subsequent element of the {ordid} in the mentioned list above?\",\n    \"Determine the element that follows the {ordid} in the list provided.\",\n    \"What comes next for the {ordid} in the list given above?\",\n    \"Identify the next item after the {ordid} in the above list.\",\n    \"What is the subsequent item to {ordid} in the list shown above?\",\n    \"Find the element that comes directly after the {ordid} in the preceding list.\",\n    \"What follows the {ordid} in the list that was mentioned earlier?\",\n    \"Can you find the immediate following element of the {ordid} in the mentioned list?\",\n    \"Locate the next element following the {ordid} in the list above.\",\n    \"What is the next sequential element for the {ordid} in the aforementioned list?\",\n    \"Please identify the following item to {ordid} in the list described above.\",\n    \"What is the element that comes immediately after the {ordid} in the listed items?\",\n    \"What item follows the {ordid} in the previously mentioned list?\",\n    \"Specify the next element for the {ordid} in the above-mentioned list.\",\n    \"What is the subsequent element after {ordid} in the list provided?\",\n    \"Indicate the immediate next item of the {ordid} in the given list.\",\n    \"Which element comes directly after the {ordid} in the list above?\",\n    \"What is the next item that succeeds the {ordid} in the mentioned list?\",\n    \"Can you tell what follows the {ordid} in the above listed items?\",\n    \"What is the immediate following item for the {ordid} in the given list?\"\n]\n```",
+    "parse_result": [
+      "Can you identify the subsequent element of the {ordid} in the mentioned list above?",
+      "Determine the element that follows the {ordid} in the list provided.",
+      "What comes next for the {ordid} in the list given above?",
+      "Identify the next item after the {ordid} in the above list.",
+      "What is the subsequent item to {ordid} in the list shown above?",
+      "Find the element that comes directly after the {ordid} in the preceding list.",
+      "What follows the {ordid} in the list that was mentioned earlier?",
+      "Can you find the immediate following element of the {ordid} in the mentioned list?",
+      "Locate the next element following the {ordid} in the list above.",
+      "What is the next sequential element for the {ordid} in the aforementioned list?",
+      "Please identify the following item to {ordid} in the list described above.",
+      "What is the element that comes immediately after the {ordid} in the listed items?",
+      "What item follows the {ordid} in the previously mentioned list?",
+      "Specify the next element for the {ordid} in the above-mentioned list.",
+      "What is the subsequent element after {ordid} in the list provided?",
+      "Indicate the immediate next item of the {ordid} in the given list.",
+      "Which element comes directly after the {ordid} in the list above?",
+      "What is the next item that succeeds the {ordid} in the mentioned list?",
+      "Can you tell what follows the {ordid} in the above listed items?",
+      "What is the immediate following item for the {ordid} in the given list?"
+    ]
+  },
+  "ori": "What is the next element of the {ordid} in the list above",
+  "gpt-3.5-turbo": {
+    "llm_output": "```json\n[\n    \"What is the subsequent element of the {ordid} in the list provided above?\",\n    \"Can you identify the next item in the list above for the {ordid}?\",\n    \"Which element follows the {ordid} in the aforementioned list?\",\n    \"What comes next for the {ordid} in the earlier list?\",\n    \"Could you specify the next element in the list above related to the {ordid}?\",\n    \"What follows the {ordid} in the preceding list?\",\n    \"What is the upcoming element for the {ordid} in the list above?\",\n    \"Identify the next entry of the {ordid} in the list shown above.\",\n    \"What is the next item pertaining to the {ordid} in the list above?\",\n    \"What is the following element for the {ordid} in the preceding list?\",\n    \"Please indicate the next element in the earlier list regarding the {ordid}.\",\n    \"Which item comes next for the {ordid} in the list above?\",\n    \"What is the element that succeeds the {ordid} in the previously mentioned list?\",\n    \"What is the next point of the {ordid} in the above list?\",\n    \"Could you clarify what the next element is for the {ordid} in the listed items above?\",\n    \"What follows next in relation to the {ordid} within the list provided earlier?\",\n    \"What is the item that comes after the {ordid} in the list above?\",\n    \"What is the next piece for the {ordid} in the prior list?\",\n    \"Can you tell me the next entry for the {ordid} in the list referenced above?\",\n    \"Which element appears next to the {ordid} in the above list?\"\n]\n```",
+    "parse_result": [
+      "What is the subsequent element of the {ordid} in the list provided above?",
+      "Can you identify the next item in the list above for the {ordid}?",
+      "Which element follows the {ordid} in the aforementioned list?",
+      "What comes next for the {ordid} in the earlier list?",
+      "Could you specify the next element in the list above related to the {ordid}?",
+      "What follows the {ordid} in the preceding list?",
+      "What is the upcoming element for the {ordid} in the list above?",
+      "Identify the next entry of the {ordid} in the list shown above.",
+      "What is the next item pertaining to the {ordid} in the list above?",
+      "What is the following element for the {ordid} in the preceding list?",
+      "Please indicate the next element in the earlier list regarding the {ordid}.",
+      "Which item comes next for the {ordid} in the list above?",
+      "What is the element that succeeds the {ordid} in the previously mentioned list?",
+      "What is the next point of the {ordid} in the above list?",
+      "Could you clarify what the next element is for the {ordid} in the listed items above?",
+      "What follows next in relation to the {ordid} within the list provided earlier?",
+      "What is the item that comes after the {ordid} in the list above?",
+      "What is the next piece for the {ordid} in the prior list?",
+      "Can you tell me the next entry for the {ordid} in the list referenced above?",
+      "Which element appears next to the {ordid} in the above list?"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+include: humaneval.yaml
+task: humaneval_chat
+doc_to_text: "Complete the following Python function. Return ONLY the complete function inside a ```python code block, nothing else.\n\n```python\n{{ prompt }}\n```\n"
+generation_kwargs:
+  until: []
+  max_gen_toks: 1024
+  do_sample: false
+filter_list:
+  - name: "create_test"
+    filter:
+      - function: "custom"
+        filter_fn: !function utils.build_predictions_instruct
+metadata:
+  version: 1.0

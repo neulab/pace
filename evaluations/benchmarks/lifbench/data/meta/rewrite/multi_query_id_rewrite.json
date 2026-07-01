@@ -1,0 +1,82 @@
+{
+  "claude-3-opus-20240229": {
+    "llm_output": "[\n  \"Please provide the elements located at the respective indices specified in the list {id_arr}, and return the result in the format of a JSON list.\",\n  \"Retrieve the items situated at the positions indicated by the list {id_arr} and deliver the outcome as a JSON list.\",\n  \"Kindly fetch the components positioned at the corresponding locations denoted in the list {id_arr}, and present the findings in a JSON list format.\",\n  \"Can you supply the entities situated at the respective spots signified within the list {id_arr}? Please format the response as a JSON list.\",\n  \"Extract the elements found at the matching positions listed in {id_arr} and display the result in the form of a JSON list.\",\n  \"Identify the items placed at the corresponding locations outlined in the list {id_arr} and provide the answer formatted as a JSON list.\",\n  \"Determine the components residing at the respective positions indicated in the list {id_arr}, and structure the output as a JSON list.\",\n  \"Pinpoint the elements occupying the corresponding slots specified by the list {id_arr}, and organize the result in a JSON list layout.\",\n  \"Locate the entities positioned at the matching indices detailed in the list {id_arr}, and arrange the response in a JSON list configuration.\",\n  \"Discern the items situated at the corresponding locations listed in {id_arr}, and present the outcome structured as a JSON list.\",\n  \"Acquire the components found at the respective positions denoted in the list {id_arr}, and deliver the findings as a JSON list.\",\n  \"Procure the elements occupying the matching spots outlined in the list {id_arr}, and provide the answer in a JSON list arrangement.\",\n  \"Gather the entities placed at the corresponding locations specified within the list {id_arr}, and display the result in JSON list format.\",\n  \"Retrieve the items situated at the respective positions signified by the list {id_arr}, and structure the response as a JSON list.\",\n  \"Obtain the components positioned at the matching indices indicated in the list {id_arr}, and present the outcome in a JSON list layout.\",\n  \"Secure the elements residing at the corresponding slots detailed in the list {id_arr}, and organize the findings in JSON list configuration.\",\n  \"Fetch the entities located at the respective spots listed within {id_arr}, and deliver the answer formatted as a JSON list.\",\n  \"Collect the items occupying the matching positions denoted in the list {id_arr}, and provide the result structured in a JSON list.\",\n  \"Acquire the components situated at the corresponding locations outlined in the list {id_arr}, and display the response in JSON list arrangement.\",\n  \"Get the elements found at the respective indices specified by the list {id_arr}, and present the outcome in a JSON list format.\"\n]",
+    "parse_result": [
+      "Please provide the elements located at the respective indices specified in the list {id_arr}, and return the result in the format of a JSON list.",
+      "Retrieve the items situated at the positions indicated by the list {id_arr} and deliver the outcome as a JSON list.",
+      "Kindly fetch the components positioned at the corresponding locations denoted in the list {id_arr}, and present the findings in a JSON list format.",
+      "Can you supply the entities situated at the respective spots signified within the list {id_arr}? Please format the response as a JSON list.",
+      "Extract the elements found at the matching positions listed in {id_arr} and display the result in the form of a JSON list.",
+      "Identify the items placed at the corresponding locations outlined in the list {id_arr} and provide the answer formatted as a JSON list.",
+      "Determine the components residing at the respective positions indicated in the list {id_arr}, and structure the output as a JSON list.",
+      "Pinpoint the elements occupying the corresponding slots specified by the list {id_arr}, and organize the result in a JSON list layout.",
+      "Locate the entities positioned at the matching indices detailed in the list {id_arr}, and arrange the response in a JSON list configuration.",
+      "Discern the items situated at the corresponding locations listed in {id_arr}, and present the outcome structured as a JSON list.",
+      "Acquire the components found at the respective positions denoted in the list {id_arr}, and deliver the findings as a JSON list.",
+      "Procure the elements occupying the matching spots outlined in the list {id_arr}, and provide the answer in a JSON list arrangement.",
+      "Gather the entities placed at the corresponding locations specified within the list {id_arr}, and display the result in JSON list format.",
+      "Retrieve the items situated at the respective positions signified by the list {id_arr}, and structure the response as a JSON list.",
+      "Obtain the components positioned at the matching indices indicated in the list {id_arr}, and present the outcome in a JSON list layout.",
+      "Secure the elements residing at the corresponding slots detailed in the list {id_arr}, and organize the findings in JSON list configuration.",
+      "Fetch the entities located at the respective spots listed within {id_arr}, and deliver the answer formatted as a JSON list.",
+      "Collect the items occupying the matching positions denoted in the list {id_arr}, and provide the result structured in a JSON list.",
+      "Acquire the components situated at the corresponding locations outlined in the list {id_arr}, and display the response in JSON list arrangement.",
+      "Get the elements found at the respective indices specified by the list {id_arr}, and present the outcome in a JSON list format."
+    ]
+  },
+  "gemini-1.5-pro-latest": {
+    "llm_output": "",
+    "parse_result": ""
+  },
+  "gpt-4o": {
+    "llm_output": "```json\n[\n    \"Which items occupy the same positions in the list {id_arr}? Kindly provide the response in JSON list format.\",\n    \"Can you identify the elements at the given indices in the array {id_arr}? Please present the results as a JSON list.\",\n    \"Please list the elements at the specified locations in {id_arr} and format the output as a JSON list.\",\n    \"What elements are found at each position in {id_arr}? Make sure to output the answer as a JSON list.\",\n    \"Could you specify the items at the particular positions in {id_arr}? Ensure the reply is in JSON list format.\",\n    \"Identify the elements at the respective spots in {id_arr} and output them as a JSON list.\",\n    \"What are the values at the same positions in the list {id_arr}? Provide the results in JSON list form.\",\n    \"Could you list the items located at the specified indices in {id_arr}? Format the answer as a JSON list.\",\n    \"Determine the elements at the designated positions in {id_arr} and present them as a JSON list.\",\n    \"What are the corresponding elements in the array {id_arr}? Kindly output the answer using JSON list format.\",\n    \"Note the items that appear at the given positions in {id_arr} and format them into a JSON list.\",\n    \"What are the entries at the respective indices in {id_arr}? Please present your answer as a JSON list.\",\n    \"Could you show the elements at the same indexes in the list {id_arr}? Output them in JSON list format.\",\n    \"Please identify the items at each specified position in {id_arr} and provide the results as a JSON list.\",\n    \"What are the values located at the positions given in {id_arr}? Make sure to output as a JSON list.\",\n    \"Indicate the items at the corresponding positions in {id_arr} and present them in JSON list format.\",\n    \"Please enumerate the elements at the certain indices in {id_arr} and format the result as a JSON list.\",\n    \"Which values are present at each respective spot in {id_arr}? Kindly provide the output as a JSON list.\",\n    \"Identify the items at the corresponding places in list {id_arr} and deliver the result in JSON list form.\",\n    \"What elements appear at the specific positions in {id_arr}? Please format the answer as a JSON list.\"\n]\n```",
+    "parse_result": [
+      "Which items occupy the same positions in the list {id_arr}? Kindly provide the response in JSON list format.",
+      "Can you identify the elements at the given indices in the array {id_arr}? Please present the results as a JSON list.",
+      "Please list the elements at the specified locations in {id_arr} and format the output as a JSON list.",
+      "What elements are found at each position in {id_arr}? Make sure to output the answer as a JSON list.",
+      "Could you specify the items at the particular positions in {id_arr}? Ensure the reply is in JSON list format.",
+      "Identify the elements at the respective spots in {id_arr} and output them as a JSON list.",
+      "What are the values at the same positions in the list {id_arr}? Provide the results in JSON list form.",
+      "Could you list the items located at the specified indices in {id_arr}? Format the answer as a JSON list.",
+      "Determine the elements at the designated positions in {id_arr} and present them as a JSON list.",
+      "What are the corresponding elements in the array {id_arr}? Kindly output the answer using JSON list format.",
+      "Note the items that appear at the given positions in {id_arr} and format them into a JSON list.",
+      "What are the entries at the respective indices in {id_arr}? Please present your answer as a JSON list.",
+      "Could you show the elements at the same indexes in the list {id_arr}? Output them in JSON list format.",
+      "Please identify the items at each specified position in {id_arr} and provide the results as a JSON list.",
+      "What are the values located at the positions given in {id_arr}? Make sure to output as a JSON list.",
+      "Indicate the items at the corresponding positions in {id_arr} and present them in JSON list format.",
+      "Please enumerate the elements at the certain indices in {id_arr} and format the result as a JSON list.",
+      "Which values are present at each respective spot in {id_arr}? Kindly provide the output as a JSON list.",
+      "Identify the items at the corresponding places in list {id_arr} and deliver the result in JSON list form.",
+      "What elements appear at the specific positions in {id_arr}? Please format the answer as a JSON list."
+    ]
+  },
+  "ori": "What are elements at the corresponding position in list {id_arr}? Please output the answer as a JSON list.",
+  "gpt-3.5-turbo": {
+    "llm_output": "[\n    \"Output a JSON list containing the elements found at the corresponding position in the list {id_arr}.\",\n    \"List the elements located at the matching positions in the list {id_arr} in JSON format.\",\n    \"Provide the elements at the corresponding positions in list {id_arr} as a JSON list.\",\n    \"In JSON list format, present the elements that correspond to the positions in list {id_arr}.\",\n    \"What elements can be found at the respective positions in list {id_arr}? Output the result as a JSON list.\",\n    \"Output the response as a JSON list, containing the elements located at the corresponding positions in list {id_arr}.\",\n    \"List the elements from list {id_arr} at their respective positions in JSON format.\",\n    \"Please output a JSON list of the elements at the corresponding positions in list {id_arr}.\",\n    \"Provide the elements at the corresponding positions in list {id_arr} in the form of a JSON list.\",\n    \"List the elements at the corresponding positions in list {id_arr}, presenting the answer as a JSON list.\",\n    \"Prepare a JSON list of the elements at the corresponding positions in list {id_arr}.\",\n    \"Share the elements at the corresponding positions in list {id_arr} as a JSON list.\",\n    \"In JSON list format, share the elements found at the corresponding positions in list {id_arr}.\",\n    \"Kindly output a JSON list of the elements at the corresponding positions in list {id_arr}.\",\n    \"Output the response as a JSON list, including the elements from list {id_arr} at their corresponding positions.\",\n    \"List the elements at their corresponding positions in list {id_arr} in JSON format.\",\n    \"In JSON list format, include the elements at their corresponding positions in list {id_arr}.\",\n    \"Prepare a JSON list that includes the elements at the corresponding positions in list {id_arr}.\",\n    \"Share a JSON list of the elements at the corresponding positions in list {id_arr}.\",\n    \"Output the answer as a JSON list, including the elements at their corresponding positions in list {id_arr}.\"\n]",
+    "parse_result": [
+      "Output a JSON list containing the elements found at the corresponding position in the list {id_arr}.",
+      "List the elements located at the matching positions in the list {id_arr} in JSON format.",
+      "Provide the elements at the corresponding positions in list {id_arr} as a JSON list.",
+      "In JSON list format, present the elements that correspond to the positions in list {id_arr}.",
+      "What elements can be found at the respective positions in list {id_arr}? Output the result as a JSON list.",
+      "Output the response as a JSON list, containing the elements located at the corresponding positions in list {id_arr}.",
+      "List the elements from list {id_arr} at their respective positions in JSON format.",
+      "Please output a JSON list of the elements at the corresponding positions in list {id_arr}.",
+      "Provide the elements at the corresponding positions in list {id_arr} in the form of a JSON list.",
+      "List the elements at the corresponding positions in list {id_arr}, presenting the answer as a JSON list.",
+      "Prepare a JSON list of the elements at the corresponding positions in list {id_arr}.",
+      "Share the elements at the corresponding positions in list {id_arr} as a JSON list.",
+      "In JSON list format, share the elements found at the corresponding positions in list {id_arr}.",
+      "Kindly output a JSON list of the elements at the corresponding positions in list {id_arr}.",
+      "Output the response as a JSON list, including the elements from list {id_arr} at their corresponding positions.",
+      "List the elements at their corresponding positions in list {id_arr} in JSON format.",
+      "In JSON list format, include the elements at their corresponding positions in list {id_arr}.",
+      "Prepare a JSON list that includes the elements at the corresponding positions in list {id_arr}.",
+      "Share a JSON list of the elements at the corresponding positions in list {id_arr}.",
+      "Output the answer as a JSON list, including the elements at their corresponding positions in list {id_arr}."
+    ]
+  }
+}

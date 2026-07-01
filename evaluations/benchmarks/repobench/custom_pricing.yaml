@@ -1,0 +1,42 @@
+model_list:
+  - model_name: fireworks_ai/accounts/fireworks/models/glm-5
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/glm-5
+    model_info:
+      input_cost_per_token: 0.00000020   # $0.20 / 1M
+      output_cost_per_token: 0.00000320  # $3.20 / 1M
+
+  - model_name: fireworks_ai/accounts/fireworks/models/Kimi-K2-Thinking
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/Kimi-K2-Thinking
+    model_info:
+      input_cost_per_token: 0.00000060   # $0.60 / 1M
+      output_cost_per_token: 0.00000250  # $2.50 / 1M
+
+  - model_name: fireworks_ai/accounts/fireworks/models/minimax-m2p5
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/minimax-m2p5
+    model_info:
+      input_cost_per_token: 0.00000030   # $0.30 / 1M
+      output_cost_per_token: 0.00000120  # $1.20 / 1M
+
+  - model_name: fireworks_ai/accounts/fireworks/models/qwen3-coder
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/qwen3-coder
+    model_info:
+      input_cost_per_token: 0.00000045   # $0.45 / 1M
+      output_cost_per_token: 0.00000080  # $0.80 / 1M
+
+  - model_name: fireworks_ai/accounts/fireworks/models/deepseek-v3p2
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/deepseek-v3p2
+    model_info:
+      input_cost_per_token: 0.00000056   # $0.56 / 1M
+      output_cost_per_token: 0.00000168  # $1.68 / 1M
+
+  - model_name: fireworks_ai/accounts/fireworks/models/Kimi-K2.5
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/Kimi-K2.5
+    model_info:
+      input_cost_per_token: 0.00000060   # $0.60 / 1M
+      output_cost_per_token: 0.00000300  # $3.00 / 1M

@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "Output any {num} KEY SENTENCE and its corresponding type directly. The output is divided into {num} lines. Each line displays a KEY SENTENCE and type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+  "2": [
+    {
+      "text": "Deliver {num} KEY SENTENCE alongside their types instantly. Arrange the output into {num} distinct lines, each showing a KEY SENTENCE and its type, split by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.19846332773162892,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Exhibit {num} KEY SENTENCE including their corresponding types straightforwardly. The output should be arranged into {num} lines, each one showing a KEY SENTENCE and type, divided by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2092421723355635,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Display {num} KEY SENTENCE and the corresponding type directly. The result should be spread over {num} lines, where each line shows a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.21627268148521697,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Present {num} KEY SENTENCE with their types directly. Format the output on {num} lines where each line contains a KEY SENTENCE and its type, set apart by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2255104977923126,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Show {num} KEY SENTENCE accompanied by their types directly. Organize the output into {num} lines, with each line displaying a KEY SENTENCE and type, detached by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2271342381952752,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Showcase {num} KEY SENTENCE and their corresponding types readily. Organize the result into {num} separate lines, each containing a KEY SENTENCE and its type, divided by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2310396339498758,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Output any {num} KEY SENTENCE and its corresponding type directly. The output is divided into {num} lines. Each line displays a KEY SENTENCE and type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2386753267929722,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Provide {num} KEY SENTENCE with their types directly. Spread the output over {num} lines, each containing a KEY SENTENCE and type, with separation provided by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.23943764495624573,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Reveal {num} KEY SENTENCE and their corresponding types instantly. Output must be divided into {num} lines, where each line displays a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2478522760459168,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Disclose {num} KEY SENTENCE and their respective types directly. Layout the output over {num} lines, where each line presents a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.25067656256775506,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Emit {num} KEY SENTENCE with the corresponding type directly. Divide the output into {num} separate lines, each containing a KEY SENTENCE and type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.25546825184027283,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Display {num} KEY SENTENCE and their respective types immediately. Split the data into {num} lines, with each one featuring a KEY SENTENCE and its type, divided by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.257969395802826,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "List {num} KEY SENTENCE along with their types. The result should be formatted into {num} lines, each having a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2822941850726607,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Record {num} KEY SENTENCE and their corresponding types straight away. The output should be split into {num} lines, with each line showcasing a KEY SENTENCE and its type, divided by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2857247804469218,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Produce {num} KEY SENTENCE together with their types immediately. Distribute the output across {num} lines, each featuring a KEY SENTENCE and its type, parted by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.28799954451545456,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Print {num} KEY SENTENCE and their associated types immediately. The output must be divided into {num} lines, each having a KEY SENTENCE and its type, parted by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.29564728027032583,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Generate {num} KEY SENTENCE along with their respective types. Present the data on {num} distinct lines. Each line should contain a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.309799787136102,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Return {num} KEY SENTENCE and their types straightforwardly. Make sure it appears on {num} different lines, each line showing a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.3142650319366857,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "1": [
+    {
+      "text": "Determine {num} KEY sentences and their related categories. Present the output in {num} lines, each containing a sentence followed by its category, divided by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2130969310543387,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Identify {num} crucial sentences and their associated categories. Arrange the output into {num} lines, each featuring a sentence and its category, delimited by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2206651556800535,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Generate {num} significant sentences and their associated categories. Present the output in {num} lines, each featuring a sentence and its category, delimited by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2222861212215959,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Produce {num} essential sentences and their related categories. Format the output into {num} lines, each consisting of a sentence and its category, separated by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.24189288111364404,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Generate {num} vital sentences and their corresponding categories. Present the output in {num} lines, each consisting of a sentence and its category, distinguished by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2437426847682872,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Recognize {num} primary sentences and their corresponding categories. Arrange the output into {num} lines, each containing a sentence followed by its category, divided by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.30629535471588976,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please extract {num} critical sentences along with their respective categories. The result should have {num} lines, with each line containing a sentence and its category delimited by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.32513369041521645,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "3": [
+    {
+      "text": "Identify {num} essential sentences and their associated types. Format the output as {num} lines, where each line features a sentence and its type, delimited by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.1831054170318769,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Determine {num} key sentences and their related types. Organize the output into {num} lines, where each line includes a sentence and its type, distinguished by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.20694643761695183,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Determine {num} principal sentences and their related types. Organize the output as {num} lines, where each line includes a sentence and its type, divided by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.21430531584285087,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify {num} important sentences and their associated types. Present the output in {num} lines, where each line includes a sentence followed by its type, separated using '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2163505903736905,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract {num} crucial sentences and their respective types. Arrange the output in {num} lines, where each line comprises a sentence and its type, divided by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.22567002462466698,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Recognize {num} critical sentences and their associated types. Organize the output as {num} lines, where each line features a sentence and its type, delimited by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.25070897294872097,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract {num} fundamental sentences and their corresponding types. Format the output as {num} lines, where each line comprises a sentence and its type, distinguished by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.26848374847459827,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify {num} vital sentences and their corresponding classifications. Structure the output into {num} lines, with each line containing a sentence followed by its classification, separated by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.29285530763864975,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Generate {num} key sentences and their corresponding classifications. Divide the output into {num} lines, with each line featuring a sentence and its classification, distinguished by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2454395746119515,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Generate {num} primary sentences and their respective classifications. Structure the output into {num} lines, with each line consisting of a sentence and its classification, separated by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.258901267337249,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Isolate {num} fundamental sentences and their respective classifications. Display the output in {num} lines, with each line consisting of a sentence and its classification, separated by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.2855024592216818,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract {num} critical sentences and their respective classifications. Structure the output into {num} lines, with each line comprising a sentence and its classification, separated by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.29620779840082984,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Isolate {num} significant sentences and their respective classifications. Display the output in {num} lines, with each line containing a sentence followed by its classification, separated by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.30563473994728274,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Provide {num} KEY SENTENCE and their categories directly. Display the output on {num} individual lines with each line containing a KEY SENTENCE and its category, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.17844742390761484,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Enumerate {num} KEY SENTENCE and their categories directly. Present them across {num} lines, each line showing a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.18771971685222572,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Convey {num} KEY SENTENCE and their categories immediately. Ensure the output spans {num} lines, each with a KEY SENTENCE and its type, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} [type_1]\n[KEY_SENTENCE_2] {sep} [type_2]",
+      "distance": 0.20017847660772464,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}

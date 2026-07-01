@@ -1,0 +1,416 @@
+{
+  "onedoc": {
+    "sys_instruction": "There are several different types of KEY SENTENCE in the input text, which are marked by special tags. These special tags a total of six kinds, respectively is \"<#Topic#>\", \"<@argument@>\", \"<!Transition!>\", \"<|Summary|>\", \"<*Evidence*>\", \"<-Concession->\". Different tags represent different types of key sentence. If a sentence in the text is KEY SENTENCE, we will add a special tag with the same attribute to the beginning and end of the sentence. The head tag also contains id order information in the format <type-id>. For example, the head tag with type '#Topic#' and id 1 is <#Topic#-1>. Also note that when the head tag and tail tag attributes are inconsistent, this means that the sentence is a fake KEY SENTENCE. Please read the input text carefully and give the answer directly according to the instruction requirements.\n\nInput text: {input}\n\nInstruction: {instruction}\n",
+    "subtasks": {
+      "repeat": {
+        "instructions": [
+          "Provide {num} KEY SENTENCE and their categories directly. Display the output on {num} individual lines with each line containing a KEY SENTENCE and its category, separated by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} #Topic#\n[KEY_SENTENCE_2] {sep} *Evidence*",
+          "Determine {num} KEY sentences and their related categories. Present the output in {num} lines, each containing a sentence followed by its category, divided by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} #Topic#\n[KEY_SENTENCE_2] {sep} *Evidence*",
+          "Deliver {num} KEY SENTENCE alongside their types instantly. Arrange the output into {num} distinct lines, each showing a KEY SENTENCE and its type, split by {sep}. \nOutput example:\n[KEY_SENTENCE_1] {sep} #Topic#\n[KEY_SENTENCE_2] {sep} *Evidence*",
+          "Identify {num} KEY SENTENCE and their associated types. Format the output as {num} lines, where each line features a sentence and its type, delimited by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} #Topic#\n[KEY_SENTENCE_2] {sep} *Evidence*",
+          "Generate {num} KEY SENTENCE and their corresponding classifications. Divide the output into {num} lines, with each line featuring a sentence and its classification, distinguished by '{sep}'. \nOutput example:\n[KEY_SENTENCE_1] {sep} #Topic#\n[KEY_SENTENCE_2] {sep} *Evidence*"
+        ],
+        "params": {
+          "num": [
+            1,
+            2,
+            4,
+            6,
+            8
+          ],
+          "sep": [
+            "###",
+            "-12367-",
+            "|||||",
+            "#stop#",
+            "[sep]"
+          ]
+        }
+      },
+      "extract": {
+        "instructions": [
+          "Gather every instance of KEY SENTENCE classified as {type}. The output should be a Json list arranged by ids. If none are found, provide an empty array. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+          "Collect all KEY SENTENCE that belong to the {type} type. List them in a Json array ordered by ids. If no such sentences exist, return an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+          "Identify and retrieve all instances of KEY SENTENCE belonging to {type}. Structure the results as a Json list, ordered by ids. In case no KEY SENTENCE of the given type is present, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+          "Discover and gather all occurrences of KEY SENTENCE that correspond to {type}. Arrange the results in a Json list format, sorted based on ids. In case no KEY SENTENCE instances of the specified type are found, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+          "Extract all KEY SENTENCE that pertain to the {type} classification. Present them ordered by ids in a Json list. If none are found, return an empty array. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []"
+        ],
+        "params": {
+          "type": [
+            "<#Topic#>",
+            "<@argument@>",
+            "<!Transition!>",
+            "<|Summary|>",
+            "<*Evidence*>",
+            "<-Concession->"
+          ]
+        }
+      },
+      "qa": {
+        "instructions": [
+          "Is the sentence \"{evidence}\" the CRUCIAL one? Use \"{options[0]}\" if it is, and \"{options[1]}\" if it isn't.",
+          "Determine if the sentence \"{evidence}\" expresses the PRINCIPAL CONCEPT. Reply \"{options[0]}\" if it does, or \"{options[1]}\" if it doesn't.",
+          "Determine if \"{evidence}\" is the PRIMARY SENTENCE. If affirmative, respond with \"{options[0]}\"; if negative, use \"{options[1]}\".",
+          "Is the phrase \"{evidence}\" the KEY SENTENCE? Reply with \"{options[0]}\" for yes and \"{options[1]}\" for no.",
+          "Is \"{evidence}\" the KEY SENTENCE of the text? Indicate \"{options[0]}\" for yes, \"{options[1]}\" for no."
+        ],
+        "params": {
+          "options": [
+            [
+              "True",
+              "False"
+            ],
+            [
+              "Yes",
+              "No"
+            ],
+            [
+              "False",
+              "True"
+            ],
+            [
+              "apple",
+              "APPLE"
+            ],
+            [
+              "12345",
+              "12346"
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "list": {
+    "sys_instruction": "You're a searcher. You need to output the corresponding list elements based on the instructions and the list below. Please follow the instructions directly without anything else. List to be retrieved:\n{input}\nInstruction: {instruction}\n",
+    "subtasks": {
+      "single_query_id": {
+        "instructions": [
+          "Retrieve the entry at position {ordid} in the list. Display it immediately.",
+          "What is the {ordid} element in the list? Output it directly.",
+          "Identify and present the {ordid} item within the list without any modifications.",
+          "Which element is found at {ordid} in the list? Present it now.",
+          "What is the item at position {ordid} in the array? Display it immediately."
+        ],
+        "params": {}
+      },
+      "multi_query_id": {
+        "instructions": [
+          "Please provide the elements located at the respective indices specified in the list {id_arr}, and return the result in the format of a JSON list.",
+          "Identify the items at the corresponding places in list {id_arr} and deliver the result in JSON list form.",
+          "Acquire the components found at the respective positions denoted in the list {id_arr}, and deliver the findings as a JSON list.",
+          "What elements appear at the specific positions in {id_arr}? Please format the answer as a JSON list.",
+          "Collect the items occupying the matching positions denoted in the list {id_arr}, and provide the result structured in a JSON list."
+        ],
+        "params": {}
+      },
+      "offset_query_id": {
+        "instructions": [
+          [
+            "Please identify the next item to {ordid} in the list described above.",
+            1
+          ],
+          [
+            "What is the next item to {ordid} in the list shown above?",
+            1
+          ],
+          [
+            "Which element is next in {ordid} in the sequence represented in the list above?",
+            1
+          ],
+          [
+            "Referencing the list provided above, determine the next item that comes after the {ordid}.",
+            1
+          ],
+          [
+            "In the list provided above, what is the next element immediately after {ordid}?",
+            1
+          ],
+          [
+            "What comes immediately after the {ordid} item in the list provided earlier?",
+            1
+          ],
+          [
+            "What is the previous element of the {ordid} in the list above.",
+            -1
+          ],
+          [
+            "identify the element that comes immediately before the {ordid} element in the list.",
+            -1
+          ],
+          [
+            "Please determine the item that is positioned just before the {ordid} item in the list.",
+            -1
+          ],
+          [
+            "Analyze the following list and find the element that directly precedes the {ordid} element.",
+            -1
+          ],
+          [
+            "In a given list, identify the element that comes right before the {ordid} element.",
+            -1
+          ],
+          [
+            "Given a sequence of elements, determine the item immediately preceding the {ordid} element,",
+            -1
+          ]
+        ]
+      },
+      "blur_offset_query_id": {
+        "instructions": [
+          [
+            "Taking into account the anterior record, random duplicate an element following the {ordid} element.",
+            1
+          ],
+          [
+            "After the {ordid} item in the list above, randomly repeat one of the elements.",
+            1
+          ],
+          [
+            "Considering the foregoing enumeration, unsystematically echo an element ensuing the {ordid} element.",
+            1
+          ],
+          [
+            "Randomly select an item from the list above, after the {ordid} element.",
+            1
+          ],
+          [
+            "Taking into account the preceding inventory, repeat a component succeeding the {ordid} item.",
+            1
+          ],
+          [
+            "Given a sequence of elements, determine the item immediately preceding the {ordid} element.'",
+            1
+          ],
+          [
+            "Based on the list above, randomly output an element before the {ordid} element.",
+            -1
+          ],
+          [
+            "Select and output an element before the {ordid} element in the list above, ensuring the selection is random.",
+            -1
+          ],
+          [
+            "From the list above, choose a random item before the {ordid} element and display it",
+            -1
+          ],
+          [
+            "Randomly pick one item before the {ordid} element in the list provided and output it.",
+            -1
+          ],
+          [
+            "Choose a random item before the {ordid}s of the list above and present it",
+            -1
+          ]
+        ]
+      },
+      "offset_query_element": {
+        "instructions": [
+          [
+            "Considering the arrangement of the list, what is the next element after {element}?",
+            1
+          ],
+          [
+            "Analyzing the order of elements, what element comes directly after the {element} in the list above?",
+            1
+          ],
+          [
+            "In the list above, what is the next element to {element}?",
+            1
+          ],
+          [
+            "What is the next item listed after the {element} in the list above?",
+            1
+          ],
+          [
+            "Looking at the list above, can you output the next one after {element}?",
+            1
+          ],
+          [
+            "What comes immediately after the {element} item in the list provided earlier?",
+            1
+          ],
+          [
+            "What is the previous element of the {element} in the list above.",
+            -1
+          ],
+          [
+            "identify the element that comes immediately before the {element} element in the list.",
+            -1
+          ],
+          [
+            "Please determine the item that is positioned just before the {element} item in the list.",
+            -1
+          ],
+          [
+            "Analyze the following list and find the element that directly precedes the {element} element.",
+            -1
+          ],
+          [
+            "In a given list, identify the element that comes right before the {element} element.",
+            -1
+          ],
+          [
+            "Given a sequence of elements, determine the item immediately preceding the {element} element,",
+            -1
+          ]
+        ],
+        "params": {}
+      },
+      "blur_offset_query_element": {
+        "instructions": [
+          [
+            "From the preceding list, choose an element at random that succeeds the item \"{element}\" and provide it as the output.",
+            1
+          ],
+          [
+            "Based on the list above, randomly output a element that comes after the element \"{element}\".",
+            1
+          ],
+          [
+            "Based on the preceding list, randomly pick an element that follows \"{element}\".",
+            1
+          ],
+          [
+            "Considering the list above, generate a randomized result consisting of an element that immediately follows \"{element}\".",
+            1
+          ],
+          [
+            "Referencing the above list, yield a randomized output after the given element \"{element}\".",
+            1
+          ],
+          [
+            "Choose a random element from the list above that appears after \"{element}\"",
+            1
+          ],
+          [
+            "Randomly output an element in front of element \"{element}\" according to the list above.",
+            -1
+          ],
+          [
+            "Output a random element from the list above, ensuring it comes before the \"{element}\"",
+            -1
+          ],
+          [
+            "Given a list of elements, please randomly select and output one that appears before the element\"{element}\". Ensure that the selection is justified by the context provided.",
+            -1
+          ],
+          [
+            "From the following list, choose a random element that comes before \"{element}\".",
+            -1
+          ],
+          [
+            "Randomly Select and output an element in front of \"{element}\" from the given list.",
+            -1
+          ],
+          [
+            "Choose a random element from the list above that appears before \"{element}\".",
+            -1
+          ]
+        ]
+      }
+    }
+  },
+  "multidoc": {
+    "sys_instruction": "You are a document manager. Here is a collection of documents. Each document includes information such as title, date, source, id, iD2 and specific article content (text). You need to read the documents and follow the instructions to give some information directly, without something else. Also note:\n1. Some documents may be missing information such as title or source, which may affect the final output.\n2. Some articles (i.e. values corresponding to the text keyword) may be duplicated.\n\n Documents:\n{input}\n\n Instructions:{instruction}",
+    "subtasks": {
+      "find_dup_text": {
+        "instructions": [
+          "Within the supplied documents, certain documents contain replicated content in their 'text' field, although other fields (such as id, iD2, date, title, source) may be different. Additionally, there could be N sets of documents, each set comprising any number of replicates. Please identify these replicated documents and present {info_text} in sequence. The output should have N lines, each line symbolizing a set of replicated documents. Format the output for each document set as depicted in the example. Avoid providing explanations. If a document lacks information in a specific field, use 'None' instead.\noutput example:\n{example}",
+          "Among the listed documents, some have duplicated content. These duplicates possess the same 'text' field but may have different other fields (like id, iD2, date, title, source). Furthermore, there could be N groups, each containing several duplicates. Identify these duplicate documents and provide {info_text} in sequence. The final output will be N lines, each representing a group of duplicates. Format each group as shown in the example. Use 'None' for any missing field data.\noutput example:\n{example}",
+          "In the given collection, some documents are duplicated. These documents share the 'text' field, but other fields (such as id, iD2, date, title, source) may vary. Additionally, there could be N groups, each representing duplicate documents . Identify these duplicates and output {info_text} sequentially. The final output will have N lines, each representing one group of duplicates. Follow the format from the example. Replace missing fields with 'None'.\noutput example:\n{example}",
+          "Among the provided documents, there are instances where multiple documents have identical content in their 'text' field, while other fields (including id, iD2, date, title, source) might vary. Moreover, there may be N clusters of documents, each cluster containing any quantity of duplicates. Please locate these duplicated documents and display {info_text} sequentially. The resulting output should consist of N lines, with each line signifying a cluster of duplicated documents. Arrange the output for each document cluster as demonstrated in the example. Refrain from including explanations. If a document has missing data in a particular field, replace it with 'None'.\noutput example:\n{example}",
+          "Within the provided collection of documents, certain documents have identical content in their 'text' field, while other fields (e.g., id, iD2, date, title, source) might differ. Additionally, there may exist N clusters of documents, each cluster containing any number of identical documents. Please detect these identical documents and display {info_text} sequentially. The output should consist of N lines, each line representing a cluster of identical documents. Structure the output for each document cluster as shown in the example. Omit any explanations. If a document is missing data in a particular field, replace it with 'None'.\noutput example:\n{example}"
+        ],
+        "params": [
+          {
+            "info_text": "iD2",
+            "info_keys": "iD2",
+            "example": "[[\"iD2_1\"], [\"iD2_2\"], [\"iD2_3\"]]\n[[\"iD2_4\"], [\"iD2_5\"]]"
+          },
+          {
+            "info_text": "id",
+            "info_keys": "id",
+            "example": "[[\"id_1\"], [\"id_2\"], [\"id_3\"]]\n[[\"id_4\"], [\"id_5\"]]"
+          },
+          {
+            "info_text": "id and title",
+            "info_keys": "id title",
+            "example": "[[\"id_1\", \"title_1\"], [\"id_2\", \"title_2\"], [\"id_3\", None]]\n[[\"id_4\", \"title_4\"], [\"id_5\", \"title_5\"]]"
+          },
+          {
+            "info_text": "iD2 and date",
+            "info_keys": "iD2 date",
+            "example": "[[\"iD2_1\", \"date_1\"], [\"iD2_2\", \"date_2\"], [\"iD2_3\", \"date_3\"]]\n[[\"iD2_4\", \"date_4\"], [\"iD2_5\", \"date_5\"]]"
+          },
+          {
+            "info_text": "id ,source and title",
+            "info_keys":"id source title",
+            "example": "[[\"id_1\", \"source_1\", \"title_1\"], [\"id_2\", None, \"title_2\"], [\"id_3\", \"source_3\", None]]\n[[\"id_4\", \"source_4\", \"title_4\"], [\"id_5\", \"source_5\", \"title_5\"]]"
+        }
+        ]
+      },
+      "batch_label": {
+        "instructions": [
+          "Assign labels to documents in order using the provided list of {candidates}. The labeling rules to follow are: {rules}. The tags should be output in JSON dictionary format, for example: {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}.",
+          "Label documents in a sequence, choosing from the list of {candidates}. Adhere to these labeling rules: {rules}. Provide the labels in JSON dictionary format as displayed: {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}.",
+          "Classify the documents in the given sequence, selecting from the label options {candidates}.\\nThe classification conventions are:\\n{rules}\\nPlease present the classification results in JSON dictionary format, like this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+          "Tag the documents in sequential order, selecting from the label candidates {candidates}.\\nThe labeling instructions are:\\n{rules}\\nPlease deliver the tags in JSON dictionary format, following this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+          "Categorize the documents in the specified order, using the label candidates {candidates}.\\nThe categorization criteria are:\\n{rules}\\nKindly output the assigned categories in JSON dictionary format, following this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}"
+        ],
+        "params": [
+          {
+            "rule_key": "1234",
+            "candidates": [
+              "11311",
+              "22422",
+              "33233",
+              "44444"
+            ],
+            "rules": "1. If the document contains both title and source information, mark it as \"11311\".\n2. If the document is missing the source information but not the title, mark it as \"22422\".\n3. If the document is missing title information but not source, mark it as \"33233\".\n4. If the document is missing both title and source information, mark it as \"44444\"."
+          },
+          {
+            "rule_key": "abcd",
+            "candidates": [
+              "apple",
+              "banana",
+              "cat",
+              "dog"
+            ],
+            "rules": "1. If the document contains both title and source information, mark it as \"apple\".\n2. If the document is missing the source information but not the title, mark it as \"banana\".\n3. If the document is missing title information but not source, mark it as \"cat\".\n4. If the document is missing both title and source information, mark it as \"dog\"."
+          },
+          {
+            "rule_key": "dcab",
+            "candidates": [
+              "dog",
+              "cat",
+              "apple",
+              "banana"
+            ],
+            "rules": "1. If the document contains both title and source information, mark it as \"dog\".\n2. If the document is missing the source information but not the title, mark it as \"cat\".\n3. If the document is missing title information but not source, mark it as \"apple\".\n4. If the document is missing both title and source information, mark it as \"banana\"."
+          },
+          {
+            "rule_key": "cmmi",
+            "candidates": [
+              "complete",
+              "miss_title",
+              "miss_source",
+              "incomplete"
+            ],
+            "rules": "1. If the document contains both title and source information, mark it as \"complete\".\n2. If the document is missing the source information but not the title, mark it as \"miss_title\".\n3. If the document is missing title information but not source, mark it as \"miss_source\".\n4. If the document is missing both title and source information, mark it as \"incomplete\"."
+          },
+          {
+            "rule_key": "immc",
+            "candidates": [
+              "incomplete",
+              "miss_source",
+              "miss_title",
+              "complete"
+            ],
+            "rules": "1. If the document contains both title and source information, mark it as \"incomplete\".\n2. If the document is missing the source information but not the title, mark it as \"miss_source\".\n3. If the document is missing title information but not source, mark it as \"miss_title\".\n4. If the document is missing both title and source information, mark it as \"complete\"."
+          }
+        ]
+      }
+    }
+  }
+}

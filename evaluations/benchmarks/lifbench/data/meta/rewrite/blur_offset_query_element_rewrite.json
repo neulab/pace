@@ -1,0 +1,82 @@
+{
+  "claude-3-opus-20240229": {
+    "llm_output": "[\n  \"Given the elements in the list above, randomly select and return an item that follows the entry \\\"{element}\\\".\",\n  \"From the preceding list, choose an element at random that succeeds the item \\\"{element}\\\" and provide it as the output.\",\n  \"Referring to the list above, generate a random output of an element that immediately follows \\\"{element}\\\".\",\n  \"Using the supplied list, randomly output an item that directly comes after the entry \\\"{element}\\\".\",\n  \"Considering the above list, produce a randomized output consisting of an element that trails \\\"{element}\\\".\",\n  \"Examining the list provided above, select an entry at random that comes subsequent to \\\"{element}\\\" and display it as the result.\",\n  \"Derived from the preceding list, arbitrarily choose and present an item that follows the element \\\"{element}\\\".\",\n  \"Utilizing the given list, randomly generate an output featuring an entry that succeeds \\\"{element}\\\".\",\n  \"Referencing the above list, yield a random element that appears directly after the item \\\"{element}\\\".\",\n  \"Drawing from the list provided, arbitrarily select and return an entry that comes after \\\"{element}\\\".\",\n  \"Based on the preceding list, randomly pick an item that trails the entry \\\"{element}\\\" and provide it as the output.\",\n  \"Considering the list above, generate a randomized result consisting of an element that immediately follows \\\"{element}\\\".\",\n  \"Using the supplied list as reference, randomly output an entry that succeeds the item \\\"{element}\\\".\",\n  \"Examining the given list, produce a random output featuring an element that comes directly after \\\"{element}\\\".\",\n  \"Derived from the list provided above, arbitrarily choose and display an item that follows the entry \\\"{element}\\\".\",\n  \"Utilizing the preceding list, randomly select an element that appears subsequent to \\\"{element}\\\" and present it as the result.\",\n  \"Referencing the above list, yield a randomized output consisting of an entry that trails \\\"{element}\\\".\",\n  \"Drawing from the supplied list, randomly generate an item that comes after the element \\\"{element}\\\".\",\n  \"Based on the list provided, arbitrarily pick an entry that succeeds \\\"{element}\\\" and return it as the output.\",\n  \"Considering the preceding list, produce a random result featuring an element that immediately follows the item \\\"{element}\\\".\"\n]",
+    "parse_result": [
+      "Given the elements in the list above, randomly select and return an item that follows the entry \"{element}\".",
+      "From the preceding list, choose an element at random that succeeds the item \"{element}\" and provide it as the output.",
+      "Referring to the list above, generate a random output of an element that immediately follows \"{element}\".",
+      "Using the supplied list, randomly output an item that directly comes after the entry \"{element}\".",
+      "Considering the above list, produce a randomized output consisting of an element that trails \"{element}\".",
+      "Examining the list provided above, select an entry at random that comes subsequent to \"{element}\" and display it as the result.",
+      "Derived from the preceding list, arbitrarily choose and present an item that follows the element \"{element}\".",
+      "Utilizing the given list, randomly generate an output featuring an entry that succeeds \"{element}\".",
+      "Referencing the above list, yield a random element that appears directly after the item \"{element}\".",
+      "Drawing from the list provided, arbitrarily select and return an entry that comes after \"{element}\".",
+      "Based on the preceding list, randomly pick an item that trails the entry \"{element}\" and provide it as the output.",
+      "Considering the list above, generate a randomized result consisting of an element that immediately follows \"{element}\".",
+      "Using the supplied list as reference, randomly output an entry that succeeds the item \"{element}\".",
+      "Examining the given list, produce a random output featuring an element that comes directly after \"{element}\".",
+      "Derived from the list provided above, arbitrarily choose and display an item that follows the entry \"{element}\".",
+      "Utilizing the preceding list, randomly select an element that appears subsequent to \"{element}\" and present it as the result.",
+      "Referencing the above list, yield a randomized output consisting of an entry that trails \"{element}\".",
+      "Drawing from the supplied list, randomly generate an item that comes after the element \"{element}\".",
+      "Based on the list provided, arbitrarily pick an entry that succeeds \"{element}\" and return it as the output.",
+      "Considering the preceding list, produce a random result featuring an element that immediately follows the item \"{element}\"."
+    ]
+  },
+  "gemini-1.5-pro-latest": {
+    "llm_output": "",
+    "parse_result": ""
+  },
+  "gpt-4o": {
+    "llm_output": "```json\n[\n    \"Given the list above, select an item that follows the element \\\"{element}\\\" at random.\",\n    \"From the aforementioned list, randomly choose an element that is positioned after \\\"{element}\\\".\",\n    \"Considering the prior list, draw a random element that appears subsequent to \\\"{element}\\\".\",\n    \"Based on the preceding list, randomly pick an element that follows \\\"{element}\\\".\",\n    \"Referencing the list above, randomly select an element that comes immediately after \\\"{element}\\\".\",\n    \"With the earlier list in mind, choose an element at random that comes after \\\"{element}\\\".\",\n    \"Looking at the list provided, randomly output an element that comes directly after \\\"{element}\\\".\",\n    \"Using the given list, randomly determine which element appears after \\\"{element}\\\".\",\n    \"Based on the above list, randomly determine an element that follows the element \\\"{element}\\\".\",\n    \"From the aforementioned list, draw at random an element that is placed after \\\"{element}\\\".\",\n    \"Taking into account the list above, choose at random an element that follows \\\"{element}\\\".\",\n    \"Referring to the list above, randomly identify an element that comes after \\\"{element}\\\".\",\n    \"Based on the provided list, randomly pick an item that comes subsequent to \\\"{element}\\\".\",\n    \"Referring to the above list, randomly choose an element that is located after \\\"{element}\\\".\",\n    \"With the above list, randomly select any element that follows the element \\\"{element}\\\".\",\n    \"In reference to the list above, randomly determine an element that comes after \\\"{element}\\\".\",\n    \"Using the previous list, randomly select an element that appears following \\\"{element}\\\".\",\n    \"From the earlier list, randomly pick out an element that comes immediately after \\\"{element}\\\".\",\n    \"Given the list provided, choose at random an element that succeeds \\\"{element}\\\".\",\n    \"Considering the aforementioned list, randomly choose an element appearing right after \\\"{element}\\\".\"\n]\n```",
+    "parse_result": [
+      "Given the list above, select an item that follows the element \"{element}\" at random.",
+      "From the aforementioned list, randomly choose an element that is positioned after \"{element}\".",
+      "Considering the prior list, draw a random element that appears subsequent to \"{element}\".",
+      "Based on the preceding list, randomly pick an element that follows \"{element}\".",
+      "Referencing the list above, randomly select an element that comes immediately after \"{element}\".",
+      "With the earlier list in mind, choose an element at random that comes after \"{element}\".",
+      "Looking at the list provided, randomly output an element that comes directly after \"{element}\".",
+      "Using the given list, randomly determine which element appears after \"{element}\".",
+      "Based on the above list, randomly determine an element that follows the element \"{element}\".",
+      "From the aforementioned list, draw at random an element that is placed after \"{element}\".",
+      "Taking into account the list above, choose at random an element that follows \"{element}\".",
+      "Referring to the list above, randomly identify an element that comes after \"{element}\".",
+      "Based on the provided list, randomly pick an item that comes subsequent to \"{element}\".",
+      "Referring to the above list, randomly choose an element that is located after \"{element}\".",
+      "With the above list, randomly select any element that follows the element \"{element}\".",
+      "In reference to the list above, randomly determine an element that comes after \"{element}\".",
+      "Using the previous list, randomly select an element that appears following \"{element}\".",
+      "From the earlier list, randomly pick out an element that comes immediately after \"{element}\".",
+      "Given the list provided, choose at random an element that succeeds \"{element}\".",
+      "Considering the aforementioned list, randomly choose an element appearing right after \"{element}\"."
+    ]
+  },
+  "ori": "Based on the list above, randomly output a element that comes after the element \"{element}\".",
+  "gpt-3.5-turbo": {
+    "llm_output": "[\n    \"Randomly select an element from the list provided above that follows the element \\\"{element}\\\".\",\n    \"Choose a random element from the list shown above that appears immediately after the element \\\"{element}\\\".\",\n    \"From the aforementioned list, pick a random element that comes right after the element \\\"{element}\\\".\",\n    \"Randomly generate an element from the given list that follows the element \\\"{element}\\\".\",\n    \"Select a random element from the list above, ensuring it comes after the element \\\"{element}\\\".\",\n    \"Pick one element at random from the provided list that comes directly after the element \\\"{element}\\\".\",\n    \"Generate a random element that follows the element \\\"{element}\\\" based on the list provided above.\",\n    \"Choose an element from the aforementioned list that appears after the occurrence of the element \\\"{element}\\\" in a random manner.\",\n    \"Randomly output a list element that succeeds the element \\\"{element}\\\" based on the provided list.\",\n    \"Select an element at random from the given list that comes immediately after the appearance of the element \\\"{element}\\\".\",\n    \"Pick a random element from the list above that follows the element \\\"{element}\\\".\",\n    \"From the given list, choose an element that comes after the element \\\"{element}\\\" in a random fashion.\",\n    \"Generate a random element from the provided list that appears right after the element \\\"{element}\\\".\",\n    \"Randomly select one element from the aforementioned list that comes directly after the element \\\"{element}\\\".\",\n    \"Choose an element in a random manner from the list above, ensuring it follows the element \\\"{element}\\\".\",\n    \"Pick an element at random from the list provided above that succeeds the element \\\"{element}\\\".\",\n    \"Select a random element from the given list that appears after the element \\\"{element}\\\".\",\n    \"Generate an element in a random manner from the provided list that comes immediately after the element \\\"{element}\\\".\",\n    \"Randomly output an element from the list above which follows the element \\\"{element}\\\".\",\n    \"Choose a random element from the aforementioned list that comes after the element \\\"{element}\\\".\"\n]",
+    "parse_result": [
+      "Randomly select an element from the list provided above that follows the element \"{element}\".",
+      "Choose a random element from the list shown above that appears immediately after the element \"{element}\".",
+      "From the aforementioned list, pick a random element that comes right after the element \"{element}\".",
+      "Randomly generate an element from the given list that follows the element \"{element}\".",
+      "Select a random element from the list above, ensuring it comes after the element \"{element}\".",
+      "Pick one element at random from the provided list that comes directly after the element \"{element}\".",
+      "Generate a random element that follows the element \"{element}\" based on the list provided above.",
+      "Choose an element from the aforementioned list that appears after the occurrence of the element \"{element}\" in a random manner.",
+      "Randomly output a list element that succeeds the element \"{element}\" based on the provided list.",
+      "Select an element at random from the given list that comes immediately after the appearance of the element \"{element}\".",
+      "Pick a random element from the list above that follows the element \"{element}\".",
+      "From the given list, choose an element that comes after the element \"{element}\" in a random fashion.",
+      "Generate a random element from the provided list that appears right after the element \"{element}\".",
+      "Randomly select one element from the aforementioned list that comes directly after the element \"{element}\".",
+      "Choose an element in a random manner from the list above, ensuring it follows the element \"{element}\".",
+      "Pick an element at random from the list provided above that succeeds the element \"{element}\".",
+      "Select a random element from the given list that appears after the element \"{element}\".",
+      "Generate an element in a random manner from the provided list that comes immediately after the element \"{element}\".",
+      "Randomly output an element from the list above which follows the element \"{element}\".",
+      "Choose a random element from the aforementioned list that comes after the element \"{element}\"."
+    ]
+  }
+}

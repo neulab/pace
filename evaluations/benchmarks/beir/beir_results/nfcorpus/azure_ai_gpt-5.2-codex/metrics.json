@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "azure_ai/gpt-5.2-codex",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.52167,
+    "NDCG@5": 0.44137,
+    "NDCG@10": 0.39358,
+    "NDCG@20": 0.34886
+  },
+  "map": {
+    "MAP@1": 0.06784,
+    "MAP@5": 0.13332,
+    "MAP@10": 0.15284,
+    "MAP@20": 0.16372
+  },
+  "recall": {
+    "Recall@1": 0.06784,
+    "Recall@5": 0.15315,
+    "Recall@10": 0.18279,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.5387,
+    "P@5": 0.37895,
+    "P@10": 0.28669,
+    "P@20": 0.18963
+  }
+}

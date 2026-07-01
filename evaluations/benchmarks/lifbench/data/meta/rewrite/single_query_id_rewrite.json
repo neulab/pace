@@ -1,0 +1,82 @@
+{
+  "claude-3-opus-20240229": {
+    "llm_output": "[\n    \"Retrieve and directly output the {ordid} element from the given list.\",\n    \"Identify and present the {ordid} item within the list without any modifications.\",\n    \"Locate the {ordid} component in the provided list and display it as is.\",\n    \"Find the {ordid} entry in the list and show it in its original form.\",\n    \"Extract the {ordid} element from the list and output it unaltered.\",\n    \"Pinpoint the {ordid} item within the list and reveal it without changes.\",\n    \"Isolate the {ordid} component from the given list and exhibit it directly.\",\n    \"Determine the {ordid} entry in the provided list and showcase it as is.\",\n    \"Spot the {ordid} element in the list and present it without any adjustments.\",\n    \"Discern the {ordid} item from the given list and display it in its pure form.\",\n    \"Pick out the {ordid} component within the list and output it directly.\",\n    \"Single out the {ordid} entry from the provided list and present it unaltered.\",\n    \"Distinguish the {ordid} element in the given list and reveal it as is.\",\n    \"Recognize the {ordid} item within the list and exhibit it without modifications.\",\n    \"Discover the {ordid} component from the provided list and display it in its original state.\",\n    \"Identify and extract the {ordid} entry in the list, outputting it directly.\",\n    \"Locate and present the {ordid} element from the given list without any changes.\",\n    \"Find and showcase the {ordid} item within the provided list in its pure form.\",\n    \"Pinpoint and reveal the {ordid} component from the list as is.\",\n    \"Determine and display the {ordid} entry in the given list without alterations.\"\n]",
+    "parse_result": [
+      "Retrieve and directly output the {ordid} element from the given list.",
+      "Identify and present the {ordid} item within the list without any modifications.",
+      "Locate the {ordid} component in the provided list and display it as is.",
+      "Find the {ordid} entry in the list and show it in its original form.",
+      "Extract the {ordid} element from the list and output it unaltered.",
+      "Pinpoint the {ordid} item within the list and reveal it without changes.",
+      "Isolate the {ordid} component from the given list and exhibit it directly.",
+      "Determine the {ordid} entry in the provided list and showcase it as is.",
+      "Spot the {ordid} element in the list and present it without any adjustments.",
+      "Discern the {ordid} item from the given list and display it in its pure form.",
+      "Pick out the {ordid} component within the list and output it directly.",
+      "Single out the {ordid} entry from the provided list and present it unaltered.",
+      "Distinguish the {ordid} element in the given list and reveal it as is.",
+      "Recognize the {ordid} item within the list and exhibit it without modifications.",
+      "Discover the {ordid} component from the provided list and display it in its original state.",
+      "Identify and extract the {ordid} entry in the list, outputting it directly.",
+      "Locate and present the {ordid} element from the given list without any changes.",
+      "Find and showcase the {ordid} item within the provided list in its pure form.",
+      "Pinpoint and reveal the {ordid} component from the list as is.",
+      "Determine and display the {ordid} entry in the given list without alterations."
+    ]
+  },
+  "gemini-1.5-pro-latest": {
+    "llm_output": "",
+    "parse_result": ""
+  },
+  "gpt-4o": {
+    "llm_output": "[\n  \"What is the item at position {ordid} in the array? Display it immediately.\",\n  \"Which element is found at {ordid} in the collection? Show it without delay.\",\n  \"Identify the element located at spot {ordid} in the list. Provide it right away.\",\n  \"Can you find the entry at index {ordid} in the list? Output it directly.\",\n  \"What item sits at the {ordid} position in the series? Present it straight away.\",\n  \"Determine the element at position {ordid} within the array. Display it instantly.\",\n  \"Which entry occupies the spot {ordid} in the list? Show it directly.\",\n  \"Identify what is at position {ordid} in the sequence. Provide it immediately.\",\n  \"Can you locate the list item at position {ordid}? Output it right away.\",\n  \"What element is at the {ordid} index in the collection? Present it immediately.\",\n  \"Which item is found at position {ordid} in the list? Display it at once.\",\n  \"Please identify the element at {ordid} in the list. Output it now.\",\n  \"What is found at the {ordid} slot in the array? Show it right away.\",\n  \"Retrieve the entry at position {ordid} in the list. Display it immediately.\",\n  \"What is the list item at {ordid} in the collection? Output it directly.\",\n  \"Indicate the element situated at {ordid} in the array. Present it now.\",\n  \"Find the item at index {ordid} within the sequence. Show it right away.\",\n  \"What is the element at the spot {ordid} in the list? Output it immediately.\",\n  \"Fetch the list item located at {ordid}. Display it without delay.\",\n  \"Please identify what is at index {ordid} in the array. Output it directly.\"\n]",
+    "parse_result": [
+      "What is the item at position {ordid} in the array? Display it immediately.",
+      "Which element is found at {ordid} in the collection? Show it without delay.",
+      "Identify the element located at spot {ordid} in the list. Provide it right away.",
+      "Can you find the entry at index {ordid} in the list? Output it directly.",
+      "What item sits at the {ordid} position in the series? Present it straight away.",
+      "Determine the element at position {ordid} within the array. Display it instantly.",
+      "Which entry occupies the spot {ordid} in the list? Show it directly.",
+      "Identify what is at position {ordid} in the sequence. Provide it immediately.",
+      "Can you locate the list item at position {ordid}? Output it right away.",
+      "What element is at the {ordid} index in the collection? Present it immediately.",
+      "Which item is found at position {ordid} in the list? Display it at once.",
+      "Please identify the element at {ordid} in the list. Output it now.",
+      "What is found at the {ordid} slot in the array? Show it right away.",
+      "Retrieve the entry at position {ordid} in the list. Display it immediately.",
+      "What is the list item at {ordid} in the collection? Output it directly.",
+      "Indicate the element situated at {ordid} in the array. Present it now.",
+      "Find the item at index {ordid} within the sequence. Show it right away.",
+      "What is the element at the spot {ordid} in the list? Output it immediately.",
+      "Fetch the list item located at {ordid}. Display it without delay.",
+      "Please identify what is at index {ordid} in the array. Output it directly."
+    ]
+  },
+  "ori": "What is the {ordid} element in the list? Output it directly.",
+  "gpt-3.5-turbo": {
+    "llm_output": "```json\n[\n    \"Can you identify the {ordid} item within the list? Please provide it directly.\",\n    \"What is the element labeled as {ordid} in the list? Output it straight away.\",\n    \"Please specify the {ordid} entry included in the list. Present it immediately.\",\n    \"What is the {ordid} component found in the list? Kindly deliver it directly.\",\n    \"Identify the {ordid} listing in the array. Output it without delay.\",\n    \"Can you tell me the {ordid} value from the list? Provide it directly.\",\n    \"What is the element at position {ordid} in the list? Please state it clearly.\",\n    \"Please indicate the {ordid} section of the list. Output it right away.\",\n    \"What does the {ordid} entry represent in the list? Provide it immediately.\",\n    \"Can you retrieve the {ordid} item from the list? Output it directly.\",\n    \"What is the item associated with {ordid} in the list? Present it immediately.\",\n    \"Please provide the {ordid} element from the list. State it directly.\",\n    \"What is the entry marked as {ordid} in the list? Kindly output it promptly.\",\n    \"Identify the {ordid} part in the list. Deliver it straight away.\",\n    \"Could you specify the {ordid} entry contained in the list? Provide it directly.\",\n    \"What is the {ordid} position in the list? Please report it immediately.\",\n    \"Can you identify the item represented by {ordid} in the list? Output it promptly.\",\n    \"What does the list have at {ordid}? Please provide it directly.\",\n    \"Please clarify what the {ordid} element is in the list. Output it without delay.\",\n    \"What is the entry that corresponds to {ordid} in the list? State it directly.\"\n]\n```",
+    "parse_result": [
+      "Can you identify the {ordid} item within the list? Please provide it directly.",
+      "What is the element labeled as {ordid} in the list? Output it straight away.",
+      "Please specify the {ordid} entry included in the list. Present it immediately.",
+      "What is the {ordid} component found in the list? Kindly deliver it directly.",
+      "Identify the {ordid} listing in the array. Output it without delay.",
+      "Can you tell me the {ordid} value from the list? Provide it directly.",
+      "What is the element at position {ordid} in the list? Please state it clearly.",
+      "Please indicate the {ordid} section of the list. Output it right away.",
+      "What does the {ordid} entry represent in the list? Provide it immediately.",
+      "Can you retrieve the {ordid} item from the list? Output it directly.",
+      "What is the item associated with {ordid} in the list? Present it immediately.",
+      "Please provide the {ordid} element from the list. State it directly.",
+      "What is the entry marked as {ordid} in the list? Kindly output it promptly.",
+      "Identify the {ordid} part in the list. Deliver it straight away.",
+      "Could you specify the {ordid} entry contained in the list? Provide it directly.",
+      "What is the {ordid} position in the list? Please report it immediately.",
+      "Can you identify the item represented by {ordid} in the list? Output it promptly.",
+      "What does the list have at {ordid}? Please provide it directly.",
+      "Please clarify what the {ordid} element is in the list. Output it without delay.",
+      "What is the entry that corresponds to {ordid} in the list? State it directly."
+    ]
+  }
+}

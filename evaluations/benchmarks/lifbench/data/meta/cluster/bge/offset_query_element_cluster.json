@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "What is the next element of the {element} in the list above",
+  "3": [
+    {
+      "text": "What is the next item listed after the {element} in the list above?",
+      "distance": 0.198468709381217,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "What comes next to the {element} in the list given above?",
+      "distance": 0.19991168674161136,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "What is the element after {element} in the following list?",
+      "distance": 0.21589399919890645,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "What is the item that follows the {element} in the list above?",
+      "distance": 0.22368556227691194,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Following the {element} in the list above, what is the next element?",
+      "distance": 0.231746430133364,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In the above list, what comes after the {element}?",
+      "distance": 0.24854401168902843,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What follows immediately after the {element} in the list above?",
+      "distance": 0.25973405804610744,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "After the {element} in the aforementioned list, what is the next element?",
+      "distance": 0.260100921463603,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is the item right after the {element} in the list above?",
+      "distance": 0.2767192166399959,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is listed right after the {element} in the list above?",
+      "distance": 0.29195237308185856,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Can you tell me what follows the {element} in the above list?",
+      "distance": 0.3017149794375551,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "After the {element}, what is the next item in the provided list?",
+      "distance": 0.30231795431649655,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Given the list, what is the item that follows the {element} in the sequence?",
+      "distance": 0.30414520567481934,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is the next element of the {element} in the list above",
+      "distance": 0.30959655726101676,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Observing the sequence above, what item follows the {element} in the list?",
+      "distance": 0.33267409125580155,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is the element next in line to the {element} in the list above?",
+      "distance": 0.3367549755984642,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Based on the sequence provided, what follows the {element}?",
+      "distance": 0.37448788129193405,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is the next item after the {element} in the referenced list?",
+      "distance": 0.3875848331653111,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Looking at the list above, can you output the next one after {element}?",
+      "distance": 0.13382694389589803,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Looking at the list, can you identify the next item that succeeds the {element}?",
+      "distance": 0.13382694389590136,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    }
+  ],
+  "1": [
+    {
+      "text": "Analyzing the order of elements, what element comes directly after the {element} in the list above?",
+      "distance": 0.2458895748305842,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Given the list provided, what is the element that comes next after the {element}?",
+      "distance": 0.25272102477881286,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "What is the element that comes immediately after the {element} in the list above?",
+      "distance": 0.26380574641452714,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Taking into account the arrangement of the list, what element comes directly after the {element}?",
+      "distance": 0.2806262205835922,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Examining the sequence, what element comes immediately after the {element} in the list?",
+      "distance": 0.2853673609930767,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assessing the list above, what element follows directly after the {element}?",
+      "distance": 0.2863729510330331,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Considering the order of elements in the given list, what appears immediately after the {element}?",
+      "distance": 0.29578206187432665,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Reviewing the list provided, what item is positioned right after the {element}?",
+      "distance": 0.3381804071600267,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In the above list, what is the element that appears after the {element}?",
+      "distance": 0.34028907273807174,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What immediately follows the {element} in the list above?",
+      "distance": 0.3444748194808775,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Inspecting the list, what item is positioned immediately after the {element}?",
+      "distance": 0.3483555561388869,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Focusing on the order of elements, what comes next after the {element} in the given list?",
+      "distance": 0.3870297331706567,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Studying the sequence provided, what item appears right after the {element}?",
+      "distance": 0.39650600607815506,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "In the list above, what is the next element to {element}?",
+      "distance": 0.15854362830537275,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "In the previously mentioned list, what is the next element to {element}?",
+      "distance": 0.2188785580366673,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "What is the subsequent item to the {element} in the list provided above?",
+      "distance": 0.2294431610589734,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Examining the list above, what is the subsequent item to the {element}?",
+      "distance": 0.23666785785423344,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In the above list, which element comes after the {element}?",
+      "distance": 0.29417590417244127,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Reviewing the sequence, what is the element that succeeds the {element} in the list above?",
+      "distance": 0.3438320220966873,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Considering the arrangement of the list, what is the next element after {element}?",
+      "distance": 0.21601836378619763,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Analyzing the list, can you determine the next item that trails the {element}?",
+      "distance": 0.2160183637861989,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    }
+  ]
+}

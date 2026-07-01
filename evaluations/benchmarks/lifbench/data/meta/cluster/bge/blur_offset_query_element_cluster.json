@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "Based on the list above, randomly output a element that comes after the element \"{element}\".",
+  "1": [
+    {
+      "text": "Looking at the list provided, randomly output an element that comes directly after \"{element}\".",
+      "distance": 0.2269469803199184,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Based on the list above, randomly output a element that comes after the element \"{element}\".",
+      "distance": 0.22703335250746734,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Examining the given list, produce a random output featuring an element that comes directly after \"{element}\".",
+      "distance": 0.2682779467450574,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Referring to the list above, randomly identify an element that comes after \"{element}\".",
+      "distance": 0.2907392910954596,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In reference to the list above, randomly determine an element that comes after \"{element}\".",
+      "distance": 0.30943936747784406,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Considering the prior list, draw a random element that appears subsequent to \"{element}\".",
+      "distance": 0.33267424316531513,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "From the aforementioned list, draw at random an element that is placed after \"{element}\".",
+      "distance": 0.3341320154801703,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Using the given list, randomly determine which element appears after \"{element}\".",
+      "distance": 0.3349992169680429,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Referencing the above list, yield a random element that appears directly after the item \"{element}\".",
+      "distance": 0.3759582559000578,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Drawing from the supplied list, randomly generate an item that comes after the element \"{element}\".",
+      "distance": 0.37869860004855915,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Using the supplied list, randomly output an item that directly comes after the entry \"{element}\".",
+      "distance": 0.40103495412477363,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "Based on the preceding list, randomly pick an element that follows \"{element}\".",
+      "distance": 0.1910703983340409,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Taking into account the list above, choose at random an element that follows \"{element}\".",
+      "distance": 0.21123929778127923,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "With the earlier list in mind, choose an element at random that comes after \"{element}\".",
+      "distance": 0.21916765744048533,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Considering the aforementioned list, randomly choose an element appearing right after \"{element}\".",
+      "distance": 0.2232400162560354,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Based on the provided list, randomly pick an item that comes subsequent to \"{element}\".",
+      "distance": 0.22691452357472486,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Referring to the above list, randomly choose an element that is located after \"{element}\".",
+      "distance": 0.22856983634677577,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Using the previous list, randomly select an element that appears following \"{element}\".",
+      "distance": 0.2334514202458028,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "From the earlier list, randomly pick out an element that comes immediately after \"{element}\".",
+      "distance": 0.24090974497142903,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "With the above list, randomly select any element that follows the element \"{element}\".",
+      "distance": 0.24651362718903275,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Given the list above, select an item that follows the element \"{element}\" at random.",
+      "distance": 0.2606615530481094,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "From the aforementioned list, randomly choose an element that is positioned after \"{element}\".",
+      "distance": 0.26413329159792587,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Referencing the list above, randomly select an element that comes immediately after \"{element}\".",
+      "distance": 0.2650419921345023,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Given the elements in the list above, randomly select and return an item that follows the entry \"{element}\".",
+      "distance": 0.3188715232081987,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Based on the above list, randomly determine an element that follows the element \"{element}\".",
+      "distance": 0.33593096547877016,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Given the list provided, choose at random an element that succeeds \"{element}\".",
+      "distance": 0.35039228488959484,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "From the preceding list, choose an element at random that succeeds the item \"{element}\" and provide it as the output.",
+      "distance": 0.29822127552789435,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Examining the list provided above, select an entry at random that comes subsequent to \"{element}\" and display it as the result.",
+      "distance": 0.31503134412889633,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Based on the list provided, arbitrarily pick an entry that succeeds \"{element}\" and return it as the output.",
+      "distance": 0.3262080241087457,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Utilizing the preceding list, randomly select an element that appears subsequent to \"{element}\" and present it as the result.",
+      "distance": 0.3395804718722653,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Drawing from the list provided, arbitrarily select and return an entry that comes after \"{element}\".",
+      "distance": 0.363787008505239,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Using the supplied list as reference, randomly output an entry that succeeds the item \"{element}\".",
+      "distance": 0.36888294431905133,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Derived from the list provided above, arbitrarily choose and display an item that follows the entry \"{element}\".",
+      "distance": 0.3812910591870019,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Derived from the preceding list, arbitrarily choose and present an item that follows the element \"{element}\".",
+      "distance": 0.3918654496839698,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Utilizing the given list, randomly generate an output featuring an entry that succeeds \"{element}\".",
+      "distance": 0.40297441855136995,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "3": [
+    {
+      "text": "Considering the list above, generate a randomized result consisting of an element that immediately follows \"{element}\".",
+      "distance": 0.17283884769058727,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Considering the preceding list, produce a random result featuring an element that immediately follows the item \"{element}\".",
+      "distance": 0.18226049226610094,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Referring to the list above, generate a random output of an element that immediately follows \"{element}\".",
+      "distance": 0.19852639304960062,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Referencing the above list, yield a randomized output after the given element \"{element}\".",
+      "distance": 0.2225759623573996,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Considering the above list, produce a randomized output after the given element \"{element}\".",
+      "distance": 0.24523391667439137,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Based on the preceding list, randomly pick an item that trails the entry \"{element}\" and provide it as the output.",
+      "distance": 0.3043795401141101,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}

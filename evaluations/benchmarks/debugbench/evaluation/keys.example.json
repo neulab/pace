@@ -1,0 +1,6 @@
+[
+  {
+    "leetcode_session": "<YOUR_LEETCODE_SESSION_COOKIE>",
+    "csrf_token": "<YOUR_CSRFTOKEN_COOKIE>"
+  }
+]

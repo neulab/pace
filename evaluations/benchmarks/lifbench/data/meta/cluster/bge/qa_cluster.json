@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "Is \"{evidence}\" the KEY SENTENCE? Output \"{options[0]}\" if yes, \"{options[1]}\" if no.",
+  "3": [
+    {
+      "text": "Is the phrase \"{evidence}\" the KEY SENTENCE? Reply with \"{options[0]}\" for yes and \"{options[1]}\" for no.",
+      "distance": 0.3077864101046736,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Is \"{evidence}\" the KEY SENTENCE? Output \"{options[0]}\" if yes, \"{options[1]}\" if no.",
+      "distance": 0.3119769460191642,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Assess if \"{evidence}\" is the PRINCIPAL SENTENCE. Select \"{options[0]}\" for yes and \"{options[1]}\" for no.",
+      "distance": 0.32229291435562524,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Determine if the given phrase \"{evidence}\" is the LEADING SENTENCE. Use \"{options[0]}\" if yes and \"{options[1]}\" if no.",
+      "distance": 0.3310250755346949,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Is the clause \"{evidence}\" the DOMINANT SENTENCE? Select \"{options[0]}\" for yes, and \"{options[1]}\" for no.",
+      "distance": 0.33324408050267257,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Is \"{evidence}\" the PIVOTAL SENTENCE in the context? Choose \"{options[0]}\" for yes and \"{options[1]}\" for no.",
+      "distance": 0.3419910792363625,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify if \"{evidence}\" is the CENTRAL SENTENCE. Reply using \"{options[0]}\" for yes, and \"{options[1]}\" for no.",
+      "distance": 0.3488141764920717,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Consider whether \"{evidence}\" is the PIVOTAL SENTENCE. Respond \"{options[0]}\" for yes, \"{options[1]}\" for no.",
+      "distance": 0.3521292144125008,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Judge if \"{evidence}\" stands as the SIGNIFICANT SENTENCE. If yes, respond \"{options[0]}\"; if no, use \"{options[1]}\".",
+      "distance": 0.35392050322255975,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Is \"{evidence}\" the PRIME SENTENCE in this context? Answer using \"{options[0]}\" for yes, and \"{options[1]}\" for no.",
+      "distance": 0.35420931920877696,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Is the expression \"{evidence}\" the PROMINENT SENTENCE here? Answer with \"{options[0]}\" if yes, and \"{options[1]}\" if no.",
+      "distance": 0.3542807490960855,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Does \"{evidence}\" represent the FUNDAMENTAL SENTENCE? If so, reply \"{options[0]}\"; if not, respond \"{options[1]}\".",
+      "distance": 0.3568698258985941,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Does \"{evidence}\" constitute the KEY STATEMENT? Answer with \"{options[0]}\" for yes, and \"{options[1]}\" for no.",
+      "distance": 0.39313018955623014,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Is \"{evidence}\" the MOST IMPORTANT SENTENCE? Use \"{options[0]}\" if it is, and \"{options[1]}\" if it is not.",
+      "distance": 0.4000141983881174,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Can \"{evidence}\" be identified as the CORE SENTENCE? Answer with \"{options[0]}\" if yes; otherwise, \"{options[1]}\".",
+      "distance": 0.40074701239906724,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please decide if \"{evidence}\" is in fact the FOCAL SENTENCE. Indicate \"{options[0]}\" for yes, and \"{options[1]}\" for no.",
+      "distance": 0.4217515877417191,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Does the sentence \"{evidence}\" contain the MAIN IDEA? Respond with \"{options[0]}\" for yes or \"{options[1]}\" for no.",
+      "distance": 0.26992221523356236,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Is \"{evidence}\" the KEY SENTENCE of the text? Indicate \"{options[0]}\" for yes, \"{options[1]}\" for no.",
+      "distance": 0.3029828959282068,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Is the sentence \"{evidence}\" expressing the CENTRAL MESSAGE? Type \"{options[0]}\" for yes, \"{options[1]}\" for no.",
+      "distance": 0.31054130928828,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Is the sentence \"{evidence}\" the CORE IDEA of the passage? Type \"{options[0]}\" for yes, \"{options[1]}\" for no.",
+      "distance": 0.32554108860450126,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Is the provided sentence, \"{evidence}\", the CHIEF POINT? Answer with \"{options[0]}\" if yes, \"{options[1]}\" if no.",
+      "distance": 0.34912731558695864,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Consider whether \"{evidence}\" serves as the MAIN IDEA. Answer \"{options[0]}\" if yes and \"{options[1]}\" if no.",
+      "distance": 0.35235692841684485,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Evaluate if \"{evidence}\" is the CENTRAL THEME. Respond with \"{options[0]}\" for yes or \"{options[1]}\" for no.",
+      "distance": 0.36474700528104187,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Is the sentence \"{evidence}\" the CRUCIAL one? Use \"{options[0]}\" if it is, and \"{options[1]}\" if it isn't.",
+      "distance": 0.26457885227816963,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Determine whether \"{evidence}\" is the CRUCIAL STATEMENT. Reply with \"{options[0]}\" to indicate yes, or \"{options[1]}\" to indicate no.",
+      "distance": 0.3414921435096629,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Is the provided sentence, \"{evidence}\", the CENTRAL POINT of the text? Answer \"{options[0]}\" if it is, and \"{options[1]}\" if not.",
+      "distance": 0.376159226511975,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "Determine if \"{evidence}\" is the PRIMARY SENTENCE. If affirmative, respond with \"{options[0]}\"; if negative, use \"{options[1]}\".",
+      "distance": 0.28376792775650134,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Assess if the given sentence, \"{evidence}\", is the PRINCIPAL MESSAGE. Output \"{options[0]}\" for affirmative or \"{options[1]}\" for negative.",
+      "distance": 0.32592883456364813,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Determine whether \"{evidence}\" conveys the ESSENTIAL IDEA. Reply with \"{options[0]}\" for affirmative or \"{options[1]}\" for negative.",
+      "distance": 0.327968448242346,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Evaluate if \"{evidence}\" is indeed the PRIMARY STATEMENT. Respond with \"{options[0]}\" for yes, otherwise use \"{options[1]}\".",
+      "distance": 0.3358544943772288,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Confirm if \"{evidence}\" is the ESSENTIAL SENTENCE. Respond \"{options[0]}\" if true, and \"{options[1]}\" if false.",
+      "distance": 0.34047973406369697,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assess whether \"{evidence}\" is the VITAL MESSAGE. Output \"{options[0]}\" for affirmative, \"{options[1]}\" for negative.",
+      "distance": 0.38141893835512525,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Confirm whether \"{evidence}\" can be considered the FOREMOST SENTENCE. Respond with \"{options[0]}\" for an affirmative answer, and \"{options[1]}\" for a negative answer.",
+      "distance": 0.4107067064895191,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "1": [
+    {
+      "text": "Determine if the sentence \"{evidence}\" expresses the PRINCIPAL CONCEPT. Reply \"{options[0]}\" if it does, or \"{options[1]}\" if it doesn't.",
+      "distance": 0.23251651758023595,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Determine if the sentence \"{evidence}\" conveys the PRIMARY NOTION. Reply with \"{options[0]}\" if it does, \"{options[1]}\" if it doesn't.",
+      "distance": 0.2772473692703124,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Evaluate whether the sentence \"{evidence}\" is the FUNDAMENTAL CONCEPT. Respond \"{options[0]}\" if it is, or \"{options[1]}\" if it isn't.",
+      "distance": 0.28009661706439365,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Analyze whether the sentence \"{evidence}\" represents the KEY IDEA. Type \"{options[0]}\" if it does, \"{options[1]}\" if it doesn't.",
+      "distance": 0.320980295005714,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Analyze if \"{evidence}\" represents the ESSENTIAL THOUGHT. Indicate \"{options[0]}\" for yes or \"{options[1]}\" for no.",
+      "distance": 0.34316224592179906,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Consider if the provided sentence, \"{evidence}\", is the CORE THOUGHT. Answer \"{options[0]}\" if it is, \"{options[1]}\" if not.",
+      "distance": 0.35045002025536337,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assess if the sentence \"{evidence}\" is the MAIN THEME. Output \"{options[0]}\" if yes, \"{options[1]}\" if no.",
+      "distance": 0.369425235368816,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Evaluate whether \"{evidence}\" represents the PIVOTAL CONCEPT. Respond \"{options[0]}\" if it does, or \"{options[1]}\" if it doesn't.",
+      "distance": 0.3998846422295026,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}

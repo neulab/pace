@@ -1,0 +1,1 @@
+{"model": "openai/nvidia/nvidia-nemotron-3-nano-30b-a3b-bf16", "stage": "done", "ndcg10": 0.34981, "started_at": 1774208061.1370962, "updated_at": 1774208061.1370964, "status": "done"}

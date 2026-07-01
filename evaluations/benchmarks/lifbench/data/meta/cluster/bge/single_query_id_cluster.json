@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "What is the {ordid} element in the list? Output it directly.",
+  "1": [
+    {
+      "text": "What is the {ordid} element in the list? Output it directly.",
+      "distance": 0.33861257340949047,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Please identify the element at {ordid} in the list. Output it now.",
+      "distance": 0.3532660178547966,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Retrieve and directly output the {ordid} element from the given list.",
+      "distance": 0.3792971999612017,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Locate the {ordid} component in the provided list and display it as is.",
+      "distance": 0.38124601973155825,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pinpoint and reveal the {ordid} component from the list as is.",
+      "distance": 0.40972109908158644,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Discern the {ordid} item from the given list and display it in its pure form.",
+      "distance": 0.40999258506826264,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pick out the {ordid} component within the list and output it directly.",
+      "distance": 0.41241009702379616,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is the element at the spot {ordid} in the list? Output it immediately.",
+      "distance": 0.4131380340021399,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Distinguish the {ordid} element in the given list and reveal it as is.",
+      "distance": 0.4184928612781668,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Discover the {ordid} component from the provided list and display it in its original state.",
+      "distance": 0.42398291470532073,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Find and showcase the {ordid} item within the provided list in its pure form.",
+      "distance": 0.42795769852309085,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify the element located at spot {ordid} in the list. Provide it right away.",
+      "distance": 0.4324636084810661,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Determine the {ordid} entry in the provided list and showcase it as is.",
+      "distance": 0.4336040442703166,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What is the list item at {ordid} in the collection? Output it directly.",
+      "distance": 0.4705496026644985,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Isolate the {ordid} component from the given list and exhibit it directly.",
+      "distance": 0.48107219326038964,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please identify what is at index {ordid} in the array. Output it directly.",
+      "distance": 0.5038106295666598,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "Identify and present the {ordid} item within the list without any modifications.",
+      "distance": 0.2596650364514648,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Recognize the {ordid} item within the list and exhibit it without modifications.",
+      "distance": 0.28001380314644647,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Locate and present the {ordid} element from the given list without any changes.",
+      "distance": 0.29077781662979557,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Spot the {ordid} element in the list and present it without any adjustments.",
+      "distance": 0.3078769391680552,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Determine and display the {ordid} entry in the given list without alterations.",
+      "distance": 0.3286232196992416,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pinpoint the {ordid} item within the list and reveal it without changes.",
+      "distance": 0.33523497283083264,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract the {ordid} element from the list and output it unaltered.",
+      "distance": 0.4010957352778013,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Single out the {ordid} entry from the provided list and present it unaltered.",
+      "distance": 0.43126572099979904,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Retrieve the entry at position {ordid} in the list. Display it immediately.",
+      "distance": 0.33483041720716233,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Can you locate the list item at position {ordid}? Output it right away.",
+      "distance": 0.3786173670626862,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Identify and extract the {ordid} entry in the list, outputting it directly.",
+      "distance": 0.4085965060995828,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Can you find the entry at index {ordid} in the list? Output it directly.",
+      "distance": 0.421144832499818,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Find the item at index {ordid} within the sequence. Show it right away.",
+      "distance": 0.4340913984429207,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Fetch the list item located at {ordid}. Display it without delay.",
+      "distance": 0.435529812991873,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Determine the element at position {ordid} within the array. Display it instantly.",
+      "distance": 0.4421450086282333,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Find the {ordid} entry in the list and show it in its original form.",
+      "distance": 0.4495946137094468,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Which entry occupies the spot {ordid} in the list? Show it directly.",
+      "distance": 0.4960846782063603,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "What is the item at position {ordid} in the array? Display it immediately.",
+      "distance": 0.258739468253568,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Which item is found at position {ordid} in the list? Display it at once.",
+      "distance": 0.32962952960207814,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Indicate the element situated at {ordid} in the array. Present it now.",
+      "distance": 0.3711803013654951,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Identify what is at position {ordid} in the sequence. Provide it immediately.",
+      "distance": 0.37843574366987565,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What item sits at the {ordid} position in the series? Present it straight away.",
+      "distance": 0.3811808724670071,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "3": [
+    {
+      "text": "Which element is found at {ordid} in the list? Present it now.",
+      "distance": 0.29911650959329095,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "What element is at the {ordid} index in the collection? Present it immediately.",
+      "distance": 0.33457944658053423,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "What is found at the {ordid} slot in the array? Show it right away.",
+      "distance": 0.41767441634888897,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}

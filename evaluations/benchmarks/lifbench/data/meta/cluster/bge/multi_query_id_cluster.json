@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "What are elements at the corresponding position in list {id_arr}? Please output the answer as a JSON list.",
+  "3": [
+    {
+      "text": "What elements appear at the specific positions in {id_arr}? Please format the answer as a JSON list.",
+      "distance": 0.29476003545447454,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "What are elements at the corresponding position in list {id_arr}? Please output the answer as a JSON list.",
+      "distance": 0.31114830795902865,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "What elements are found at each position in {id_arr}? Make sure to output the answer as a JSON list.",
+      "distance": 0.3133255038747301,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What are the values located at the positions given in {id_arr}? Make sure to output as a JSON list.",
+      "distance": 0.3260430712957861,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please identify the items at each specified position in {id_arr} and provide the results as a JSON list.",
+      "distance": 0.3487807664767999,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please list the elements at the specified locations in {id_arr} and format the output as a JSON list.",
+      "distance": 0.3686672467244995,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Which values are present at each respective spot in {id_arr}? Kindly provide the output as a JSON list.",
+      "distance": 0.3770095075429447,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Determine the elements at the designated positions in {id_arr} and present them as a JSON list.",
+      "distance": 0.3994830888006491,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Which items occupy the same positions in the list {id_arr}? Kindly provide the response in JSON list format.",
+      "distance": 0.40480498684066174,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What are the values at the same positions in the list {id_arr}? Provide the results in JSON list form.",
+      "distance": 0.4089757778350921,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Could you specify the items at the particular positions in {id_arr}? Ensure the reply is in JSON list format.",
+      "distance": 0.425102117985024,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What are the corresponding elements in the array {id_arr}? Kindly output the answer using JSON list format.",
+      "distance": 0.45296668892216413,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Please provide the elements located at the respective indices specified in the list {id_arr}, and return the result in the format of a JSON list.",
+      "distance": 0.2673087298457166,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Could you list the items located at the specified indices in {id_arr}? Format the answer as a JSON list.",
+      "distance": 0.3036191537556223,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Please enumerate the elements at the certain indices in {id_arr} and format the result as a JSON list.",
+      "distance": 0.31517926071327323,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Can you identify the elements at the given indices in the array {id_arr}? Please present the results as a JSON list.",
+      "distance": 0.3235349467231723,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Get the elements found at the respective indices specified by the list {id_arr}, and present the outcome in a JSON list format.",
+      "distance": 0.3444967206411652,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "What are the entries at the respective indices in {id_arr}? Please present your answer as a JSON list.",
+      "distance": 0.39258435161921745,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Could you show the elements at the same indexes in the list {id_arr}? Output them in JSON list format.",
+      "distance": 0.3965578067542897,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Collect the items occupying the matching positions denoted in the list {id_arr}, and provide the result structured in a JSON list.",
+      "distance": 0.2813998954800741,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Retrieve the items situated at the respective positions signified by the list {id_arr}, and structure the response as a JSON list.",
+      "distance": 0.32845056170191594,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Retrieve the items situated at the positions indicated by the list {id_arr} and deliver the outcome as a JSON list.",
+      "distance": 0.3409590662055417,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Procure the elements occupying the matching spots outlined in the list {id_arr}, and provide the answer in a JSON list arrangement.",
+      "distance": 0.3467984107992941,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract the elements found at the matching positions listed in {id_arr} and display the result in the form of a JSON list.",
+      "distance": 0.3480070869662095,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Locate the entities positioned at the matching indices detailed in the list {id_arr}, and arrange the response in a JSON list configuration.",
+      "distance": 0.40360179281356373,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pinpoint the elements occupying the corresponding slots specified by the list {id_arr}, and organize the result in a JSON list layout.",
+      "distance": 0.4093618606617759,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Secure the elements residing at the corresponding slots detailed in the list {id_arr}, and organize the findings in JSON list configuration.",
+      "distance": 0.4676499623972417,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "Acquire the components found at the respective positions denoted in the list {id_arr}, and deliver the findings as a JSON list.",
+      "distance": 0.28650887867907027,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Acquire the components situated at the corresponding locations outlined in the list {id_arr}, and display the response in JSON list arrangement.",
+      "distance": 0.29096055887981637,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Kindly fetch the components positioned at the corresponding locations denoted in the list {id_arr}, and present the findings in a JSON list format.",
+      "distance": 0.3124132377518739,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Obtain the components positioned at the matching indices indicated in the list {id_arr}, and present the outcome in a JSON list layout.",
+      "distance": 0.3176083494900985,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Determine the components residing at the respective positions indicated in the list {id_arr}, and structure the output as a JSON list.",
+      "distance": 0.36457592042524045,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "1": [
+    {
+      "text": "Identify the items placed at the corresponding locations outlined in the list {id_arr} and provide the answer formatted as a JSON list.",
+      "distance": 0.2723306763951263,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Identify the items at the corresponding places in list {id_arr} and deliver the result in JSON list form.",
+      "distance": 0.292458703109174,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Indicate the items at the corresponding positions in {id_arr} and present them in JSON list format.",
+      "distance": 0.3288127683458427,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Discern the items situated at the corresponding locations listed in {id_arr}, and present the outcome structured as a JSON list.",
+      "distance": 0.3374482547104604,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Gather the entities placed at the corresponding locations specified within the list {id_arr}, and display the result in JSON list format.",
+      "distance": 0.3415942882891916,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Note the items that appear at the given positions in {id_arr} and format them into a JSON list.",
+      "distance": 0.366081336331829,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Fetch the entities located at the respective spots listed within {id_arr}, and deliver the answer formatted as a JSON list.",
+      "distance": 0.37364943285080937,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify the elements at the respective spots in {id_arr} and output them as a JSON list.",
+      "distance": 0.410898079224664,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Can you supply the entities situated at the respective spots signified within the list {id_arr}? Please format the response as a JSON list.",
+      "distance": 0.4289174957850155,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}

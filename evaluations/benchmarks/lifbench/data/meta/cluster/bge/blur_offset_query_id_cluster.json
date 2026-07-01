@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "Based on the list above, randomly repeat an element after the {ordid} element.",
+  "1": [
+    {
+      "text": "After the {ordid} item in the list above, randomly repeat one of the elements.",
+      "distance": 0.21467817808970824,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Directly after the {ordid} element in the list above, repeat a random item.",
+      "distance": 0.21686141438017253,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "After the {ordid} entry in the list, randomly repeat one of the elements above.",
+      "distance": 0.21690760481314764,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Choose an element from the list above randomly and repeat it after the {ordid} item.",
+      "distance": 0.24399018037420392,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "After the {ordid} item in the provided list, repeat one randomly chosen element.",
+      "distance": 0.25077096703082097,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Following the {ordid} item, randomly choose one and repeat it in the list above.",
+      "distance": 0.25655662438608273,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Take any element from the list above and repeat it randomly after the {ordid} entry.",
+      "distance": 0.25760003901893574,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Based on the list above, randomly repeat an element after the {ordid} element.",
+      "distance": 0.26248124333839656,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Right after the {ordid} item in the list above, repeat one random element.",
+      "distance": 0.26637192847457736,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Immediately following the {ordid} element, randomly repeat an item from the list.",
+      "distance": 0.27409202054407206,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Following the {ordid} item, duplicate one element randomly from the list given.",
+      "distance": 0.29133599828211776,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "After the {ordid} position, duplicate a randomly chosen element from the list above.",
+      "distance": 0.30163770834915005,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "From the list above, duplicate an element randomly after the {ordid} entry.",
+      "distance": 0.31547132663265676,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "After the {ordid} position in the list, repeat one randomly chosen from above.",
+      "distance": 0.33266555412518933,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Duplicate a random element after the {ordid} position in the list above.",
+      "distance": 0.34987487392487426,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Following the {ordid} element in the list provided, insert a randomly chosen item again.",
+      "distance": 0.384887845335225,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Taking into account the preceding inventory, repeat a component succeeding the {ordid} item.",
+      "distance": 0.2839341861715384,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "With reference to the preceding inventory, repeat a component succeeding the {ordid} item.",
+      "distance": 0.28429098733031044,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Based upon the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item.",
+      "distance": 0.291645121031119,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Referring to the preceding inventory, haphazardly replicate a constituent following the {ordid} item.",
+      "distance": 0.33358957822758145,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Based on the aforementioned catalog, haphazardly reproduce a unit subsequent to the {ordid} piece.",
+      "distance": 0.37505336104101406,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Drawing from the aforementioned catalog, haphazardly reproduce a unit subsequent to the {ordid} piece.",
+      "distance": 0.391724015623459,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Drawing from the catalog previously mentioned, erratically reiterate a unit subsequent to the {ordid} piece.",
+      "distance": 0.40709665258430777,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "From the aforementioned list, arbitrarily duplicate an entry succeeding the {ordid} component.",
+      "distance": 0.41294081815753353,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Taking into account the anterior record, random duplicate an element following the {ordid} element.",
+      "distance": 0.3510677589910386,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "In light of the anterior record, capriciously duplicate an element following the {ordid} element.",
+      "distance": 0.3679371664189501,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Taking into account the anterior record, randomly duplicate a fragment following the {ordid} element.",
+      "distance": 0.38596538154619264,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "With reference to the prior register, unsystematically reproduce an object trailing the {ordid} article.",
+      "distance": 0.39274675901452655,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Drawing from the prior register, erratically replicate an object trailing the {ordid} article.",
+      "distance": 0.3995008672604904,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In light of the antecedent tabulation, capriciously imitate a module coming after the {ordid} portion.",
+      "distance": 0.4012881088863446,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In light of the antecedent tabulation, randomly imitate a module coming after the {ordid} portion.",
+      "distance": 0.4094813032755901,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Considering the antecedent tabulation, randomly imitate a module coming after the {ordid} portion.",
+      "distance": 0.41324801141362527,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Referring to the prior register, erratically replicate an object trailing the {ordid} article.",
+      "distance": 0.4181983464821455,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "Considering the foregoing enumeration, unsystematically echo an element ensuing the {ordid} element.",
+      "distance": 0.12907577118646169,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Referring to the foregoing enumeration, unsystematically echo an element ensuing the {ordid} element.",
+      "distance": 0.16974995661587305,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Considering the foregoing enumeration, unpredictably echo a part ensuing the {ordid} segment.",
+      "distance": 0.2473734953529156,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "3": [
+    {
+      "text": "Randomly select an item from the list above, after the {ordid} element.",
+      "distance": 0.1999742915488496,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Randomly selects an item from the list after the {ordid} element.",
+      "distance": 0.230303412263872,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Pick any element from the list and place it again randomly after the {ordid} position.",
+      "distance": 0.2688366268586081,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Randomly select one item from the list above and duplicate it after the {ordid} element.",
+      "distance": 0.2728103856331315,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Select one item from the list and randomly reinsert it after the {ordid} spot.",
+      "distance": 0.2919042076442006,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}

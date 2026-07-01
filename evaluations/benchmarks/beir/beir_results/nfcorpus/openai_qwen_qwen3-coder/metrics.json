@@ -1,0 +1,34 @@
+{
+  "dataset": "nfcorpus",
+  "engine": "openai/qwen/qwen3-coder",
+  "top_k_reranked": 20,
+  "window_size": 20,
+  "stride": 10,
+  "first_stage_model": "Alibaba-NLP/gte-modernbert-base",
+  "num_queries": 323,
+  "num_corpus": 3633,
+  "ndcg": {
+    "NDCG@1": 0.52477,
+    "NDCG@5": 0.4363,
+    "NDCG@10": 0.39208,
+    "NDCG@20": 0.34704
+  },
+  "map": {
+    "MAP@1": 0.06889,
+    "MAP@5": 0.13058,
+    "MAP@10": 0.15119,
+    "MAP@20": 0.16167
+  },
+  "recall": {
+    "Recall@1": 0.06889,
+    "Recall@5": 0.14529,
+    "Recall@10": 0.18277,
+    "Recall@20": 0.20537
+  },
+  "precision": {
+    "P@1": 0.54489,
+    "P@5": 0.37709,
+    "P@10": 0.28607,
+    "P@20": 0.18963
+  }
+}

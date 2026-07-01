@@ -1,0 +1,170 @@
+{
+  "Kimi-K2.5": {
+    "instances": 500,
+    "prompt_tokens": 38311,
+    "completion_tokens": 935182,
+    "total_tokens": 973493
+  },
+  "Llama-4-Maverick-17B-128E-Instruct-FP8": {
+    "instances": 500,
+    "prompt_tokens": 39153,
+    "completion_tokens": 231372,
+    "total_tokens": 270525
+  },
+  "claude-opus-4-5-20251101": {
+    "instances": 500,
+    "prompt_tokens": 41363,
+    "completion_tokens": 414352,
+    "total_tokens": 455715
+  },
+  "claude_opus": {
+    "instances": 500,
+    "prompt_tokens": 41363,
+    "completion_tokens": 339027,
+    "total_tokens": 380390
+  },
+  "deepseek-v3p2": {
+    "instances": 500,
+    "prompt_tokens": 38874,
+    "completion_tokens": 605406,
+    "total_tokens": 644280
+  },
+  "gemini-2.0-flash": {
+    "instances": 500,
+    "prompt_tokens": 35455,
+    "completion_tokens": 346769,
+    "total_tokens": 382224
+  },
+  "gemini-2.5-flash": {
+    "instances": 500,
+    "prompt_tokens": 35955,
+    "completion_tokens": 1134586,
+    "total_tokens": 1170541
+  },
+  "gemini-3-pro-preview": {
+    "instances": 500,
+    "prompt_tokens": 35955,
+    "completion_tokens": 945785,
+    "total_tokens": 981740
+  },
+  "gemini2.5pro": {
+    "instances": 500,
+    "prompt_tokens": 35905,
+    "completion_tokens": 1220009,
+    "total_tokens": 1255914
+  },
+  "gemini3flash": {
+    "instances": 500,
+    "prompt_tokens": 35955,
+    "completion_tokens": 1035254,
+    "total_tokens": 1071209
+  },
+  "glm-4p7": {
+    "instances": 500,
+    "prompt_tokens": 36968,
+    "completion_tokens": 1149183,
+    "total_tokens": 1186151
+  },
+  "glm-5": {
+    "instances": 500,
+    "prompt_tokens": 36961,
+    "completion_tokens": 1091275,
+    "total_tokens": 1128236
+  },
+  "gpt-5.2-codex": {
+    "instances": 480,
+    "prompt_tokens": 20973,
+    "completion_tokens": 148979,
+    "total_tokens": 169952
+  },
+  "gpt-5.2": {
+    "instances": 500,
+    "prompt_tokens": 37111,
+    "completion_tokens": 210367,
+    "total_tokens": 247478
+  },
+  "gpt-5": {
+    "instances": 500,
+    "prompt_tokens": 37111,
+    "completion_tokens": 1978017,
+    "total_tokens": 2015128
+  },
+  "gpt-oss-120b": {
+    "instances": 500,
+    "prompt_tokens": 67338,
+    "completion_tokens": 612843,
+    "total_tokens": 680181
+  },
+  "gpt4o": {
+    "instances": 500,
+    "prompt_tokens": 37610,
+    "completion_tokens": 198262,
+    "total_tokens": 235872
+  },
+  "kimi-k2-thinking": {
+    "instances": 500,
+    "prompt_tokens": 37857,
+    "completion_tokens": 1006701,
+    "total_tokens": 1044558
+  },
+  "kimikinstruct": {
+    "instances": 500,
+    "prompt_tokens": 37857,
+    "completion_tokens": 226279,
+    "total_tokens": 264136
+  },
+  "minimax-m2p1": {
+    "instances": 500,
+    "prompt_tokens": 52458,
+    "completion_tokens": 852050,
+    "total_tokens": 904508
+  },
+  "minimax-m2p5": {
+    "instances": 500,
+    "prompt_tokens": 52376,
+    "completion_tokens": 1005929,
+    "total_tokens": 1058305
+  },
+  "nemotron-3-nano-30b-a3b": {
+    "instances": 500,
+    "prompt_tokens": 46598,
+    "completion_tokens": 1185570,
+    "total_tokens": 1232168
+  },
+  "o3": {
+    "instances": 500,
+    "prompt_tokens": 36960,
+    "completion_tokens": 549774,
+    "total_tokens": 586734
+  },
+  "o4-mini": {
+    "instances": 500,
+    "prompt_tokens": 36960,
+    "completion_tokens": 916193,
+    "total_tokens": 953153
+  },
+  "qwen3-coder-480b-a35b-instruct": {
+    "instances": 500,
+    "prompt_tokens": 39053,
+    "completion_tokens": 226307,
+    "total_tokens": 265360
+  },
+  "qwen3b": {
+    "instances": 500,
+    "prompt_tokens": 49198,
+    "completion_tokens": 222418,
+    "total_tokens": 271616
+  },
+  "sonnet0514": {
+    "instances": 500,
+    "prompt_tokens": 41363,
+    "completion_tokens": 256514,
+    "total_tokens": 297877
+  },
+  "sonnet092925": {
+    "instances": 500,
+    "prompt_tokens": 41363,
+    "completion_tokens": 289062,
+    "total_tokens": 330425
+  }
+}

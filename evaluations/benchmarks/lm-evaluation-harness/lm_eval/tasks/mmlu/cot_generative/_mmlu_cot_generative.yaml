@@ -1,0 +1,38 @@
+group: mmlu_cot_generative
+group_alias: mmlu (cot generative)
+task:
+  - group: stem
+    task:
+      - mmlu_stem_cot_generative
+    aggregate_metric_list:
+      - metric: exact_match
+        weight_by_size: true
+        filter_list: flexible-extract
+  - group: other
+    task:
+      - mmlu_other_cot_generative
+    aggregate_metric_list:
+      - metric: exact_match
+        weight_by_size: true
+        filter_list: flexible-extract
+  - group: social sciences
+    task:
+      - mmlu_social_sciences_cot_generative
+    aggregate_metric_list:
+      - metric: exact_match
+        weight_by_size: true
+        filter_list: flexible-extract
+  - group: humanities
+    task:
+      - mmlu_humanities_cot_generative
+    aggregate_metric_list:
+      - metric: exact_match
+        weight_by_size: true
+        filter_list: flexible-extract
+aggregate_metric_list:
+  - aggregation: mean
+    metric: exact_match
+    weight_by_size: true
+    filter_list: flexible-extract
+metadata:
+  version: 1

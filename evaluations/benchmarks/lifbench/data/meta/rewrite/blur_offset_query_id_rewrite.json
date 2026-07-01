@@ -1,0 +1,82 @@
+{
+  "claude-3-opus-20240229": {
+    "llm_output": "[\n  \"From the aforementioned list, arbitrarily duplicate an entry succeeding the {ordid} component.\",\n  \"Referring to the preceding inventory, haphazardly replicate a constituent following the {ordid} item.\",\n  \"Drawing from the catalog previously mentioned, erratically reiterate a unit subsequent to the {ordid} piece.\",\n  \"With reference to the prior register, unsystematically reproduce an object trailing the {ordid} article.\",\n  \"Considering the foregoing enumeration, unpredictably echo a part ensuing the {ordid} segment.\",\n  \"In light of the antecedent tabulation, capriciously imitate a module coming after the {ordid} portion.\",\n  \"Taking into account the anterior record, randomly duplicate a fragment following the {ordid} element.\",\n  \"Based upon the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item.\",\n  \"Drawing from the aforementioned catalog, haphazardly reproduce a unit subsequent to the {ordid} piece.\",\n  \"Referring to the prior register, erratically replicate an object trailing the {ordid} article.\",\n  \"Considering the foregoing enumeration, unsystematically echo a part ensuing the {ordid} segment.\",\n  \"In light of the antecedent tabulation, randomly imitate a module coming after the {ordid} portion.\",\n  \"Taking into account the anterior record, capriciously duplicate a fragment following the {ordid} element.\",\n  \"With reference to the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item.\",\n  \"Based on the aforementioned catalog, haphazardly reproduce a unit subsequent to the {ordid} piece.\",\n  \"Drawing from the prior register, erratically replicate an object trailing the {ordid} article.\",\n  \"Referring to the foregoing enumeration, unsystematically echo a part ensuing the {ordid} segment.\",\n  \"Considering the antecedent tabulation, randomly imitate a module coming after the {ordid} portion.\",\n  \"In light of the anterior record, capriciously duplicate a fragment following the {ordid} element.\",\n  \"Taking into account the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item.\"\n]",
+    "parse_result": [
+      "From the aforementioned list, arbitrarily duplicate an entry succeeding the {ordid} component.",
+      "Referring to the preceding inventory, haphazardly replicate a constituent following the {ordid} item.",
+      "Drawing from the catalog previously mentioned, erratically reiterate a unit subsequent to the {ordid} piece.",
+      "With reference to the prior register, unsystematically reproduce an object trailing the {ordid} article.",
+      "Considering the foregoing enumeration, unpredictably echo a part ensuing the {ordid} segment.",
+      "In light of the antecedent tabulation, capriciously imitate a module coming after the {ordid} portion.",
+      "Taking into account the anterior record, randomly duplicate a fragment following the {ordid} element.",
+      "Based upon the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item.",
+      "Drawing from the aforementioned catalog, haphazardly reproduce a unit subsequent to the {ordid} piece.",
+      "Referring to the prior register, erratically replicate an object trailing the {ordid} article.",
+      "Considering the foregoing enumeration, unsystematically echo a part ensuing the {ordid} segment.",
+      "In light of the antecedent tabulation, randomly imitate a module coming after the {ordid} portion.",
+      "Taking into account the anterior record, capriciously duplicate a fragment following the {ordid} element.",
+      "With reference to the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item.",
+      "Based on the aforementioned catalog, haphazardly reproduce a unit subsequent to the {ordid} piece.",
+      "Drawing from the prior register, erratically replicate an object trailing the {ordid} article.",
+      "Referring to the foregoing enumeration, unsystematically echo a part ensuing the {ordid} segment.",
+      "Considering the antecedent tabulation, randomly imitate a module coming after the {ordid} portion.",
+      "In light of the anterior record, capriciously duplicate a fragment following the {ordid} element.",
+      "Taking into account the preceding inventory, arbitrarily reiterate a component succeeding the {ordid} item."
+    ]
+  },
+  "gemini-1.5-pro-latest": {
+    "llm_output": "",
+    "parse_result": ""
+  },
+  "gpt-4o": {
+    "llm_output": "[\n    \"After the {ordid} item in the list above, randomly repeat one of the elements.\",\n    \"Following the {ordid} element in the list provided, insert a randomly chosen item again.\",\n    \"Take any element from the list above and repeat it randomly after the {ordid} entry.\",\n    \"Duplicate a random element after the {ordid} position in the list above.\",\n    \"Select one item from the list and randomly reinsert it after the {ordid} spot.\",\n    \"Following the {ordid} item, randomly choose one and repeat it in the list above.\",\n    \"Pick a random item from the list and repeat it just after the {ordid} element.\",\n    \"Directly after the {ordid} element in the list above, repeat a random item.\",\n    \"From the list above, duplicate an element randomly after the {ordid} entry.\",\n    \"After the {ordid} item in the provided list, repeat one randomly chosen element.\",\n    \"Select an item from the list above at random and place it again right after the {ordid} element.\",\n    \"After the {ordid} position in the list, repeat one randomly chosen from above.\",\n    \"Following the {ordid} item, duplicate one element randomly from the list given.\",\n    \"Choose an element from the list above randomly and repeat it after the {ordid} item.\",\n    \"Immediately following the {ordid} element, randomly repeat an item from the list.\",\n    \"Pick any element from the list and place it again randomly after the {ordid} position.\",\n    \"After the {ordid} entry in the list, randomly repeat one of the elements above.\",\n    \"Randomly select one item from the list above and duplicate it after the {ordid} element.\",\n    \"Right after the {ordid} item in the list above, repeat one random element.\",\n    \"After the {ordid} position, duplicate a randomly chosen element from the list above.\"\n]",
+    "parse_result": [
+      "After the {ordid} item in the list above, randomly repeat one of the elements.",
+      "Following the {ordid} element in the list provided, insert a randomly chosen item again.",
+      "Take any element from the list above and repeat it randomly after the {ordid} entry.",
+      "Duplicate a random element after the {ordid} position in the list above.",
+      "Select one item from the list and randomly reinsert it after the {ordid} spot.",
+      "Following the {ordid} item, randomly choose one and repeat it in the list above.",
+      "Pick a random item from the list and repeat it just after the {ordid} element.",
+      "Directly after the {ordid} element in the list above, repeat a random item.",
+      "From the list above, duplicate an element randomly after the {ordid} entry.",
+      "After the {ordid} item in the provided list, repeat one randomly chosen element.",
+      "Select an item from the list above at random and place it again right after the {ordid} element.",
+      "After the {ordid} position in the list, repeat one randomly chosen from above.",
+      "Following the {ordid} item, duplicate one element randomly from the list given.",
+      "Choose an element from the list above randomly and repeat it after the {ordid} item.",
+      "Immediately following the {ordid} element, randomly repeat an item from the list.",
+      "Pick any element from the list and place it again randomly after the {ordid} position.",
+      "After the {ordid} entry in the list, randomly repeat one of the elements above.",
+      "Randomly select one item from the list above and duplicate it after the {ordid} element.",
+      "Right after the {ordid} item in the list above, repeat one random element.",
+      "After the {ordid} position, duplicate a randomly chosen element from the list above."
+    ]
+  },
+  "ori": "Based on the list above, randomly repeat an element after the {ordid} element.",
+  "gpt-3.5-turbo": {
+    "llm_output": "[\n    \"From the list provided, randomly duplicate an element following the {ordid} element.\",\n    \"Select a random element from the list above and repeat it after the {ordid} element.\",\n    \"Randomly replicate an element after the {ordid} element based on the given list.\",\n    \"After the {ordid} element, choose an element from the list above and repeat it randomly.\",\n    \"Using the list provided, randomly select an element and duplicate it after the {ordid} element.\",\n    \"Randomly repeat an element after the {ordid} element, according to the given list.\",\n    \"Choose an element randomly from the list above and repeat it after the {ordid} element.\",\n    \"After the {ordid} element, repeat a randomly selected element from the given list.\",\n    \"Randomly duplicate an element after the {ordid} element, based on the provided list.\",\n    \"From the list above, randomly select an element to repeat after the {ordid} element.\",\n    \"After the {ordid} element, randomly choose an element from the list and repeat it.\",\n    \"Randomly replicate an element from the given list after the {ordid} element.\",\n    \"Repeat an element randomly after the {ordid} element, using the provided list.\",\n    \"Select a random element from the list and duplicate it after the {ordid} element.\",\n    \"Randomly repeat an element after the {ordid} element by choosing from the list above.\",\n    \"Choose an element randomly from the provided list and repeat it after the {ordid} element.\",\n    \"After the {ordid} element, repeat a randomly chosen element from the list above.\",\n    \"Randomly duplicate an element after the {ordid} element, selecting from the given list.\",\n    \"From the list above, randomly select an element and repeat it after the {ordid} element.\",\n    \"After the {ordid} element, randomly repeat an element chosen from the list provided.\"\n]",
+    "parse_result": [
+      "From the list provided, randomly duplicate an element following the {ordid} element.",
+      "Select a random element from the list above and repeat it after the {ordid} element.",
+      "Randomly replicate an element after the {ordid} element based on the given list.",
+      "After the {ordid} element, choose an element from the list above and repeat it randomly.",
+      "Using the list provided, randomly select an element and duplicate it after the {ordid} element.",
+      "Randomly repeat an element after the {ordid} element, according to the given list.",
+      "Choose an element randomly from the list above and repeat it after the {ordid} element.",
+      "After the {ordid} element, repeat a randomly selected element from the given list.",
+      "Randomly duplicate an element after the {ordid} element, based on the provided list.",
+      "From the list above, randomly select an element to repeat after the {ordid} element.",
+      "After the {ordid} element, randomly choose an element from the list and repeat it.",
+      "Randomly replicate an element from the given list after the {ordid} element.",
+      "Repeat an element randomly after the {ordid} element, using the provided list.",
+      "Select a random element from the list and duplicate it after the {ordid} element.",
+      "Randomly repeat an element after the {ordid} element by choosing from the list above.",
+      "Choose an element randomly from the provided list and repeat it after the {ordid} element.",
+      "After the {ordid} element, repeat a randomly chosen element from the list above.",
+      "Randomly duplicate an element after the {ordid} element, selecting from the given list.",
+      "From the list above, randomly select an element and repeat it after the {ordid} element.",
+      "After the {ordid} element, randomly repeat an element chosen from the list provided."
+    ]
+  }
+}

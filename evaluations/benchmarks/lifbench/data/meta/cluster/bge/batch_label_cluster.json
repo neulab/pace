@@ -1,0 +1,267 @@
+{
+  "ori_prompt": "Please label documents in order, with a label candidate list of {candidates}.\nThe labeling rules are as follows:\n{rules}\nPlease output the tags in JSON dictionary format, the output format is as follows:\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+  "3": [
+    { 
+      "text": "Tag the documents in sequential order, selecting from the label candidates {candidates}.\\nThe labeling instructions are:\\n{rules}\\nPlease deliver the tags in JSON dictionary format, following this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.17183659739020413,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Tag the documents sequentially, choosing from the provided label candidates {candidates}.\\nThe tagging rules are as follows:\\n{rules}\\nPlease present the tags in JSON dictionary format, as shown in this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.2055185359969601,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Please sequentially label the documents using the following candidate list: {candidates}. The labeling instructions are: {rules}. Output the tags in JSON dictionary format, for example: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.2146773782902548,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Tag the documents in the specified order, utilizing the label candidates {candidates}.\\nThe tagging guidelines are as follows:\\n{rules}\\nKindly render the assigned tags in JSON dictionary format, as shown here:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.2175621908214709,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Kindly assign labels to the documents sequentially, choosing from the list of {candidates}. The tagging criteria are as follows: {rules}. Provide the tags in JSON dictionary format, like this: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.2357121903541482,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Tag the documents in the given sequence, using the label candidates {candidates}.\\nThe tagging guidelines are:\\n{rules}\\nKindly provide the tags in JSON dictionary format, like this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.24379009705818333,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please sequentially label each document from the candidate list {candidates}. The labeling instructions are: {rules}. Format the output tags in a JSON dictionary like so: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.24565673826206344,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Label each document in order using the candidate list {candidates}. Follow the provided rules: {rules}. The tags should be formatted in a JSON dictionary like this: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.2624160361530389,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please label documents in order, with a label candidate list of {candidates}.\nThe labeling rules are as follows:\n{rules}\nPlease output the tags in JSON dictionary format, the output format is as follows:\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.26616652628761583,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Categorize the documents in the specified order, using the label candidates {candidates}.\\nThe categorization criteria are:\\n{rules}\\nKindly output the assigned categories in JSON dictionary format, following this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.21586137352769008,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Categorize the documents sequentially, using the given label options {candidates}.\\nAdhere to the following labeling guidelines:\\n{rules}\\nKindly output the assigned labels in JSON dictionary format, like this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.21730995966207786,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Categorize the documents sequentially, using the label candidates {candidates}.\\nThe categorization instructions are as follows:\\n{rules}\\nKindly provide the assigned categories in JSON dictionary format, like this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.22596885396781238,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assign categories to the documents in the given sequence, selecting from the label candidates {candidates}.\\nThe categorization guidelines are:\\n{rules}\\nKindly deliver the assigned categories in JSON dictionary format, like this:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.22634878913857934,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assign categories to the documents sequentially, choosing from the provided label candidates {candidates}.\\nThe categorization rules are as follows:\\n{rules}\\nPlease output the assigned categories in JSON dictionary format, following this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.22846309806924758,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Using the provided label candidates {candidates}, assign labels to the documents sequentially. \\nThe labeling criteria are:\\n{rules}\\nPlease provide the labels in JSON dictionary format, as demonstrated below:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.29153575379674446,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Classify the documents in the specified sequence, utilizing the label options {candidates}.\\nThe classification rules are:\\n{rules}\\nPlease present the classification results in JSON dictionary format, like this:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.2988027464459708,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "choice":"yes",
+      "text": "Assign labels to documents in order using the provided list of {candidates}. The labeling rules to follow are: {rules}. The tags should be output in JSON dictionary format, for example: {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}.",
+      "distance": 0.17676623913189476,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "choice":"yes",
+      "text": "Apply labels to the documents in order, using the candidate list provided: {candidates}. Follow the labeling guidelines: {rules}. Please output the tags in JSON dictionary format, such as: {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}.",
+      "distance": 0.18402707763344173,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Assign labels to each document in the given order using the available {candidates}. Follow these guidelines for labeling: {rules}. Please present the tags in JSON format, as shown: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.20145722622715678,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please assign labels to each document in the given order, using the list of {candidates}. The rules for labeling are: {rules}. Present the tags in JSON format like this: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.21623742278199234,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please apply sequential labels to the documents from the list of {candidates}. Stick to the following labeling guidelines: {rules}. Output the tags in JSON dictionary format, e.g., {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.22886385132837117,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assign labels to documents in order, selecting from the candidates list: {candidates}. Follow the given labeling rules: {rules}. Format the tags in JSON dictionary format, for instance: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.22991024033197144,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please assign sequential labels to the documents from the {candidates} list. Stick to these guidelines: {rules}. The output tags should be provided in JSON dictionary format, for example: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.2772935460657304,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assign labels to the documents in the given order, choosing from the label candidates {candidates}.\\nThe labeling conventions are as follows:\\n{rules}\\nKindly provide the document labels in JSON dictionary format, as shown here:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.3043047012126855,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "1": [
+    {
+      "text": "Label documents in a sequence, choosing from the list of {candidates}. Adhere to these labeling rules: {rules}. Provide the labels in JSON dictionary format as displayed: {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}.",
+      "distance": 0.1790473290838007,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Sequentially label the documents using the {candidates} list. Adhere to these rules for labeling: {rules}. Provide the output in JSON dictionary format, such as: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.18930462116397515,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 3
+    },
+    {
+      "text": "Label the documents consecutively, using the following list of {candidates}. Ensure the labeling rules are followed: {rules}. Output the labels in a JSON dictionary format, e.g., {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.19189435522990406,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "In sequence, label the documents from the {candidates} list. The labeling guidelines are: {rules}. Output the labels in JSON dictionary format as follows: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.21690561963663924,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Sequentially label each document, selecting from the list of {candidates}. Ensure adherence to these labeling rules: {rules}. Please format the output labels in JSON dictionary format, such as: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.21760134813797044,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Label the documents in the specified sequence, utilizing the label options {candidates}.\\nThe labeling criteria are:\\n{rules}\\nKindly present the labels in JSON dictionary format, as shown here:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.22716906238146,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Label the documents in the specified order, utilizing the candidate list: {candidates}. The rules for labeling are as follows: {rules}. Present the labeled documents in JSON dictionary format, e.g., {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.23510146416957906,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Apply labels to the documents, one by one, based on the {candidates} list. Adhere to these rules for labeling: {rules}. Output the results in a JSON dictionary format, such as: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.2376036741011799,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please label the documents one after another, based on the {candidates} list. Follow these rules for labeling: {rules}. Output the labeled tags in JSON dictionary format, for example: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.24204647795683182,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Sequentially assign labels to documents using the {candidates} list. The labeling process should follow these rules: {rules}. Format your output in a JSON dictionary, e.g., {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.24859780209101312,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Label the documents in the specified order, using the provided label candidates {candidates}.\\nThe labeling instructions are as follows:\\n{rules}\\nPlease output the labels in JSON dictionary format, as demonstrated in this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.24947597264877064,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Label the documents consecutively, selecting from the available label candidates {candidates}.\\nThe labeling guidelines are:\\n{rules}\\nKindly render the assigned labels in JSON dictionary format, as demonstrated in this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.2514893471619038,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please label the documents in sequence, according to the {candidates} list. The labeling rules are as follows: {rules}. The output should be in JSON dictionary format, like this: {\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}.",
+      "distance": 0.2522592993453282,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Assign labels to the documents consecutively, choosing from the available label candidates {candidates}.\\nThe labeling rules are:\\n{rules}\\nPlease output the document labels in JSON dictionary format, following this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.2533670285015648,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "2": [
+    {
+      "text": "Annotate the documents in the given order, selecting from the label candidates {candidates}.\\nThe annotation conventions are:\\n{rules}\\nPlease deliver the annotations in JSON dictionary format, as demonstrated in this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.1742325218415868,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Annotate the documents in the given sequence, using the label candidates {candidates}.\\nThe annotation rules are as follows:\\n{rules}\\nPlease provide the annotations in JSON dictionary format, like this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.20561877495099348,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Annotate the documents sequentially, choosing from the label candidates {candidates}.\\nThe annotation criteria are:\\n{rules}\\nKindly provide the annotations in JSON dictionary format, following this template:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.27394679007814793,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 1
+    },
+    {
+      "text": "Classify the documents in the given sequence, selecting from the label options {candidates}.\\nThe classification conventions are:\\n{rules}\\nPlease present the classification results in JSON dictionary format, like this example:\\n {{\"doc1\":\"{candidates[0]}\",\"doc2\":\"{candidates[1]}\"}}",
+      "distance": 0.34537082171061373,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    }
+  ]
+}

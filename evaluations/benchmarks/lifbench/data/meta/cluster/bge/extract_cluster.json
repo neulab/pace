@@ -1,0 +1,259 @@
+{
+  "ori_prompt": "Extract all KEY SENTENCE of type {type}. Output as a Json list in order of ids. If there is no KEY SENTENCE of this type, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+  "2": [
+    {
+      "text": "Identify and retrieve all instances of KEY SENTENCE belonging to {type}. Structure the results as a Json list, ordered by ids. In case no KEY SENTENCE of the given type is present, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.13231626719285577,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Find and collect all instances of KEY SENTENCE belonging to {type}. Structure the output as a Json list, ordered based on ids. If no KEY SENTENCE of the specified type is present, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.14976460500099775,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Locate and retrieve all instances of KEY SENTENCE belonging to {type}. Organize the output as a Json list, arranged according to ids. In case no KEY SENTENCE of the given type is present, produce an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.15618439415774668,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Detect and gather all KEY SENTENCE instances that correspond to {type}. Structure the results as a Json list, sorted according to ids. In the absence of any KEY SENTENCE of this type, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.17159193929856195,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify and collect all KEY SENTENCE entries of {type}. Arrange the output in a Json list, ordered by ids. Should there be no KEY SENTENCE of the specified type, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.1740070827444507,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Discover and retrieve all instances of KEY SENTENCE that belong to {type}. Present the results in a Json list format, sorted based on ids. In case no KEY SENTENCE of the specified type is found, produce an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.17510337494521394,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Discover and extract all KEY SENTENCE instances that correspond to {type}. Display the results as a Json list, ordered based on ids. In the absence of any KEY SENTENCE of the specified type, generate an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18066200473821287,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Locate and extract all KEY SENTENCE entries belonging to {type}. Structure the output as a Json list, ordered according to ids. Should there be no KEY SENTENCE of this type present, produce an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18180952189492675,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Locate and extract all KEY SENTENCE entries that match {type}. Display the output as a Json list, ordered according to ids. Should there be no KEY SENTENCE instances of this type, generate an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18222787803271515,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify and extract all KEY SENTENCE instances of {type}. Present the results as a Json list, sorted by ids. If no KEY SENTENCE of the specified type is found, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.1833317043390598,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Locate and collect all entries of KEY SENTENCE that match {type}. Arrange the output in a Json list format, sorted according to ids. If no KEY SENTENCE of this type is found, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.1967412777964567,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Detect and collect all KEY SENTENCE entries that match {type}. Present the results in a Json list format, sorted according to ids. In the absence of any KEY SENTENCE of this type, generate an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.20146425050040812,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Detect and retrieve all KEY SENTENCE entries that match {type}. Organize the results into a Json list, arranged according to ids. In case no KEY SENTENCE of this type is detected, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.20266963512850747,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract all KEY SENTENCE of type {type}. Output as a Json list in order of ids. If there is no KEY SENTENCE of this type, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.24389215563050112,
+      "ori_flag": true,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pinpoint and retrieve all instances of KEY SENTENCE that belong to {type}. Display the output as a Json list, ordered by ids. If no KEY SENTENCE of the given type is detected, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.262788838777576,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "3": [
+    {
+      "text": "Discover and gather all occurrences of KEY SENTENCE that correspond to {type}. Arrange the results in a Json list format, sorted based on ids. In case no KEY SENTENCE instances of the specified type are found, output an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.13784748725396131,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Identify and gather all occurrences of KEY SENTENCE that correspond to {type}. Arrange the results in a Json list format, sorted by ids. In the absence of any KEY SENTENCE of the given type, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.13791339403367528,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Find and gather all occurrences of KEY SENTENCE that correspond to {type}. Organize the output into a Json list, arranged based on ids. Should there be no KEY SENTENCE instances of the specified type, produce an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.14277855070763867,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Find and extract all occurrences of KEY SENTENCE that match {type}. Display the results in a Json list format, sorted based on ids. If there are no KEY SENTENCE instances of this type, generate an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18035279766246617,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pinpoint and gather all occurrences of KEY SENTENCE that belong to {type}. Present the output in a Json list format, sorted by ids. Should there be no KEY SENTENCE instances of the given type, produce an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.19747822158682954,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Pinpoint and extract all KEY SENTENCE occurrences of {type}. Organize the output into a Json list, arranged by ids. If no KEY SENTENCE of the given type is detected, return an empty list.\nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.22089520342046434,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "0": [
+    {
+      "text": "Gather every instance of KEY SENTENCE classified as {type}. The output should be a Json list arranged by ids. If none are found, provide an empty array. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.17981607933421678,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Collect every KEY SENTENCE of type {type} and present them in a Json array ordered by their ids. If no such KEY SENTENCE exist, return an empty array. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.21712890003428603,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Gather all instances of KEY SENTENCE that are of the {type} variety. Display them in a Json list sorted by ids. If there are none, the list should be empty. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2278700727240767,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify every KEY SENTENCE categorized as {type}. Present them in a Json array sorted by ids. If such a KEY SENTENCE is absent, provide an empty array output. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.23008786563638126,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract all instances of KEY SENTENCE classified as {type}. Return them in a Json list sorted by ids. If no such sentences are found, provide an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2566075079229956,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "4": [
+    {
+      "text": "Extract all KEY SENTENCE that pertain to the {type} classification. Present them ordered by ids in a Json list. If none are found, return an empty array. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18966737459112312,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Retrieve all KEY SENTENCE that belong to the {type} category. The result should be a Json list ordered by ids. If none exist, return an empty array. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.19251143791100334,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Retrieve every KEY SENTENCE that falls under the {type} classification. Present them in a Json array ordered by ids. If none exist, the array should be empty. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.20126213128975523,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Retrieve all instances of KEY SENTENCE under the {type} category. Organize them in a Json list by ids. If none exist, the list should be empty. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.21519716774808795,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Fetch all KEY SENTENCE categorized as {type}. Output them in sequence based on ids, in a Json list. If there aren't any, the list should be empty. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2302629402384813,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Extract every KEY SENTENCE under the {type} category. List them in a Json array in the order of their ids. If no such sentence is found, provide an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2307806480125426,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Retrieve all KEY SENTENCE belonging to the {type} classification. Ensure the output is in a Json list, sequenced by ids. If there are no such KEY SENTENCE, output an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2421694220700935,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify all KEY SENTENCE within the {type} category. Display them in a Json list sorted according to ids. If no such sentences are present, return an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.25332552150650955,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please extract all KEY SENTENCE that fall under the {type} category. Organize the output in a Json list based on ids. If no matching KEY SENTENCE exists, return an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2564957259971314,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ],
+  "1": [
+    {
+      "text": "Collect all KEY SENTENCE that belong to the {type} type. List them in a Json array ordered by ids. If no such sentences exist, return an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18060790203122012,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Gather every KEY SENTENCE of the {type} type. Output them in a Json array according to their ids. If no sentences are found, provide an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18085891836930393,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 2
+    },
+    {
+      "text": "Please gather every KEY SENTENCE of {type} type. Arrange them in a Json array according to their ids. If there are no such sentences, return an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.18850877375123004,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Identify all KEY SENTENCE that fall under {type}. Display them in a Json array organized by ids. If there are no matching sentences, output an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2557467722930754,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please fetch all KEY SENTENCE that fall into the {type} group. The output should be a Json array in order of ids. If there are no such sentences, it should be an empty list. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.27684121176620763,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    },
+    {
+      "text": "Please extract all instances of KEY SENTENCE categorized as {type}. Output them as a Json list in the sequence of ids. If no such sentences are found, the list should be empty. \nOutput Example 1: [KEY SENTENCE1, KEY SENTENCE2, KEY SENTENCE3,...]\nOutput Example 2: []",
+      "distance": 0.2866261727569871,
+      "ori_flag": false,
+      "check_flag(1 checked, 2canbeused)": 0
+    }
+  ]
+}
