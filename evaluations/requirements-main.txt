@@ -1,0 +1,86 @@
+# =============================================================================
+# evaluations/requirements-main.txt
+#
+# ONE pip-installable file for the MAIN environment: pacebench + 18 of the 19
+# benchmarks (everything EXCEPT BFCL, which hard-conflicts on tree-sitter and
+# lives in its own venv — see evaluations/install.sh).
+#
+# Exact versions verified to run every one of the 18 benchmarks end-to-end
+# (Python 3.11). Do NOT `pip install -r` this on its own for the vendored
+# packages lm_eval / lcb_runner / lmms_eval — those are editable installs done
+# by evaluations/install.sh (which calls this file first). Prefer:
+#
+#     bash evaluations/install.sh
+# =============================================================================
+
+# --- pacebench core (numeric + plotting) ---
+numpy==1.26.4
+scipy==1.14.1
+pandas==1.5.3
+matplotlib==3.10.0
+joblib==1.4.2
+
+# --- model API / shared ---
+openai==2.44.0
+litellm==1.77.3
+datasets==3.6.0
+huggingface-hub==0.35.0
+tiktoken==0.7.0
+tqdm==4.66.3
+fire==0.7.0
+requests
+
+# --- deep-learning stack (torch and torchvision MUST match: 2.8.0 <-> 0.23.0) ---
+torch==2.8.0
+torchvision==0.23.0
+transformers==4.57.1
+accelerate==1.11.0
+sentence-transformers==5.1.1
+
+# --- lm_eval family: aime25 / gpqa / logiqa / mmlu_cot / humaneval_chat / mbpp_chat ---
+evaluate==0.4.6
+jsonlines==4.0.0
+pytablewriter==1.2.1
+rouge-score==0.1.2
+sacrebleu==2.5.1
+sqlitedict==2.1.0
+dill==0.3.8
+word2number==1.1
+more-itertools==10.8.0
+scikit-learn==1.6.0
+nltk==3.9.1
+# ifeval extras
+immutabledict==4.3.1
+langdetect==1.0.9
+# acp_gen (ACPBench generative) planner extras
+lark==1.1.9
+pddl==0.4.2
+kstar-planner==1.4.2
+tarski==0.8.2
+clingo==5.8.0
+
+# --- code: repobench ---
+# NOTE: codebleu + tree-sitter 0.23.x are installed with --no-deps by
+# evaluations/install.sh — codebleu 0.7.0 pins an older tree-sitter in its
+# metadata but works fine with 0.23.x at runtime, so the resolver must be
+# bypassed. They are intentionally NOT listed here.
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.27.3
+
+# --- debugbench (inference + LeetCode online-judge grading) ---
+gym==0.26.2
+python-leetcode==1.2.1
+pydantic==2.11.10
+beautifulsoup4==4.12.3
+
+# --- multimodal: mmmu / visualpuzzles / visualwebbench ---
+pillow==10.4.0
+opencv-python-headless==4.10.0.84
+einops==0.8.0
+timm==1.0.12
+sentencepiece==0.2.1
+rouge==1.0.1
+
+# --- retrieval: beir_nfcorpus ---
+beir==2.2.0
+pytrec_eval==0.5

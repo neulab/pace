@@ -1,0 +1,5 @@
+# BEIR — handler: evaluations/handlers/beir.py (beir_nfcorpus)
+# Upstream has no requirements file under benchmarks/beir; install the package:
+beir
+sentence-transformers
+pytrec_eval

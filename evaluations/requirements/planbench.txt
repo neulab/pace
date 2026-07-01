@@ -1,0 +1,6 @@
+# PlanBench — handler: evaluations/handlers/planbench.py
+numpy
+litellm
+PyYAML==6.0
+tarski==0.7.0
+pddl==0.2.0

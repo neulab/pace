@@ -1,0 +1,19 @@
+# lm-evaluation-harness — handler: evaluations/handlers/lm_eval.py
+# Covers benchmarks: acp_gen, aime25, gpqa, humaneval_chat, ifeval, logiqa,
+#                    mbpp_chat, mmlu_cot
+# Easiest: pip install -e evaluations/benchmarks/lm-evaluation-harness
+datasets>=2.16.0
+numpy
+evaluate>=0.4.0
+jinja2
+jsonlines
+pytablewriter
+rouge-score>=0.0.4
+sacrebleu>=1.5.0
+scikit-learn>=0.24.1
+sqlitedict
+zstandard
+dill
+word2number
+more_itertools
+typing_extensions

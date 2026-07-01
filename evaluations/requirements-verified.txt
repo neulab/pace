@@ -1,0 +1,132 @@
+# =============================================================================
+# evaluations/requirements-verified.txt
+#
+# EXACT package versions that were verified to run real instances of every
+# benchmark on 2026-06-30 (macOS, Python 3.11, /usr/local/bin/python).
+# 17/19 benchmarks passed with real scores; see notes at the bottom for the
+# two that need external resources (planbench data, debugbench LeetCode OJ).
+#
+# This is a record of a KNOWN-GOOD combo, not a clean dependency spec. Some of
+# these pins resolve conflicts that the per-benchmark files in
+# evaluations/requirements/ leave separate (e.g. tree-sitter for codebleu).
+#
+# Two environments are required because BFCL hard-conflicts on tree-sitter:
+#   (A) main env   — pacebench + 11 of 12 handlers
+#   (B) bfcl venv  — BFCL only (tree-sitter 0.21.x)
+#
+# Runtime env vars used:
+#   export HF_HUB_ENABLE_HF_TRANSFER=0   # else HF dataset downloads error out
+# =============================================================================
+
+# =============================================================================
+# (A) MAIN ENV  —  pip install -r this section
+# =============================================================================
+
+# --- model API / core (pacebench + handlers) ---
+openai==2.44.0
+litellm==1.77.3
+numpy==1.26.4
+scipy==1.14.1
+pandas==1.5.3
+matplotlib==3.10.0
+joblib==1.4.2
+datasets==3.6.0
+huggingface-hub==0.35.0
+tiktoken==0.7.0
+scikit-learn==1.6.0
+nltk==3.9.1
+pillow==10.4.0
+
+# --- deep-learning stack (torch/torchvision MUST match: 2.8.0 <-> 0.23.0) ---
+torch==2.8.0
+torchvision==0.23.0
+transformers==4.57.1
+accelerate==1.11.0
+sentence-transformers==5.1.1
+
+# --- lm_eval family (aime25/gpqa/ifeval/logiqa/humaneval_chat/mbpp_chat/mmlu_cot/acp_gen) ---
+# lm_eval itself is an editable install (see EDITABLE INSTALLS below).
+immutabledict==4.3.1        # ifeval
+langdetect==1.0.9           # ifeval
+sqlitedict==2.1.0
+jsonlines==4.0.0
+pytablewriter==1.2.1
+rouge-score==0.1.2
+sacrebleu==2.5.1
+evaluate==0.4.6
+# acp_gen (generative ACPBench) planner deps:
+lark==1.1.9
+pddl==0.4.2
+kstar-planner==1.4.2
+tarski==0.8.2
+clingo==5.8.0
+
+# --- repobench (codebleu needs tree-sitter 0.23.x with matching lang packs) ---
+codebleu==0.7.0
+tree-sitter==0.23.2
+tree-sitter-python==0.23.6
+tree-sitter-java==0.23.5
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.27.3
+
+# --- debugbench ---
+gym==0.26.2                 # required by the LeetCode OJ tester import
+python-leetcode==1.2.1      # submits fixed code to the LeetCode online judge
+# NOTE: OJ grading needs real creds in
+#   evaluations/benchmarks/debugbench/evaluation/keys.json
+#   -> [{"leetcode_session": "<cookie>", "csrf_token": "<cookie>"}]
+# (both are cookies from leetcode.com). Keep keys.json OUT of git.
+
+# --- visualwebbench ---
+rouge==1.0.1
+
+# --- beir (beir_nfcorpus) ---
+beir==2.2.0
+pytrec_eval==0.5
+
+# -----------------------------------------------------------------------------
+# EDITABLE INSTALLS (local vendored packages — run AFTER the pins above).
+# --no-deps avoids pulling vllm (GPU-only, not needed for API generation).
+#   pip install -e evaluations/benchmarks/lm-evaluation-harness          # lm_eval 0.4.11.dev0
+#   pip install -e evaluations/benchmarks/livecodebench --no-deps        # livecodebench 0.1.0
+#   pip install -e evaluations/benchmarks/lmms-eval --no-deps            # lmms_eval 0.7.1  (mmmu, visualpuzzles)
+# -----------------------------------------------------------------------------
+
+# =============================================================================
+# (B) BFCL VENV  —  separate virtualenv (tree-sitter 0.21.x conflicts with (A))
+#
+#   python -m venv bfcl-venv && source bfcl-venv/bin/activate
+#   pip install -e evaluations/benchmarks/BFCL/gorilla/berkeley-function-call-leaderboard --no-deps
+#   pip install -r <this (B) section>
+#   # run BFCL with bfcl-venv/bin/python -m evaluations.run --benchmark bfcl ...
+# =============================================================================
+# bfcl_eval==0.0.0.dev0   (editable, see command above)
+# openai==2.44.0
+# tree-sitter==0.21.3
+# tree-sitter-java==0.21.0
+# tree-sitter-javascript==0.21.4
+# pydantic==2.13.4
+# numpy==2.4.6
+# pandas==3.0.3
+# tqdm==4.68.3
+# tabulate==0.10.0
+# huggingface-hub==1.21.0
+# tenacity==9.1.4
+# overrides==7.7.0
+# python-dotenv==1.2.2
+
+# =============================================================================
+# NOTES / known limitations at verification time
+#   - planbench    : runs once results/raw_results/planbench is present (the
+#                    handler reads each instance's query from there). task_3
+#                    gets a real binary score; other tasks run the model but
+#                    return llm_correct=null — full scoring needs VAL + Fast
+#                    Downward (see benchmarks/planbench/plan-bench/install_val.py).
+#   - debugbench   : fully working, incl. LeetCode online-judge grading
+#                    (test_result_bool). Requires python-leetcode + real
+#                    leetcode_session/csrf_token cookies in keys.json (above).
+#                    Each run makes a real submission to your LeetCode account.
+#   - bfcl         : the handler now self-registers proxied model names into
+#                    BFCL's MODEL_CONFIG_MAPPING (handlers/bfcl.py), so
+#                    azure_ai/gpt-5.2 scores without a manual patch.
+# =============================================================================

@@ -1,0 +1,17 @@
+# DebugBench — handler: evaluations/handlers/debugbench.py
+# NOTE: upstream pins openai~=0.28.0, but the PACE handler uses the new SDK
+#       (from openai import OpenAI). openai is bumped to >=1.0 here to match
+#       the handler; DebugBench's own legacy openai calls are not used.
+numpy~=1.25.2
+matplotlib~=3.7.2
+openai>=1.0          # upstream: openai~=0.28.0 (overridden)
+tqdm~=4.66.1
+transformers~=4.31.0
+pydantic~=2.3.0
+python-dotenv~=0.21.1
+gym~=0.26.2
+python-leetcode==1.2.1   # submits fixed code to the LeetCode online judge (grading)
+bs4~=0.0.1
+beautifulsoup4~=4.12.2
+# LeetCode grading also needs cookies in evaluations/benchmarks/debugbench/evaluation/keys.json
+# -> [{"leetcode_session": "<cookie>", "csrf_token": "<cookie>"}]  (see README, "debugbench setup")
