@@ -1,0 +1,132 @@
+# =============================================================================
+# PACE — combined "kitchen-sink" requirements
+#
+# Single-file union of: pacebench core + evaluations handler layer + EVERY
+# vendored benchmark EXCEPT BFCL. One version is chosen per package; where
+# benchmarks disagreed, the NEWER pin wins and the override is noted inline.
+#
+# ⚠️ BFCL IS DELIBERATELY EXCLUDED. It has two hard (unsatisfiable) conflicts
+#    with the rest, plus a large set of unique heavy deps (faiss, qwen-agent,
+#    boto3, ...). Install it in ITS OWN venv:
+#        pip install -r evaluations/requirements/bfcl.txt
+#    The conflicts that forced this:
+#      - mistralai : BFCL ==1.7.0  vs  livecodebench ==0.4.2
+#      - tree-sitter: BFCL ==0.21.3 vs repobench >=0.22,<0.23
+#
+# ⚠️ This file is best-effort. Heavy ML pins (torch, vllm, transformers) often
+#    still need manual nudging on a given machine/CUDA combo. For a clean, known
+#    -good setup prefer the per-benchmark files in evaluations/requirements/.
+#
+# ⚠️ vllm/torch/torchvision are LOCAL model-serving only. If you generate via
+#    the litellm API endpoint (default usage) you can delete the GPU block.
+# Python 3.11.
+# =============================================================================
+
+# ── pacebench core (numeric + plotting) ─────────────────────────────────────
+numpy==1.26.4              # debugbench/lifbench wanted 1.25.2 -> 1.26.4 (lmms/bfcl/core)
+scipy==1.14.1
+pandas==2.0.3              # pacebench verified on 1.5.3; lifbench pins 2.0.3 -> 2.0.3
+matplotlib==3.10.0         # debugbench wanted ~3.7.2
+joblib==1.4.2
+
+# ── model API / shared infra ────────────────────────────────────────────────
+openai>=1.59.6             # lifbench pinned ==1.57.2; handlers need new SDK -> >=1.59.6
+litellm>=1.0.0
+huggingface_hub>=0.19.0
+datasets==3.6.0            # lifbench wanted ==2.15.0 -> 3.6.0 (core/livecodebench)
+tqdm>=4.66.3              # was ==4.66.1 but datasets==3.6.0 requires tqdm>=4.66.3
+tiktoken==0.7.0
+transformers==4.46.1       # debugbench ~4.31 / visualwebbench ==4.38.0 differ -> 4.46.1 (newest)
+scikit-learn==1.6.0
+pydantic>=2.8.2            # debugbench wanted ~2.3.0
+python-dotenv>=1.0.1
+tenacity>=8.5.0
+requests
+packaging
+protobuf
+pyyaml>=6.0                # planbench upstream pins PyYAML==6.0
+
+# ── instruction / reasoning benchmarks ──────────────────────────────────────
+# infobench, debugbench, planbench, lifbench, lm_eval(acp_gen/aime25/gpqa/...)
+fire==0.5.0
+nltk==3.8.1
+beautifulsoup4>=4.12.2     # debugbench ~4.12.2
+bs4>=0.0.1
+gym~=0.26.2                # debugbench
+tarski==0.7.0              # planbench
+pddl==0.2.0                # planbench
+
+# lm-evaluation-harness extras
+evaluate>=0.4.0
+jinja2
+jsonlines
+pytablewriter
+rouge-score>=0.0.4
+sacrebleu>=1.5.0
+sqlitedict
+zstandard
+dill
+word2number
+more_itertools
+typing_extensions
+
+# ── code benchmarks (repobench, livecodebench) ──────────────────────────────
+fuzzywuzzy
+python-Levenshtein
+codebleu
+tree-sitter>=0.22,<0.23        # repobench (BFCL's ==0.21.3 is why BFCL is separate)
+tree-sitter-python>=0.21,<0.22
+tree-sitter-java>=0.21,<0.22
+annotated-types>=0.7.0
+anthropic>=0.75.0
+cohere==5.18.0
+google-genai>=1.52.0
+mistralai==0.4.2               # livecodebench (BFCL needs ==1.7.0 -> separate env)
+pebble>=5.1.0
+together>=0.21.0
+
+# ── multimodal benchmarks (mmmu, visualpuzzles via lmms-eval; visualwebbench) ─
+google-generativeai            # visualwebbench (distinct pkg from google-genai)
+rouge==1.0.1                   # visualwebbench
+pillow
+accelerate>=0.29.1
+httpx>=0.23.3
+aiohttp
+numexpr
+peft>=0.2.0
+pybind11>=2.6.2
+timm
+einops
+ftfy
+opencv-python-headless
+av<16.0.0
+hf_transfer
+sentencepiece
+yt-dlp
+pycocoevalcap
+tqdm-multiprocess
+transformers-stream-generator
+sympy
+latex2sympy2
+mpmath==1.3.0
+openpyxl
+loguru
+zss
+qwen-vl-utils>=0.0.14
+math-verify
+sentence-transformers>=2.7.0
+
+# ── retrieval (beir / beir_nfcorpus) ────────────────────────────────────────
+beir
+pytrec_eval
+
+# ── GPU / LOCAL model serving ONLY ───────────────────────────────────────────
+# Using the litellm API (default usage)? You don't need this block: torch is still
+# pulled transitively (sentence-transformers/timm/accelerate/peft/...) at a version
+# valid for your platform. Uncomment the pins below ONLY to serve models locally.
+# NOTE: torch 2.4.0 has NO macOS x86_64 (Intel Mac) wheel — it caps at 2.2.2 there.
+#       Pin ==2.4.0 only on Linux / Apple Silicon; on Intel Mac leave it transitive.
+# torch==2.4.0                 # lifbench ==2.4.0 ; livecodebench >=2.3.0 ; lmms >=2.1.0
+# torchvision>=0.16.0
+# vllm==0.6.1.post2            # uncomment ONLY if serving models locally (lifbench/livecodebench)
+
