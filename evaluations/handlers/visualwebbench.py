@@ -48,19 +48,27 @@ def _run_visualwebbench(
     """
     import datasets as hf_datasets
 
-    if subtask not in VWB_TASKS:
+    # The instance_id encodes the task as '{task}_{idx}' (e.g. 'heading_ocr_3'),
+    # so derive the subtask from it — callers need not pass the matching one.
+    m = re.match(r"^(.*)_(\d+)$", instance_id)
+    if m and m.group(1) in VWB_TASKS:
+        subtask = m.group(1)
+        idx = int(m.group(2))
+    elif subtask in VWB_TASKS:
+        # Fallback: trust the given subtask; id is the bare index or '{subtask}_{idx}'.
+        prefix = f"{subtask}_"
+        idx_str = instance_id[len(prefix):] if instance_id.startswith(prefix) else instance_id
+        try:
+            idx = int(idx_str)
+        except ValueError:
+            raise ValueError(
+                f"Invalid VisualWebBench instance_id '{instance_id}'. "
+                f"Expected '{{task}}_{{integer}}' with task in {VWB_TASKS}."
+            )
+    else:
         raise ValueError(
-            f"Unknown VisualWebBench subtask '{subtask}'. Valid subtasks: {VWB_TASKS}"
-        )
-
-    prefix = f"{subtask}_"
-    idx_str = instance_id[len(prefix):] if instance_id.startswith(prefix) else instance_id
-    try:
-        idx = int(idx_str)
-    except ValueError:
-        raise ValueError(
-            f"Invalid VisualWebBench instance_id '{instance_id}'. "
-            f"Expected format: '{subtask}_{{integer}}'"
+            f"Cannot resolve VisualWebBench task from instance_id '{instance_id}' "
+            f"(subtask='{subtask}'). Valid tasks: {VWB_TASKS}."
         )
 
     vwb_utils_dir = os.path.join(VWB_DIR, "utils")

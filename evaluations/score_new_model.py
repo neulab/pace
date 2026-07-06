@@ -14,7 +14,13 @@ that pacebench reads.
 
 Usage
 -----
+  # Credentials come from the environment. Either export them for the session:
   export API_KEY=...   # OpenAI-compatible endpoint that serves the new model
+  export BASE_URL=...
+  # ...or (recommended) put them once in a git-ignored repo-root .env file:
+  #   API_KEY=sk-...
+  #   BASE_URL=https://cmu.litellm.ai
+  # Real env vars / --flags override .env.
   python evaluations/score_new_model.py \
       --model azure_ai/gpt-5.2 \
       --model-name-out My-New-Model \
@@ -46,6 +52,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # repo root
 from evaluations.run import run_instance  # noqa: E402
+from evaluations._env import load_env  # noqa: E402
 
 _REPO = Path(__file__).resolve().parents[1]
 _STD = _REPO / "results" / "standardized_results"
@@ -93,6 +100,13 @@ def extract(benchmark, subdir, result):
         return ("exact_match", _num(r.get("correct")))
     if b == "mmmu":
         return ("mmmu_acc", _num(r.get("correct")))
+    if b == "visualwebbench":
+        # metric_name varies by task (rouge_l / f1 / correct); the handler emits
+        # the normalized [0,1] score under '<metric>_normalized'.
+        for mk in ("rouge_l", "f1", "correct"):
+            if f"{mk}_normalized" in r:
+                return (mk, _num(r[f"{mk}_normalized"]))
+        return None
     if b == "livecodebench":
         return ("pass@1", _num(r.get("pass@1", r.get("pass_at_1", 0.0))))
     if b == "bfcl":
@@ -138,6 +152,7 @@ def _load_existing(path):
 
 
 def main():
+    load_env()  # populate env from repo-root .env (real env vars still win)
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--selections", required=True)

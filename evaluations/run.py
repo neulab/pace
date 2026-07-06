@@ -24,7 +24,10 @@ Python API:
 
 import argparse
 import json
+import os
 import sys
+
+from evaluations._env import load_env
 
 from evaluations.handlers.lm_eval import (
     _run_lm_eval,
@@ -240,15 +243,16 @@ def run_instance(
 # ---------------------------------------------------------------------------
 
 def main():
+    load_env()  # populate env from repo-root .env (real env vars still win)
     parser = argparse.ArgumentParser(
         description="Run a single benchmark instance and print the result as JSON."
     )
     parser.add_argument("--model_name", required=True,
                         help="Model identifier, e.g. azure_ai/gpt-5.2")
-    parser.add_argument("--base_url", required=True,
-                        help="API base URL, e.g. https://cmu.litellm.ai")
-    parser.add_argument("--api_key", required=True,
-                        help="API key for the endpoint")
+    parser.add_argument("--base_url", default=os.environ.get("BASE_URL", "https://cmu.litellm.ai"),
+                        help="API base URL (default: $BASE_URL or https://cmu.litellm.ai)")
+    parser.add_argument("--api_key", default=os.environ.get("API_KEY"),
+                        help="API key for the endpoint (default: $API_KEY, e.g. from .env)")
     parser.add_argument("--benchmark", required=True,
                         help="Benchmark name, e.g. lifbench")
     parser.add_argument("--subtask", default=None,
@@ -256,6 +260,9 @@ def main():
     parser.add_argument("--instance_id", type=str, default="0",
                         help="Instance id in standardized_results format (default: 0)")
     args = parser.parse_args()
+
+    if not args.api_key:
+        parser.error("no API key: pass --api_key, export API_KEY, or set it in .env")
 
     results = run_instance(
         model_name=args.model_name,

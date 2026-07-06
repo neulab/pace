@@ -29,6 +29,7 @@ tiktoken==0.7.0
 tqdm==4.66.3
 fire==0.7.0
 requests
+python-dotenv==1.2.2          # optional .env loading for API_KEY / BASE_URL (evaluations/_env.py)
 
 # --- deep-learning stack (torch and torchvision MUST match: 2.8.0 <-> 0.23.0) ---
 torch==2.8.0
