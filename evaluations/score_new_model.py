@@ -31,19 +31,25 @@ Usage
 under standardized_results (defaults to `--model`). Re-running resumes: instances
 already present in the output CSVs are skipped.
 
-Support / limitations
----------------------
-Fully scored by the handler: visualpuzzles, mmmu, livecodebench, repobench, bfcl,
-lifbench, ifeval, logiqa, acp_gen, aime25, gpqa, humaneval_chat, mbpp_chat,
-mmlu_cot, infobench, and debugbench (needs LeetCode cookies in keys.json).
-planbench: only `task_3_plan_verification` is auto-scored; the other tasks need
-VAL + Fast Downward (see benchmarks/planbench/plan-bench/install_val.py) and are
-skipped with a warning.
+Support / setup notes (all use the benchmark's authentic grading)
+-----------------------------------------------------------------
+- Most benchmarks score in-process in the main env.
+- bfcl: scored in its own env (evaluations/.bfcl-venv, created by install.sh) via
+  a subprocess — the main env can't import BFCL's tree-sitter build.
+- acp_gen: grading needs the acpbench deps pinned in requirements-main.txt
+  (lark / tarski[clingo] / pddl / kstar-planner / clingo).
+- planbench: task_3 is a binary string match; all OTHER tasks are graded with the
+  original VAL pipeline and require $VAL to be set (see
+  benchmarks/planbench/plan-bench/install_val.py, and _validate_planbench.py to
+  confirm the grades reproduce the standardized results).
+- debugbench: needs LeetCode cookies in keys.json.
 """
 import argparse
 import csv
+import json
 import os
 import re
+import subprocess
 import sys
 import threading
 from collections import OrderedDict, defaultdict
@@ -57,6 +63,11 @@ from evaluations._env import load_env  # noqa: E402
 _REPO = Path(__file__).resolve().parents[1]
 _STD = _REPO / "results" / "standardized_results"
 _REPOBENCH_METRIC = re.compile(r"_(codebleu|edit_similarity|exact_match)$")
+# BFCL needs its own virtualenv (tree-sitter 0.21.x hard-conflicts with the main
+# env's 0.23.x). install.sh step [2/2] creates it here; we score BFCL instances by
+# running evaluations/_bfcl_runner.py under this interpreter as a subprocess.
+_BFCL_VENV_PY = _REPO / "evaluations" / ".bfcl-venv" / "bin" / "python"
+_BFCL_RUNNER = _REPO / "evaluations" / "_bfcl_runner.py"
 SUBDIR_IS_SUBTASK = {"planbench", "bfcl", "livecodebench", "lifbench", "acp_gen",
                      "visualwebbench"}
 METRIC_SUBDIR = {"ifeval", "logiqa", "gpqa", "aime25", "mmlu_cot",
@@ -138,10 +149,14 @@ def extract(benchmark, subdir, result):
             v = (sum(1.0 for x in v if x) / len(v)) if v else 0.0
         return (subdir, _num(v))
     if b == "planbench":
+        # task_3 -> 'llm_correct_binary'; all other tasks are graded with the
+        # authentic VAL pipeline (needs $VAL set) and stored under 'llm_correct'.
+        # Both metric_names match the standardized CSVs.
         if subdir == "task_3_plan_verification":
             return None if r.get("llm_correct_binary") is None else \
-                ("llm_correct", _num(r["llm_correct_binary"]))
-        return None  # other tasks need VAL
+                ("llm_correct_binary", _num(r["llm_correct_binary"]))
+        return None if r.get("llm_correct") is None else \
+            ("llm_correct", _num(r["llm_correct"]))
     return None
 
 
@@ -149,6 +164,54 @@ def _load_existing(path):
     if not path.exists():
         return set()
     return {row["id"] for row in csv.DictReader(open(path))}
+
+
+def _run_bfcl_subprocess(model, base_url, api_key, subtask, instance_id):
+    """Score one BFCL instance in the dedicated .bfcl-venv, returning run_instance's shape.
+
+    BFCL can't be scored in-process here: its tree-sitter pin conflicts with the
+    main env (fails with "No module named 'tree_sitter_javascript'"). We instead
+    run evaluations/_bfcl_runner.py under evaluations/.bfcl-venv/bin/python, which
+    calls the real `_run_bfcl` and prints the [result] list as JSON. The returned
+    list is the same shape run_instance would produce, so extract() is unchanged.
+
+    Credentials are passed on the subprocess **stdin** (JSON) so they never appear
+    in argv / `ps` output or on disk.
+    """
+    if not _BFCL_VENV_PY.exists():
+        raise RuntimeError(
+            f"BFCL virtualenv interpreter not found at {_BFCL_VENV_PY}. "
+            f"Create it with `bash evaluations/install.sh` (step [2/2])."
+        )
+    payload = json.dumps({
+        "model_name": model,
+        "base_url": base_url,
+        "api_key": api_key,
+        "subtask": subtask,
+        "instance_id": str(instance_id),
+    })
+    proc = subprocess.run(
+        [str(_BFCL_VENV_PY), str(_BFCL_RUNNER)],
+        input=payload,
+        text=True,
+        capture_output=True,
+        cwd=str(_REPO),            # repo root -> `evaluations` package importable
+        env=os.environ.copy(),     # inherit HF_* etc.; api_key still comes via stdin
+    )
+    if proc.returncode != 0:
+        detail = proc.stdout.strip()
+        try:                       # runner reports failures as a JSON error object
+            err = json.loads(detail)
+            detail = err.get("error") or err.get("traceback") or detail
+        except (ValueError, TypeError):
+            detail = detail or proc.stderr.strip()
+        raise RuntimeError(f"bfcl subprocess failed: {detail}")
+    out = proc.stdout.strip()
+    if not out:
+        raise RuntimeError(
+            f"bfcl subprocess produced no output (stderr: {proc.stderr.strip()[-500:]})"
+        )
+    return json.loads(out)
 
 
 def main():
@@ -209,18 +272,25 @@ def main():
 
     serial_lock = threading.Lock()
 
+    def _call(b, subtask, call_iid):
+        # BFCL can't run in-process (tree-sitter version conflict) -> score it in
+        # its own venv via a subprocess; everything else runs in-process.
+        if b == "bfcl":
+            return _run_bfcl_subprocess(
+                model=args.model, base_url=args.base_url, api_key=args.api_key,
+                subtask=subtask, instance_id=call_iid)
+        return run_instance(model_name=args.model, base_url=args.base_url,
+                            api_key=args.api_key, benchmark=b,
+                            subtask=subtask, instance_id=call_iid)
+
     def run_one(key):
         b, subtask, call_iid = key
         try:
             if b in SERIAL_BENCHMARKS:   # not thread-safe (chdir / global state / env)
                 with serial_lock:
-                    r = run_instance(model_name=args.model, base_url=args.base_url,
-                                     api_key=args.api_key, benchmark=b,
-                                     subtask=subtask, instance_id=call_iid)
+                    r = _call(b, subtask, call_iid)
             else:
-                r = run_instance(model_name=args.model, base_url=args.base_url,
-                                 api_key=args.api_key, benchmark=b,
-                                 subtask=subtask, instance_id=call_iid)
+                r = _call(b, subtask, call_iid)
             return key, r, None
         except Exception as e:
             return key, None, e

@@ -55,24 +55,28 @@ def _run_livecodebench(
             extract_execution_code,
         )
 
+        # NOTE: the standardized results were produced with "release_latest"
+        # (lcb_runner's parser default), giving 1055 codegen/selfrepair problems.
+        # "release_v1" has only ~400 problems, so high indices (e.g. 974) went out
+        # of range — the instance ids index into the release_latest ordering.
         if subtask in ("codegeneration", "selfrepair"):
             from lcb_runner.benchmarks.code_generation import load_code_generation_dataset
             from lcb_runner.prompts.code_generation import format_prompt_generation
-            dataset = sorted(load_code_generation_dataset("release_v1"), key=lambda x: x.question_id)
+            dataset = sorted(load_code_generation_dataset("release_latest"), key=lambda x: x.question_id)
             problem = dataset[idx]
             messages = format_prompt_generation(problem, LMStyle.OpenAIChat)
 
         elif subtask == "testoutputprediction":
             from lcb_runner.benchmarks.test_output_prediction import load_test_prediction_dataset
             from lcb_runner.prompts.test_output_prediction import format_prompt_test_output
-            dataset = sorted(load_test_prediction_dataset("release_v1"), key=lambda x: (x.question_id, x.test_id))
+            dataset = sorted(load_test_prediction_dataset("release_latest"), key=lambda x: (x.question_id, x.test_id))
             problem = dataset[idx]
             messages = format_prompt_test_output(problem, LMStyle.OpenAIChat)
 
         elif subtask == "codeexecution":
             from lcb_runner.benchmarks.code_execution import load_code_execution_dataset
             from lcb_runner.prompts.code_execution import format_prompt_execution_cot
-            dataset = sorted(load_code_execution_dataset("release_v1"), key=lambda x: int(x.id.split("_")[1]))
+            dataset = sorted(load_code_execution_dataset("release_latest"), key=lambda x: int(x.id.split("_")[1]))
             problem = dataset[idx]
             messages = format_prompt_execution_cot(problem, LMStyle.OpenAIChat)
 

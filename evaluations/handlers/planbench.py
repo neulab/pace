@@ -3,11 +3,123 @@
 import json
 import os
 import re
+import sys
+import tempfile
 
 _HANDLERS_DIR = os.path.dirname(os.path.abspath(__file__))
 _ROOT_DIR = os.path.normpath(os.path.join(_HANDLERS_DIR, "..", ".."))
 
 PLANBENCH_RAW_DIR = os.path.join(_ROOT_DIR, "results", "raw_results", "planbench")
+
+# Vendored PlanBench package (original grading code we reuse for authentic scoring).
+_PLANBENCH_PKG = os.path.join(_ROOT_DIR, "evaluations", "benchmarks", "planbench", "plan-bench")
+_PLANBENCH_CFG = os.path.join(_PLANBENCH_PKG, "configs", "blocksworld.yaml")
+
+# task_7 compares final states (no VAL); everything except task_3 is a plan task.
+_PLANBENCH_STATE_TASKS = ("task_7_plan_execution",)
+
+# The canonical PlanBench blocksworld grading domain (== instances/blocksworld/
+# generated_domain.pddl, which is not shipped). Its predicate/action names MUST
+# match configs/blocksworld.yaml — verified: actions pick-up/put-down/stack/unstack,
+# predicates ontable/clear/handempty/holding/on.
+_BLOCKSWORLD_DOMAIN = """(define (domain blocksworld-4ops)
+  (:requirements :strips)
+  (:predicates (clear ?x) (ontable ?x) (handempty) (holding ?x) (on ?x ?y))
+  (:action pick-up
+    :parameters (?ob)
+    :precondition (and (clear ?ob) (ontable ?ob) (handempty))
+    :effect (and (holding ?ob) (not (clear ?ob)) (not (ontable ?ob)) (not (handempty))))
+  (:action put-down
+    :parameters (?ob)
+    :precondition (holding ?ob)
+    :effect (and (clear ?ob) (handempty) (ontable ?ob) (not (holding ?ob))))
+  (:action stack
+    :parameters (?ob ?underob)
+    :precondition (and (clear ?underob) (holding ?ob))
+    :effect (and (handempty) (clear ?ob) (on ?ob ?underob)
+                 (not (clear ?underob)) (not (holding ?ob))))
+  (:action unstack
+    :parameters (?ob ?underob)
+    :precondition (and (on ?ob ?underob) (clear ?ob) (handempty))
+    :effect (and (holding ?ob) (clear ?underob)
+                 (not (on ?ob ?underob)) (not (clear ?ob)) (not (handempty)))))
+"""
+
+
+def _planbench_grade(subtask, query, llm_raw_response, ground_truth_plan):
+    """Authentic PlanBench grading, reusing the vendored original functions.
+
+    Returns (llm_correct: int|None, extracted, extras: dict). Requires VAL for the
+    plan tasks (env var $VAL pointing at a dir with the `validate` binary); task_7
+    is state-comparison only. The problem's init/goal are reconstructed from the
+    query's last [STATEMENT] block (equivalent to the generated instance file, since
+    the query was produced from it), then graded with the original text_to_plan /
+    validate_plan / text_to_state and the canonical blocksworld domain.
+    """
+    # Default $VAL to where install.sh / install_val.py puts it, so grading works
+    # even if the user forgot to export it. An explicit $VAL still wins.
+    os.environ.setdefault("VAL", os.path.expanduser("~/.planutils/packages/val/bin"))
+    if _PLANBENCH_PKG not in sys.path:
+        sys.path.insert(0, _PLANBENCH_PKG)
+    import yaml
+    from utils import text_to_plan, text_to_state       # utils/text_to_pddl.py
+    from utils.task_utils import validate_plan          # VAL wrapper
+    from response_evaluation import ResponseEvaluator   # _extract_state_text (staticmethod)
+    from tarski.io import PDDLReader
+    with open(_PLANBENCH_CFG) as f:
+        data = yaml.safe_load(f)
+
+    # ---- task_7: final-state set equality (mirrors evaluate_state) ----
+    if subtask in _PLANBENCH_STATE_TASKS:
+        state_text = ResponseEvaluator._extract_state_text(llm_raw_response)
+        llm_state = text_to_state(state_text, data)
+        gt = ground_truth_plan if isinstance(ground_truth_plan, list) \
+            else text_to_state(ground_truth_plan, data)
+        return int(sorted(gt) == sorted(llm_state)), llm_state, {}
+
+    # ---- plan tasks (t1/t2/t4/t5/t6/t8_*): VAL validation (mirrors evaluate_plan) ----
+    block = query.rsplit("[STATEMENT]", 1)[-1]
+    m_init = re.search(r"As initial conditions I have that,\s*(.*?)\.\s*\n", block, re.S)
+    m_goal = re.search(r"My goal is to have that\s*(.*?)\.", block, re.S)
+    init_preds = text_to_state(m_init.group(1), data) if m_init else []
+    goal_preds = text_to_state(m_goal.group(1), data) if m_goal else []
+
+    def _to_pddl(preds):
+        return ["(" + " ".join(p.split("_")) + ")" for p in preds]
+
+    objs = sorted({tok for p in (init_preds + goal_preds) for tok in p.split("_")[1:]})
+    problem_pddl = (
+        "(define (problem reconstructed)\n(:domain blocksworld-4ops)\n"
+        "(:objects " + " ".join(objs) + ")\n"
+        "(:init " + " ".join(_to_pddl(init_preds)) + ")\n"
+        "(:goal (and " + " ".join(_to_pddl(goal_preds)) + ")))\n"
+    )
+
+    extras = {}
+    with tempfile.TemporaryDirectory() as wd:
+        domain_file = os.path.join(wd, "domain.pddl")
+        problem_file = os.path.join(wd, "problem.pddl")
+        plan_file = os.path.join(wd, "llm_plan")
+        with open(domain_file, "w") as f:
+            f.write(_BLOCKSWORLD_DOMAIN)
+        with open(problem_file, "w") as f:
+            f.write(problem_pddl)
+        reader = PDDLReader(raise_on_error=True)
+        reader.parse_domain(domain_file)
+        problem = reader.parse_instance(problem_file)
+        try:
+            llm_plan, _ = text_to_plan(llm_raw_response, problem.actions, plan_file, data)
+            extracted = llm_plan
+            correct = int(validate_plan(domain_file, problem_file, plan_file))
+            if "optimality" in subtask and correct:
+                actual = sum(1 for ln in llm_plan.split("\n") if len(ln) > 0)
+                optimal = sum(1 for ln in (ground_truth_plan or "").split("\n") if ln.strip())
+                extras = {"actual_cost_of_llm_plan": actual, "optimal_cost": optimal}
+                correct = int(actual == optimal)
+        except Exception:
+            extracted = None
+            correct = 0
+    return correct, extracted, extras
 
 PLANBENCH_TASKS = (
     "task_1_plan_generation",
@@ -126,6 +238,11 @@ def _run_planbench(
             result["llm_correct_binary"] = None
         result["llm_correct"] = None
     else:
-        result["llm_correct"] = None
+        correct, extracted, extras = _planbench_grade(
+            subtask, query, llm_raw_response, ground_truth_plan
+        )
+        result["extracted_llm_plan"] = extracted
+        result["llm_correct"] = correct        # 0/1 (int), matching the standardized CSVs
+        result.update(extras)                  # actual_cost_of_llm_plan / optimal_cost (task_2)
 
     return [result]
