@@ -62,8 +62,9 @@ def _planbench_grade(subtask, query, llm_raw_response, ground_truth_plan):
     if _PLANBENCH_PKG not in sys.path:
         sys.path.insert(0, _PLANBENCH_PKG)
     import yaml
-    from utils import text_to_plan, text_to_state       # utils/text_to_pddl.py
-    from utils.task_utils import validate_plan          # VAL wrapper
+    # validate_plan / text_to_plan / text_to_state are all re-exported by the
+    # utils package __init__ (mirrors the original `from utils import *`).
+    from utils import text_to_plan, text_to_state, validate_plan
     from response_evaluation import ResponseEvaluator   # _extract_state_text (staticmethod)
     from tarski.io import PDDLReader
     with open(_PLANBENCH_CFG) as f:
