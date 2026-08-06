@@ -23,6 +23,7 @@ joblib==1.4.2
 # --- model API / shared ---
 openai==2.44.0
 litellm==1.77.3
+tenacity>=8.5.0              # lm_eval API models (lm_eval/models/api_models.py) — unblocks aime25/gpqa/ifeval/logiqa/humaneval_chat/mbpp_chat/mmlu_cot/acp_gen (8 benchmarks)
 datasets==3.6.0
 huggingface-hub==0.35.0
 tiktoken==0.7.0
@@ -59,6 +60,14 @@ pddl==0.4.2
 kstar-planner==1.4.2
 tarski==0.8.2
 clingo==5.8.0
+# PIN antlr4 to 4.7.x (ATN v3) for planbench. tarski 0.8.2's PDDL parser is
+# built against antlr4-python3-runtime 4.7.x. lm_eval's math extra pulls
+# latex2sympy2, which depends on antlr4 4.13.x (ATN v4) and silently breaks
+# planbench plan tasks (task_1/2/4/5/6/8) at parse time with:
+#   "Could not deserialize ATN with version 3 (expected 4)."
+# latex2sympy2 is therefore intentionally NOT listed here (mmmu-MCQ and
+# visualpuzzles grading do not need it). Keep this pin.
+antlr4-python3-runtime==4.7.2
 
 # --- code: repobench ---
 # NOTE: codebleu + tree-sitter 0.23.x are installed with --no-deps by
@@ -67,6 +76,7 @@ clingo==5.8.0
 # bypassed. They are intentionally NOT listed here.
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.27.3
+anthropic>=0.75.0             # livecodebench: lcb_runner/.../claude_runner.py imports Anthropic at module load even when using the OpenAI endpoint — unblocks livecodebench
 
 # --- debugbench (inference + LeetCode online-judge grading) ---
 gym==0.26.2
@@ -81,6 +91,8 @@ einops==0.8.0
 timm==1.0.12
 sentencepiece==0.2.1
 rouge==1.0.1
+loguru>=0.7.0                # lmms_eval: lmms_eval/tasks/__init__.py imports loguru unconditionally as eval_logger — unblocks mmmu/visualpuzzles (any lmms_eval task)
+google-generativeai          # visualwebbench: run.py + gemini_adapter.py import it at module load — unblocks visualwebbench
 
 # --- retrieval: beir_nfcorpus ---
 beir==2.2.0
