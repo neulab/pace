@@ -23,6 +23,7 @@ joblib==1.4.2
 # --- model API / shared ---
 openai==2.44.0
 litellm==1.77.3
+tenacity>=8.5.0              # lm_eval API models (api_models.py) — without it: 8 benchmarks fail
 datasets==3.6.0
 huggingface-hub==0.35.0
 tiktoken==0.7.0
@@ -67,6 +68,7 @@ clingo==5.8.0
 # bypassed. They are intentionally NOT listed here.
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.27.3
+anthropic>=0.75.0             # livecodebench claude_runner.py — imported even when using OpenAI endpoint
 
 # --- debugbench (inference + LeetCode online-judge grading) ---
 gym==0.26.2
@@ -81,6 +83,9 @@ einops==0.8.0
 timm==1.0.12
 sentencepiece==0.2.1
 rouge==1.0.1
+loguru>=0.7.0                # lmms_eval.tasks.__init__ imports loguru unconditionally
+antlr4-python3-runtime==4.7.2 # tarski 0.8.2 (planbench) needs ATN v3; do NOT upgrade (latex2sympy2 pulls 4.13)
+google-generativeai          # visualwebbench gemini_adapter.py (vendored run.py imports it at module load)
 
 # --- retrieval: beir_nfcorpus ---
 beir==2.2.0
