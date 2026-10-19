@@ -17,3 +17,5 @@ dill
 word2number
 more_itertools
 typing_extensions
+# lm_eval's API model backend (openai-chat-completions), used by the handler
+tenacity
