@@ -10,7 +10,7 @@ A single instance contributes once to EACH ability its source benchmark covers
 Row sums therefore exceed 100 (= |union| × avg-abilities-per-instance).
 
 Usage:
-  python scripts/pacebench/analysis/ability_heatmap.py \
+  python scripts/analysis/ability_heatmap.py \
       --csv scripts/pacebench/selections/abs_fit/selections_C100.csv
 """
 
@@ -21,6 +21,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# Embed TrueType (Type 42) fonts: venues such as NeurIPS reject PDFs with Type 3 fonts.
+plt.rcParams["pdf.fonttype"] = 42
+plt.rcParams["ps.fonttype"] = 42
 
 
 # ──────────────────────────────────────────────────────────────────────

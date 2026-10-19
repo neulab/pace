@@ -15,12 +15,30 @@ The new model must already have per-instance score CSVs under BASE_DIR
 pipeline). It uses the frozen hyper-parameters in config.TASK_A_CONFIGS[count]
 (no --auto-tune, which would leak the eval model into tuning).
 
+Outputs go to new_model_predictions/<NewModel>/ at the repo root (override with
+$PROXYBENCH_OUT_DIR), so the main LOOCV outputs at the repo root are never
+overwritten.
+
+Without agentic ground truth (the usual case for a new model) its target scores
+are read as 0. Its own held-out prediction is unaffected — that fold trains only on
+the other models — but the other models' LOOCV metrics in the same run are not
+meaningful, so the full run log goes to <out>/abs_run.log and only the new model's
+predictions are printed (`actual` / `abs_error` only for targets with ground truth).
+
 Usage
 -----
   python analysis/predict_new_model.py --new-model My-New-Model
   python analysis/predict_new_model.py --new-model My-New-Model --count 100 --B 300 --seed 42
 """
+import os
+# Same BLAS thread settings as cli.py, applied before numpy/pandas are imported:
+# the thread count changes floating-point summation order, so without this the
+# predictions differ slightly from `cli.py abs` / `cli.py pair`.
+os.environ.setdefault('OMP_NUM_THREADS', '4')
+os.environ.setdefault('MKL_NUM_THREADS', '4')
+os.environ.setdefault('OPENBLAS_NUM_THREADS', '4')
 import argparse
+import contextlib
 import sys
 from pathlib import Path
 
@@ -31,6 +49,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pacebench import config  # noqa: E402
+
+
+def targets_with_ground_truth(model):
+    """Agentic targets for which `model` has a score CSV under BASE_DIR."""
+    base = Path(config.BASE_DIR)
+    return {t for t in config.TARGET_DATASETS if any((base / t).rglob(f"{model}.csv"))}
 
 
 def main():
@@ -49,25 +73,45 @@ def main():
         config.MODELS.append(args.new_model)
         config.N_MODELS = len(config.MODELS)
 
+    out_dir = Path(os.environ.setdefault(
+        "PROXYBENCH_OUT_DIR",
+        str(Path(config.BASE_DIR).parent.parent / "new_model_predictions" / args.new_model)))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    gt_targets = targets_with_ground_truth(args.new_model)
+    missing_gt = sorted(set(config.TARGET_DATASETS) - gt_targets)
+
     import cli  # imported after registration so it binds the mutated MODELS list
 
     print(f"Running LOOCV abs over {len(config.MODELS)} models "
-          f"(holding out each, incl. {args.new_model}) …\n", flush=True)
-    cli.run_abs(B=args.B, seed=args.seed, count=args.count,
-                strict_budget=True, auto_tune=False)
+          f"(holding out each, incl. {args.new_model}) …", flush=True)
+    run = lambda: cli.run_abs(B=args.B, seed=args.seed, count=args.count,  # noqa: E731
+                              strict_budget=True, auto_tune=False)
+    if missing_gt:
+        log_path = out_dir / "abs_run.log"
+        print(f"No agentic ground truth for {args.new_model} on: {', '.join(missing_gt)}.\n"
+              "Its held-out prediction is unaffected, but the other models' LOOCV metrics in\n"
+              f"this run would count those scores as 0, so the run log goes to {log_path} only.",
+              flush=True)
+        with open(log_path, "w") as fh, contextlib.redirect_stdout(fh):
+            run()
+    else:
+        print()
+        run()
 
-    out_csv = Path(config.BASE_DIR).parent.parent / "abs_predictions.csv"
+    out_csv = out_dir / "abs_predictions.csv"
     df = pd.read_csv(out_csv)
-    sub = df[df["model"] == args.new_model]
+    sub = df[df["model"] == args.new_model].copy()
     if sub.empty:
         raise SystemExit(f"No rows for '{args.new_model}' in {out_csv}. "
                          "Check the model name and that its CSVs exist under BASE_DIR.")
+    sub.loc[~sub["target"].isin(gt_targets), ["actual", "abs_error"]] = float("nan")
 
     print("\n" + "=" * 52)
     print(f"Held-out predictions for: {args.new_model}")
     print("=" * 52)
-    cols = [c for c in ("target", "predicted", "actual", "abs_error") if c in sub.columns]
-    print(sub[cols].to_string(index=False))
+    cols = ["target", "predicted"] + (["actual", "abs_error"] if gt_targets else [])
+    print(sub[cols].to_string(index=False, na_rep="n/a"))
+    print(f"\nOutputs saved under {out_dir}")
 
 
 if __name__ == "__main__":

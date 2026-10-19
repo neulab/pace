@@ -38,7 +38,7 @@ def _is_logiqa_file(filename: str) -> bool:
 def _extract_id(data: Dict[str, Any], fallback_idx: int) -> str:
     if "doc_id" in data:
         try:
-            return f'{data["doc_id"]}_{data['filter']}'
+            return f'{data["doc_id"]}_{data["filter"]}'
         except Exception:
             pass
     raise ValueError(f"no valid id")
