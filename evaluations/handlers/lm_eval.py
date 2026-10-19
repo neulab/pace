@@ -1,5 +1,6 @@
 """lm-evaluation-harness handler for ProxyBench."""
 
+import logging
 import os
 import sys
 
@@ -57,6 +58,21 @@ def standardized_id_to_doc_id(benchmark: str, subtask: str | None, instance_id: 
     return int(s)
 
 
+class _APIFailureLog(logging.Handler):
+    """Collects lm_eval's "API request failed" warnings. On a failed request the
+    harness stores an empty response and scores it 0 instead of raising, which
+    would silently record a 0 for the instance."""
+
+    def __init__(self):
+        super().__init__(level=logging.WARNING)
+        self.failures = []
+
+    def emit(self, record):
+        msg = record.getMessage()
+        if "API request failed" in msg:
+            self.failures.append(msg)
+
+
 def _run_lm_eval(
     model_name: str,
     base_url: str,
@@ -92,23 +108,34 @@ def _run_lm_eval(
     chat_completions_url = base_url.rstrip("/") + "/v1/chat/completions"
 
     def _evaluate(gen_kwargs):
-        return simple_evaluate(
-            model="openai-chat-completions",
-            model_args=(
-                f"model={model_name},"
-                f"base_url={chat_completions_url},"
-                f"num_concurrent=1,"
-                f"{disable_seed}"
-            ),
-            tasks=[subtask],
-            samples={subtask: [doc_id]},
-            log_samples=True,
-            apply_chat_template=True,
-            gen_kwargs=gen_kwargs,
-            bootstrap_iters=0,
-            task_manager=tm,
-            confirm_run_unsafe_code=True,
-        )
+        api_logger = logging.getLogger("lm_eval.models.api_models")
+        failures = _APIFailureLog()
+        api_logger.addHandler(failures)
+        try:
+            results = simple_evaluate(
+                model="openai-chat-completions",
+                model_args=(
+                    f"model={model_name},"
+                    f"base_url={chat_completions_url},"
+                    f"num_concurrent=1,"
+                    f"{disable_seed}"
+                ),
+                tasks=[subtask],
+                samples={subtask: [doc_id]},
+                log_samples=True,
+                apply_chat_template=True,
+                gen_kwargs=gen_kwargs,
+                bootstrap_iters=0,
+                task_manager=tm,
+                confirm_run_unsafe_code=True,
+            )
+        finally:
+            api_logger.removeHandler(failures)
+        if failures.failures:
+            # Raise instead of scoring the stored empty response; the message keeps
+            # the API error so the temperature fallback below can still match it.
+            raise RuntimeError(failures.failures[-1])
+        return results
 
     # Some models reject `temperature` (e.g. reasoning models return a 400).
     # Try with temperature=0 for determinism; on a temperature error, drop it.

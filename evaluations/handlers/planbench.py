@@ -1,8 +1,10 @@
 """PlanBench handler for ProxyBench."""
 
+import functools
 import json
 import os
 import re
+import subprocess
 import sys
 import tempfile
 
@@ -46,6 +48,17 @@ _BLOCKSWORLD_DOMAIN = """(define (domain blocksworld-4ops)
 """
 
 
+@functools.lru_cache(maxsize=None)
+def _val_runs(validator):
+    """True if the VAL binary can actually be executed here. install_val.py always
+    fetches the Linux build, which exists but cannot run on e.g. macOS."""
+    try:
+        subprocess.run([validator], capture_output=True, timeout=60)
+        return True
+    except (OSError, subprocess.SubprocessError):
+        return False
+
+
 def _planbench_grade(subtask, query, llm_raw_response, ground_truth_plan):
     """Authentic PlanBench grading, reusing the vendored original functions.
 
@@ -62,10 +75,13 @@ def _planbench_grade(subtask, query, llm_raw_response, ground_truth_plan):
     if _PLANBENCH_PKG not in sys.path:
         sys.path.insert(0, _PLANBENCH_PKG)
     import yaml
+    from evaluations.handlers._isolated_import import isolated_imports
     # validate_plan / text_to_plan / text_to_state are all re-exported by the
     # utils package __init__ (mirrors the original `from utils import *`).
-    from utils import text_to_plan, text_to_state, validate_plan
-    from response_evaluation import ResponseEvaluator   # _extract_state_text (staticmethod)
+    # visualwebbench also ships a top-level `utils`, so import in isolation.
+    with isolated_imports(_PLANBENCH_PKG, ("utils", "response_evaluation")):
+        from utils import text_to_plan, text_to_state, validate_plan
+        from response_evaluation import ResponseEvaluator   # _extract_state_text (staticmethod)
     from tarski.io import PDDLReader
     with open(_PLANBENCH_CFG) as f:
         data = yaml.safe_load(f)
@@ -79,6 +95,14 @@ def _planbench_grade(subtask, query, llm_raw_response, ground_truth_plan):
         return int(sorted(gt) == sorted(llm_state)), llm_state, {}
 
     # ---- plan tasks (t1/t2/t4/t5/t6/t8_*): VAL validation (mirrors evaluate_plan) ----
+    # validate_plan shells out to $VAL/validate and looks for "Plan valid" in its
+    # output, so a missing binary would silently grade every plan as wrong.
+    validator = os.path.join(os.environ["VAL"], "validate")
+    if not _val_runs(validator):
+        print(f"Warning: VAL validator missing or not runnable at {validator}; plan task left "
+              "unscored (install it with evaluations/install.sh, Linux x86_64 only).",
+              file=sys.stderr)
+        return None, None, {}
     block = query.rsplit("[STATEMENT]", 1)[-1]
     m_init = re.search(r"As initial conditions I have that,\s*(.*?)\.\s*\n", block, re.S)
     m_goal = re.search(r"My goal is to have that\s*(.*?)\.", block, re.S)

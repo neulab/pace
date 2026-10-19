@@ -6,22 +6,30 @@
 #
 #   bash evaluations/verify_benchmarks.sh
 #   MODEL_NAME=azure_ai/gpt-5.2 bash evaluations/verify_benchmarks.sh
+#   SKIP_BENCHMARKS=debugbench bash evaluations/verify_benchmarks.sh   # opt-in skip
 #
 # BFCL (the 19th) is auto-detected at evaluations/.bfcl-venv (created by install.sh);
 # override its path with BFCL_VENV=... , or it is SKIP-ped if that venv is missing.
 # Each PASS is a real API call (costs money). debugbench needs keys.json;
 # planbench's non-verification tasks need VAL + Fast Downward.
+# SKIP_BENCHMARKS (comma- or space-separated benchmark names) skips those checks;
+# it is empty by default, so every benchmark runs unless you opt out explicitly.
 set -uo pipefail                       # NOTE: no -e, we want to run past failures
 cd "$(dirname "$0")/.."
 PYTHON="${PYTHON:-python}"
 MODEL_NAME="${MODEL_NAME:-azure_ai/gpt-5}"
+SKIP_BENCHMARKS="${SKIP_BENCHMARKS:-}"
 export HF_HUB_ENABLE_HF_TRANSFER=0
 
-PASS=0; FAIL=0; SUMMARY=""
+PASS=0; FAIL=0; SKIPPED=0; SUMMARY=""
 
 check() {  # check <python> <benchmark> <instance_id> [subtask]
   local py="$1" bench="$2" iid="$3" subtask="${4:-}"
   local label="$bench${subtask:+/$subtask}"
+  if [[ " ${SKIP_BENCHMARKS//,/ } " == *" $bench "* ]]; then
+    SKIPPED=$((SKIPPED+1)); SUMMARY+="  SKIP  $label (listed in SKIP_BENCHMARKS)"$'\n'
+    return
+  fi
   printf '\n=== %s ===\n' "$label"
   local out rc
   if [[ -n "$subtask" ]]; then
@@ -32,10 +40,10 @@ check() {  # check <python> <benchmark> <instance_id> [subtask]
           --benchmark "$bench" --instance_id "$iid" 2>&1); rc=$?
   fi
   if [[ $rc -eq 0 && -n "$out" ]]; then
-    PASS=$((PASS+1)); SUMMARY+=$(printf '  PASS  %s\n' "$label")
+    PASS=$((PASS+1)); SUMMARY+="  PASS  $label"$'\n'
     echo "$out" | tail -8            # show the result JSON so you can eyeball the score
   else
-    FAIL=$((FAIL+1)); SUMMARY+=$(printf '  FAIL  %s\n' "$label")
+    FAIL=$((FAIL+1)); SUMMARY+="  FAIL  $label"$'\n'
     echo "$out" | tail -6 | sed 's/^/    /'
   fi
 }
@@ -65,8 +73,8 @@ BFCL_VENV="${BFCL_VENV:-evaluations/.bfcl-venv}"
 if [[ -x "$BFCL_VENV/bin/python" ]]; then
   check "$BFCL_VENV/bin/python" bfcl parallel_multiple_0 non_live_parallel_multiple
 else
-  SUMMARY+=$(printf '  SKIP  bfcl (%s not found — run install.sh to create it)\n' "$BFCL_VENV")
+  SKIPPED=$((SKIPPED+1)); SUMMARY+="  SKIP  bfcl ($BFCL_VENV not found — run install.sh to create it)"$'\n'
 fi
 
 printf '\n===================== SUMMARY =====================\n%s' "$SUMMARY"
-printf '\n  %d passed, %d failed\n' "$PASS" "$FAIL"
+printf '\n  %d passed, %d failed, %d skipped\n' "$PASS" "$FAIL" "$SKIPPED"

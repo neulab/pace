@@ -77,15 +77,18 @@ def _run_visualwebbench(
     if VWB_DIR not in sys.path:
         sys.path.insert(0, VWB_DIR)
 
-    from utils.constants import (
-        CAPTION_TASK, HEADING_OCR_TASK, WEBQA_TASK, ELEMENT_OCR_TASK,
-        ELEMENT_GROUND_TASK, ACTION_PREDICTION_TASK, ACTION_GROUND_TASK,
-    )
-    from utils.eval_utils import (
-        eval_web_caption, eval_heading_ocr, eval_webqa, eval_element_ocr,
-        eval_element_ground, eval_action_prediction, eval_action_ground,
-    )
-    from utils.prompts import DEFAULT_PROMPTS
+    from evaluations.handlers._isolated_import import isolated_imports
+    # planbench also ships a top-level `utils`, so import in isolation.
+    with isolated_imports(VWB_DIR, ("utils",)):
+        from utils.constants import (
+            CAPTION_TASK, HEADING_OCR_TASK, WEBQA_TASK, ELEMENT_OCR_TASK,
+            ELEMENT_GROUND_TASK, ACTION_PREDICTION_TASK, ACTION_GROUND_TASK,
+        )
+        from utils.eval_utils import (
+            eval_web_caption, eval_heading_ocr, eval_webqa, eval_element_ocr,
+            eval_element_ground, eval_action_prediction, eval_action_ground,
+        )
+        from utils.prompts import DEFAULT_PROMPTS
 
     eval_func_map = {
         CAPTION_TASK:           eval_web_caption,
