@@ -114,6 +114,15 @@ def _load_and_svd(sources=None, targets=None):
     return X_v, Y, target_names, P_target, Vt_full, source_col_info_v
 
 
+def _output_dir():
+    """Where prediction CSVs / plots are written: the repo root by default, or
+    $PROXYBENCH_OUT_DIR if set (analysis/predict_new_model*.py use this so they
+    never overwrite the main LOOCV outputs)."""
+    out = Path(os.environ.get("PROXYBENCH_OUT_DIR") or Path(BASE_DIR).parent.parent)
+    out.mkdir(parents=True, exist_ok=True)
+    return out
+
+
 def _resolve_model_split(train_names, eval_names):
     """
     Resolve --train-models / --eval-models into (train_idx, eval_idx) index arrays.
@@ -233,7 +242,7 @@ def _compute_task_a_selections_lomo(X_v, Y, Vt_full, target_names, count,
 def _compute_task_a_selections_lomo_strict(X_v, Y, Vt_full, target_names, count,
                                              P_target=None, B=None, seed=None,
                                              auto_tune=False, nc_max=10, m_grid=None,
-                                             q=None):
+                                             q=None, per_fold_svd=False):
     """Strict-budget version of _compute_task_a_selections_lomo.
 
     Selections satisfy |H ∪ D| = C per (fold, target) via joint_top_C.
@@ -261,7 +270,7 @@ def _compute_task_a_selections_lomo_strict(X_v, Y, Vt_full, target_names, count,
               flush=True)
         H_cache, D_cache, sel_cache = loocv_joint_abs_autotune(
             X_v, Y, Vt_full, q_list, nc_h_grid, nc_d_grid, count,
-            P_target, B, seed)
+            P_target, B, seed, per_fold_svd=per_fold_svd)
         a_cfgs, _, _ = _autotune_task_a_strict_q(
             H_cache, D_cache, Y, target_names,
             q_list, nc_h_grid, nc_d_grid, m_grid, count)
@@ -791,8 +800,11 @@ def run_abs(B, seed, sources=None, targets=None, count=COUNT,
             override_m=None, override_nc_h=None, override_nc_d=None,
             train_models=None, eval_models=None, dump_selections=None,
             auto_tune=False, nc_max=10, m_grid="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0",
-            q=None, strict_budget=False):
+            q=None, strict_budget=False, per_fold_svd=False):
     count_L, count_G = _split_count(count, q)
+    if per_fold_svd:
+        print("[per-fold SVD] D-pt basis recomputed per fold on training models "
+              "only (leak-free).", flush=True)
     override_m = _clamp_m_for_empty_split(count_L, count_G, override_m)
     if strict_budget:
         if q is None:
@@ -809,7 +821,7 @@ def run_abs(B, seed, sources=None, targets=None, count=COUNT,
     X_v, Y, target_names, P_target, Vt_full, source_col_info_v = _load_and_svd(sources, targets)
 
     train_idx, eval_idx = _resolve_model_split(train_models, eval_models)
-    out_dir = Path(BASE_DIR).parent.parent
+    out_dir = _output_dir()
 
     if auto_tune and train_idx is not None:
         raise ValueError("--auto-tune is incompatible with --train-models/--eval-models "
@@ -898,7 +910,7 @@ def run_abs(B, seed, sources=None, targets=None, count=COUNT,
               f"y_pool reused per (fold, target))", flush=True)
         H_cache, D_cache, sel_cache = loocv_joint_abs_autotune(
             X_v, Y, Vt_full, q_list, nc_h_grid, nc_d_grid, count,
-            P_target, B, seed)
+            P_target, B, seed, per_fold_svd=per_fold_svd)
         cfgs, preds, _ = _autotune_task_a_strict_q(
             H_cache, D_cache, Y, target_names,
             q_list, nc_h_grid, nc_d_grid, m_list, count)
@@ -1093,7 +1105,7 @@ def _describe_pair(cfg):
 
 
 def _lomo_pair_dispatch(strategy, reg, X_v, Y, Vt_full, nc, P_target, count, B, seed,
-                         pinned_sel_by_fold_t=None):
+                         pinned_sel_by_fold_t=None, per_fold_svd=False):
     """Dispatch to the correct LOMO function by (strategy, reg) pair."""
     if strategy == "H":
         if reg == "ols":
@@ -1104,9 +1116,11 @@ def _lomo_pair_dispatch(strategy, reg, X_v, Y, Vt_full, nc, P_target, count, B, 
     else:  # D-pt
         if reg == "ols":
             return lomo_Dpt_pair_ols(X_v, Y, Vt_full, nc, count, P_target, B, seed,
-                                     pinned_sel_by_fold_t=pinned_sel_by_fold_t)
+                                     pinned_sel_by_fold_t=pinned_sel_by_fold_t,
+                                     per_fold_svd=per_fold_svd)
         return lomo_Dpt_logit(X_v, Y, Vt_full, nc, count, P_target, B, seed, DEFAULT_ALPHA,
-                              pinned_sel_by_fold_t=pinned_sel_by_fold_t)
+                              pinned_sel_by_fold_t=pinned_sel_by_fold_t,
+                              per_fold_svd=per_fold_svd)
 
 
 def run_pair(B, seed, sources=None, targets=None, count=COUNT,
@@ -1115,9 +1129,12 @@ def run_pair(B, seed, sources=None, targets=None, count=COUNT,
              pin_task_a_selection=False,
              auto_tune=False, nc_max=10,
              m_grid="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0",
-             q=None, strict_budget=False):
+             q=None, strict_budget=False, per_fold_svd=False):
     count_L, count_G = _split_count(count, q)
     override_m = _clamp_m_for_empty_split(count_L, count_G, override_m)
+    if per_fold_svd:
+        print("[per-fold SVD] D-pt basis (selection + embedding) recomputed per "
+              "fold on training models only (leak-free).", flush=True)
     if strict_budget:
         if not pin_task_a_selection:
             raise ValueError("--strict-budget on `pair` requires --pin-task-a-selection "
@@ -1141,7 +1158,7 @@ def run_pair(B, seed, sources=None, targets=None, count=COUNT,
                             fallback_reg="ols")
 
     train_idx, eval_idx = _resolve_model_split(train_models, eval_models)
-    out_dir = Path(BASE_DIR).parent.parent
+    out_dir = _output_dir()
 
     if auto_tune and train_idx is not None:
         raise ValueError("--auto-tune is incompatible with --train-models/--eval-models "
@@ -1249,7 +1266,8 @@ def run_pair(B, seed, sources=None, targets=None, count=COUNT,
             P_target=P_target, B=B, seed=seed,
             auto_tune=auto_tune, nc_max=nc_max,
             m_grid=(_parse_m_grid(m_grid) if auto_tune else None),
-            q=q)
+            q=q,
+            **({"per_fold_svd": per_fold_svd} if strict_budget else {}))
 
     if auto_tune:
         nc_range = list(range(1, nc_max + 1))
@@ -1293,7 +1311,7 @@ def run_pair(B, seed, sources=None, targets=None, count=COUNT,
                 print(f"  • D-pt_logit(nc={nc_}, N={M}) …", flush=True)
                 D_cache_qm[(nc_, M)] = _lomo_pair_dispatch(
                     "D-pt", "logit", X_v, Y, Vt_full, nc_, P_target, M, B, seed,
-                    pinned_sel_by_fold_t=pinned_D_lomo)
+                    pinned_sel_by_fold_t=pinned_D_lomo, per_fold_svd=per_fold_svd)
         cfgs, preds, _ = _autotune_task_b_q(H_cache_qm, D_cache_qm, Y, target_names,
                                             nc_range, m_list, count, q_list)
         note_parts = ["auto-tuned, q fixed" if q is not None else "auto-tuned w/ q-sweep"]
@@ -1331,7 +1349,8 @@ def run_pair(B, seed, sources=None, targets=None, count=COUNT,
             print(f"  • D-pt_{reg}(nc={nc_}, N={M}) …", flush=True)
             D_cache[(reg, nc_, M)] = _lomo_pair_dispatch("D-pt", reg, X_v, Y, Vt_full,
                                                          nc_, P_target, M, B, seed,
-                                                         pinned_sel_by_fold_t=pinned_D_lomo)
+                                                         pinned_sel_by_fold_t=pinned_D_lomo,
+                                                         per_fold_svd=per_fold_svd)
 
         idx = {t: i for i, t in enumerate(target_names)}
         ref_arr = next(iter(H_cache.values())) if H_cache else next(iter(D_cache.values()))
@@ -1506,7 +1525,7 @@ def run_fit_abs(B, seed, sources=None, targets=None, count=COUNT,
         print("═" * 75, flush=True)
         print_abs_results(df, label=f"Task A IN-SAMPLE STRICT  C={count}, B={B}, seed={seed}")
 
-        out_dir = Path(BASE_DIR).parent.parent
+        out_dir = _output_dir()
         out_csv = out_dir / "abs_fit_all_predictions.csv"
         rows = []
         for i, mname in enumerate(MODELS):
@@ -1591,7 +1610,7 @@ def run_fit_abs(B, seed, sources=None, targets=None, count=COUNT,
     print("═" * 75, flush=True)
     print_abs_results(df, label=f"Task A  IN-SAMPLE  C={count}, B={B}, seed={seed}")
 
-    out_dir = Path(BASE_DIR).parent.parent
+    out_dir = _output_dir()
     out_csv = out_dir / "abs_fit_all_predictions.csv"
     rows = []
     for i, m in enumerate(MODELS):
@@ -1759,7 +1778,7 @@ def run_fit_pair(B, seed, sources=None, targets=None, count=COUNT,
                     "correct":           bool((pred_mat[k, j] > 0) == (y_m > 0)),
                 })
     df_pairs = pd.DataFrame(rows)
-    out_csv = Path(BASE_DIR).parent.parent / "pair_fit_all_predictions.csv"
+    out_csv = _output_dir() / "pair_fit_all_predictions.csv"
     df_pairs.to_csv(out_csv, index=False)
     print(f"\nPer-pair in-sample predictions saved → {out_csv}", flush=True)
 
@@ -1904,6 +1923,11 @@ def main():
                         default="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0",
                         dest="m_grid_str",
                         help="Comma-separated m values to sweep when --auto-tune")
+    parser.add_argument("--per-fold-svd", action="store_true", dest="per_fold_svd",
+                        help="Leak-free D-pt: recompute the SVD basis on each "
+                             "fold's TRAINING models only (default: one global SVD "
+                             "over all models, reused every fold). Currently "
+                             "implemented for `abs` + --strict-budget.")
     args = parser.parse_args()
 
     kwargs = dict(
@@ -1934,6 +1958,11 @@ def main():
               "ignored)", flush=True)
     kwargs["q"] = args.q   # supported by abs / pair / fit-abs / fit-pair
     kwargs["strict_budget"] = args.strict_budget   # all 4 tasks now support it
+    if args.task in ("abs", "pair"):
+        kwargs["per_fold_svd"] = args.per_fold_svd
+    elif args.per_fold_svd:
+        print("(warning: --per-fold-svd is implemented for `abs` / `pair` "
+              "(--strict-budget); ignored for fit-abs / fit-pair)", flush=True)
     {
         "abs":      run_abs,
         "pair":     run_pair,

@@ -300,6 +300,16 @@ def main():
     errors = defaultdict(int)
     total = len(rows_by_key)
     done = 0
+    # Finish importing transformers (a lazy module) on the main thread first. Several
+    # handlers reach it from worker threads (e.g. `datasets` checks
+    # transformers.PreTrainedTokenizerBase when hashing), and a thread that sees it
+    # half-imported by another fails with "module 'transformers' has no attribute".
+    try:
+        import transformers
+        transformers.PreTrainedTokenizerBase  # noqa: B018  (forces the lazy import)
+    except ImportError:
+        pass
+
     # Workers do only the (I/O-bound) API calls; extraction + CSV writes stay on
     # the main thread here, so no locking is needed for `written`/flush.
     with ThreadPoolExecutor(max_workers=args.workers) as pool:

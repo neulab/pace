@@ -1,0 +1,10 @@
+# Part 1 only: the prediction pipeline (scripts/pacebench/) and the figure
+# scripts (scripts/analysis/). No API key, no GPU. Python 3.11.
+#   pip install -r requirements-pacebench.txt
+# To run models on the benchmarks (Part 2) use `bash evaluations/install.sh`;
+# requirements.txt is the best-effort single-file union of everything.
+numpy==1.26.4
+scipy==1.14.1
+pandas==1.5.3
+matplotlib==3.10.0
+joblib==1.4.2

@@ -43,6 +43,7 @@ results/raw_results/
 /pair_fit_all_predictions.csv
 /abs_loocv_fit.png
 /pair_loocv_scatter.png
+/new_model_predictions/
 *.log
 eval_plan.csv
 found_plans/

@@ -1,6 +1,7 @@
 """BEIR reranking handler for ProxyBench."""
 
 import json
+import logging
 import os
 import sys
 
@@ -13,6 +14,21 @@ BEIR_DIR = os.path.join(BENCHMARKS_DIR, "beir")
 BEIR_DATASET_INFO = {
     "beir_nfcorpus": ("nfcorpus", "nfcorpus"),
 }
+
+
+class _RerankFailureLog(logging.Handler):
+    """Collects beir_llm_rerank's "rank_window failed" warnings. On an API error it
+    falls back to the first-stage order, so the metrics would silently be the
+    retriever's rather than the model's."""
+
+    def __init__(self):
+        super().__init__(level=logging.WARNING)
+        self.failures = []
+
+    def emit(self, record):
+        msg = record.getMessage()
+        if msg.startswith("rank_window failed"):
+            self.failures.append(msg)
 
 
 def _run_beir(
@@ -69,23 +85,33 @@ def _run_beir(
     # a smoke-test completes quickly without running the whole dataset.
     MAX_QUERIES_SMOKE = int(os.environ.get("BEIR_MAX_QUERIES", len(queries)))
     reranked_results = {}
-    for qid, query_text in list(queries.items())[:MAX_QUERIES_SMOKE]:
-        doc_scores = first_stage_results.get(qid, {})
-        sorted_docs = sorted(doc_scores.items(), key=lambda x: x[1], reverse=True)[:TOP_K]
-        doc_list = [
-            (doc_id, corpus[doc_id].get("title", ""), corpus[doc_id].get("text", ""))
-            for doc_id, _ in sorted_docs
-            if doc_id in corpus
-        ]
-        ranked = sliding_window_rerank(
-            engine=model_name,
-            query_text=query_text,
-            doc_list=doc_list,
-            api_base=api_base,
-            api_key=api_key,
-        )
-        n = len(ranked)
-        reranked_results[qid] = {doc_id: n - rank for rank, (doc_id, _, _) in enumerate(ranked)}
+    rerank_logger = logging.getLogger("beir_llm_rerank")
+    failures = _RerankFailureLog()
+    rerank_logger.addHandler(failures)
+    try:
+        for qid, query_text in list(queries.items())[:MAX_QUERIES_SMOKE]:
+            doc_scores = first_stage_results.get(qid, {})
+            sorted_docs = sorted(doc_scores.items(), key=lambda x: x[1], reverse=True)[:TOP_K]
+            doc_list = [
+                (doc_id, corpus[doc_id].get("title", ""), corpus[doc_id].get("text", ""))
+                for doc_id, _ in sorted_docs
+                if doc_id in corpus
+            ]
+            ranked = sliding_window_rerank(
+                engine=model_name,
+                query_text=query_text,
+                doc_list=doc_list,
+                api_base=api_base,
+                api_key=api_key,
+            )
+            n = len(ranked)
+            reranked_results[qid] = {doc_id: n - rank for rank, (doc_id, _, _) in enumerate(ranked)}
+    finally:
+        rerank_logger.removeHandler(failures)
+    if failures.failures:
+        raise RuntimeError(
+            f"LLM rerank failed for {len(failures.failures)} window(s), so the metrics "
+            f"would reflect the first-stage order: {failures.failures[-1]}")
 
     k_values = [1, 5, 10, 20]
     ndcg, _map, recall, precision = EvaluateRetrieval.evaluate(qrels, reranked_results, k_values)

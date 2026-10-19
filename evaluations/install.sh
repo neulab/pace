@@ -37,7 +37,14 @@ echo "== [2/3] BFCL venv: $BFCL_VENV =="
 "$BFCL_VENV/bin/python" -m pip install \
     "openai>=1.86.0" "tree-sitter==0.21.3" "tree-sitter-java==0.21.0" \
     "tree-sitter-javascript==0.21.4" pydantic numpy pandas tqdm tabulate \
-    huggingface_hub tenacity overrides python-dotenv
+    huggingface_hub tenacity overrides python-dotenv \
+    requests beautifulsoup4 html2text google-search-results "rank_bm25==0.2.2" \
+    "sentence-transformers>=2.7.0; sys_platform != 'darwin' or platform_machine != 'x86_64'" \
+    "faiss-cpu==1.11.0; sys_platform != 'darwin' or platform_machine != 'x86_64'"
+# ^ agentic categories: web_search (needs SERPAPI_API_KEY at run time), memory_kv
+#   (rank_bm25) and memory_vector (sentence-transformers + faiss). The last two are
+#   skipped on Intel macOS, where current sentence-transformers needs a newer torch
+#   than PyTorch publishes there; memory_vector instances then fail with an import error.
 
 echo "== [3/3] VAL plan validator (planbench grading) =="
 # planbench grades non-verification tasks with VAL. Downloads a Linux64 build to
@@ -45,7 +52,11 @@ echo "== [3/3] VAL plan validator (planbench grading) =="
 # '$VAL/validate' (lowercase) -> add a symlink. Non-fatal if it fails (e.g. no
 # network / non-Linux): only planbench plan tasks need it.
 VAL_BIN="$HOME/.planutils/packages/val/bin"
-if "$PY" evaluations/benchmarks/planbench/plan-bench/install_val.py; then
+if [ "$(uname -s)" != "Linux" ] || [ "$(uname -m)" != "x86_64" ]; then
+    # install_val.py only fetches the Linux x86_64 build, which cannot run elsewhere.
+    echo "Skipping VAL: it is only available for Linux x86_64. planbench plan tasks will"
+    echo "be unscored on this machine; run the scoring step on Linux x86_64 to grade them."
+elif "$PY" evaluations/benchmarks/planbench/plan-bench/install_val.py; then
     [ -f "$VAL_BIN/Validate" ] && ln -sf "$VAL_BIN/Validate" "$VAL_BIN/validate"
     echo "VAL installed. The planbench handler defaults \$VAL to $VAL_BIN;"
     echo "to override, export VAL=<dir with the validate binary>."

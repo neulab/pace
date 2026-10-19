@@ -224,17 +224,25 @@ def loocv_joint_abs(X_v, Y, Vt_full, per_target_qC, nc_h_per_t, nc_d_per_t,
 # ──────────────────────────────────────────────────────────────
 
 def _fold_strict_autotune(i, X_valid, Y, Vt_full, q_grid, nc_h_grid, nc_d_grid,
-                           count, P_target, B, seed):
+                           count, P_target, B, seed, per_fold_svd=False):
     """One fold worker: returns (h_records, d_records, sel_records).
 
     h_records   : dict[(t_idx, q, nc_h, nc_d)] → scalar pred
     d_records   : dict[(t_idx, q, nc_d)]       → scalar pred
     sel_records : dict[(t_idx, q, nc_d)]       → (h_idx, d_idx) ndarrays
+
+    per_fold_svd=True: recompute the D-pt SVD basis on THIS fold's training
+    models only (leak-free), instead of the global Vt_full over all models.
     """
     from pacebench.selection import joint_top_C
     n, T = X_valid.shape[0], Y.shape[1]
     tr = [j for j in range(n) if j != i]
     X_tr = X_valid[tr].astype(np.float64)
+    if per_fold_svd:
+        from numpy.linalg import svd as np_svd
+        _, _, Vt_use = np_svd(X_tr, full_matrices=False)
+    else:
+        Vt_use = Vt_full
 
     h_records, d_records, sel_records = {}, {}, {}
     for t_idx in range(T):
@@ -251,11 +259,11 @@ def _fold_strict_autotune(i, X_valid, Y, Vt_full, q_grid, nc_h_grid, nc_d_grid,
             y_pool[b*n_tr:(b+1)*n_tr] = P_t[:, bi_t].mean(axis=1)
         for q_val in q_grid:
             for nc_d in nc_d_grid:
-                h_idx, d_idx = joint_top_C(X_tr, y_tr, Vt_full, count, nc_d, q_val)
+                h_idx, d_idx = joint_top_C(X_tr, y_tr, Vt_use, count, nc_d, q_val)
                 sel_records[(t_idx, q_val, nc_d)] = (h_idx, d_idx)
                 # D-pt prediction (one per (q, nc_d))
                 if len(d_idx) > 0:
-                    U_D_tr, u_D_te = dpt_embed(X_valid, i, X_tr, y_tr, Vt_full,
+                    U_D_tr, u_D_te = dpt_embed(X_valid, i, X_tr, y_tr, Vt_use,
                                                 len(d_idx), nc_d, pinned_sel=d_idx)
                     U_pool = np.tile(U_D_tr, (B, 1))
                     d_records[(t_idx, q_val, nc_d)] = _fit_predict_abs(U_pool, y_pool, u_D_te)
@@ -277,7 +285,7 @@ def _fold_strict_autotune(i, X_valid, Y, Vt_full, q_grid, nc_h_grid, nc_d_grid,
 
 
 def loocv_joint_abs_autotune(X_v, Y, Vt_full, q_grid, nc_h_grid, nc_d_grid,
-                              count, P_target, B, seed):
+                              count, P_target, B, seed, per_fold_svd=False):
     """Strict-budget LOMO across n folds, computing ALL (q, nc_h, nc_d) combos
     in a single pass per fold.
 
@@ -289,7 +297,8 @@ def loocv_joint_abs_autotune(X_v, Y, Vt_full, q_grid, nc_h_grid, nc_d_grid,
     n, T = X_v.shape[0], Y.shape[1]
     res = Parallel(n_jobs=N_JOBS, backend='loky')(
         delayed(_fold_strict_autotune)(i, X_v, Y, Vt_full, q_grid, nc_h_grid,
-                                        nc_d_grid, count, P_target, B, seed)
+                                        nc_d_grid, count, P_target, B, seed,
+                                        per_fold_svd=per_fold_svd)
         for i in range(n))
 
     H_cache = {(q_val, nc_h, nc_d): np.zeros((n, T))

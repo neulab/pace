@@ -74,10 +74,13 @@ def _fold_H_logit(i, X_valid, Y, P_target, nc, M, B, seed, alpha,
 
 
 def _fold_Dpt_logit(i, X_valid, Y, Vt_full, P_target, nc, N, B, seed, alpha,
-                    pair_idx_a, pair_idx_b, pinned_sel_by_t=None):
+                    pair_idx_a, pair_idx_b, pinned_sel_by_t=None, per_fold_svd=False):
     n, T = X_valid.shape[0], Y.shape[1]
     tr = [k for k in range(n) if k != i]
     X_tr = X_valid[tr].astype(np.float64)
+    if per_fold_svd:      # leak-free D-pt basis: train-only SVD for this fold
+        from numpy.linalg import svd as np_svd
+        _, _, Vt_full = np_svd(X_tr, full_matrices=False)
     margins = np.zeros((n, T))
 
     for t_idx in range(T):
@@ -114,14 +117,15 @@ def lomo_H_logit(X_v, Y, nc, M, P_target, B, seed, alpha=DEFAULT_ALPHA,
 
 
 def lomo_Dpt_logit(X_v, Y, Vt, nc, N, P_target, B, seed, alpha=DEFAULT_ALPHA,
-                   pinned_sel_by_fold_t=None):
+                   pinned_sel_by_fold_t=None, per_fold_svd=False):
     """Task B LOMO with D-pt embedding + pairwise logistic. Returns (n, n, T) logits."""
     n = X_v.shape[0]
     pair_idx_a, pair_idx_b = pair_indices(n - 1)
     res = Parallel(n_jobs=N_JOBS, backend='loky')(
         delayed(_fold_Dpt_logit)(i, X_v, Y, Vt, P_target, nc, N, B, seed,
                                  alpha, pair_idx_a, pair_idx_b,
-                                 pinned_sel_by_fold_t.get(i) if pinned_sel_by_fold_t else None)
+                                 pinned_sel_by_fold_t.get(i) if pinned_sel_by_fold_t else None,
+                                 per_fold_svd=per_fold_svd)
         for i in range(n))
     return np.stack(res, axis=0)
 
@@ -165,10 +169,13 @@ def _fold_H_pair_ols(i, X_valid, Y, P_target, nc, M, B, seed,
 
 
 def _fold_Dpt_pair_ols(i, X_valid, Y, Vt_full, P_target, nc, N, B, seed,
-                       pair_idx_a, pair_idx_b, pinned_sel_by_t=None):
+                       pair_idx_a, pair_idx_b, pinned_sel_by_t=None, per_fold_svd=False):
     n, T = X_valid.shape[0], Y.shape[1]
     tr = [k for k in range(n) if k != i]
     X_tr = X_valid[tr].astype(np.float64)
+    if per_fold_svd:      # leak-free D-pt basis: train-only SVD for this fold
+        from numpy.linalg import svd as np_svd
+        _, _, Vt_full = np_svd(X_tr, full_matrices=False)
     margins = np.zeros((n, T))
     for t_idx in range(T):
         rng = np.random.RandomState(seed + i * 997 + t_idx * 31)
@@ -195,14 +202,16 @@ def lomo_H_pair_ols(X_v, Y, nc, M, P_target, B, seed, pinned_sel_by_fold_t=None)
     return np.stack(res, axis=0)
 
 
-def lomo_Dpt_pair_ols(X_v, Y, Vt, nc, N, P_target, B, seed, pinned_sel_by_fold_t=None):
+def lomo_Dpt_pair_ols(X_v, Y, Vt, nc, N, P_target, B, seed, pinned_sel_by_fold_t=None,
+                      per_fold_svd=False):
     """Task B LOMO: D-pt embedding + pair-diff OLS (Spearman-weighted 1-D)."""
     n = X_v.shape[0]
     pair_idx_a, pair_idx_b = pair_indices(n - 1)
     res = Parallel(n_jobs=N_JOBS, backend='loky')(
         delayed(_fold_Dpt_pair_ols)(i, X_v, Y, Vt, P_target, nc, N, B, seed,
                                     pair_idx_a, pair_idx_b,
-                                    pinned_sel_by_fold_t.get(i) if pinned_sel_by_fold_t else None)
+                                    pinned_sel_by_fold_t.get(i) if pinned_sel_by_fold_t else None,
+                                    per_fold_svd=per_fold_svd)
         for i in range(n))
     return np.stack(res, axis=0)
 

@@ -9,8 +9,8 @@ Three helper scripts (run from `scripts/pacebench/`):
 | script | what it does | output |
 |---|---|---|
 | `analysis/emit_eval_plan.py` | list the exact source instances the new model must be scored on | `eval_plan.csv` + per-benchmark summary + `evaluations/run.py` commands |
-| `analysis/predict_new_model.py` | **Goal A** — predict the 4 absolute target scores | `abs_predictions.csv` (rows for the new model) |
-| `analysis/predict_new_model_pair.py` | **Goal B** — predict pairwise win/loss vs every existing model | `pair_predictions.csv` (rows where the new model is held-out) |
+| `analysis/predict_new_model.py` | **Goal A** — predict the 4 absolute target scores | `new_model_predictions/<NAME>/abs_predictions.csv` (rows for the new model) |
+| `analysis/predict_new_model_pair.py` | **Goal B** — predict pairwise win/loss vs every existing model | `new_model_predictions/<NAME>/pair_predictions.csv` (rows where the new model is held-out) |
 
 ## How it works
 
@@ -21,6 +21,13 @@ new model, run the standard `abs` / `pair` pipeline holding it out, and read its
 prediction — the regression is fit only on the *other* models, so it is a proper
 out-of-sample estimate, using the frozen hyper-parameters in
 `config.TASK_A_CONFIGS[count]` / `config.TASK_B_CONFIGS_PINNED_A[count]`.
+
+Without agentic ground truth for the new model (the usual case) its target scores
+are read as 0. Its own fold is unaffected (it trains only on the other models), but
+the other models' LOOCV metrics and the pooled Platt calibration of that run are
+not. The scripts therefore print only the new model's predictions (full run logs go
+to `new_model_predictions/<NAME>/*_run.log`), and `predict_new_model_pair.py`
+recalibrates P(win) on a reference run over the existing models only.
 
 Because the held-out fold selects instances from the *other* models' scores, the
 set of source instances the new model needs is exactly the fit-selection dump

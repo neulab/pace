@@ -1,7 +1,10 @@
 """BFCL (Berkeley Function-Calling Leaderboard) handler for ProxyBench."""
 
 import os
+import shutil
 import sys
+import tempfile
+from pathlib import Path
 
 _HANDLERS_DIR = os.path.dirname(os.path.abspath(__file__))
 _EVALUATIONS_DIR = os.path.dirname(_HANDLERS_DIR)
@@ -76,6 +79,30 @@ def _ensure_model_registered(model_name: str) -> None:
     )
 
 
+def _find_ground_truth(all_ground_truth, instance_id, test_category):
+    """Ground-truth entry for `instance_id`; raises instead of returning None so a
+    missing answer can never be scored against an empty list.
+
+    bfcl renames memory / web_search prompt ids to their specific category when
+    loading them (memory_45-x-y -> memory_rec_sum_45-x-y, web_search_72 ->
+    web_search_no_snippet_72) but not the shared ground-truth ids, so apply the
+    same renaming here before matching."""
+    from bfcl_eval.utils import is_memory, is_web_search
+
+    def gt_id(g):
+        g_id = str(g["id"])
+        if is_web_search(test_category):
+            return g_id.replace("web_search", test_category)
+        if is_memory(test_category):
+            return g_id.replace("memory", test_category)
+        return g_id
+
+    entry = next((g for g in all_ground_truth if gt_id(g) == str(instance_id)), None)
+    if entry is None:
+        raise ValueError(f"No ground truth for '{instance_id}' in test_category '{test_category}'.")
+    return entry
+
+
 def _run_bfcl(
     model_name: str,
     base_url: str,
@@ -99,6 +126,11 @@ def _run_bfcl(
         is_agentic,
         is_java,
         is_js,
+        is_memory,
+        is_web_search,
+        populate_initial_settings_for_memory_test_cases,
+        populate_initial_settings_for_web_search_test_cases,
+        sort_key,
     )
     from bfcl_eval.constants.enums import Language, ReturnFormat
     from bfcl_eval.model_handler.api_inference.openai_completion import (
@@ -142,68 +174,104 @@ def _run_bfcl(
     handler.generate_with_backoff = _generate_no_temp_fallback
 
     all_entries = load_dataset_entry(
-        test_category, include_prereq=False, include_language_specific_hint=False
+        test_category, include_prereq=is_memory(test_category),
+        include_language_specific_hint=False,
     )
     entry = next((e for e in all_entries if str(e["id"]) == str(instance_id)), None)
+    if entry is None:
+        # Live-category ids carry a "-<n>-<m>" suffix that the standardized results
+        # drop (live_irrelevance_293-x-y -> live_irrelevance_293). Map back to the full
+        # id so both the entry and its ground truth below are found.
+        matches = [e for e in all_entries if str(e["id"]).split("-")[0] == str(instance_id)]
+        if len(matches) == 1:
+            entry = matches[0]
+            instance_id = entry["id"]
     if entry is None:
         raise ValueError(
             f"Instance id '{instance_id}' not found in test_category '{test_category}'. "
             f"Sample ids: {[e['id'] for e in all_entries[:5]]}"
         )
 
-    model_responses, metadata = handler.inference(
-        entry, include_input_log=False, exclude_state_log=True
-    )
+    if is_web_search(test_category):
+        if not os.getenv("SERPAPI_API_KEY"):
+            raise RuntimeError(
+                "BFCL web_search categories search the web through SerpAPI: set "
+                "SERPAPI_API_KEY (e.g. in .env). Without it every search returns an error "
+                "and the instance would be scored as a failure.")
+        # show_snippet=False for the no_snippet variant, as bfcl's own generation sets.
+        populate_initial_settings_for_web_search_test_cases([entry])
 
-    if is_relevance_or_irrelevance(test_category):
-        result = _evaluate_single_relevance_entry(
-            handler, instance_id, model_responses, entry, model_name, test_category
-        )
-    elif is_multi_turn(test_category):
-        all_ground_truth = load_ground_truth_entry(test_category)
-        gt_entry = next(
-            (g for g in all_ground_truth if str(g["id"]) == str(instance_id)), None
-        )
-        ground_truth = gt_entry["ground_truth"] if gt_entry else []
-        result = _evaluate_single_multi_turn_entry(
-            handler, instance_id, model_responses, ground_truth, entry, model_name, test_category
-        )
-    elif is_agentic(test_category):
-        all_ground_truth = load_ground_truth_entry(test_category)
-        gt_entry = next(
-            (g for g in all_ground_truth if str(g["id"]) == str(instance_id)), None
-        )
-        possible_answer = gt_entry["ground_truth"] if gt_entry else []
-        result = _evaluate_single_agentic_entry(
-            handler, instance_id, model_responses, possible_answer, entry, model_name, test_category
-        )
-    else:
-        all_ground_truth = load_ground_truth_entry(test_category)
-        gt_entry = next(
-            (g for g in all_ground_truth if str(g["id"]) == str(instance_id)), None
-        )
-        possible_answer = gt_entry["ground_truth"] if gt_entry else []
+    memory_dir = tempfile.mkdtemp(prefix="bfcl_memory_") if is_memory(test_category) else None
+    try:
+        if memory_dir:
+            # A memory entry reads the snapshot built by its prerequisite conversations,
+            # so run those first, in dependency order as bfcl's own generation does.
+            by_id = {e["id"]: e for e in all_entries}
+            chain, seen = [], set()
 
-        if is_java(test_category):
-            language, return_format = Language.JAVA, ReturnFormat.JAVA
-        elif is_js(test_category):
-            language, return_format = Language.JAVASCRIPT, ReturnFormat.JAVASCRIPT
+            def visit(test_id):
+                deps = sorted(by_id[test_id].get("depends_on", []), key=lambda d: sort_key(by_id[d]))
+                for dep in deps:
+                    if dep not in seen:
+                        seen.add(dep)
+                        visit(dep)
+                        chain.append(by_id[dep])
+
+            visit(entry["id"])
+            populate_initial_settings_for_memory_test_cases(chain + [entry], Path(memory_dir))
+            for prereq in chain:
+                handler.inference(prereq, include_input_log=False, exclude_state_log=True)
+
+        model_responses, metadata = handler.inference(
+            entry, include_input_log=False, exclude_state_log=True
+        )
+
+        if is_relevance_or_irrelevance(test_category):
+            result = _evaluate_single_relevance_entry(
+                handler, instance_id, model_responses, entry, model_name, test_category
+            )
+        elif is_multi_turn(test_category):
+            all_ground_truth = load_ground_truth_entry(test_category)
+            gt_entry = _find_ground_truth(all_ground_truth, instance_id, test_category)
+            ground_truth = gt_entry["ground_truth"]
+            result = _evaluate_single_multi_turn_entry(
+                handler, instance_id, model_responses, ground_truth, entry, model_name, test_category
+            )
+        elif is_agentic(test_category):
+            all_ground_truth = load_ground_truth_entry(test_category)
+            gt_entry = _find_ground_truth(all_ground_truth, instance_id, test_category)
+            possible_answer = gt_entry["ground_truth"]
+            result = _evaluate_single_agentic_entry(
+                handler, instance_id, model_responses, possible_answer, entry, model_name, test_category
+            )
         else:
-            language, return_format = Language.PYTHON, ReturnFormat.PYTHON
+            all_ground_truth = load_ground_truth_entry(test_category)
+            gt_entry = _find_ground_truth(all_ground_truth, instance_id, test_category)
+            possible_answer = gt_entry["ground_truth"]
 
-        result = _evaluate_single_ast_entry(
-            handler,
-            instance_id,
-            model_responses,
-            possible_answer,
-            entry,
-            model_name,
-            test_category,
-            language=language,
-            return_format=return_format,
-            has_tool_call_tag=False,
-        )
+            if is_java(test_category):
+                language, return_format = Language.JAVA, ReturnFormat.JAVA
+            elif is_js(test_category):
+                language, return_format = Language.JAVASCRIPT, ReturnFormat.JAVASCRIPT
+            else:
+                language, return_format = Language.PYTHON, ReturnFormat.PYTHON
 
-    result.setdefault("model_result_raw", model_responses)
-    result["metadata"] = metadata
-    return [result]
+            result = _evaluate_single_ast_entry(
+                handler,
+                instance_id,
+                model_responses,
+                possible_answer,
+                entry,
+                model_name,
+                test_category,
+                language=language,
+                return_format=return_format,
+                has_tool_call_tag=False,
+            )
+
+        result.setdefault("model_result_raw", model_responses)
+        result["metadata"] = metadata
+        return [result]
+    finally:
+        if memory_dir:
+            shutil.rmtree(memory_dir, ignore_errors=True)

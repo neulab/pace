@@ -2,7 +2,7 @@
 # Easiest: pip install -e evaluations/benchmarks/livecodebench
 # vllm/torch are local-serving only — drop if using the API endpoint.
 annotated-types>=0.7.0
-anthropic>=0.42.0
+anthropic>=0.42.0,<1  # 1.x removed HUMAN_PROMPT / AI_PROMPT, which lcb_runner imports
 cohere>=5.13.6
 datasets==3.6.0
 google-genai>=0.6.0

@@ -103,7 +103,11 @@ def _run_livecodebench(
             except Exception as e:
                 print(f"Warning: check_correctness failed: {e}", file=sys.stderr)
                 graded = []
-            graded_list = [bool(g) for g in graded] if graded else [False]
+            # One generation, correct iff every test passed. check_correctness returns
+            # per-test True/False or negative error codes (-1 runtime error/timeout,
+            # -2 compile error), which bool() would count as passes; use LCB's own
+            # criterion (lcb_runner/evaluation/pass_k_utils.py: all(g > 0)).
+            graded_list = [bool(graded) and all(g > 0 for g in graded)]
             result = problem.insert_output_evaluation([output], [code], graded_list)
 
         elif subtask == "testoutputprediction":

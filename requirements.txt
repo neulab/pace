@@ -11,7 +11,7 @@
 #        pip install -r evaluations/requirements/bfcl.txt
 #    The conflicts that forced this:
 #      - mistralai : BFCL ==1.7.0  vs  livecodebench ==0.4.2
-#      - tree-sitter: BFCL ==0.21.3 vs repobench >=0.22,<0.23
+#      - tree-sitter: BFCL ==0.21.3 vs repobench 0.23.x (codebleu, installed --no-deps)
 #
 # ⚠️ This file is best-effort. Heavy ML pins (torch, vllm, transformers) often
 #    still need manual nudging on a given machine/CUDA combo. For a clean, known
@@ -34,6 +34,7 @@ openai>=1.59.6             # lifbench pinned ==1.57.2; handlers need new SDK -> 
 litellm>=1.0.0
 huggingface_hub>=0.19.0
 datasets==3.6.0            # lifbench wanted ==2.15.0 -> 3.6.0 (core/livecodebench)
+pyarrow==24.0.0            # >= 25 requires NumPy 2, but numpy is pinned to 1.26.4 above
 tqdm>=4.66.3              # was ==4.66.1 but datasets==3.6.0 requires tqdm>=4.66.3
 tiktoken==0.7.0
 transformers==4.46.1       # debugbench ~4.31 / visualwebbench ==4.38.0 differ -> 4.46.1 (newest)
@@ -73,12 +74,14 @@ typing_extensions
 # ── code benchmarks (repobench, livecodebench) ──────────────────────────────
 fuzzywuzzy
 python-Levenshtein
-codebleu
-tree-sitter>=0.22,<0.23        # repobench (BFCL's ==0.21.3 is why BFCL is separate)
-tree-sitter-python>=0.21,<0.22
-tree-sitter-java>=0.21,<0.22
+# codebleu 0.7.0 pins tree-sitter<0.23 in its metadata but runs fine with the
+# 0.23.x grammars (the only ones with wheels on every platform, incl. Apple
+# Silicon), so that group is installed WITHOUT the resolver, exactly as
+# evaluations/install.sh does:
+#   pip install --no-deps codebleu==0.7.0 tree-sitter==0.23.2 \
+#       tree-sitter-python==0.23.6 tree-sitter-java==0.23.5
 annotated-types>=0.7.0
-anthropic>=0.75.0
+anthropic>=0.75.0,<1  # 1.x removed HUMAN_PROMPT / AI_PROMPT (livecodebench imports them)
 cohere==5.18.0
 google-genai>=1.52.0
 mistralai==0.4.2               # livecodebench (BFCL needs ==1.7.0 -> separate env)

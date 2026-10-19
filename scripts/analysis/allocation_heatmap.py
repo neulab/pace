@@ -6,7 +6,7 @@ Rows: 4 paper targets. Cols: source benchmarks. Cells: # unique instances
 selected for that (target, source) pair (deduped across H/D-pt).
 
 Usage:
-  python scripts/pacebench/analysis/allocation_heatmap.py \
+  python scripts/analysis/allocation_heatmap.py \
       --csv scripts/pacebench/selections/abs_fit/selections_C100.csv
 """
 
@@ -17,6 +17,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# Embed TrueType (Type 42) fonts: venues such as NeurIPS reject PDFs with Type 3 fonts.
+plt.rcParams["pdf.fonttype"] = 42
+plt.rcParams["ps.fonttype"] = 42
 import matplotlib.colors as mcolors
 
 

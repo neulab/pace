@@ -18,8 +18,9 @@ pace/
 ├── scripts/pacebench/          # the Pace-Bench pipeline (selection + regression)
 │   ├── cli.py                  # entry point: abs / pair / fit-abs / fit-pair
 │   ├── config.py               # MODELS, targets, frozen hyperparameters, BASE_DIR
-│   ├── analysis/               # figures, tables, and new-model prediction tools
+│   ├── analysis/               # new-model prediction tools (predict_new_model*.py, emit_eval_plan.py)
 │   └── README.md               # detailed pipeline reference
+├── scripts/analysis/           # paper figures (ability / allocation heatmaps) and extra analyses
 ├── evaluations/                # runs models on the 19 non-agentic benchmarks
 │   ├── run.py                  # entry point: score one instance
 │   ├── handlers/               # one adapter per benchmark
@@ -28,7 +29,8 @@ pace/
 │   ├── requirements/           # per-benchmark deps, to set up ONE benchmark
 │   ├── requirements-verified.txt  # frozen known-good pins (reference only; not installed)
 │   └── script.sh               # runnable examples for every benchmark
-└── requirements.txt            # CORE deps for Part 1 (pacebench + handler layer)
+├── requirements-pacebench.txt  # Part 1 deps only (numpy / scipy / pandas / matplotlib / joblib)
+└── requirements.txt            # best-effort single-file union of everything except BFCL
 ```
 
 There are two independent things you can run:
@@ -43,7 +45,7 @@ There are two independent things you can run:
 ```bash
 conda create -n pace python=3.11 -y
 conda activate pace
-pip install -r requirements.txt
+pip install -r requirements-pacebench.txt
 ```
 
 ## Part 1 — run the prediction pipeline (no API key)
@@ -61,7 +63,7 @@ python cli.py abs  --count 100 --B 300 --seed 42 --auto-tune --strict-budget
 python cli.py pair --count 100 --B 300 --seed 42 --auto-tune --strict-budget --pin-task-a-selection
 ```
 
-Outputs land at the repo root: `abs_predictions.csv`, `pair_predictions.csv`. See `scripts/pacebench/README.md` for all flags.
+Outputs land at the repo root (override with `PROXYBENCH_OUT_DIR`): `abs_predictions.csv`, `pair_predictions.csv`. See `scripts/pacebench/README.md` for all flags.
 
 ### The Pace-Bench selection (the 100 selected instances)
 
@@ -93,6 +95,13 @@ data with the frozen config, so they reproduce the paper's core numbers
 deterministically (seed 42). See `scripts/pacebench/README.md` for the budget
 sweep (`C ∈ {25..500}`) and all flags.
 
+**Platform note.** The `--auto-tune` hyperparameter search is sensitive to tiny
+floating-point differences between CPU architectures. On arm64 (Apple Silicon or
+Linux aarch64, `pip install -r requirements-pacebench.txt`) the two commands give
+the paper's averages (Goal A MAE 3.80%, Goal B accuracy 84.37%), with small
+per-target differences (e.g. SWT-Bench MAE 5.09% vs 5.12%). On x86_64 the averages
+come out slightly different (we observed MAE 3.86–3.91% and accuracy 84.23–84.51%).
+
 ## Part 2 — generate scores by running models (needs an API key)
 
 ### Install everything in one command
@@ -101,12 +110,16 @@ sweep (`C ∈ {25..500}`) and all flags.
 bash evaluations/install.sh
 ```
 
-This installs the verified, pinned deps for **all 19 benchmarks**. Because BFCL
-hard-conflicts with the rest on `tree-sitter`, it sets up two environments:
+This installs the verified, pinned deps for **all 19 benchmarks**. It runs three
+steps — two environments (BFCL hard-conflicts with the rest on `tree-sitter`, so
+it needs its own) plus the VAL plan validator that PlanBench grading uses:
 
-- the **current python** → pacebench + 18 benchmarks (`evaluations/requirements-main.txt`
+- **[1/3] current python** → pacebench + 18 benchmarks (`evaluations/requirements-main.txt`
   plus the editable vendored packages lm_eval / lcb_runner / lmms_eval);
-- **`evaluations/.bfcl-venv`** → BFCL only.
+- **[2/3] `evaluations/.bfcl-venv`** → BFCL only;
+- **[3/3] VAL** → downloads the plan validator to `~/.planutils/packages/val`
+  (Linux x86_64 only; skipped elsewhere). The PlanBench handler defaults `$VAL` there, so
+  no manual `export` is needed. Only PlanBench's non-verification tasks need it.
 
 Override the interpreter with `PYTHON=...` and the BFCL venv with `BFCL_VENV=...`.
 (A single flat requirements file for all 19 is impossible — the tree-sitter
@@ -204,6 +217,11 @@ venv is missing (run `install.sh` to create it). Expected failures without extra
 setup: `debugbench` needs `keys.json` (below), and `planbench`'s non-verification
 tasks need VAL + Fast Downward.
 
+Nothing is skipped by default. To leave benchmarks out, list them explicitly, e.g.
+`SKIP_BENCHMARKS=debugbench bash evaluations/verify_benchmarks.sh` (avoids LeetCode
+submissions). A benchmark whose API calls fail (bad endpoint, key, or network) is
+reported as FAIL rather than scored 0.
+
 ### debugbench: extra one-time LeetCode setup
 
 debugbench grades fixed code by submitting it to the **LeetCode online judge**,
@@ -261,6 +279,8 @@ Step 2 prints a table of `predicted` (and, if `<NAME>` also has agentic
 ground-truth CSVs, `actual` + `abs_error`) for gaia / swebench /
 swebench_multimodal / swtbench. That prediction **is** the new model's estimated
 agentic performance, at ~1% of the cost of running the agentic benchmarks.
+All outputs (CSVs, plots, run logs) go to `new_model_predictions/<NAME>/`, so the
+main LOOCV outputs at the repo root are never overwritten.
 
 Preview which instances will be run (optional, no API calls):
 
@@ -272,8 +292,11 @@ python scripts/pacebench/analysis/emit_eval_plan.py \
 **Coverage matters.** The prediction is a weighted sum over the selected
 instances, so instances you do *not* score count as 0 and pull the prediction
 toward the training-set mean. For a faithful estimate, score the whole selection.
-`planbench` grading needs VAL + Fast Downward, which require **Linux**, so run the
-scoring step on a Linux machine. See
+`planbench` grading needs VAL + Fast Downward, which require **Linux x86_64**, so run
+the scoring step on such a machine. BFCL's agentic `web_search` instances also need a
+SerpAPI key (`SERPAPI_API_KEY` in `.env`). Instances that cannot be scored (no VAL,
+no SerpAPI key, an API error, or a prompt refused by the provider's content filter)
+are reported as skipped or as errors rather than recorded as 0. See
 `scripts/pacebench/analysis/README_new_model.md` for details.
 
 ## Notes
@@ -284,6 +307,11 @@ scoring step on a Linux machine. See
   `openai>=1.0` is required — an older 0.28 will fail to import.
 - **HuggingFace downloads.** Some benchmarks download datasets; export
   `HF_HUB_ENABLE_HF_TRANSFER=0` unless you install `hf_transfer`.
+  GPQA (`Idavidrein/gpqa`) is a gated dataset: accept its terms on the Hub, then
+  `hf auth login` (or set `HF_TOKEN`), otherwise `gpqa` fails with an access error.
+- **Memory.** `livecodebench` loads the whole LiveCodeBench release (with all test
+  cases) and peaks at about 9 GB of memory; with less (e.g. a Docker VM capped at
+  8 GB) the process is killed.
 - **BFCL.** install
   it in its own venv (`evaluations/requirements/bfcl.txt`) and point the runner at
   that venv's python.

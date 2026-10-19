@@ -97,7 +97,8 @@ def _run_visualpuzzles(
             f"Expected format: 'visualpuzzles_{{integer}}'"
         )
 
-    dataset = hf_datasets.load_dataset(VP_DATASET_NAME, split="train", token=True)
+    # Public dataset: use a Hugging Face token if one is configured, but do not require it.
+    dataset = hf_datasets.load_dataset(VP_DATASET_NAME, split="train")
 
     if doc_id >= len(dataset):
         raise IndexError(

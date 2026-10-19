@@ -17,7 +17,7 @@ def fit_platt(margins, labels):
     def nll(p):
         a, b = p
         z  = a * margins + b
-        lp = np.where(z >= 0, z + np.log1p(np.exp(-z)), np.log1p(np.exp(z)))
+        lp = np.logaddexp(0.0, z)              # log(1 + e^z), overflow-safe
         return float(np.sum(lp - labels * z))
     res = minimize(nll, x0=[1.0, 0.0], method='L-BFGS-B')
     return float(res.x[0]), float(res.x[1])

@@ -24,6 +24,8 @@ joblib==1.4.2
 openai==2.44.0
 litellm==1.77.3
 datasets==3.6.0
+# pyarrow >= 25 requires NumPy 2; numpy is pinned to 1.26.4, so pin the last known-good pyarrow.
+pyarrow==24.0.0
 huggingface-hub==0.35.0
 tiktoken==0.7.0
 tqdm==4.66.3
@@ -32,8 +34,12 @@ requests
 python-dotenv==1.2.2          # optional .env loading for API_KEY / BASE_URL (evaluations/_env.py)
 
 # --- deep-learning stack (torch and torchvision MUST match: 2.8.0 <-> 0.23.0) ---
-torch==2.8.0
-torchvision==0.23.0
+# PyTorch publishes no macOS x86_64 (Intel Mac / Rosetta Python) wheels after
+# 2.2.2, so that platform gets the last matching pair instead.
+torch==2.8.0; sys_platform != "darwin" or platform_machine != "x86_64"
+torchvision==0.23.0; sys_platform != "darwin" or platform_machine != "x86_64"
+torch==2.2.2; sys_platform == "darwin" and platform_machine == "x86_64"
+torchvision==0.17.2; sys_platform == "darwin" and platform_machine == "x86_64"
 transformers==4.57.1
 accelerate==1.11.0
 sentence-transformers==5.1.1
@@ -85,3 +91,34 @@ rouge==1.0.1
 # --- retrieval: beir_nfcorpus ---
 beir==2.2.0
 pytrec_eval==0.5
+
+# --- imported by the vendored benchmark code but previously missing here ---
+# (same specs as the top-level requirements.txt; a fresh install failed without them)
+# lm_eval API models (openai-chat-completions)
+tenacity>=8.5.0
+# livecodebench: lcb_runner imports every provider SDK at load time
+anthropic==0.116.0   # 1.x removed HUMAN_PROMPT / AI_PROMPT, which lcb_runner imports
+cohere==5.18.0
+mistralai==0.4.2
+together>=0.21.0
+google-genai>=1.52.0
+google-generativeai
+pebble>=5.1.0
+# lmms_eval: mmmu / visualpuzzles
+loguru
+av<16.0.0
+ftfy
+latex2sympy2
+math-verify
+numexpr
+openpyxl
+peft>=0.2.0
+pybind11>=2.6.2
+pycocoevalcap
+qwen-vl-utils>=0.0.14
+tqdm-multiprocess
+transformers-stream-generator
+yt-dlp
+zss
+zstandard
+protobuf
