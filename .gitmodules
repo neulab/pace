@@ -1,3 +1,0 @@
-[submodule "vendor/evalplus"]
-	path = vendor/evalplus
-	url = https://github.com/evalplus/evalplus.git
