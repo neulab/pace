@@ -268,7 +268,7 @@ python evaluations/score_new_model.py \
     --selections scripts/pacebench/selections/abs_fit/selections_C100.csv \
     --workers 8   # API_KEY / BASE_URL come from .env (or the environment)
 
-# 2. Predict the 4 agentic-target scores (held-out: fit on the other models).
+# 2. Predict the 4 agentic-target scores (fit on the calibration models only).
 cd scripts/pacebench
 python analysis/predict_new_model.py      --new-model <NAME>            # absolute scores
 python analysis/predict_new_model_pair.py --new-model <NAME> --summary   # pairwise win/loss
@@ -278,8 +278,8 @@ Step 2 prints a table of `predicted` (and, if `<NAME>` also has agentic
 ground-truth CSVs, `actual` + `abs_error`) for gaia / swebench /
 swebench_multimodal / swtbench. That prediction **is** the new model's estimated
 agentic performance, at ~1% of the cost of running the agentic benchmarks.
-All outputs (CSVs, plots, run logs) go to `new_model_predictions/<NAME>/`, so the
-main LOOCV outputs at the repo root are never overwritten.
+All outputs go to `new_model_predictions/<NAME>/`, so the main LOOCV outputs at
+the repo root are never overwritten.
 
 Preview which instances will be run (optional, no API calls):
 
@@ -289,8 +289,8 @@ python scripts/pacebench/analysis/emit_eval_plan.py \
 ```
 
 **Coverage matters.** The prediction is a weighted sum over the selected
-instances, so instances you do *not* score count as 0 and pull the prediction
-toward the training-set mean. For a faithful estimate, score the whole selection.
+instances, so instances you do *not* score count as 0 and shift the prediction (in
+a direction set by their weights). For a faithful estimate, score the whole selection.
 `planbench` grading needs VAL + Fast Downward, which require **Linux x86_64**, so run
 the scoring step on such a machine. BFCL's agentic `web_search` instances also need a
 SerpAPI key (`SERPAPI_API_KEY` in `.env`). Instances that cannot be scored (no VAL,

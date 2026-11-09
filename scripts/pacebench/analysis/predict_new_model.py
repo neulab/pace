@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
-"""Predict a NEW model's agentic-target scores with the real Pace-Bench pipeline.
+"""Predict a NEW model's agentic-target scores (Goal A) from Pace-Bench.
 
-This does NOT hand-roll the prediction from the dumped selection weights (those
-weights are an interpretability approximation, not an exact linear predictor).
-Instead it registers the new model, runs the standard leave-one-model-out (LOOCV)
-`abs` pipeline, and reads the new model's held-out prediction — i.e. the model is
-predicted using a regression fit on all the *other* models, exactly as in the paper.
+The regression is fit on the calibration models only (config.MODELS), with the
+frozen per-target config config.TASK_A_CONFIGS[count], on the Pace-Bench
+selection those models imply (= selections/abs_fit/selections_C<count>.csv, the
+instances evaluations/score_new_model.py scores). The new model's scores on the
+selected instances are then projected into the fitted model. Its own scores never
+influence which instances are used, so only the selected instances matter.
 
 Requirements
 ------------
 The new model must already have per-instance score CSVs under BASE_DIR
-(results/standardized_results/<benchmark>/.../<NewModel>.csv), produced by running
-`evaluations/` on it. Missing source instances are treated as 0 (same as the
-pipeline). It uses the frozen hyper-parameters in config.TASK_A_CONFIGS[count]
-(no --auto-tune, which would leak the eval model into tuning).
+(results/standardized_results/<benchmark>/.../<NewModel>.csv), produced by
+evaluations/score_new_model.py. Selected instances without a score are read as 0;
+the script reports per-target coverage.
 
 Outputs go to new_model_predictions/<NewModel>/ at the repo root (override with
-$PROXYBENCH_OUT_DIR), so the main LOOCV outputs at the repo root are never
-overwritten.
-
-Without agentic ground truth (the usual case for a new model) its target scores
-are read as 0. Its own held-out prediction is unaffected — that fold trains only on
-the other models — but the other models' LOOCV metrics in the same run are not
-meaningful, so the full run log goes to <out>/abs_run.log and only the new model's
-predictions are printed (`actual` / `abs_error` only for targets with ground truth).
+$PROXYBENCH_OUT_DIR). If the new model also has agentic ground-truth CSVs,
+`actual` and `abs_error` are reported for those targets.
 
 Usage
 -----
@@ -32,29 +26,24 @@ Usage
 """
 import os
 # Same BLAS thread settings as cli.py, applied before numpy/pandas are imported:
-# the thread count changes floating-point summation order, so without this the
-# predictions differ slightly from `cli.py abs` / `cli.py pair`.
+# the thread count changes floating-point summation order.
 os.environ.setdefault('OMP_NUM_THREADS', '4')
 os.environ.setdefault('MKL_NUM_THREADS', '4')
 os.environ.setdefault('OPENBLAS_NUM_THREADS', '4')
 import argparse
-import contextlib
 import sys
 from pathlib import Path
 
 import pandas as pd
 
-# make `pacebench` (parents[2]=scripts/) and `cli` (parents[1]=scripts/pacebench/) importable
+# make `pacebench` (parents[2]=scripts/), `cli` (parents[1]) and the analysis helpers importable
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pacebench import config  # noqa: E402
-
-
-def targets_with_ground_truth(model):
-    """Agentic targets for which `model` has a score CSV under BASE_DIR."""
-    base = Path(config.BASE_DIR)
-    return {t for t in config.TARGET_DATASETS if any((base / t).rglob(f"{model}.csv"))}
+from pacebench.regression.absolute import _fold_joint_abs  # noqa: E402
+import _new_model as nm  # noqa: E402
 
 
 def main():
@@ -67,51 +56,56 @@ def main():
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
 
-    # Register the new model so build_data loads it and LOOCV holds it out.
-    # (config.MODELS is a shared list object; mutating it is seen everywhere.)
-    if args.new_model not in config.MODELS:
-        config.MODELS.append(args.new_model)
-        config.N_MODELS = len(config.MODELS)
+    d = nm.prepare(args.new_model)
+    sel = nm.plan_selection(d, args.count)
+    nm.check_against_shipped(d, sel, args.count)
+    cov = nm.coverage(d, sel, args.new_model)
+    nm.require_scores(cov, args.new_model)
+    nm.check_scale(d, sel)
 
-    out_dir = Path(os.environ.setdefault(
-        "PROXYBENCH_OUT_DIR",
-        str(Path(config.BASE_DIR).parent.parent / "new_model_predictions" / args.new_model)))
+    out_dir = Path(os.environ.get("PROXYBENCH_OUT_DIR") or
+                   Path(config.BASE_DIR).parent.parent / "new_model_predictions" / args.new_model)
     out_dir.mkdir(parents=True, exist_ok=True)
-    gt_targets = targets_with_ground_truth(args.new_model)
-    missing_gt = sorted(set(config.TARGET_DATASETS) - gt_targets)
 
-    import cli  # imported after registration so it binds the mutated MODELS list
+    tn = d["target_names"]
+    cfgs = nm.task_a_configs(tn, args.count)
+    per_target_qC, nc_h_per_t, nc_d_per_t = {}, {}, {}
+    for t_idx, t in enumerate(tn):
+        cfg = cfgs[t]
+        q = cfg.get("q") if cfg.get("q") is not None else 0.5
+        per_target_qC[t_idx] = (float(q), int(args.count))
+        nc_h_per_t[t_idx] = int(cfg["nc_h"])
+        nc_d_per_t[t_idx] = int(cfg["nc_d"])
 
-    print(f"Running LOOCV abs over {len(config.MODELS)} models "
-          f"(holding out each, incl. {args.new_model}) …", flush=True)
-    run = lambda: cli.run_abs(B=args.B, seed=args.seed, count=args.count,  # noqa: E731
-                              strict_budget=True, auto_tune=False)
-    if missing_gt:
-        log_path = out_dir / "abs_run.log"
-        print(f"No agentic ground truth for {args.new_model} on: {', '.join(missing_gt)}.\n"
-              "Its held-out prediction is unaffected, but the other models' LOOCV metrics in\n"
-              f"this run would count those scores as 0, so the run log goes to {log_path} only.",
-              flush=True)
-        with open(log_path, "w") as fh, contextlib.redirect_stdout(fh):
-            run()
-    else:
-        print()
-        run()
+    # One fold with the new model held out: trains on the calibration rows only.
+    pred_H, pred_D, fold_sel = _fold_joint_abs(
+        d["new_idx"], d["X_v"], d["Y"], d["Vt"], per_target_qC, nc_h_per_t,
+        nc_d_per_t, d["P_target"], args.B, args.seed)
 
+    rows = []
+    for t_idx, t in enumerate(tn):
+        # the fold's selection must be the plan (same rows, same filter and basis)
+        h0, d0 = sel[t_idx]; h1, d1 = fold_sel[t_idx]
+        assert list(h0) == list(h1) and list(d0) == list(d1), f"selection mismatch on {t}"
+        m = cfgs[t]["m"]
+        pred = m * pred_H[t_idx] + (1 - m) * pred_D[t_idx]
+        have, n_sel = cov[t]
+        row = {"model": args.new_model, "target": t, "predicted": float(pred),
+               "scored_instances": have, "selected_instances": n_sel}
+        if t in d["gt_targets"]:
+            actual = float(d["Y"][d["new_idx"], t_idx])
+            row.update(actual=actual, abs_error=abs(pred - actual))
+        rows.append(row)
+    df = pd.DataFrame(rows)
     out_csv = out_dir / "abs_predictions.csv"
-    df = pd.read_csv(out_csv)
-    sub = df[df["model"] == args.new_model].copy()
-    if sub.empty:
-        raise SystemExit(f"No rows for '{args.new_model}' in {out_csv}. "
-                         "Check the model name and that its CSVs exist under BASE_DIR.")
-    sub.loc[~sub["target"].isin(gt_targets), ["actual", "abs_error"]] = float("nan")
+    df.to_csv(out_csv, index=False)
 
     print("\n" + "=" * 52)
-    print(f"Held-out predictions for: {args.new_model}")
+    print(f"Predicted agentic scores for: {args.new_model}")
     print("=" * 52)
-    cols = ["target", "predicted"] + (["actual", "abs_error"] if gt_targets else [])
-    print(sub[cols].to_string(index=False, na_rep="n/a"))
-    print(f"\nOutputs saved under {out_dir}")
+    cols = ["target", "predicted"] + (["actual", "abs_error"] if d["gt_targets"] else [])
+    print(df[cols].to_string(index=False, na_rep="n/a"))
+    print(f"\nSaved {out_csv}")
 
 
 if __name__ == "__main__":

@@ -2,9 +2,9 @@
 """From a dumped selection, list exactly which source instances a NEW model must
 be evaluated on (so you don't run whole benchmarks — only the selected instances).
 
-The held-out fold for a new model selects on the *other* models' scores, which is
-identical to the all-models fit dump. So the instances in the fit selection CSV
-(selections/abs_fit/selections_C100.csv) ARE the set the new model needs scored.
+The new-model predictors select on the calibration models only, which is identical
+to the all-models fit dump (they check this). So the instances in the fit selection
+CSV (selections/abs_fit/selections_C100.csv) ARE the set the new model needs scored.
 
 Standardized-results (benchmark, subdir, instance_id) are translated to the
 evaluations `--benchmark/--subtask/--instance_id` form, then de-duplicated to
