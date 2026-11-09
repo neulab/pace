@@ -55,6 +55,3 @@ scripts/pacebench/selections/*_split/
 
 # ── HuggingFace / model caches ───────────────────────────────────────
 .cache/
-
-# Claude Code session dir
-.claude/
