@@ -71,9 +71,9 @@ Pace-Bench itself **is** the set of source instances the pipeline selects per
 target (100 per target at `--count 100`). It ships ready-made at
 [`scripts/pacebench/selections/abs_fit/selections_C100.csv`](scripts/pacebench/selections/abs_fit/selections_C100.csv)
 — one row per selected `(target, benchmark, subdir, instance_id)` with the
-regression `weight`. The `abs`/`pair` commands above pick instances internally;
-this file is that selection materialized (used by the analysis and new-model
-tools).
+regression `weight`. The `abs`/`pair` commands above select instances inside each
+LOOCV fold; this file is the selection fit on all calibration models with the
+per-target configs in `config.py` (used by the analysis and new-model tools).
 
 To (re)generate it, or to produce it for a different budget `C`:
 
@@ -91,16 +91,15 @@ held-out prediction).
 
 The two commands above **are** the headline result — they print the LOOCV table
 (MAE / Spearman / Pearson for `abs`, pairwise accuracy for `pair`) on the shipped
-data with the frozen config, so they reproduce the paper's core numbers
-deterministically (seed 42). See `scripts/pacebench/README.md` for the budget
-sweep (`C ∈ {25..500}`) and all flags.
+data (the per-target hyperparameter search runs inside `--auto-tune`), so they
+reproduce the paper's core numbers deterministically (seed 42). See
+`scripts/pacebench/README.md` for the budget sweep (`C ∈ {25..500}`) and all flags.
 
 **Platform note.** The `--auto-tune` hyperparameter search is sensitive to tiny
 floating-point differences between CPU architectures. On arm64 (Apple Silicon or
 Linux aarch64, `pip install -r requirements-pacebench.txt`) the two commands give
-the paper's averages (Goal A MAE 3.80%, Goal B accuracy 84.37%), with small
-per-target differences (e.g. SWT-Bench MAE 5.09% vs 5.12%). On x86_64 the averages
-come out slightly different (we observed MAE 3.86–3.91% and accuracy 84.23–84.51%).
+the paper's numbers (Goal A MAE 3.56%, Goal B accuracy 85.92%); other
+architectures may give slightly different numbers.
 
 ## Part 2 — generate scores by running models (needs an API key)
 

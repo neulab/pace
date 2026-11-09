@@ -36,6 +36,7 @@ Reproduce the headline LOOCV numbers from the paper (`Pace-Bench`, $C=100$):
 
 ```bash
 cd scripts/pacebench
+mkdir -p logs
 
 # Goal A: absolute score prediction (MAE, Spearman, Pearson)
 python cli.py abs  --count 100 --B 300 --seed 42 --auto-tune --strict-budget \
@@ -70,19 +71,23 @@ Key flags:
 ```
 --count INT          Source-instance budget C per target (default 100).
 --B INT              Bootstrap replicates over target instances (default 300).
-                     Set to 1 for "single fit"; see PROXYBENCH_NO_BOOTSTRAP below.
 --seed INT           Random seed (default 42).
 --auto-tune          Sweep (q, m, nc_h, nc_d) per target; otherwise read from
                      TASK_A_CONFIG / TASK_B_CONFIG in config.py.
 --strict-budget      Enforce |H ∪ D| = C per target (the regime used in the
                      paper). Without this flag, |H| = |D| = C and the two
                      selection lists may overlap.
+--per-fold-svd       Recompute the Global-SVD basis on each fold's training
+                     models. Applies to abs / pair with --strict-budget
+                     --auto-tune, where it is the default.
+--global-svd         Use one SVD basis computed over all loaded models instead
+                     (always the case on the other paths).
 --pin-task-a-selection
-                     (pair only) Reuse the instance subset selected by
-                     the previous `abs` run, so Goal A and Goal B operate on
-                     the same Pace-Bench instances.
---q FLOAT            Manual Local/Global mixing weight (default per-target).
---m FLOAT            Manual H-weight ∈ [0,1] (default per-target).
+                     (pair only) Pin Goal B to the instances Goal A selects
+                     (recomputed in the same run), so Goal A and Goal B operate
+                     on the same Pace-Bench instances.
+--q FLOAT            Manual Local budget share, C_L = round(q·C) (default per-target).
+--m FLOAT            Manual Local/Global mixing weight ∈ [0,1] (default per-target).
 --nc-h, --nc-d INT   Manual SVD ranks (default per-target).
 --sources BENCH …    Restrict source pool (default: 19 benchmarks).
 --targets BENCH …    Restrict target list (default: gaia / swebench /
@@ -96,10 +101,10 @@ Key flags:
 
 ### Budget sweep
 
-`script.sh` and `logs/abs_C.log` / `logs/pair_C.log` cover
-`C ∈ {25, 50, 100, 200, 300, 400, 500}`. Re-run any of them with:
+To sweep `C ∈ {25, 50, 100, 200, 300, 400, 500}`:
 
 ```bash
+mkdir -p logs
 for c in 25 50 100 200 300 400 500; do
   python cli.py abs  --count $c --B 300 --seed 42 --auto-tune --strict-budget \
       > logs/abs_${c}.log
@@ -107,21 +112,6 @@ for c in 25 50 100 200 300 400 500; do
       --pin-task-a-selection > logs/pair_${c}.log
 done
 ```
-
-### Bootstrap ablation
-
-To disable target-instance bootstrap pooling (§5.2 of the paper):
-
-```bash
-PROXYBENCH_NO_BOOTSTRAP=1 python cli.py abs  --count 100 \
-    --B 300 --seed 42 --auto-tune --strict-budget
-```
-
-The env var is read by `bootstrap.py::_no_bootstrap_env()` and forces
-`pooled_absolute` / `pooled_pairwise` to return the raw target mean instead of
-$B$ resamples. The flag is currently only respected on the non-autotune path
-for `--strict-budget --auto-tune` — see `regression/absolute.py:248` if you
-need to extend it there as well.
 
 ## New-model prediction (`analysis/`)
 
@@ -136,7 +126,7 @@ python analysis/emit_eval_plan.py --selections selections/abs_fit/selections_C10
 python ../../evaluations/score_new_model.py --model <MODEL> --model-name-out <NAME> \
     --base-url "$BASE_URL" --selections selections/abs_fit/selections_C100.csv --workers 8
 
-# 3. predict the 4 agentic-target scores (held-out)
+# 3. predict the 4 agentic-target scores (fit on the calibration models)
 python analysis/predict_new_model.py      --new-model <NAME>            # Goal A: absolute
 python analysis/predict_new_model_pair.py --new-model <NAME> --summary   # Goal B: pairwise
 ```
@@ -148,19 +138,23 @@ python analysis/predict_new_model_pair.py --new-model <NAME> --summary   # Goal 
 | 1. Select instances | `selection.py` | `joint_top_C` (Local ∪ Global) | same |
 | 2. Embed M models   | `embedding.py` | `h_embed`, `dpt_embed`         | same |
 | 3. Pool over target instances | `bootstrap.py` | `pooled_absolute → (U_pool, y_pool)` | `pooled_pairwise → (D_pool, dy_pool)` |
-| 4. Fit + predict    | `regression/`  | least-squares (1-D OLS, ridge) | logistic (L-BFGS + ridge)            |
+| 4. Fit + predict    | `regression/`  | Spearman-weighted 1-D OLS      | logistic (L-BFGS, L2)                |
 
 Per-target `(q, m, nc_h, nc_d)` live in `config.py::TASK_A_CONFIG` /
 `TASK_B_CONFIG` and are produced by `--auto-tune`. The auto-tune block in each
-log file is the recommended way to update them after a re-run.
+log file is the recommended way to update them after a re-run. After changing
+`TASK_A_CONFIGS`, regenerate `selections/abs_fit/selections_C<count>.csv` with
+`fit-abs` (the new-model tools check that it matches).
 
-## No-Y-leakage invariants
+## Per-fold computations
 
-The pipeline is structured to avoid information leakage in the LOOCV setting:
+Within each LOOCV fold, these steps use the training models only:
 
-- SVD of $X$ uses only source features.
-- Local/Global scoring (`h_top_M`, `dpt_top_N`) uses only training-fold $Y$.
-- Bootstrap pooling samples target instances from training models only.
-- Regression fits on training-model embeddings (or pair-diffs) only.
-- `expand_to_all_models` places the held-out model at index $i$ — it
-  participates in prediction (`u_k - u_j`) but never in fitting.
+- instance scoring (`h_top_M`, `dpt_top_N`, `joint_top_C` use training-fold $Y$);
+- the Global-SVD basis (recomputed on the training models with `--per-fold-svd`,
+  the default for `--strict-budget --auto-tune`);
+- bootstrap pooling (target instances are resampled over training models);
+- regression fitting (training-model embeddings or pair-diffs).
+
+The held-out model is then projected into the fitted model: `expand_to_all_models`
+places it at index $i$ for prediction (`u_k - u_j`).

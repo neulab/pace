@@ -803,8 +803,8 @@ def run_abs(B, seed, sources=None, targets=None, count=COUNT,
             q=None, strict_budget=False, per_fold_svd=False):
     count_L, count_G = _split_count(count, q)
     if per_fold_svd:
-        print("[per-fold SVD] D-pt basis recomputed per fold on training models "
-              "only (leak-free).", flush=True)
+        print("[per-fold SVD] D-pt basis recomputed per fold on the training models.",
+              flush=True)
     override_m = _clamp_m_for_empty_split(count_L, count_G, override_m)
     if strict_budget:
         if q is None:
@@ -1134,7 +1134,7 @@ def run_pair(B, seed, sources=None, targets=None, count=COUNT,
     override_m = _clamp_m_for_empty_split(count_L, count_G, override_m)
     if per_fold_svd:
         print("[per-fold SVD] D-pt basis (selection + embedding) recomputed per "
-              "fold on training models only (leak-free).", flush=True)
+              "fold on the training models.", flush=True)
     if strict_budget:
         if not pin_task_a_selection:
             raise ValueError("--strict-budget on `pair` requires --pin-task-a-selection "
@@ -1924,10 +1924,15 @@ def main():
                         dest="m_grid_str",
                         help="Comma-separated m values to sweep when --auto-tune")
     parser.add_argument("--per-fold-svd", action="store_true", dest="per_fold_svd",
-                        help="Leak-free D-pt: recompute the SVD basis on each "
-                             "fold's TRAINING models only (default: one global SVD "
-                             "over all models, reused every fold). Currently "
-                             "implemented for `abs` + --strict-budget.")
+                        help="Recompute the Global (D-pt) SVD basis on each fold's "
+                             "training models. Applies to `abs` / `pair` with "
+                             "--strict-budget --auto-tune (the paper's headline "
+                             "commands), where it is the default.")
+    parser.add_argument("--global-svd", action="store_false", dest="per_fold_svd",
+                        help="Use a single SVD basis computed once over all loaded "
+                             "models and reused in every fold (always the case on "
+                             "the other paths).")
+    parser.set_defaults(per_fold_svd=None)   # None = pick per path (see below)
     args = parser.parse_args()
 
     kwargs = dict(
@@ -1958,11 +1963,23 @@ def main():
               "ignored)", flush=True)
     kwargs["q"] = args.q   # supported by abs / pair / fit-abs / fit-pair
     kwargs["strict_budget"] = args.strict_budget   # all 4 tasks now support it
+    # Per-fold SVD is implemented on the strict-budget auto-tune LOOCV path (the
+    # paper's headline commands), where it is the default; every other path uses
+    # the single SVD.
+    per_fold_path = (args.task in ("abs", "pair") and args.strict_budget
+                     and args.auto_tune and not (args.train_models or args.eval_models))
     if args.task in ("abs", "pair"):
-        kwargs["per_fold_svd"] = args.per_fold_svd
+        per_fold_svd = args.per_fold_svd
+        if per_fold_svd is None:
+            per_fold_svd = per_fold_path
+        elif per_fold_svd and not per_fold_path:
+            print("(warning: --per-fold-svd applies only to `abs` / `pair` with "
+                  "--strict-budget --auto-tune on the LOOCV path; ignored here)", flush=True)
+            per_fold_svd = False
+        kwargs["per_fold_svd"] = per_fold_svd
     elif args.per_fold_svd:
-        print("(warning: --per-fold-svd is implemented for `abs` / `pair` "
-              "(--strict-budget); ignored for fit-abs / fit-pair)", flush=True)
+        print("(warning: --per-fold-svd applies only to `abs` / `pair` with "
+              "--strict-budget --auto-tune; ignored for fit-abs / fit-pair)", flush=True)
     {
         "abs":      run_abs,
         "pair":     run_pair,
