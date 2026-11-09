@@ -11,6 +11,11 @@ C=100 selected *source* instances, each line:
   datasets cache (offline). answer is null when a benchmark has no single gold
   reference (e.g. ifeval checker-based scoring) — the metric field documents how
   it is scored.
+- visualpuzzles / visualwebbench / repobench / livecodebench ids are resolved with
+  the same dataset, subset and ordering as evaluations/handlers/<benchmark>.py, so
+  each exported row is the item a model is scored on; for visualwebbench `input` is
+  the prompt the handler sends with the image, for repobench the user prompt it
+  sends after its fixed system message.
 - Multimodal benchmarks (mmmu / visualpuzzles / visualwebbench) store their image
   files under images/<benchmark>/ and put the relative paths in `images`.
 
@@ -29,6 +34,8 @@ from pathlib import Path
 from collections import defaultdict
 
 REPO = Path(__file__).resolve().parents[2]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))          # for evaluations.handlers.*
 SEL_CSV = REPO / "scripts/pacebench/selections/abs_fit/selections_C100.csv"
 STD = REPO / "results/standardized_results"
 RAW = REPO / "results/raw_results"
@@ -153,14 +160,15 @@ def r_mmmu(subdir, iid):
     return q, str(row.get("answer")), imgs
 
 def r_visualpuzzles(subdir, iid):
-    num = int(re.sub(r"\D", "", str(iid)))   # 'visualpuzzles_1115' -> 1115
-    ds = hf("neulab/VisualPuzzles", None, "train")
-    if not hasattr(r_visualpuzzles, "_idx"):
-        r_visualpuzzles._idx = {int(row["id"]): i for i, row in enumerate(ds)}
-    i = r_visualpuzzles._idx.get(num)
-    if i is None:
-        raise KeyError(f"visualpuzzles {iid}")
-    row = ds[i]
+    # 'visualpuzzles_<doc_id>': doc_id is the 0-based row index of the train split
+    # (as in evaluations/handlers/visualpuzzles.py), not the dataset's `id` column.
+    from evaluations.handlers.visualpuzzles import VP_DATASET_NAME
+    s = str(iid)
+    doc_id = int(s[len("visualpuzzles_"):] if s.startswith("visualpuzzles_") else s)
+    ds = hf(VP_DATASET_NAME, None, "train")
+    if doc_id >= len(ds):
+        raise KeyError(f"visualpuzzles doc_id {doc_id} >= {len(ds)}")
+    row = ds[doc_id]
     q = row["question"]
     opts = row.get("options")
     if opts:
@@ -246,57 +254,116 @@ def r_bfcl(subdir, iid):
             ans = json.dumps(g, ensure_ascii=False)
     return inp, ans, []
 
+def _load_by_path(name, path):
+    """Import one file as a module (avoids package-name clashes such as
+    scripts/pacebench/data.py vs RepoBench's `data` package)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+# The standardized LiveCodeBench ids index these problem lists ("release_latest" =
+# release_v6); a different size means the cached release changed.
+_LCB_SIZE = {"codegeneration": 1055, "codeexecution": 479}
+_lcb_cache: dict = {}
+def _lcb_rows(kind):
+    """(dataset, order): rows in the order evaluations/handlers/livecodebench.py uses
+    (lcb_runner's list sorted by question_id, resp. by the numeric part of id; Python's
+    sort is stable, so sorting the row indices gives the same order)."""
+    if kind not in _lcb_cache:
+        from datasets import load_dataset
+        if kind == "codegeneration":
+            ds = load_dataset("livecodebench/code_generation_lite", split="test",
+                              version_tag="release_latest", trust_remote_code=True)
+            keys = ds["question_id"]
+        else:
+            ds = load_dataset("livecodebench/execution-v2", split="test")
+            keys = [int(x.split("_")[1]) for x in ds["id"]]
+        if len(ds) != _LCB_SIZE[kind]:
+            raise KeyError(f"lcb {kind}: {len(ds)} problems, expected {_LCB_SIZE[kind]}")
+        _lcb_cache[kind] = (ds, sorted(range(len(ds)), key=keys.__getitem__))
+    return _lcb_cache[kind]
+
 def r_livecodebench(subdir, iid):
     if subdir in ("codegeneration", "selfrepair"):
         # selfrepair reuses the code_generation problems (repair a wrong solution)
-        ds = hf("livecodebench/code_generation_lite", None, "test")
-        row = ds[int(iid)]
+        ds, order = _lcb_rows("codegeneration")
+        row = ds[order[int(iid)]]
         inp = row.get("question_content") or row.get("question_title", "")
         return inp, None, []                 # tests as answer -> null
     if subdir == "codeexecution":
-        ds = hf("livecodebench/execution-v2", None, "test")
-        row = ds[int(iid)]
+        ds, order = _lcb_rows("codeexecution")
+        row = ds[order[int(iid)]]
         inp = f"Code:\n{row.get('code','')}\n\nInput: {row.get('input','')}"
         return inp, (str(row["output"]) if row.get("output") is not None else None), []
     raise NotImplementedError(f"lcb {subdir}")
 
+_vwb_prompts: dict = {}
 def r_visualwebbench(subdir, iid):
-    # iid = '<task>_<n>', task is the HF builder config; ds 'id' matches iid exactly
-    task = re.sub(r"_\d+$", "", str(iid))
-    ds = hf("webbench/WebBench", task, "test")
-    if not hasattr(r_visualwebbench, "_idx"):
-        r_visualwebbench._idx = {}
-    if task not in r_visualwebbench._idx:
-        r_visualwebbench._idx[task] = {row["id"]: i for i, row in enumerate(ds)}
-    i = r_visualwebbench._idx[task].get(iid)
-    if i is None:
-        raise KeyError(f"visualwebbench {iid}")
-    row = ds[i]
-    txt = ""
-    for k in ("question", "instruction", "text"):
-        if row.get(k):
-            txt = str(row[k]); break
-    inp = f"[{row.get('task_type', task)}] {row.get('website','')}".strip()
-    if txt:
-        inp += "\n" + txt
+    # '<task>_<idx>': idx is the 0-based row index of the task's test split, and the
+    # input is the prompt evaluations/handlers/visualwebbench.py sends with the image.
+    from evaluations.handlers.visualwebbench import VWB_DATASET_NAME, VWB_DIR
+    m = re.match(r"^(.*)_(\d+)$", str(iid))
+    if not m:
+        raise KeyError(f"visualwebbench id {iid}")
+    task, idx = m.group(1), int(m.group(2))
+    ds = hf(VWB_DATASET_NAME, task, "test")
+    if idx >= len(ds):
+        raise KeyError(f"visualwebbench {task} idx {idx} >= {len(ds)}")
+    row = ds[idx]
+    if not _vwb_prompts:
+        # prompts.py only holds string templates (utils/__init__ would pull in torch)
+        _vwb_prompts.update(_load_by_path(
+            "_vwb_prompts", os.path.join(VWB_DIR, "utils", "prompts.py")).DEFAULT_PROMPTS)
+    tmpl = _vwb_prompts[f"{task}_prompt"]
+    if task == "webqa":
+        inp = tmpl.format(question=row["question"])
+    elif task == "element_ocr":
+        inp = tmpl.format(bbox_ratio=row["bbox"])
+    elif task == "element_ground":
+        inp = tmpl.format(element_desc=row["elem_desc"])
+    elif task == "action_prediction":
+        inp = tmpl.format(bbox_ratio=row["bbox"], choices_text=row["options"])
+    elif task == "action_ground":
+        inp = tmpl.format(instruction=row["instruction"])
+    else:                                   # web_caption / heading_ocr
+        inp = tmpl
     imgs = [save_image(row["image"], "visualwebbench", iid, 1)] if row.get("image") else []
     return inp, (str(row["answer"]) if row.get("answer") is not None else None), imgs
 
-_RB_SPLIT = {"xff": "cross_file_first", "xfr": "cross_file_random", "if": "in_file"}
+_rb_cache: dict = {}
 def r_repobench(subdir, iid):
-    # subdir 'repobench_<xff|xfr|if>_python_<metric>'; iid 'repobench_<row idx>'
-    m = re.search(r"repobench_(xff|xfr|if)_", subdir)
-    if not m:
-        raise KeyError(f"repobench split from {subdir}")
-    split = _RB_SPLIT[m.group(1)]
+    # subdir 'repobench_<xff|xfr|if>_python_<metric>'; iid 'repobench_<idx>', where idx
+    # indexes the Dec-2023 / 8k subset evaluations/handlers/repobench.py evaluates, and
+    # the input is the prompt it builds (cross-file context + in-file code).
+    from evaluations.handlers.repobench import (
+        REPOBENCH_DATASET_NAME, REPOBENCH_DIR, REPOBENCH_END_DATE, REPOBENCH_LEVEL,
+        REPOBENCH_START_DATE, REPOBENCH_SUBTASK_MAP)
+    subtask = re.sub(r"_(codebleu|edit_similarity|exact_match)$", "", subdir)
+    if subtask not in REPOBENCH_SUBTASK_MAP:
+        raise KeyError(f"repobench subtask from {subdir}")
+    subset = REPOBENCH_SUBTASK_MAP[subtask]
+    if subset not in _rb_cache:
+        import pandas as pd
+        df = pd.DataFrame(hf(REPOBENCH_DATASET_NAME)[subset])
+        df["created_at"] = pd.to_datetime(df["created_at"])
+        start = pd.to_datetime(REPOBENCH_START_DATE).tz_localize("UTC")
+        end = pd.to_datetime(REPOBENCH_END_DATE).tz_localize("UTC")
+        df = df[(df["created_at"] >= start) & (df["created_at"] <= end)]
+        _rb_cache[subset] = df[df["level"] == REPOBENCH_LEVEL].reset_index(drop=True)
+    df = _rb_cache[subset]
     idx = int(re.sub(r"\D", "", str(iid)))
-    ds = hf("tianyang/repobench_python_v1.1", "default")[split]
-    if idx >= len(ds):
-        raise KeyError(f"repobench idx {idx} >= {len(ds)}")
-    row = ds[idx]
-    inp = (f"# File: {row.get('file_path','')}\n{row.get('import_statement','')}\n\n"
-           f"{row.get('cropped_code','')}")
-    return inp, row.get("next_line"), []
+    if idx >= len(df):
+        raise KeyError(f"repobench idx {idx} >= {len(df)}")
+    item = df.iloc[idx].to_dict()
+    if "construct_prompt" not in _rb_cache:
+        _rb_cache["construct_prompt"] = _load_by_path(
+            "_repobench_data_utils",
+            os.path.join(REPOBENCH_DIR, "data", "utils.py")).construct_prompt
+    inp = _rb_cache["construct_prompt"](item, language="python", tokenizer=None,
+                                        max_token_nums=15800)
+    return inp, item.get("next_line"), []
 
 _lif_cache: dict = {}
 def r_lifbench(subdir, iid):
