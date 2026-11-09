@@ -141,7 +141,12 @@ def extract(benchmark, subdir, result):
     if b == "repobench":
         for metric in ("codebleu", "edit_similarity", "exact_match"):
             if subdir.endswith("_" + metric):
-                return (metric, _num(r.get(metric, 0.0)))
+                v = _num(r.get(metric, 0.0))
+                # RepoBench's edit_similarity_score is a mean fuzz.ratio on a 0-100
+                # scale; the standardized CSVs store it on 0-1 (standardize_repobench.py).
+                if metric == "edit_similarity" and v is not None:
+                    v = min(max(v / 100.0, 0.0), 1.0)
+                return (metric, v)
         return None
     if b == "ifeval":
         v = r.get(subdir)
@@ -164,6 +169,38 @@ def _load_existing(path):
     if not path.exists():
         return set()
     return {row["id"] for row in csv.DictReader(open(path))}
+
+
+def _calibration_models():
+    """The calibration model names (scripts/pacebench/config.py MODELS)."""
+    sys.path.insert(0, str(_REPO / "scripts"))
+    from pacebench.config import MODELS
+    return list(MODELS)
+
+
+def _rescale_stale_edit_similarity(out_name):
+    """Earlier runs wrote RepoBench edit_similarity on a 0-100 scale. Rescale such
+    rows to 0-1 in place, so that a resumed run (which skips existing ids) does not
+    keep them."""
+    for p in sorted((_STD / "repobench").glob(f"*_edit_similarity/{out_name}.csv")):
+        rows = list(csv.DictReader(open(p)))
+        n = 0
+        for r in rows:
+            try:
+                v = float(r["score"])
+            except (TypeError, ValueError):
+                continue
+            if v > 1.0:
+                r["score"] = str(min(v / 100.0, 1.0))
+                n += 1
+        if n:
+            with open(p, "w", newline="") as f:
+                w = csv.writer(f)
+                w.writerow(["id", "score", "metric_name"])
+                for r in rows:
+                    w.writerow([r["id"], r["score"], r["metric_name"]])
+            print(f"Rescaled {n} edit_similarity value(s) from 0-100 to 0-1 in {p}",
+                  flush=True)
 
 
 def _run_bfcl_subprocess(model, base_url, api_key, subtask, instance_id):
@@ -231,6 +268,13 @@ def main():
     if not args.api_key:
         ap.error("set --api-key or export API_KEY")
     out_name = args.model_name_out or args.model
+    # Never write into a calibration model's CSVs (compared case-insensitively:
+    # on case-insensitive filesystems 'gpt-5.2.csv' is 'GPT-5.2.csv').
+    clash = [m for m in _calibration_models() if m.casefold() == out_name.casefold()]
+    if clash:
+        ap.error(f"output name '{out_name}' matches calibration model '{clash[0]}'; "
+                 "choose another --model-name-out")
+    _rescale_stale_edit_similarity(out_name)
 
     rows = list(csv.DictReader(open(args.selections)))
     if args.limit:
